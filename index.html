@@ -6,7 +6,7 @@
         content="Evaluating mathematical reasoning of foundation models in visual contexts">
   <meta name="keywords" content="MathVista, Math Vista">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> MathVista: Evaluating Math Reasoning in Visual Contexts</title>
+  <title> HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -116,10 +116,10 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
             <img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista" style="vertical-align: middle">MathVista</span>
+            <span class="mathvista" style="vertical-align: middle">HRScene</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
-            Evaluating Math Reasoning in Visual Contexts
+            How Far Are VLMs from Effective High-Resolution Image Understanding?
             <!-- <br> -->
             <!-- with GPT-4V, Bard, and Other Large Multimodal Models -->
           </h2>
@@ -158,7 +158,7 @@
             <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of California, Los Angeles,</span><br>
             <span class="author-block"><sup style="color:#ed4b82">2</sup>University of Washington,</span>
             <span class="author-block"><sup style="color:#ffac33">3</sup>Microsoft Research</span><br>
-            <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span>
+            <!-- <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
           </div>
         
           <!-- <section> -->
@@ -325,7 +325,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
-          <p>
+          <!-- <p>
           <b>Large Language Models (LLMs)</b> and <b>Large Multimodal Models (LMMs)</b> exhibit impressive problem-solving skills in many tasks and domains, but their ability in mathematical reasoning in visual contexts has not been systematically studied.
           </p>
           <p>
@@ -336,7 +336,27 @@
             With <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">MathVista</span>, we have conducted <b>a comprehensive, quantitative evaluation of 12 prominent foundation models</b>. The best-performing <b>GPT-4V</b> model achieves an overall accuracy of <b>49.9%</b>, substantially outperforming Bard, the second-best performer, by <b>15.1%</b>. Our in-depth analysis reveals that the superiority of <b>GPT-4V</b> is mainly attributed to its enhanced visual perception and mathematical reasoning. However, <b>GPT-4V</b> still falls short of human performance by <b>10.4%</b>, as it often struggles to understand complex figures and perform rigorous reasoning. This significant gap underscores the critical role that <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">MathVista</span> will play in the development of general-purpose AI agents capable of tackling mathematically intensive and visually rich real-world tasks. We further explore the new ability of <b>self-verification</b>, the use of <b>self-consistency</b>, and the  <b>goal-directed multi-turn human-AI dialogues</b>, highlighting the promising potential of GPT-4V for future research. 
+          </p> -->
+
+          <p>
+            High-resolution image (HRI) understanding aims to process
+            images with a large number of pixels such as pathological images and agricultural aerial images, both of which
+            can exceed 1 million pixels. Vision Large Language Models (VLMs) typically handle higher-resolution images through
+            dynamic patching. However, there is a lack of a comprehensive benchmark for VLMs to evaluate HRI understanding,
+            leaving this domain underexplored. To address this gap, we introduce HRScene, a novel unified benchmark for HRI
+            understanding with rich scenes. HRScene incorporates 25 real-world datasets and 2 synthetic diagnostic datasets with
+            resolutions ranging from 1,024 × 1,024 to 35,503 × 26,627. HRScene is collected and re-annotated by 10 graduate-level annotators, 
+            covering 25 scenarios, ranging from microscopic and radiology images to street views, long-range
+            pictures, and telescope images. It includes high-resolution images of real-world objects, scanned documents, 
+            and composite multi-image. The two diagnostic evaluation datasets
+            are synthesized by combining the target image with the gold answer and similar distracting images in different orders.
+            These datasets assess how well models utilize HRI by comparing performance across different image regions. 
+            We conduct extensive experiments involving 27 VLMs, including Gemini 2.0 Pro and GPT-4o. Experiments on HRScene
+            show that current VLMs achieve an average accuracy of around 50% on real-world tasks, revealing significant gaps
+            in HRI understanding. Results on our synthetic datasets reveal that VLMs struggle to effectively utilize HRI regions
+            compared to low-resolution images, with a gap exceeding 20%. Our code and data will be publicly available.
           </p>
+
         </div>
       </div>
     </div>
@@ -901,7 +921,8 @@
               <td><a href="https://github.com/OpenGVLab/InternVL" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td>2024-09-04</td>
               <td><b class="best-score-text">65.84</b></td>
-              <td>65.0</td>
+              <!-- <td>65.0</td> -->
+              <td>Hello</td>
               <td>64.0</td>
               <td>75.4</td>
               <td>72.4</td>
@@ -926,7 +947,7 @@
               <td>73.0</td> <!-- MWP (math word problem) -->
               <td>65.3</td> <!-- TQA (textbook question answering) -->
               <td>51.5</td> <!-- VQA (visual question answering) -->
-              <td>66.7/td> <!-- ALG (algebraic reasoning) -->
+              <td>66.7</td> <!-- ALG (algebraic reasoning) -->
               <td>60.6</td> <!-- ARI (arithmetic reasoning) -->
               <td>68.5</td> <!-- GEO (geometry reasoning) -->
               <td>19.1</td> <!-- LOG (logical reasoning) -->
