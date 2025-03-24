@@ -8,19 +8,16 @@ function generateTable() {
           <td class="js-sort"><strong>Method</strong></td>
           <td class="js-sort"><strong>Source</strong></td>
           <td class="js-sort"><strong>Date</strong></td>
+
           <td class="js-sort-number"><strong><u>ALL</u></strong></td>
-          <td class="js-sort-number"><strong>FQA</strong></td>
-          <td class="js-sort-number"><strong>GPS</strong></td>
-          <td class="js-sort-number"><strong>MWP</strong></td>
-          <td class="js-sort-number"><strong>TQA</strong></td>
-          <td class="js-sort-number"><strong>VQA</strong></td>
-          <td class="js-sort-number"><strong>ALG</strong></td>
-          <td class="js-sort-number"><strong>ARI</strong></td>
-          <td class="js-sort-number"><strong>GEO</strong></td>
-          <td class="js-sort-number"><strong>LOG</strong></td>
-          <td class="js-sort-number"><strong>NUM</strong></td>
-          <td class="js-sort-number"><strong>SCI</strong></td>
-          <td class="js-sort-number"><strong>STA</strong></td>
+          <td class="js-sort-number"><strong>daily</strong></td>
+          <td class="js-sort-number"><strong>research</strong></td>
+          <td class="js-sort-number"><strong>medical</strong></td>
+          <td class="js-sort-number"><strong>sub-img</strong></td>
+          <td class="js-sort-number"><strong>remote</strong></td>
+          <td class="js-sort-number"><strong>art</strong></td>
+          <td class="js-sort-number"><strong>paper</strong></td>
+          <td class="js-sort-number"><strong>urban</strong></td>
       </tr>`;
 
       // sort data to make sure the best model is on top
@@ -69,32 +66,24 @@ function generateTable() {
 
         // if entry.FQA is a number
         if (!isNaN(entry.FQA)) {
-          table += `<td>${entry.FQA.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.GPS.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.MWP.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.TQA.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.VQA.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.ALG.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.ARI.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.GEO.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.LOG.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.NUM.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.SCI.toFixed(1).toString()}</td>`;
-          table += `<td>${entry.STA.toFixed(1).toString()}</td>`;
+          table += `<td>${entry["daily"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["research"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["medical"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["sub-img"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["remote"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["art"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["paper"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["urban"].toFixed(1).toString()}</td>`;
         }
         else {
-        table += `<td>${entry.FQA.toString()}</td>`;
-        table += `<td>${entry.GPS.toString()}</td>`;
-        table += `<td>${entry.MWP.toString()}</td>`;
-        table += `<td>${entry.TQA.toString()}</td>`;
-        table += `<td>${entry.VQA.toString()}</td>`;
-        table += `<td>${entry.ALG.toString()}</td>`;
-        table += `<td>${entry.ARI.toString()}</td>`;
-        table += `<td>${entry.GEO.toString()}</td>`;
-        table += `<td>${entry.LOG.toString()}</td>`;
-        table += `<td>${entry.NUM.toString()}</td>`;
-        table += `<td>${entry.SCI.toString()}</td>`;
-        table += `<td>${entry.STA.toString()}</td>`;
+          table += `<td>${entry["daily"].toString()}</td>`;
+          table += `<td>${entry["research"].toString()}</td>`;
+          table += `<td>${entry["medical"].toString()}</td>`;
+          table += `<td>${entry["sub-img"].toString()}</td>`;
+          table += `<td>${entry["remote"].toString()}</td>`;
+          table += `<td>${entry["art"].toString()}</td>`;
+          table += `<td>${entry["paper"].toString()}</td>`;
+          table += `<td>${entry["urban"].toString()}</td>`;
         }
         table += '</tr>';
     }
