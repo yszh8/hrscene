@@ -1,5 +1,15 @@
-function generateTable() {
-  var data = score_table; // The variable from model_scores.js
+function loadTables() {
+  
+  var table = generateTable(score_table);
+  document.getElementById('testmini_leaderboard').innerHTML = table;
+
+  table = generateTable(score_table_test);
+  document.getElementById('test_leaderboard').innerHTML = table;
+
+};
+
+
+function generateTable(data) {
 
   var table = '<table class="js-sort-table" id="results">';
   table += `<tr>
@@ -89,8 +99,10 @@ function generateTable() {
     }
 
   table += '</table>';
-  document.getElementById('testmini_leaderboard').innerHTML = table; // Assuming you have a div with id 'container' where the table will be placed
+
+  return table;
+  
 }
 
 // Call the function when the window loads
-window.onload = generateTable;
+window.onload = loadTables;
