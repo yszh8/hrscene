@@ -202,7 +202,7 @@
               <!-- PDF Link. -->
               <span class="link-block">
                 <!-- @PAN TODO: change links -->
-                <a href="https://yszh8.github.io/hrbench/"
+                <a href="https://github.com/yszh8/hrscene/blob/e86ee902c8edd7022d6daa89fdb30367b33601d0/static/pdfs/HRScene.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -330,7 +330,7 @@
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/radar_chart_all_models.png" alt="geometric reasoning" width="50%"/>
+              <img src="static/images/radar_chart_all_models.png" alt="geometric reasoning" width="40%"/>
 
               <p>
                 Performance of some VLMs on our test set. We identify 8 categories of HRI tasks:  Daily pictures, Urban planning, 
@@ -581,50 +581,50 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/daily_hrbench.png" alt="arithmetic reasoning" width="20%"/>
-              <p>Daily</p>
+              <img src="static/images/examples/daily_hrbench.png" alt="arithmetic reasoning" width="25%"/>
+              <p><b>Daily</b></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/research_galaxy.png" alt="algebraic reasoning" width="20%"/>
-              <p>Research</p>
+              <img src="static/images/examples/research_galaxy.png" alt="algebraic reasoning" width="25%"/>
+              <p><b>Research</b></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/medical_vqarad.png" alt="geometric reasoning" width="20%"/>
-              <p>Medical</p>
+              <img src="static/images/examples/medical_vqarad.png" alt="geometric reasoning" width="25%"/>
+              <p><b>Medical</b></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/examples/subimg_visdiff.png" alt="logical reasoning" width="30%"/>
-              <p>Sub Image</p>
+              <p><b>Sub Image</b></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/remote_sen.png" alt="numeric reasoning" width="20%"/>
-              <p>Remote Sensing</p>
+              <img src="static/images/examples/remote_sen.png" alt="numeric reasoning" width="25%"/>
+              <p><b>Remote Sensing</b></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/art_artbench.png" alt="statistical reasoning" width="15%"/>
-              <p>Art</p>
+              <img src="static/images/examples/art_artbench.png" alt="statistical reasoning" width="20%"/>
+              <p><b>Art</b></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/paper_docstruct.png" alt="scientific reasoning" width="20%"/>
-              <p>Paper</p>
+              <img src="static/images/examples/paper_docstruct.png" alt="scientific reasoning" width="25%"/>
+              <p><b>Paper</b></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/examples/urban.png" alt="scientific reasoning" width="25%"/>
-              <p>Urban</p>
+              <p><b>Urban</b></p>
             </div>
           </div>
 
@@ -810,57 +810,69 @@
 </section>
 
 <!-- RESULTS SECTION -->
-<section class="hero is-light is-small" style="display: none;">
+<section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
     <h1 class="title is-1 mathvista">Experiment Results</h1>
   </div>
 </section>
 
 <section class="section">
-  <div class="container" style="display: none;">
+  <div class="container">
 
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Results on Existing Foundation Models</h2>
-        <!-- <p>One example for each reasoning skill required in <span class="mathvista">HRScene</span></p> -->
-        <div id="results-carousel" class="carousel results-carousel">
+        <h2 class="title is-3">Results on 25 Real-World Datasets</h2>
+        
+        <div id="results-carousel">
+
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-figures/score_leaderboard_gpt4v.png" alt="grade-lv" width="60%"/>
-              <p>Accuracy scores of primary baselines on the testmini subset (1,000 examples) of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                <span class="mathvista">HRScene</span>. 
-                <br>
-                Both CoT GPT-4 and PoT GPT-4 are augmented with Bard captions and OCR text.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-figures/bard_error.png" alt="grade-lv" width="70%"/>
+              <img src="static/images/tab3.png" alt="grade-lv" width="50%"/>
               <p>
-                Error analysis of Bard results: (a) presents errors in answers and explanations; <br>
-                (b) delves into the details of wrong explanations. <br>
-                Notations: “Answer” is “Ans.”, “Explanation” is “Exp.”, “Partially Correct” is “Partial”, <br>
-                and “Not applicable” refers to unanswerable or indeterminate cases.</p>
+                Overall results of all models on real-world datasets of 
+                <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista">HRScene</span>. <br><br>
+
+                The models are clustered according to the parameter sizes. 
+                <b>Bold</b> indicates global best performance, while <u>underline</u> represents the best of the group. 
+                Avg is the mean value of the column/row.  
+
+                Results show that due to the native resolution support of Qwen, it obtains SOTA even general capability might not be the best. 
+                This result highlights <b>the importance of the HRI processing capability of native resolution to obtain high performance.</b> 
+                However, <b>the average performance across all categories is only 48.54%, showing the large gap between VLMs and efficient HRI processing.</b>
+              </p>
             </div>
           </div>
+
+          <h2 class="title is-3">Results on 2 Diagnosis Datasets</h2>
+
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-figures/grade-lv.png" alt="grade-lv" width="90%"/>
-              <p>Average accuracy scores across different grade levels for leading foundation models</p>
+              <b>White Background</b><br>
+              <img src="static/images/tab4.png" alt="grade-lv" width="70%"/>
+              <p>
+                Table shows the statistics of the <b>WhiteBackground diagnosis</b>. <br><br>
+                We report the average performance of the samples (Perf &uarr;), the performance drop with image size increasing from 1x1 (Size &uarr;), 
+                and the region expectation gap (Region &darr;), which is the difference between the highest performance region and the mean 
+                performance of every region. We call this <b><i>Regional Divergence</i></b>. As shown in Table, most of the models cannot maintain consistent 
+                performance with increasing image size. Furthermore, models exhibit significant Region Divergence, usually amplified with increasing image size.
+              </p>
             </div>
           </div>
+
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-figures/contexts.png" alt="contexts" width="90%"/>
-              <p>Accuracy scores of leading baselines across various visual contexts</p>
+              <b>Complex Grid</b><br>
+              <img src="static/images/fig4.png" alt="grade-lv" width="90%"/>
+              <p>
+                Surprisingly, We observe a phenomenon that is similar to lost-in-the-middle. 
+                Figure shows the performance change of the models with increasing Manhattan distance from row 1, column 1 to the needle image. 
+                Differently, we observe the performance forms a U-shape based on the Manhattan distance from the left upper corner rather than 
+                the linear depth of the needle in traditional NIAH. We call this Lost-in-the-middle Manhattan.
+              </p>
             </div>
           </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-figures/ablation.png" alt="geometric reasoning" width="90%"/>
-              <p>Average accuracy scores of LLM baselines under various visual inputs</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -868,123 +880,27 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Visualization Examples</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/5.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/6.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/37.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/38.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/39.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/40.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/41.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/42.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/43.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/44.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/45.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/46.png" alt="" width="50%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/47.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/48.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/49.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/50.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/51.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/52.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/53.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/54.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/55.png" alt="" width="55%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/56.png" alt="" width="50%"/>
-            </div>
-          </div>   
+        <div id="results-carousel">
 
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/fig6.png" alt="" width="80%" style="margin-top: 20px;"/>
+              <br>
+              <br>
+             <p>Detailed performance of some models on two diagnose datasets.</p>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
 
-    <!-- <div class="container is-full has-text-centered content m-6" id="result-table">
+    <div class="columns is-centered has-text-centered">
+        We also provide a convenient tool to diagnose your own model with 5 lines of code! 
+        Here is the&#20;<a href="https://huggingface.co/datasets/Wenliang04/HRScene" target="_blank">Hugging Face Dataset</a>
+    </div>
+
+    <div class="container is-full has-text-centered content m-6" id="result-table">
       <h2 class="title is-3" id="explorer">Explorer</h2>
       <p>Explore the outputs of each model on <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
         <span class="mathvista">HRScene</span></p>
@@ -1032,7 +948,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </section>
 
