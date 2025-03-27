@@ -12,9 +12,7 @@ function create_number(data) {
     image = make_img(`${BASE_DIR}/${data.image}`);
   // image = make_img(`${BASE_DIR}/1.jpg`);
 
-  let choices = "";
-  if (data.question_type === "multi_choice")
-    choices = make_choices(data.choices);
+  let choices = make_choices(data.choices);
 
   // if data has the answer attr.
   let answer = "";

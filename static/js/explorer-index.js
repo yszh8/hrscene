@@ -46,11 +46,11 @@ $(document).ready(function () {
 
   // load and display default models
   let qids = getRandomSubarray(num_output_qs);
-  let [folder, output_data] = read_data("Multimodal Bard");
+  let [folder, output_data] = read_data("Claude-Haiku");
   output_data.addEventListener("load", function () {
     refresh_table(qids);
   });
-  [folder, output_data] = read_data("CoT GPT4 (Caption+OCR)");
+  [folder, output_data] = read_data("Claude-Sonnet");
   output_data.addEventListener("load", function () {
     refresh_table(qids);
   });
@@ -159,12 +159,8 @@ function generate_row(qid, model_names) {
         <div class='leve-item container m-3' style='width: 30%;'>
             ${create_number(test_data[qid.toString()])}
         </div>
-        <div class='leve-item container m-3' style='width: 30%; white-space: pre-wrap;'>${
-          responses[0]["response"]
-        }</div>
-        <div class='leve-item container m-3' style='width: 30%; white-space: pre-wrap;'>${
-          responses[1]["response"]
-        }</div>
+        <div class='leve-item container m-3' style='width: 30%; white-space: pre-wrap;'>${responses[0]['response']}</div>
+        <div class='leve-item container m-3' style='width: 30%; white-space: pre-wrap;'>${responses[1]['response']}</div>
     </div>`;
   return html;
 }

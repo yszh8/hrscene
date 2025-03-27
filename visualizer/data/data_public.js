@@ -1,9387 +1,10776 @@
-test_data = {
-    "0": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing a pure purple top on the right\n",
-        "answer": "E",
-        "dataset": "Autonomous_Driving",
-        "image_id": 0,
-        "choices": [
-            "slowing down",
-            "stopping",
-            "passing by",
-            "accelerating/speeding up",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/0",
-        "question_type": "multi_choice"
-    },
-    "1": {
-        "question": "What is motion of the pedestrian wearing black top and wearing black bottom on the right?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 1,
-        "choices": [
-            "crossing the crosswalk",
-            "waiting to cross",
-            "standing",
-            "walking on the sidewalk",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/1",
-        "question_type": "multi_choice"
-    },
-    "2": {
-        "question": "What color is the traffic light on the left?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 2,
-        "choices": [
-            "red",
-            "yellow",
-            "green",
-            "changing or off",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/2",
-        "question_type": "multi_choice"
-    },
-    "3": {
-        "question": "What should the ego vehicle do when encountering the black suv on the left?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 3,
-        "choices": [
-            "stopping",
-            "no response",
-            "slowing down",
-            "accelerating/speeding up",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/3",
-        "question_type": "multi_choice"
-    },
-    "4": {
-        "question": "What is motion of the pedestrian wearing blue bottom on the left?\n",
-        "answer": "E",
-        "dataset": "Autonomous_Driving",
-        "image_id": 4,
-        "choices": [
-            "waiting to cross",
-            "walking on the sidewalk",
-            "jaywalking (illegally crossing not at pedestrian crossing)",
-            "crossing the crosswalk",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/4",
-        "question_type": "multi_choice"
-    },
-    "5": {
-        "question": "What should the ego vehicle do when encountering the white truck on the left?\n",
-        "answer": "C",
-        "dataset": "Autonomous_Driving",
-        "image_id": 5,
-        "choices": [
-            "no response",
-            "accelerating/speeding up",
-            "passing by",
-            "yielding",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/5",
-        "question_type": "multi_choice"
-    },
-    "6": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the left?\n",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 6,
-        "choices": [
-            "no response",
-            "slowing down",
-            "yielding",
-            "stopping",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/6",
-        "question_type": "multi_choice"
-    },
-    "7": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black top and wearing black bottom on the right?\n",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 7,
-        "choices": [
-            "slowing down",
-            "accelerating/speeding up",
-            "stopping",
-            "passing by",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/7",
-        "question_type": "multi_choice"
-    },
-    "8": {
-        "question": "What color is the traffic light on the right?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 8,
-        "choices": [
-            "red",
-            "yellow",
-            "green",
-            "changing or off",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/8",
-        "question_type": "multi_choice"
-    },
-    "9": {
-        "question": "What is motion of the pedestrian wearing black top on the right?\n",
-        "answer": "D",
-        "dataset": "Autonomous_Driving",
-        "image_id": 9,
-        "choices": [
-            "waiting to cross",
-            "standing",
-            "crossing the crosswalk",
-            "jaywalking (illegally crossing not at pedestrian crossing)",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/9",
-        "question_type": "multi_choice"
-    },
-    "10": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the left?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 10,
-        "choices": [
-            "no response",
-            "slowing down",
-            "accelerating/speeding up",
-            "stopping",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/10",
-        "question_type": "multi_choice"
-    },
-    "11": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black top on the left?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 11,
-        "choices": [
-            "accelerating/speeding up",
-            "slowing down",
-            "no response",
-            "passing by",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/11",
-        "question_type": "multi_choice"
-    },
-    "12": {
-        "question": "What should the ego vehicle do when encountering the white truck on the left?\n",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 12,
-        "choices": [
-            "passing by",
-            "accelerating/speeding up",
-            "stopping",
-            "yielding",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/12",
-        "question_type": "multi_choice"
-    },
-    "13": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black bottom on the left?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 13,
-        "choices": [
-            "accelerating/speeding up",
-            "yielding",
-            "no response",
-            "passing by",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/13",
-        "question_type": "multi_choice"
-    },
-    "14": {
-        "question": "What should the ego vehicle do when encountering the black sedan on the left?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 14,
-        "choices": [
-            "yielding",
-            "following",
-            "stopping",
-            "no response",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/14",
-        "question_type": "multi_choice"
-    },
-    "15": {
-        "question": "What is motion of the pedestrian wearing blue top on the left?\n",
-        "answer": "D",
-        "dataset": "Autonomous_Driving",
-        "image_id": 15,
-        "choices": [
-            "crossing the crosswalk",
-            "standing",
-            "waiting to cross",
-            "walking on the sidewalk",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/15",
-        "question_type": "multi_choice"
-    },
-    "16": {
-        "question": "What is motion of the black mid-suv on the ego lane?\n",
-        "answer": "D",
-        "dataset": "Autonomous_Driving",
-        "image_id": 16,
-        "choices": [
-            "parked",
-            "stopped",
-            "other",
-            "moving",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/16",
-        "question_type": "multi_choice"
-    },
-    "17": {
-        "question": "What should the ego vehicle do when encountering the blue sedan on the left?\n",
-        "answer": "E",
-        "dataset": "Autonomous_Driving",
-        "image_id": 17,
-        "choices": [
-            "no response",
-            "passing by",
-            "following",
-            "yielding",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/17",
-        "question_type": "multi_choice"
-    },
-    "18": {
-        "question": "What should the ego vehicle do when encountering the white suv on the ego lane?\n",
-        "answer": "D",
-        "dataset": "Autonomous_Driving",
-        "image_id": 18,
-        "choices": [
-            "passing by",
-            "yielding",
-            "no response",
-            "stopping",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/18",
-        "question_type": "multi_choice"
-    },
-    "19": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the right?\n",
-        "answer": "D",
-        "dataset": "Autonomous_Driving",
-        "image_id": 19,
-        "choices": [
-            "yielding",
-            "accelerating/speeding up",
-            "stopping",
-            "slowing down",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/19",
-        "question_type": "multi_choice"
-    },
-    "20": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the left?\n",
-        "answer": "C",
-        "dataset": "Autonomous_Driving",
-        "image_id": 20,
-        "choices": [
-            "yielding",
-            "accelerating/speeding up",
-            "slowing down",
-            "no response",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/20",
-        "question_type": "multi_choice"
-    },
-    "21": {
-        "question": "What is motion of the white sedan on the left?\n",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 21,
-        "choices": [
-            "moving",
-            "parked",
-            "other",
-            "stopped",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/21",
-        "question_type": "multi_choice"
-    },
-    "22": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the left?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 22,
-        "choices": [
-            "accelerating/speeding up",
-            "no response",
-            "slowing down",
-            "yielding",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/22",
-        "question_type": "multi_choice"
-    },
-    "23": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black top and wearing black bottom on the ego lane?\n",
-        "answer": "E",
-        "dataset": "Autonomous_Driving",
-        "image_id": 23,
-        "choices": [
-            "accelerating/speeding up",
-            "yielding",
-            "passing by",
-            "slowing down",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/23",
-        "question_type": "multi_choice"
-    },
-    "24": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black top on the right?\n",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 24,
-        "choices": [
-            "yielding",
-            "passing by",
-            "accelerating/speeding up",
-            "no response",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/24",
-        "question_type": "multi_choice"
-    },
-    "25": {
-        "question": "What is motion of the pedestrian wearing white top on the right?\n",
-        "answer": "B",
-        "dataset": "Autonomous_Driving",
-        "image_id": 25,
-        "choices": [
-            "jaywalking (illegally crossing not at pedestrian crossing)",
-            "standing",
-            "waiting to cross",
-            "crossing the crosswalk",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/25",
-        "question_type": "multi_choice"
-    },
-    "26": {
-        "question": "What is motion of the white sedan on the left?\n",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 26,
-        "choices": [
-            "moving",
-            "stopped",
-            "other",
-            "parked",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/26",
-        "question_type": "multi_choice"
-    },
-    "27": {
-        "question": "What type of the traffic signal ",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 27,
-        "choices": [
-            "speed limit sign",
-            "construction work",
-            "stop sign",
-            "no parking",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/27",
-        "question_type": "multi_choice"
-    },
-    "28": {
-        "question": "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the left?\n",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 28,
-        "choices": [
-            "stopping",
-            "slowing down",
-            "no response",
-            "yielding",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/28",
-        "question_type": "multi_choice"
-    },
-    "29": {
-        "question": "What type of the traffic signal ",
-        "answer": "A",
-        "dataset": "Autonomous_Driving",
-        "image_id": 29,
-        "choices": [
-            "speed limit sign",
-            "construction work",
-            "stop sign",
-            "no parking",
-            "The image does not feature the object"
-        ],
-        "image": "Autonomous_Driving/29",
-        "question_type": "multi_choice"
-    },
-    "30": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 2,
-        "choices": [
-            "<ocr> G-7-4 100.00% 99.75% </ocr>",
-            "<ocr> G-7-4 90.00% 99.75% </ocr>",
-            "<ocr> G-5-4 100.00% 99.75% </ocr>",
-            "<ocr> G-7-4 100.00% 89.75% </ocr>"
-        ],
-        "image": "DocStruct4M/2",
-        "question_type": "multi_choice"
-    },
-    "31": {
-        "question": "Read the following text: <doc> Second, this case also can be used to address one fundamental challenge in studying the \n effect of natural disasters on public opinion. Even though the occurrences of natural disasters \n are unexpected, individual exposures to disasters are often not random, making it difficult to \n distinguish between correlation and causation in the study of the natural disaster hypothesis. \n We address this problem by taking advantage of the circumstances of the Kinu River flood \n case. The overflow of the river water affected the east side of the city, and not the west. This \n was mainly due to a failure of the flood berm caused by the massive rainfall, which caught Joso \n residents and experts by surprise. In fact, both the east and west\nWhich of the following options is correct?\n",
-        "answer": "D",
-        "dataset": "DocStruct4M",
-        "image_id": 4,
-        "choices": [
-            "sides of the city were under \n the risk of being flooded if the Kinu River were to overflow. Consider the hazard map created \n by the Ioso City Hall in 2009 in Figure 1. The hazard map shows which areas of the city might \n be flooded in the event of a Kinu River flood. The map demonstrates that both the east and \n west are under the flood risk. In particular, in the area which we chose for our study (in a red \n circle), both the east and west are estimated to be flooded. Thus, we contend that a variation in \n the exposures to flood damages can be considered effectively random, which we will support \n with more empirical evidence later. \n 4 </doc>",
-            "sides of the city were under \n the risk of being flooded if the King River were to overflow. Consider the hazard map created \n by the Joso City Hall in 2009 in Figure 1. The hazard map shows which areas of the city might \n be flooded in the event of a King River flood. The map demonstrates that both the east and \n west are under the flood risk. In particular, in the area which we chose for our study (in a red \n circle), both the east and west are estimated to be flooded. Thus, we contend that a variation in \n the exposures to flood damages can be considered effectively random, which we will support \n with more empirical evidence later. \n 4 </doc>",
-            "sides of the city were under \n the risk of being flooded if the Kinu River were to overflow. Consider the hazard map created \n by the Joso City Hall in 2009 in Figure l. The hazard map shows which areas of the city might \n be flooded in the event of a Kinu River flood. The map demonstrates that both the east and \n west are under the flood risk. In particular, in the area which we chose for our study (in a red \n circle), both the east and west are estimated to be flooded. Thus, we contend that a variation in \n the exposures to flood damages can be considered effectively random, which we will support \n with more empirical evidence later. \n 4 </doc>",
-            "sides of the city were under \n the risk of being flooded if the Kinu River were to overflow. Consider the hazard map created \n by the Joso City Hall in 2009 in Figure 1. The hazard map shows which areas of the city might \n be flooded in the event of a Kinu River flood. The map demonstrates that both the east and \n west are under the flood risk. In particular, in the area which we chose for our study (in a red \n circle), both the east and west are estimated to be flooded. Thus, we contend that a variation in \n the exposures to flood damages can be considered effectively random, which we will support \n with more empirical evidence later. \n 4 </doc>"
-        ],
-        "image": "DocStruct4M/4",
-        "question_type": "multi_choice"
-    },
-    "32": {
-        "question": "Predict the bounding box of the text <ocr> Contract Agreement Between: Print Date 08/16/12 Page 5 of 5 \n Contract / Revision Alt Order # </ocr> \nWhich of the following options is correct?\n",
-        "answer": NaN,
-        "dataset": "DocStruct4M",
-        "image_id": 5,
-        "choices": [
-            "<bbox>55,481,181,576</bbox>",
-            "<bbox>342,182,422,245</bbox>",
-            "<bbox>29,24,955,72</bbox>",
-            "<bbox>543,336,628,430</bbox>"
-        ],
-        "image": "DocStruct4M/5",
-        "question_type": "multi_choice"
-    },
-    "33": {
-        "question": "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
-        "answer": "B",
-        "dataset": "DocStruct4M",
-        "image_id": 6,
-        "choices": [
-            "All these Gods for his faithfulness",
-            "Hebrews 12:1-2",
-            "ten years at Chistchurch",
-            "different ventures and for improving us"
-        ],
-        "image": "DocStruct4M/6",
-        "question_type": "multi_choice"
-    },
-    "34": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 7,
-        "choices": [
-            "<ocr> to April, 2008: R.J. </ocr>",
-            "<ocr> to April, 2008 </ocr>",
-            "<ocr> to April, 2010: R.J. </ocr>",
-            "<ocr> April, 2008: R.J. </ocr>"
-        ],
-        "image": "DocStruct4M/7",
-        "question_type": "multi_choice"
-    },
-    "35": {
-        "question": "Which of the following phrases appears in the picture? \nWhich of the following options is correct?\n",
-        "answer": "D",
-        "dataset": "DocStruct4M",
-        "image_id": 8,
-        "choices": [
-            "Average monthly spending $28,800",
-            "Up payment $16,000",
-            "Pay outcome tax on interest",
-            "Access money easily any time"
-        ],
-        "image": "DocStruct4M/8",
-        "question_type": "multi_choice"
-    },
-    "36": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "C",
-        "dataset": "DocStruct4M",
-        "image_id": 10,
-        "choices": [
-            "<ocr> 11 October 2016 </ocr>",
-            "<ocr> County Proficiency Tests </ocr>",
-            "<ocr> Mr M Savagar </ocr>",
-            "<ocr> Accountant RobertPowell </ocr>"
-        ],
-        "image": "DocStruct4M/10",
-        "question_type": "multi_choice"
-    },
-    "37": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 11,
-        "choices": [
-            "<ocr> 20 WFXG M.F 9:00 AM-10:00 AM \n 05131120 1x ----1-- 051251201o \n WFXG F :30 9'.4 )ot220H \n 2',1 WFXG M-F 10:00 AM-11:00 AM \n O5l25l20lo O5l31l2O 1x -1----- </ocr>",
-            "<ocr> 15 WFXX M.F 1:00 AM-3:00 AM \n 05131120 1x ----1-- 0332251201o \n WFXG F :30 9'.4 )</ocr>",
-            "<ocr> Statement </ocr>",
-            "<bbox>0,121,34,210</bbox>"
-        ],
-        "image": "DocStruct4M/11",
-        "question_type": "multi_choice"
-    },
-    "38": {
-        "question": "What is the number on the traffic sign? \nWhich of the following options is correct?\n",
-        "answer": "B",
-        "dataset": "DocStruct4M",
-        "image_id": 12,
-        "choices": [
-            "30",
-            "50",
-            "60",
-            "20"
-        ],
-        "image": "DocStruct4M/12",
-        "question_type": "multi_choice"
-    },
-    "39": {
-        "question": "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 13,
-        "choices": [
-            "Quarter 2 Performance Measure Check-in",
-            "Quarter 4 Performance Measure Check-in",
-            "Review Phase 1 Program",
-            "Quarter 2 Performance Measure Check-out"
-        ],
-        "image": "DocStruct4M/13",
-        "question_type": "multi_choice"
-    },
-    "40": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "C",
-        "dataset": "DocStruct4M",
-        "image_id": 14,
-        "choices": [
-            "<ocr> Tel: Code #304; 340-0824 </ocr>",
-            "<ocr> Te1: Code #304; 346-0824 </ocr>",
-            "<ocr> Tel: Code #304; 346-0824 </ocr>",
-            "<ocr> Tel: Code #304; 346-0821 </ocr>"
-        ],
-        "image": "DocStruct4M/14",
-        "question_type": "multi_choice"
-    },
-    "41": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 16,
-        "choices": [
-            "<ocr> SPOT 11/17/19-11/17/19 </ocr>",
-            "<ocr> SPOT 11/16/19-11/16/19 </ocr>",
-            "<ocr> SPOT 11/13/19-11/13/19 </ocr>",
-            "<ocr> SPOT 11/12/19-11/12/19 </ocr>"
-        ],
-        "image": "DocStruct4M/16",
-        "question_type": "multi_choice"
-    },
-    "42": {
-        "question": "Describe the content and text within the image. \nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 18,
-        "choices": [
-            "man standing by a window , holding newborn baby wrapped in blanket <ocr> a a a a a no a a alamy alamy a a alamy a a a a a a no a alamy a a a a no a a a alamy photo stock JTCFPX a www.alamy.com </ocr>",
-            "man sitting near a chair, holding toy wrapped in blanket <ocr> a a a a a no a a alamy alamy a a alamy a a a a a a no a alamy a a a a no a a a alamy photo stock JTCFPX a www.alamy.com </ocr>",
-            "woman standing by a window , holding newborn baby wrapped in blanket <ocr> bb ccc a blamy JTCFPX a www.alamy.com </ocr>",
-            "man holding a cup"
-        ],
-        "image": "DocStruct4M/18",
-        "question_type": "multi_choice"
-    },
-    "43": {
-        "question": "Which of the following sentences is present in the image? \nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 19,
-        "choices": [
-            "Equipment, motor vehicles",
-            "3,304",
-            "NET BOOK VALUE",
-            "350"
-        ],
-        "image": "DocStruct4M/19",
-        "question_type": "multi_choice"
-    },
-    "44": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "D",
-        "dataset": "DocStruct4M",
-        "image_id": 20,
-        "choices": [
-            "<ocr> Star Nursery and Piayschool aims to provide a safe and secure environment with lots\nof available resources for the children to assist with their learning and development.\nTo ensure all areas of the EYFS are being met.</ocr>",
-            "<ocr> Star Nursery and Playschool aims to provide a safe and secure environment with lots\nof available resources for the children to assist with their learning and development.\nTo ensure all areas of the EYES are being met.  </ocr>",
-            "<ocr> Star Nursery and Playschool aims to provide a safe and secure environment with lots\nof available resources for the children to assist with their learning and development.\nTo ensure all areas of the EVFS are being met. </ocr>",
-            "<ocr> Star Nursery and Playschool aims to provide a safe and secure environment with lots\nof available resources for the children to assist with their learning and development.\nTo ensure all areas of the EYFS are being met. </ocr>"
-        ],
-        "image": "DocStruct4M/20",
-        "question_type": "multi_choice"
-    },
-    "45": {
-        "question": "Which of the following phrases appears in the picture? \nWhich of the following options is correct?\n",
-        "answer": "D",
-        "dataset": "DocStruct4M",
-        "image_id": 21,
-        "choices": [
-            "Philllippa Suzanne",
-            "Queen George's House",
-            "David Cooper",
-            "Interim Director of Business Development"
-        ],
-        "image": "DocStruct4M/21",
-        "question_type": "multi_choice"
-    },
-    "46": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "B",
-        "dataset": "DocStruct4M",
-        "image_id": 22,
-        "choices": [
-            "<ocr> Esuples with Facebook and Telser \n Facebook </ocr>",
-            "<ocr> 64% of the brand experience </ocr>",
-            "<ocr> Things You're Doing Wrong </ocr>",
-            "<ocr> Manage Declining Organic </ocr>"
-        ],
-        "image": "DocStruct4M/22",
-        "question_type": "multi_choice"
-    },
-    "47": {
-        "question": "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
-        "answer": "A",
-        "dataset": "DocStruct4M",
-        "image_id": 23,
-        "choices": [
-            "Tangible fixed assets are depreciated",
-            "The actual lives assessments",
-            "a company unlimited by guarantee",
-            "Pensions income"
-        ],
-        "image": "DocStruct4M/23",
-        "question_type": "multi_choice"
-    },
-    "48": {
-        "question": "Which of the following phrases appears in the picture? \nWhich of the following options is correct?\n",
-        "answer": "D",
-        "dataset": "DocStruct4M",
-        "image_id": 24,
-        "choices": [
-            "determined with the",
-            "a larger number of meaning less",
-            "sent over time",
-            "digital assets to their"
-        ],
-        "image": "DocStruct4M/24",
-        "question_type": "multi_choice"
-    },
-    "49": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "C",
-        "dataset": "DocStruct4M",
-        "image_id": 25,
-        "choices": [
-            "<ocr> VC17G011 </ocr>",
-            "<ocr> Ve176011 </ocr>",
-            "<ocr> VC176011 </ocr>",
-            "<ocr> VU176011 </ocr>"
-        ],
-        "image": "DocStruct4M/25",
-        "question_type": "multi_choice"
-    },
-    "50": {
-        "question": "Which of the following phrases appears in the picture? \nWhich of the following options is correct?\n",
-        "answer": "B",
-        "dataset": "DocStruct4M",
-        "image_id": 27,
-        "choices": [
-            "7,780",
-            "7,779",
-            "2,333",
-            "80845"
-        ],
-        "image": "DocStruct4M/27",
-        "question_type": "multi_choice"
-    },
-    "51": {
-        "question": "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
-        "answer": "B",
-        "dataset": "DocStruct4M",
-        "image_id": 28,
-        "choices": [
-            "<ocr> AMERICAN COCKTAILS </ocr>",
-            "<ocr> APOTHECARY COCKTAILS </ocr>",
-            "<ocr> APOTHECARY GOCKTAILS </ocr>",
-            "<ocr> APOTHCARY COCKTAILS </ocr>"
-        ],
-        "image": "DocStruct4M/28",
-        "question_type": "multi_choice"
-    },
-    "52": {
-        "question": "Which of the following sentences is present in the image? \nWhich of the following options is correct?\n",
-        "answer": "B",
-        "dataset": "DocStruct4M",
-        "image_id": 29,
-        "choices": [
-            "4D Sun for iPhone",
-            "Spaceweather community",
-            "Jun. 6, 2012",
-            "Page 1 of 3"
-        ],
-        "image": "DocStruct4M/29",
-        "question_type": "multi_choice"
-    },
-    "53": {
-        "question": "Which president's face is highlighted in the red rectangle on Mount Rushmore?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 0,
-        "choices": [
-            "Theodore Roosevelt",
-            "George Washington",
-            "Thomas Jefferson",
-            "Abraham Lincoln"
-        ],
-        "image": "HR-Bench/0",
-        "question_type": "multi_choice"
-    },
-    "54": {
-        "question": "On the provided map, which two numbered locations belong to the same country?\n",
-        "answer": "A",
-        "dataset": "HR-Bench",
-        "image_id": 1,
-        "choices": [
-            "Locations 1 and 2",
-            "Locations 2 and 4",
-            "Locations 2 and 3",
-            "Locations 1 and 3"
-        ],
-        "image": "HR-Bench/1",
-        "question_type": "multi_choice"
-    },
-    "55": {
-        "question": "What word is written on the building to the left in the image?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 2,
-        "choices": [
-            "five",
-            "house",
-            "office",
-            "family"
-        ],
-        "image": "HR-Bench/2",
-        "question_type": "multi_choice"
-    },
-    "56": {
-        "question": "What is the color of the \"1\" on the left side hazard label of the storage container?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 3,
-        "choices": [
-            "Blue",
-            "Yellow",
-            "Green",
-            "Red"
-        ],
-        "image": "HR-Bench/3",
-        "question_type": "multi_choice"
-    },
-    "57": {
-        "question": "In which direction is the child in the foreground running on the bridge?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 4,
-        "choices": [
-            "No child in the image",
-            "Towards the camera",
-            "Sideways",
-            "Away from the camera"
-        ],
-        "image": "HR-Bench/4",
-        "question_type": "multi_choice"
-    },
-    "58": {
-        "question": "What word is written on the hang glider?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 5,
-        "choices": [
-            "Cloudy",
-            "Stormy",
-            "Windy",
-            "Sunny"
-        ],
-        "image": "HR-Bench/5",
-        "question_type": "multi_choice"
-    },
-    "59": {
-        "question": "What is the color of the flag?\n",
-        "answer": "A",
-        "dataset": "HR-Bench",
-        "image_id": 6,
-        "choices": [
-            "Red",
-            "Blue",
-            "Black",
-            "White"
-        ],
-        "image": "HR-Bench/6",
-        "question_type": "multi_choice"
-    },
-    "60": {
-        "question": "What is the material of the ceiling beams in the room?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 7,
-        "choices": [
-            "Stone",
-            "Metal",
-            "Plastic",
-            "Wood"
-        ],
-        "image": "HR-Bench/7",
-        "question_type": "multi_choice"
-    },
-    "61": {
-        "question": "What is the average sales of Item 10 and Item 15?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 8,
-        "choices": [
-            "9",
-            "15",
-            "12",
-            "6"
-        ],
-        "image": "HR-Bench/8",
-        "question_type": "multi_choice"
-    },
-    "62": {
-        "question": "What word is written on the hang glider?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 9,
-        "choices": [
-            "Cloudy",
-            "Windy",
-            "Sunny",
-            "Stormy"
-        ],
-        "image": "HR-Bench/9",
-        "question_type": "multi_choice"
-    },
-    "63": {
-        "question": "What is the direction indicated on the sign pointing towards Zaragoza?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 10,
-        "choices": [
-            "Right",
-            "Straight",
-            "Left",
-            "Downward"
-        ],
-        "image": "HR-Bench/10",
-        "question_type": "multi_choice"
-    },
-    "64": {
-        "question": "What's the color of the car?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 11,
-        "choices": [
-            "Green",
-            "Red",
-            "Black",
-            "Yellow"
-        ],
-        "image": "HR-Bench/11",
-        "question_type": "multi_choice"
-    },
-    "65": {
-        "question": "What object can be seen inside the partially built brick structure?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 13,
-        "choices": [
-            "A plastic bag",
-            "A dog",
-            "A metal chair",
-            "A wooden box with flowers"
-        ],
-        "image": "HR-Bench/13",
-        "question_type": "multi_choice"
-    },
-    "66": {
-        "question": "Where is the bird positioned in relation to the car?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 14,
-        "choices": [
-            "To the right side of the car",
-            "To the left side on the ground in front of the car",
-            "On top of the car",
-            "Behind the car"
-        ],
-        "image": "HR-Bench/14",
-        "question_type": "multi_choice"
-    },
-    "67": {
-        "question": "On the provided map, which two numbered locations belong to the same country?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 15,
-        "choices": [
-            "Locations 2 and 4",
-            "Locations 1 and 4",
-            "Locations 1 and 2",
-            "Locations 1 and 3"
-        ],
-        "image": "HR-Bench/15",
-        "question_type": "multi_choice"
-    },
-    "68": {
-        "question": "What is the name written on the boat?\n",
-        "answer": "A",
-        "dataset": "HR-Bench",
-        "image_id": 16,
-        "choices": [
-            "GONDOLA",
-            "GENDOLA",
-            "GENDALA",
-            "GODOLA"
-        ],
-        "image": "HR-Bench/16",
-        "question_type": "multi_choice"
-    },
-    "69": {
-        "question": "Where is the statue located in the image?\n",
-        "answer": "C",
-        "dataset": "HR-Bench",
-        "image_id": 17,
-        "choices": [
-            "The statue is located on the left side of the image",
-            "The statue is located inside the colonnade",
-            "The statue is located on the right side of the image",
-            "The statue is located in the center of the colonnade"
-        ],
-        "image": "HR-Bench/17",
-        "question_type": "multi_choice"
-    },
-    "70": {
-        "question": "On the provided map, which two numbered locations belong to the same country?\n",
-        "answer": "A",
-        "dataset": "HR-Bench",
-        "image_id": 18,
-        "choices": [
-            "Locations 1 and 2",
-            "Locations 1 and 3",
-            "Locations 2 and 3",
-            "Locations 2 and 4"
-        ],
-        "image": "HR-Bench/18",
-        "question_type": "multi_choice"
-    },
-    "71": {
-        "question": "What is the sum of the sales for Item 1 and Item 6?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 19,
-        "choices": [
-            "96",
-            "95",
-            "94",
-            "97"
-        ],
-        "image": "HR-Bench/19",
-        "question_type": "multi_choice"
-    },
-    "72": {
-        "question": "Where is the clock located in the room?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 22,
-        "choices": [
-            "No clock in the room",
-            "On the wall to the left of the main seating area",
-            "Above the main seating area",
-            "On the wall to the right of the main seating area"
-        ],
-        "image": "HR-Bench/22",
-        "question_type": "multi_choice"
-    },
-    "73": {
-        "question": "What is the title of the framed poster visible in the image?\n",
-        "answer": "D",
-        "dataset": "HR-Bench",
-        "image_id": 23,
-        "choices": [
-            "Ely Diocess",
-            "Ely Division",
-            "Ely Cathedral",
-            "Ely Diocese"
-        ],
-        "image": "HR-Bench/23",
-        "question_type": "multi_choice"
-    },
-    "74": {
-        "question": "Where is the water bottle placed relative to the person in the image?\n",
-        "answer": "C",
-        "dataset": "HR-Bench",
-        "image_id": 25,
-        "choices": [
-            "In front of the person",
-            "Behind the person",
-            "On the left side",
-            "On the right side"
-        ],
-        "image": "HR-Bench/25",
-        "question_type": "multi_choice"
-    },
-    "75": {
-        "question": "How many people are seated at the table on the right side of the image where a woman in a striped shirt is standing?\n",
-        "answer": "C",
-        "dataset": "HR-Bench",
-        "image_id": 26,
-        "choices": [
-            "Two people",
-            "Five people",
-            "Three people",
-            "Four people"
-        ],
-        "image": "HR-Bench/26",
-        "question_type": "multi_choice"
-    },
-    "76": {
-        "question": "What is the year inscribed on the sundial?\n",
-        "answer": "A",
-        "dataset": "HR-Bench",
-        "image_id": 27,
-        "choices": [
-            "1762",
-            "1768",
-            "1752",
-            "1782"
-        ],
-        "image": "HR-Bench/27",
-        "question_type": "multi_choice"
-    },
-    "77": {
-        "question": "What type of structure is visible to the right of the image?\n",
-        "answer": "B",
-        "dataset": "HR-Bench",
-        "image_id": 28,
-        "choices": [
-            "A house",
-            "An elephant statue",
-            "A bridge",
-            "A car"
-        ],
-        "image": "HR-Bench/28",
-        "question_type": "multi_choice"
-    },
-    "78": {
-        "question": "Where are the houses located relative to the tea fields?\n",
-        "answer": "A",
-        "dataset": "HR-Bench",
-        "image_id": 29,
-        "choices": [
-            "At the top right corner",
-            "In the middle of the tea fields",
-            "At the top left corner",
-            "In the bottom center"
-        ],
-        "image": "HR-Bench/29",
-        "question_type": "multi_choice"
-    },
-    "79": {
-        "question": "Where is the track in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 0,
-        "choices": [
-            "bottom",
-            "nonexistent",
-            "right",
-            "top"
-        ],
-        "image": "HRVQA/0",
-        "question_type": "multi_choice"
-    },
-    "80": {
-        "question": "How many blue soccer ball fields are there in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 1,
-        "choices": [
-            "0",
-            "2",
-            "1",
-            "3"
-        ],
-        "image": "HRVQA/1",
-        "question_type": "multi_choice"
-    },
-    "81": {
-        "question": "What kind of scene can you see in this image?\n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 4,
-        "choices": [
-            "residential",
-            "rural",
-            "industrial",
-            "others"
-        ],
-        "image": "HRVQA/4",
-        "question_type": "multi_choice"
-    },
-    "82": {
-        "question": "Is the number of storage tanks equal to the number of swimming pools in this image?\n",
-        "answer": "C",
-        "dataset": "HRVQA",
-        "image_id": 5,
-        "choices": [
-            "yes",
-            "no",
-            "ambiguous",
-            "probably"
-        ],
-        "image": "HRVQA/5",
-        "question_type": "multi_choice"
-    },
-    "83": {
-        "question": "What size is the ship in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 6,
-        "choices": [
-            "nonexistent",
-            "small",
-            "tiny",
-            "large"
-        ],
-        "image": "HRVQA/6",
-        "question_type": "multi_choice"
-    },
-    "84": {
-        "question": "Does building exist in this image?\n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 7,
-        "choices": [
-            "no",
-            "yes ",
-            "ambiguous",
-            "probably"
-        ],
-        "image": "HRVQA/7",
-        "question_type": "multi_choice"
-    },
-    "85": {
-        "question": "What size is the ship in this image?\n",
-        "answer": "C",
-        "dataset": "HRVQA",
-        "image_id": 8,
-        "choices": [
-            "small",
-            "large",
-            "nonexistent",
-            "tiny"
-        ],
-        "image": "HRVQA/8",
-        "question_type": "multi_choice"
-    },
-    "86": {
-        "question": "What size is the storage tank in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 9,
-        "choices": [
-            "large",
-            "small",
-            "tiny",
-            "nonexistent"
-        ],
-        "image": "HRVQA/9",
-        "question_type": "multi_choice"
-    },
-    "87": {
-        "question": "What kind of scene can you see in this image?\n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 10,
-        "choices": [
-            "remote",
-            "highdensity",
-            "rural",
-            "industrial"
-        ],
-        "image": "HRVQA/10",
-        "question_type": "multi_choice"
-    },
-    "88": {
-        "question": "What kind of transportation can people use in this image?\n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 12,
-        "choices": [
-            "train",
-            "car",
-            "shuttle",
-            "bus"
-        ],
-        "image": "HRVQA/12",
-        "question_type": "multi_choice"
-    },
-    "89": {
-        "question": "Is there any water section in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 14,
-        "choices": [
-            "no",
-            "ambiguous",
-            "yes",
-            "probably"
-        ],
-        "image": "HRVQA/14",
-        "question_type": "multi_choice"
-    },
-    "90": {
-        "question": "How can people improve their strength in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 15,
-        "choices": [
-            "aerobic",
-            "tennis",
-            "cricket",
-            "basketball"
-        ],
-        "image": "HRVQA/15",
-        "question_type": "multi_choice"
-    },
-    "91": {
-        "question": "What color is the fifth small vehicle based on the left to right rule in this image?\n",
-        "answer": "C",
-        "dataset": "HRVQA",
-        "image_id": 16,
-        "choices": [
-            "green",
-            "blue",
-            "white",
-            "black"
-        ],
-        "image": "HRVQA/16",
-        "question_type": "multi_choice"
-    },
-    "92": {
-        "question": "What is the main scene of this image?\n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 18,
-        "choices": [
-            "residential",
-            "industrial",
-            "rural",
-            "other"
-        ],
-        "image": "HRVQA/18",
-        "question_type": "multi_choice"
-    },
-    "93": {
-        "question": "What kind of shape is the field track in this image?\n",
-        "answer": "D",
-        "dataset": "HRVQA",
-        "image_id": 19,
-        "choices": [
-            "irregular",
-            "polygonal",
-            "curved",
-            "straight"
-        ],
-        "image": "HRVQA/19",
-        "question_type": "multi_choice"
-    },
-    "94": {
-        "question": "What is the color of the first small vehicle based on the left to right rule in this image?\n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 20,
-        "choices": [
-            "grey",
-            "silver",
-            "white",
-            "yellow"
-        ],
-        "image": "HRVQA/20",
-        "question_type": "multi_choice"
-    },
-    "95": {
-        "question": "Where is the first small vehicle based on the left to right rule in this image?\n",
-        "answer": "C",
-        "dataset": "HRVQA",
-        "image_id": 21,
-        "choices": [
-            "center",
-            "right",
-            "topleft",
-            "left"
-        ],
-        "image": "HRVQA/21",
-        "question_type": "multi_choice"
-    },
-    "96": {
-        "question": "What is the color of the second small vehicle based on the left to right rule in this image?\n",
-        "answer": "D",
-        "dataset": "HRVQA",
-        "image_id": 22,
-        "choices": [
-            "red",
-            "yellow",
-            "silver",
-            "white"
-        ],
-        "image": "HRVQA/22",
-        "question_type": "multi_choice"
-    },
-    "97": {
-        "question": "What sport can people do in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 23,
-        "choices": [
-            "swimming",
-            "cricket",
-            "aerobic",
-            "basketball"
-        ],
-        "image": "HRVQA/23",
-        "question_type": "multi_choice"
-    },
-    "98": {
-        "question": "Where is the soccer ball field in this image?\n",
-        "answer": "C",
-        "dataset": "HRVQA",
-        "image_id": 24,
-        "choices": [
-            "topleft",
-            "nonexistent",
-            "topright",
-            "bottomright"
-        ],
-        "image": "HRVQA/24",
-        "question_type": "multi_choice"
-    },
-    "99": {
-        "question": "What sport can people do in this image?\n",
-        "answer": "A",
-        "dataset": "HRVQA",
-        "image_id": 25,
-        "choices": [
-            "aerobic",
-            "cricket",
-            "tennis",
-            "basketball"
-        ],
-        "image": "HRVQA/25",
-        "question_type": "multi_choice"
-    },
-    "100": {
-        "question": "What size is the storage tank in this image?\n",
-        "answer": "D",
-        "dataset": "HRVQA",
-        "image_id": 26,
-        "choices": [
-            "small",
-            "large",
-            "tiny",
-            "nonexistent"
-        ],
-        "image": "HRVQA/26",
-        "question_type": "multi_choice"
-    },
-    "101": {
-        "question": "What kind of shape is the third building based on the left to right rule in this image? \n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 27,
-        "choices": [
-            "irregular",
-            "triangular",
-            "circular",
-            "polygonal"
-        ],
-        "image": "HRVQA/27",
-        "question_type": "multi_choice"
-    },
-    "102": {
-        "question": "How many rectangular tennis courts are there in this image?\n",
-        "answer": "B",
-        "dataset": "HRVQA",
-        "image_id": 28,
-        "choices": [
-            "1",
-            "0",
-            "2",
-            "3"
-        ],
-        "image": "HRVQA/28",
-        "question_type": "multi_choice"
-    },
-    "103": {
-        "question": "How many rectangular basketball courts are visible in this image?\n",
-        "answer": "D",
-        "dataset": "HRVQA",
-        "image_id": 29,
-        "choices": [
-            "3",
-            "2",
-            "1",
-            "0"
-        ],
-        "image": "HRVQA/29",
-        "question_type": "multi_choice"
-    },
-    "104": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "D",
-        "dataset": "HRIQ",
-        "image_id": 0,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/0",
-        "question_type": "multi_choice"
-    },
-    "105": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "D",
-        "dataset": "HRIQ",
-        "image_id": 1,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/1",
-        "question_type": "multi_choice"
-    },
-    "106": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "B",
-        "dataset": "HRIQ",
-        "image_id": 2,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/2",
-        "question_type": "multi_choice"
-    },
-    "107": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "D",
-        "dataset": "HRIQ",
-        "image_id": 3,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/3",
-        "question_type": "multi_choice"
-    },
-    "108": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "D",
-        "dataset": "HRIQ",
-        "image_id": 7,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/7",
-        "question_type": "multi_choice"
-    },
-    "109": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "A",
-        "dataset": "HRIQ",
-        "image_id": 9,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/9",
-        "question_type": "multi_choice"
-    },
-    "110": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "E",
-        "dataset": "HRIQ",
-        "image_id": 12,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/12",
-        "question_type": "multi_choice"
-    },
-    "111": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "D",
-        "dataset": "HRIQ",
-        "image_id": 13,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/13",
-        "question_type": "multi_choice"
-    },
-    "112": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "E",
-        "dataset": "HRIQ",
-        "image_id": 14,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/14",
-        "question_type": "multi_choice"
-    },
-    "113": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "A",
-        "dataset": "HRIQ",
-        "image_id": 18,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/18",
-        "question_type": "multi_choice"
-    },
-    "114": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "C",
-        "dataset": "HRIQ",
-        "image_id": 19,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/19",
-        "question_type": "multi_choice"
-    },
-    "115": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "E",
-        "dataset": "HRIQ",
-        "image_id": 20,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/20",
-        "question_type": "multi_choice"
-    },
-    "116": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "E",
-        "dataset": "HRIQ",
-        "image_id": 21,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/21",
-        "question_type": "multi_choice"
-    },
-    "117": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "D",
-        "dataset": "HRIQ",
-        "image_id": 22,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/22",
-        "question_type": "multi_choice"
-    },
-    "118": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "B",
-        "dataset": "HRIQ",
-        "image_id": 23,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/23",
-        "question_type": "multi_choice"
-    },
-    "119": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "C",
-        "dataset": "HRIQ",
-        "image_id": 24,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/24",
-        "question_type": "multi_choice"
-    },
-    "120": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "E",
-        "dataset": "HRIQ",
-        "image_id": 25,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/25",
-        "question_type": "multi_choice"
-    },
-    "121": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "A",
-        "dataset": "HRIQ",
-        "image_id": 26,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/26",
-        "question_type": "multi_choice"
-    },
-    "122": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "C",
-        "dataset": "HRIQ",
-        "image_id": 27,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/27",
-        "question_type": "multi_choice"
-    },
-    "123": {
-        "question": "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
-        "answer": "D",
-        "dataset": "HRIQ",
-        "image_id": 29,
-        "choices": [
-            "1 bad",
-            "2 poor",
-            "3 fair",
-            "4 good",
-            "5 excellent"
-        ],
-        "image": "HRIQ/29",
-        "question_type": "multi_choice"
-    },
-    "124": {
-        "question": "When was Dhoni made the captain of the test team? \n",
-        "answer": "B",
-        "dataset": "InfographicVQA",
-        "image_id": 0,
-        "choices": [
-            "'2010'",
-            "'2008'",
-            "'2018'",
-            "'2009'"
-        ],
-        "image": "InfographicVQA/0",
-        "question_type": "multi_choice"
-    },
-    "125": {
-        "question": "what is the percentage of women with disabilities in low income countries? \n",
-        "answer": "D",
-        "dataset": "InfographicVQA",
-        "image_id": 1,
-        "choices": [
-            "'19,1%', '19.1'",
-            "'22,2%', '22.2'",
-            "'21,1%', '21.1'",
-            "'22,1%', '22.1'"
-        ],
-        "image": "InfographicVQA/1",
-        "question_type": "multi_choice"
-    },
-    "126": {
-        "question": "What percent of employees feel very safe from violence? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 2,
-        "choices": [
-            "33",
-            "31",
-            "33.33",
-            "30"
-        ],
-        "image": "InfographicVQA/2",
-        "question_type": "multi_choice"
-    },
-    "127": {
-        "question": "Which team had more rebounds? \n",
-        "answer": "B",
-        "dataset": "InfographicVQA",
-        "image_id": 3,
-        "choices": [
-            "spurs",
-            "lakers",
-            "los angles spurs",
-            "None"
-        ],
-        "image": "InfographicVQA/3",
-        "question_type": "multi_choice"
-    },
-    "128": {
-        "question": "How many NBA teams are there which have the number of total followers above 5million? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 4,
-        "choices": [
-            "'3'",
-            "'4'",
-            "'5'",
-            "'5.1'"
-        ],
-        "image": "InfographicVQA/4",
-        "question_type": "multi_choice"
-    },
-    "129": {
-        "question": "What percentage Wedding helps women for their empowerment? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 5,
-        "choices": [
-            "'7', '7%'",
-            "'17', '17%'",
-            "'1', '1%'",
-            "'5', '5%'"
-        ],
-        "image": "InfographicVQA/5",
-        "question_type": "multi_choice"
-    },
-    "130": {
-        "question": "Which sites can be used for group buying? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 6,
-        "choices": [
-            "'google', 'NEWSLETTERS'",
-            "'google, living social and others', 'living social, google', 'google, living social', 'living social and others, google'",
-            "'groupon, living social and others', 'living social, groupon', 'groupon, living social', 'living social and others, groupon'",
-            "'NEWSLETTERs, living social and others', 'living social, NEWSLETTERs', 'NEWSLETTERs, living social', 'living social and others, NEWSLETTERs'"
-        ],
-        "image": "InfographicVQA/6",
-        "question_type": "multi_choice"
-    },
-    "131": {
-        "question": "How many additional support for SMMEs have been announced? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 7,
-        "choices": [
-            "6",
-            "4",
-            "3",
-            "5"
-        ],
-        "image": "InfographicVQA/7",
-        "question_type": "multi_choice"
-    },
-    "132": {
-        "question": "who is more likely to have a LinkedIn account? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 8,
-        "choices": [
-            "'men'",
-            "'women'",
-            "''high schooler",
-            "'child'"
-        ],
-        "image": "InfographicVQA/8",
-        "question_type": "multi_choice"
-    },
-    "133": {
-        "question": "What are the three things you should look for in influencers? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 9,
-        "choices": [
-            "'Celebrities, Enthusiasts, Activists'",
-            "'creat, post, INFLUENCE'",
-            "'high engagement, high quality content, match your brand'",
-            "'creat, post, high quality content'"
-        ],
-        "image": "InfographicVQA/9",
-        "question_type": "multi_choice"
-    },
-    "134": {
-        "question": "Which team has a higher value? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 10,
-        "choices": [
-            "CHICAGO CLUBS",
-            "Atlanta Falcons",
-            "BOSTON RED SOX",
-            "philadelphia eagles"
-        ],
-        "image": "InfographicVQA/10",
-        "question_type": "multi_choice"
-    },
-    "135": {
-        "question": "Which all countries have the number of prisoners released equals to nil? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 11,
-        "choices": [
-            "'italy, belgium, france'",
-            "'Germany, belgium, france'",
-            "'italy, belgium, Cyprus'",
-            "'italy, portugal, france'"
-        ],
-        "image": "InfographicVQA/11",
-        "question_type": "multi_choice"
-    },
-    "136": {
-        "question": "What percentage of employers were bound to step up sanitization measures post COVID-19? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 12,
-        "choices": [
-            "79.00%",
-            "98%",
-            "87.00%",
-            "87.10%"
-        ],
-        "image": "InfographicVQA/12",
-        "question_type": "multi_choice"
-    },
-    "137": {
-        "question": "What is the number of workflow review meetings held every year? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 13,
-        "choices": [
-            "'2,000+'",
-            "'2,700+'",
-            "'1,100+'",
-            "'7,700+'"
-        ],
-        "image": "InfographicVQA/13",
-        "question_type": "multi_choice"
-    },
-    "138": {
-        "question": "Which is the most secure payment app according to Americans? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 14,
-        "choices": [
-            "'paypal'",
-            "'google pay'",
-            "'chase'",
-            "'apple pay'"
-        ],
-        "image": "InfographicVQA/14",
-        "question_type": "multi_choice"
-    },
-    "139": {
-        "question": "who are the authors of science fiction books in the subcategory of Alien invasion? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 15,
-        "choices": [
-            "roth",
-            "james",
-            "wells, finney",
-            "wallace"
-        ],
-        "image": "InfographicVQA/15",
-        "question_type": "multi_choice"
-    },
-    "140": {
-        "question": "what percent of account holders in UK are using LinkedIn for finding job? \n",
-        "answer": "B",
-        "dataset": "InfographicVQA",
-        "image_id": 16,
-        "choices": [
-            "44",
-            "40",
-            "41",
-            "34"
-        ],
-        "image": "InfographicVQA/16",
-        "question_type": "multi_choice"
-    },
-    "141": {
-        "question": "What was the time taken to recover after the corona virus crash? \n",
-        "answer": "B",
-        "dataset": "InfographicVQA",
-        "image_id": 17,
-        "choices": [
-            "'645'",
-            "'693'",
-            "'674'",
-            "'741'"
-        ],
-        "image": "InfographicVQA/17",
-        "question_type": "multi_choice"
-    },
-    "142": {
-        "question": "Who are Hulk's teammates? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 18,
-        "choices": [
-            "'nick fury, black widow, iron man'",
-            "'yondo, black widow, iron man'",
-            "'nick fury, black widow, the punisher'",
-            "'nick fury, black widow, hydra'"
-        ],
-        "image": "InfographicVQA/18",
-        "question_type": "multi_choice"
-    },
-    "143": {
-        "question": "What percentage of world's population do not own a mobile phone? \n",
-        "answer": "C",
-        "dataset": "InfographicVQA",
-        "image_id": 19,
-        "choices": [
-            "34%",
-            "35%",
-            "30%",
-            "33%"
-        ],
-        "image": "InfographicVQA/19",
-        "question_type": "multi_choice"
-    },
-    "144": {
-        "question": "What percentage of Whites think voting by mail is secure? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 21,
-        "choices": [
-            "'57%'",
-            "'71%'",
-            "'58%'",
-            "'68%'"
-        ],
-        "image": "InfographicVQA/21",
-        "question_type": "multi_choice"
-    },
-    "145": {
-        "question": "What is the percentage of employees a business should have in order to qualify for SMME Debt Relief Finance Scheme? \n",
-        "answer": "B",
-        "dataset": "InfographicVQA",
-        "image_id": 22,
-        "choices": [
-            "100%",
-            "70%",
-            "107%",
-            "77%"
-        ],
-        "image": "InfographicVQA/22",
-        "question_type": "multi_choice"
-    },
-    "146": {
-        "question": "What are the two ways in which prize winning novels begin their narrative? \n",
-        "answer": "D",
-        "dataset": "InfographicVQA",
-        "image_id": 24,
-        "choices": [
-            "in the first person, in the last person",
-            "in a random way, in the first person",
-            "in the second person, in the third person",
-            "in the third person, in the first person"
-        ],
-        "image": "InfographicVQA/24",
-        "question_type": "multi_choice"
-    },
-    "147": {
-        "question": "who have more followers? \n",
-        "answer": "D",
-        "dataset": "InfographicVQA",
-        "image_id": 25,
-        "choices": [
-            "michael phelps",
-            "Hope Solo",
-            "Durant",
-            "LeBron James"
-        ],
-        "image": "InfographicVQA/25",
-        "question_type": "multi_choice"
-    },
-    "148": {
-        "question": "Who are more likely to trust brands that are involved in sports sponsorship? \n",
-        "answer": "A",
-        "dataset": "InfographicVQA",
-        "image_id": 27,
-        "choices": [
-            "ugby league fans",
-            "average consumers ",
-            "female",
-            "male"
-        ],
-        "image": "InfographicVQA/27",
-        "question_type": "multi_choice"
-    },
-    "149": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 0,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/0",
-        "question_type": "multi_choice"
-    },
-    "150": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 1,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/1",
-        "question_type": "multi_choice"
-    },
-    "151": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 2,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/2",
-        "question_type": "multi_choice"
-    },
-    "152": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 3,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/3",
-        "question_type": "multi_choice"
-    },
-    "153": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 4,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/4",
-        "question_type": "multi_choice"
-    },
-    "154": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 5,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/5",
-        "question_type": "multi_choice"
-    },
-    "155": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 6,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/6",
-        "question_type": "multi_choice"
-    },
-    "156": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 7,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/7",
-        "question_type": "multi_choice"
-    },
-    "157": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 8,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/8",
-        "question_type": "multi_choice"
-    },
-    "158": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 9,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/9",
-        "question_type": "multi_choice"
-    },
-    "159": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 10,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/10",
-        "question_type": "multi_choice"
-    },
-    "160": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 11,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/11",
-        "question_type": "multi_choice"
-    },
-    "161": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 12,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/12",
-        "question_type": "multi_choice"
-    },
-    "162": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 13,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/13",
-        "question_type": "multi_choice"
-    },
-    "163": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 14,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/14",
-        "question_type": "multi_choice"
-    },
-    "164": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 15,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/15",
-        "question_type": "multi_choice"
-    },
-    "165": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 16,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/16",
-        "question_type": "multi_choice"
-    },
-    "166": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 17,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/17",
-        "question_type": "multi_choice"
-    },
-    "167": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 18,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/18",
-        "question_type": "multi_choice"
-    },
-    "168": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 19,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/19",
-        "question_type": "multi_choice"
-    },
-    "169": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 20,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/20",
-        "question_type": "multi_choice"
-    },
-    "170": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 21,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/21",
-        "question_type": "multi_choice"
-    },
-    "171": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 22,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/22",
-        "question_type": "multi_choice"
-    },
-    "172": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 23,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/23",
-        "question_type": "multi_choice"
-    },
-    "173": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 24,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/24",
-        "question_type": "multi_choice"
-    },
-    "174": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 25,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/25",
-        "question_type": "multi_choice"
-    },
-    "175": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 26,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/26",
-        "question_type": "multi_choice"
-    },
-    "176": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 27,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/27",
-        "question_type": "multi_choice"
-    },
-    "177": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 28,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/28",
-        "question_type": "multi_choice"
-    },
-    "178": {
-        "question": "Given the following histopathological image of lung tissue, classify the malignancy ",
-        "answer": NaN,
-        "dataset": "LungHist700",
-        "image_id": 29,
-        "choices": [
-            "Normal tissue",
-            "Adenocarcinoma (Well-differentiated)",
-            "Adenocarcinoma (Moderately differentiated)",
-            "Adenocarcinoma (Poorly differentiated)",
-            "Squamous cell carcinoma (Well-differentiated)",
-            "Squamous cell carcinoma (Moderately differentiated)",
-            "Squamous cell carcinoma (Poorly differentiated)"
-        ],
-        "image": "LungHist700/29",
-        "question_type": "multi_choice"
-    },
-    "179": {
-        "question": "Below are four slides from one presentation. Please reorder them to ensure a logical flow: \n\n<image1> <image2> <image3> <image4>\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 0,
-        "choices": [
-            "The forth image, the second image, the third image, the first image.",
-            "The first image, the third image, the second image, the forth image.",
-            "The third image, the first image, the second image, the forth image.",
-            "None of the choices provided"
-        ],
-        "image": "MuirBench/0",
-        "question_type": "multi_choice"
-    },
-    "180": {
-        "question": "Based on the content of the slides, make an educated guess about the title of the paper being presented: \n\n<image1> <image2> <image3> <image4> <image5>\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 1,
-        "choices": [
-            "Adaptive Stochastic Natural Gradient Method for One-Shot Neural Architecture Search",
-            "None of the choices provided",
-            "Riemannian adaptive stochastic gradient algorithms on matrix manifolds",
-            "Dynamic Learning with Frequent New Product Launches: A Sequential Multinomial Logit Bandit Problem"
-        ],
-        "image": "MuirBench/1",
-        "question_type": "multi_choice"
-    },
-    "181": {
-        "question": "<image1> Which of the following images shares the same scene with the given image but contains the object traffic light?\n",
-        "answer": "D",
-        "dataset": "MuirBench",
-        "image_id": 2,
-        "choices": [
-            "<image2>",
-            "<image3>",
-            "<image4>",
-            "None of the choices provided",
-            "<image5>"
-        ],
-        "image": "MuirBench/2",
-        "question_type": "multi_choice"
-    },
-    "182": {
-        "question": "Which of the following figure does not belong to the same paper?\n",
-        "answer": "E",
-        "dataset": "MuirBench",
-        "image_id": 3,
-        "choices": [
-            "<image1>",
-            "<image2>",
-            "<image3>",
-            "None of the choices provided",
-            "<image4>"
-        ],
-        "image": "MuirBench/3",
-        "question_type": "multi_choice"
-    },
-    "183": {
-        "question": "In the video, what activity is the woman engaged in while sitting in a chair? <image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8>\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 4,
-        "choices": [
-            "Reading a book",
-            "Eating doughnuts",
-            "Playing video games",
-            "None of the choices provided"
-        ],
-        "image": "MuirBench/4",
-        "question_type": "multi_choice"
-    },
-    "184": {
-        "question": "Can you discover the photograph containing the same architectural edifice as depicted in <image1>?\n",
-        "answer": "E",
-        "dataset": "MuirBench",
-        "image_id": 5,
-        "choices": [
-            "<image2>",
-            "<image3>",
-            "None of the choices provided",
-            "<image4>",
-            "<image5>"
-        ],
-        "image": "MuirBench/5",
-        "question_type": "multi_choice"
-    },
-    "185": {
-        "question": "<image1> <image2> <image3> The baby attempts to take off the clothes. What is the correct order of images according to the given context?\n",
-        "answer": "C",
-        "dataset": "MuirBench",
-        "image_id": 7,
-        "choices": [
-            "the third image, the first image, the second image",
-            "the second image, the third image, the first image",
-            "the second image, the first image, the third image",
-            "None of the choices provided"
-        ],
-        "image": "MuirBench/7",
-        "question_type": "multi_choice"
-    },
-    "186": {
-        "question": "Below are four slides from one presentation. Please reorder them to ensure a logical flow: \n\n<image1> <image2> <image3> <image4>\n",
-        "answer": "C",
-        "dataset": "MuirBench",
-        "image_id": 8,
-        "choices": [
-            "None of the choices provided",
-            "The first image, the forth image, the third image, the second image.",
-            "The second image, the first image, the third image, the forth image.",
-            "The second image, the third image, the first image, the forth image."
-        ],
-        "image": "MuirBench/8",
-        "question_type": "multi_choice"
-    },
-    "187": {
-        "question": "Which picture below better fits the description: A black and white cat sitting in a green bowl.\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 9,
-        "choices": [
-            "<image1>",
-            "None of the choices provided",
-            "<image2>",
-            "<image3>"
-        ],
-        "image": "MuirBench/9",
-        "question_type": "multi_choice"
-    },
-    "188": {
-        "question": "Select the map image that represents geographic regions overlapping with <image1>.\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 10,
-        "choices": [
-            "<image2>",
-            "None of the choices provided",
-            "<image3>",
-            "<image4>"
-        ],
-        "image": "MuirBench/10",
-        "question_type": "multi_choice"
-    },
-    "189": {
-        "question": "Three of the following four slides are from the same presentation, but one is from a different one. Please identify the outlier: \n\n<image1> <image2> <image3> <image4>\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 12,
-        "choices": [
-            "the third image",
-            "the second image",
-            "None of the choices provided",
-            "the forth image"
-        ],
-        "image": "MuirBench/12",
-        "question_type": "multi_choice"
-    },
-    "190": {
-        "question": "Which image has 1 apple and 5 bananas?\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 13,
-        "choices": [
-            "None of the choices provided",
-            "<image1>",
-            "<image2>",
-            "<image3>"
-        ],
-        "image": "MuirBench/13",
-        "question_type": "multi_choice"
-    },
-    "191": {
-        "question": "Among these map images, which one depicts overlapping geographic regions like <image1>?\n",
-        "answer": "D",
-        "dataset": "MuirBench",
-        "image_id": 14,
-        "choices": [
-            "<image2>",
-            "<image3>",
-            "None of the choices provided",
-            "<image4>"
-        ],
-        "image": "MuirBench/14",
-        "question_type": "multi_choice"
-    },
-    "192": {
-        "question": "How many syringes with liquid dripping from the needles are there? <image1> <image2>\n",
-        "answer": "D",
-        "dataset": "MuirBench",
-        "image_id": 15,
-        "choices": [
-            "None of the choices provided",
-            "Four",
-            "Three",
-            "Two",
-            "One"
-        ],
-        "image": "MuirBench/15",
-        "question_type": "multi_choice"
-    },
-    "193": {
-        "question": "How many hands with gloves on them are there? <image1> <image2>\n",
-        "answer": "E",
-        "dataset": "MuirBench",
-        "image_id": 16,
-        "choices": [
-            "None of the choices provided",
-            "Four",
-            "One",
-            "Three",
-            "Two"
-        ],
-        "image": "MuirBench/16",
-        "question_type": "multi_choice"
-    },
-    "194": {
-        "question": "Is it possible for you to unearth images containing the identical building as portrayed in <image1>?\n",
-        "answer": "D",
-        "dataset": "MuirBench",
-        "image_id": 17,
-        "choices": [
-            "<image2>",
-            "None of the choices provided",
-            "<image3>",
-            "<image4>",
-            "<image5>"
-        ],
-        "image": "MuirBench/17",
-        "question_type": "multi_choice"
-    },
-    "195": {
-        "question": "How many arched doorways sit under the stairway in the images? <image1> <image2>\n",
-        "answer": "C",
-        "dataset": "MuirBench",
-        "image_id": 18,
-        "choices": [
-            "None of the choices provided",
-            "Three",
-            "One",
-            "Two",
-            "Four"
-        ],
-        "image": "MuirBench/18",
-        "question_type": "multi_choice"
-    },
-    "196": {
-        "question": "Can you determine which slide serves a different function compared to the others? For instance, some slides may be for concluding the presentation while others are for introducing the topic: \n\n<image1> <image2> <image3> <image4>\n",
-        "answer": "B",
-        "dataset": "MuirBench",
-        "image_id": 19,
-        "choices": [
-            "the forth image",
-            "the third image",
-            "None of the choices provided",
-            "the second image"
-        ],
-        "image": "MuirBench/19",
-        "question_type": "multi_choice"
-    },
-    "197": {
-        "question": "Which picture below better fits the description: A parked black motorcycle in front of a brown house.\n",
-        "answer": "B",
-        "dataset": "MuirBench",
-        "image_id": 20,
-        "choices": [
-            "<image1>",
-            "<image2>",
-            "<image3>",
-            "None of the choices provided"
-        ],
-        "image": "MuirBench/20",
-        "question_type": "multi_choice"
-    },
-    "198": {
-        "question": "Which picture below better fits the description: A white and bright bathroom with silver fixtures.\n",
-        "answer": "B",
-        "dataset": "MuirBench",
-        "image_id": 23,
-        "choices": [
-            "<image1>",
-            "None of the choices provided",
-            "<image2>",
-            "<image3>"
-        ],
-        "image": "MuirBench/23",
-        "question_type": "multi_choice"
-    },
-    "199": {
-        "question": "Select the sub-figures that appear in the same figure as <image1>?\n",
-        "answer": "D",
-        "dataset": "MuirBench",
-        "image_id": 24,
-        "choices": [
-            "<image2>",
-            "<image3>",
-            "<image4>",
-            "<image5>",
-            "None of the choices provided"
-        ],
-        "image": "MuirBench/24",
-        "question_type": "multi_choice"
-    },
-    "200": {
-        "question": "Select the sub-figures that appear in the same figure as <image1>?\n",
-        "answer": "C",
-        "dataset": "MuirBench",
-        "image_id": 25,
-        "choices": [
-            "None of the choices provided",
-            "<image2>",
-            "<image3>",
-            "<image4>",
-            "<image5>"
-        ],
-        "image": "MuirBench/25",
-        "question_type": "multi_choice"
-    },
-    "201": {
-        "question": "Which of the following figure does not belong to the same paper?\n",
-        "answer": "E",
-        "dataset": "MuirBench",
-        "image_id": 26,
-        "choices": [
-            "<image1>",
-            "None of the choices provided",
-            "<image2>",
-            "<image3>",
-            "<image4>"
-        ],
-        "image": "MuirBench/26",
-        "question_type": "multi_choice"
-    },
-    "202": {
-        "question": "<image1> <image2> <image3> <image4> <image5> <image6> <image7> What is the affiliation of the first author?\n",
-        "answer": "A",
-        "dataset": "MuirBench",
-        "image_id": 27,
-        "choices": [
-            "University of Minnesota",
-            "UCSD",
-            "USC",
-            "None of the choices provided"
-        ],
-        "image": "MuirBench/27",
-        "question_type": "multi_choice"
-    },
-    "203": {
-        "question": "Below are four slides from one presentation. Please reorder them to ensure a logical flow: \n\n<image1> <image2> <image3> <image4>\n",
-        "answer": "B",
-        "dataset": "MuirBench",
-        "image_id": 29,
-        "choices": [
-            "The second image, the third image, the forth image, the first image.",
-            "The forth image, the third image, the first image, the second image.",
-            "The first image, the forth image, the third image, the second image.",
-            "None of the choices provided"
-        ],
-        "image": "MuirBench/29",
-        "question_type": "multi_choice"
-    },
-    "204": {
-        "question": "Anticipate the seaborn style most likely used for this image.\n",
-        "answer": "E",
-        "dataset": "NovaChart",
-        "image_id": 0,
-        "choices": [
-            "dark",
-            "white",
-            "",
-            "whitegrid",
-            "darkgrid"
-        ],
-        "image": "NovaChart/0",
-        "question_type": "multi_choice"
-    },
-    "205": {
-        "question": "Can you identify the name assigned to the x-axis?\n",
-        "answer": "B",
-        "dataset": "NovaChart",
-        "image_id": 1,
-        "choices": [
-            "Male",
-            "Gender",
-            "Count",
-            "Famale ",
-            ""
-        ],
-        "image": "NovaChart/1",
-        "question_type": "multi_choice"
-    },
-    "206": {
-        "question": "Anticipate the seaborn style most likely used for this image.\n",
-        "answer": "E",
-        "dataset": "NovaChart",
-        "image_id": 2,
-        "choices": [
-            "darkgrid",
-            "whitegrid",
-            "dark",
-            "",
-            "white"
-        ],
-        "image": "NovaChart/2",
-        "question_type": "multi_choice"
-    },
-    "207": {
-        "question": "Suggest the seaborn style that is expected for this image.\n",
-        "answer": "E",
-        "dataset": "NovaChart",
-        "image_id": 3,
-        "choices": [
-            "white",
-            "dark",
-            "darkgrid",
-            "",
-            "whitegrid"
-        ],
-        "image": "NovaChart/3",
-        "question_type": "multi_choice"
-    },
-    "208": {
-        "question": "What is the chart's representation of the value corresponding to the 1 class and the 1 semantic grouping?\n",
-        "answer": "C",
-        "dataset": "NovaChart",
-        "image_id": 5,
-        "choices": [
-            "2",
-            "4",
-            "1",
-            "0",
-            "3"
-        ],
-        "image": "NovaChart/5",
-        "question_type": "multi_choice"
-    },
-    "209": {
-        "question": "Create a function with ['title', 'style', 'color'] as parameters to generate a chart of the same type.\n",
-        "answer": "E",
-        "dataset": "NovaChart",
-        "image_id": 6,
-        "choices": [
-            "def plot(dataframe, title, style='white', color='rebeccapurple'):\n    sns.set_style(style)\n    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=x, y=y, color=color)\n    ax.set_title(title)\n\n    return ax",
-            "import seaborn as sns\n                                     \ndef plot(dataframe, title, style='white', color='rebeccapurple'):\n    sns.set_style(style)\n    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=x, y=y, color=color)\n    ax.set_title(title)\n    for _, row in dataframe.iterrows():\n        ax.annotate(f\"{row[y]:.2f}\", (row[x], row[y]), textcoords=\"offset points\", xytext=(0, 5), ha='center')\n    ax.figure.tight_layout()\n    return ax",
-            "",
-            "    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=x, y=y, color=color)\n    ax.set_title(title)\n    for _, row in dataframe.iterrows():\n        ax.annotate(f\"{row[y]:.2f}\", (row[x], row[y]), textcoords=\"offset points\", xytext=(0, 5), ha='center')\n    ax.figure.tight_layout()\n    return ax",
-            "import seaborn as sns\n                                     \ndef plot(dataframe, title, style=dark', color='rebeccapurple'):\n    sns.set_style(style)\n    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=y, y=x, color=color)\n    ax.set_title(title)\n    for _, row in dataframe.iterrows():\n        ax.annotate(f\"{row[y]:.2f}\", (row[x], row[y]), textcoords=\"offset points\", xytext=(0, 3), ha='center')\n    ax.figure.tight_layout()\n    return ax"
-        ],
-        "image": "NovaChart/6",
-        "question_type": "multi_choice"
-    },
-    "210": {
-        "question": "Can you provide the histogram value for the bin corresponding to the range x=[-4.0, -1.96) and y=[73.235, 82.2385)?\n",
-        "answer": "E",
-        "dataset": "NovaChart",
-        "image_id": 8,
-        "choices": [
-            "13",
-            "9",
-            "2",
-            "3",
-            "0"
-        ],
-        "image": "NovaChart/8",
-        "question_type": "multi_choice"
-    },
-    "211": {
-        "question": "Describe the color scheme used for representing data in this chart.\n",
-        "answer": "E",
-        "dataset": "NovaChart",
-        "image_id": 9,
-        "choices": [
-            "moccasin",
-            "silver",
-            "plum",
-            "forestgreen",
-            "orange"
-        ],
-        "image": "NovaChart/9",
-        "question_type": "multi_choice"
-    },
-    "212": {
-        "question": "Uncover and list the colors corresponding to each class displayed on the chart.\n",
-        "answer": "A",
-        "dataset": "NovaChart",
-        "image_id": 10,
-        "choices": [
-            "{'1': 'blueviolet', '0': 'white'}",
-            "{'1': 'blueviolet', '0': 'black'}",
-            "",
-            "{'3': 'blueviolet', '0': 'black'}",
-            "{'2': 'blueviolet', '1': 'white'}"
-        ],
-        "image": "NovaChart/10",
-        "question_type": "multi_choice"
-    },
-    "213": {
-        "question": "Extract the quantitative data from the chart.\n",
-        "answer": "A",
-        "dataset": "NovaChart",
-        "image_id": 12,
-        "choices": [
-            "[[-155.0, 0.11], [-99.7877, 0.07], [-87.8542, 0.993], [-74.5112, 4.446], [-72.0068, 0.784], [-70.1546, 2.501], [-24.4608, 8.865], [-23.3318, 8.363], [122.2, 1.025], [124.629, 4.139], [126.758, 1.596], [127.051, 1.974], [146.169, 6.393], [150.788, 0.0], [162.786, 4.591], [163.215, 3.619], [174.337, 0.0]]",
-            "[[146.169, 6.393], [150.788, 0.0], [162.786, 4.591], [163.215, 3.619], [174.337, 0.0]]",
-            "[[155.0, 0.11], [99.7877, 0.07], [-87.8542, 0.993], [-74.5112, 4.446], [72.0068, 0.784], [70.1546, 2.501], [-24.4608, 8.865], [-23.3318, 8.363], [122.2, 7.025], [124.629, 4.139], [126.758, 1.596], [127.051, 1.974], [146.169, 8.393], [150.788, 0.0], [162.786, 4.591], [163.215, 3.619], [174.337, 0.0]]",
-            "",
-            "[[-155.0, 0.11], [-99.7877, 0.07], [-87.8542, 0.993], [-74.5112, 4.446], [-72.0068, 0.784], [-70.1546, 2.501], [-24.4608, 8.865], [-23.3318, 8.363], [122.2, 1.025], [124.629, 4.139], [126.758, 1.596], [127.051, 1.974], [146.169, 6.393]]"
-        ],
-        "image": "NovaChart/12",
-        "question_type": "multi_choice"
-    },
-    "214": {
-        "question": "Identify the seaborn style that is likely applied to this image.\n",
-        "answer": "D",
-        "dataset": "NovaChart",
-        "image_id": 13,
-        "choices": [
-            "darkgrid",
-            "dark",
-            "white",
-            "whitegrid",
-            ""
-        ],
-        "image": "NovaChart/13",
-        "question_type": "multi_choice"
-    },
-    "215": {
-        "question": "Compose code to switch the current chart to a scatterplot.\n",
-        "answer": "A",
-        "dataset": "NovaChart",
-        "image_id": 14,
-        "choices": [
-            "import seaborn as sns\nimport pandas as pd\n\ndata = [[98916, 839], [101398, 1020], [102343, 955], [102872, 945], [104424, 883], [107266, 876], [111447, 944], [121067, 942], [170767, 862], [172612, 1009], [184991, 899], [200482, 850], [210317, 924], [210886, 949], [222943, 1042], [287482, 966], [569578, 907], [887871, 911]]\nx_label = 'Population'\ny_label = 'Sex Ratio'\ndataframe = pd.DataFrame(data, columns=[x_label, y_label])\n\n\ndef plot(dataframe, title, style='dark', color='darkviolet'):\n    sns.set_style(style)\n    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=x, y=y, color=color)\n    ax.set_title(title)\n    for _, row in dataframe.iterrows():\n        ax.annotate(f\"{row[y]:.2f}\", (row[x], row[y]), textcoords=\"offset points\", xytext=(0, 5), ha='center')\n    ax.figure.tight_layout()\n    return ax\n\nax = plot(dataframe, \"New Scatter Plot\")",
-            "",
-            "import seaborn as sns\nimport pandas as pd\n\ndata = [[98916, 839], [101398, 1020], [102343, 955], [102872, 945], [104424, 883], [107266, 876], [111447, 944],  [184991, 899], [200482, 850], [210317, 924], [210886, 949], [222943, 1042], [287482, 966], [569578, 907], [887871, 911]]\nx_label = 'Population'\ny_label = 'Sex Ratio'\ndataframe = pd.DataFrame(data, columns=[x_label, y_label])\n\n\ndef plot(dataframe, title, style='white', color='darkviolet'):\n    sns.set_style(style)\n    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=x, y=y, color=color)\n    ax.set_title(title)\n    for _, row in dataframe.iterrows():\n        ax.annotate(f\"{row[y]:.2f}\", (row[x], row[y]), textcoords=\"offset points\", xytext=(0, 5), ha='center')\n    ax.figure.tight_layout()\n    return ax\n\nax = plot(dataframe, \"New Scatter Plot\")",
-            "import seaborn as sns\nimport pandas as pd\n]\nx_label = 'Population'\ny_label = 'Sex Ratio'\ndataframe = pd.DataFrame(data, columns=[x_label, y_label])\n\n\ndef plot(dataframe, title, style='white', color='darkviolet'):\n    sns.set_style(style)\n    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=x, y=y, color=color)\n    ax.set_title(title)\n    for _, row in dataframe.iterrows():\n        ax.annotate(f\"{row[y]:.2f}\", (row[x], row[y]), textcoords=\"offset points\", xytext=(0, 5), ha='center')\n    ax.figure.tight_layout()\n    return ax\n\nax = plot(dataframe, \"New Scatter Plot\")",
-            "import seaborn as sns\nimport pandas as pd\n\ndata = [[98916, 839], [101398, 1020], [102343, 955], [102872, 945], [104424, 883], [107266, 876], [111447, 944],  [184991, 899], [200482, 850], [210317, 924], [210886, 949], [222943, 1042], [287482, 966], [569578, 907], [887871, 911]]\nx_label = 'Population'\ny_label = 'Sex Ratio'\ndataframe = pd.DataFrame(data, columns=[x_label, y_label])\n\n\ndef plot(dataframe, title, style='dark', color='darkviolet'):\n    sns.set_style(style)\n    x, y = dataframe.columns\n    ax = sns.scatterplot(data=dataframe, x=x, y=y, color=color)\n    ax.set_title(title)\n    for _, row in dataframe.iterrows():\n        ax.annotate(f\"{row[y]:.2f}\", (row[x], row[y]), textcoords=\"offset points\", xytext=(0, 5), ha='center')\n    ax.figure.tight_layout()\n    return ax\n\nax = plot(dataframe, \"New Scatter Plot\")"
-        ],
-        "image": "NovaChart/14",
-        "question_type": "multi_choice"
-    },
-    "216": {
-        "question": "Please offer a brief summary of the image in one paragraph.\n",
-        "answer": "B",
-        "dataset": "NovaChart",
-        "image_id": 16,
-        "choices": [
-            "The x-axis and y-axis represent the same scale, which means that 4-star and 1-star ratings are nearly equal in magnitude.",
-            "An increase in 4-star ratings directly causes an increase in 1-star ratings, as indicated by the upward trend.",
-            "The sharp peak at 262,385 in 1-star ratings proves that most products with high 4-star ratings also receive predominantly negative reviews.",
-            "This line plot depicts the relationship between 4 Star Ratings and 1 Star Ratings for the top games on the Google Play Store. The x-axis represents the 4 Star Ratings, while the y-axis represents the corresponding 1 Star Ratings. The plot shows an ascending pattern, indicating a positive correlation between the two variables. As the 4 Star Ratings increase, the 1 Star Ratings also increase. The data points are sorted by the x-coordinate, with the lowest value on the left and the highest value on the right.",
-            "The chart shows a perfect linear correlation between 4-star ratings and 1-star ratings, meaning that every increase in 4-star ratings results in an equal increase in 1-star ratings."
-        ],
-        "image": "NovaChart/16",
-        "question_type": "multi_choice"
-    },
-    "217": {
-        "question": "Can you provide the histogram value corresponding to x=[0.0, 1.0)?\n",
-        "answer": "D",
-        "dataset": "NovaChart",
-        "image_id": 17,
-        "choices": [
-            "",
-            "12",
-            "11",
-            "54",
-            "16"
-        ],
-        "image": "NovaChart/17",
-        "question_type": "multi_choice"
-    },
-    "218": {
-        "question": "Estimate the probable seaborn style for this image.\n",
-        "answer": "A",
-        "dataset": "NovaChart",
-        "image_id": 18,
-        "choices": [
-            "darkgrid",
-            "dark",
-            "white",
-            "whitegrid",
-            ""
-        ],
-        "image": "NovaChart/18",
-        "question_type": "multi_choice"
-    },
-    "219": {
-        "question": "What text is used for the x-coordinate label?\n",
-        "answer": "D",
-        "dataset": "NovaChart",
-        "image_id": 19,
-        "choices": [
-            "3933",
-            "",
-            "Mininus ",
-            "Flight Distance",
-            "Departure Distance"
-        ],
-        "image": "NovaChart/19",
-        "question_type": "multi_choice"
-    },
-    "220": {
-        "question": "Retrieve the data units from the chart.\n",
-        "answer": "B",
-        "dataset": "NovaChart",
-        "image_id": 20,
-        "choices": [
-            "[3, 2, 2]",
-            "[[1, 1, 37], [1, 2, 48], [2, 1, 3], [2, 2, 7], [3, 1, 3], [3, 2, 2]]",
-            "[[1, 2, 48], [2, 1, 3], [2, 2, 7], [3, 1, 3]]",
-            "[[1, 1, 37], [2, 2, 7], [3, 1, 3], [3, 2, 2]]",
-            "[ [3, 2, 2], [1, 1, 37], [1, 2, 48], [2, 1, 3], [2, 2, 7], [3, 1, 3], [3, 2, 2]]"
-        ],
-        "image": "NovaChart/20",
-        "question_type": "multi_choice"
-    },
-    "221": {
-        "question": "Identify the chart format used to present this data visually.\n",
-        "answer": "D",
-        "dataset": "NovaChart",
-        "image_id": 21,
-        "choices": [
-            "sankey chart",
-            "box plot",
-            "bivariate histogram",
-            "single-class scatter plot",
-            "word cloud"
-        ],
-        "image": "NovaChart/21",
-        "question_type": "multi_choice"
-    },
-    "222": {
-        "question": "What understanding can be gained by looking at this image?\n",
-        "answer": "D",
-        "dataset": "NovaChart",
-        "image_id": 23,
-        "choices": [
-            "The chart shows that traveling outside the US always results in a handset being refurbished, as all refurbishments occur exclusively among non-US travelers.",
-            "From the chart, we can see that the majority of observations fall into the 'No' category for both 'Handset Refurbished' and 'Non-US Travel' groups. There are only a few observations in the 'Yes' category for both groups. To recapitulate, the answer to this question is: The chart shows the counts of observations in each categorical bin for the 'Handset Refurbished' and 'Non-US Travel' groups.",
-            "Handsets that are not refurbished are never used by non-US travelers, indicating that US travelers exclusively avoid refurbished devices.",
-            "The chart proves that non-US travel directly causes handsets to be refurbished, as all refurbished devices are linked to non-US travel.",
-            "Most handsets are refurbished during non-US travel, which proves that refurbishment services are mainly available internationally."
-        ],
-        "image": "NovaChart/23",
-        "question_type": "multi_choice"
-    },
-    "223": {
-        "question": "Determine the likely seaborn style used in this image.\n",
-        "answer": "A",
-        "dataset": "NovaChart",
-        "image_id": 24,
-        "choices": [
-            "dark",
-            "darkgrid",
-            "white",
-            "",
-            "whitegrid"
-        ],
-        "image": "NovaChart/24",
-        "question_type": "multi_choice"
-    },
-    "224": {
-        "question": "Kindly provide a one-paragraph summary of the image.\n",
-        "answer": "D",
-        "dataset": "NovaChart",
-        "image_id": 25,
-        "choices": [
-            "This graph proves that all Emmy-winning shows and actors, including Modern Family and Kevin Costner, are directly associated with That Thing You Do!",
-            "The node Gary Goetzman is directly connected to all Emmy Award winners, implying that he personally gave out the awards to every recipient.",
-            "Two and a Half Men was the only show ever recognized in the 64th Primetime Emmy Awards, as indicated by the prominent connection in this graph.",
-            "This knowledge graph represents the relationships between different entities. It shows that Gary Goetzman has the given name 'Gary' and is a producer of the movies 'That Thing You Do!' and 'Where the Wild Things Are'. Gary Goetzman was born in Los Angeles and received an award at the 64th Primetime Emmy Awards. The graph also includes other award recipients at the 64th Primetime Emmy Awards, such as 'Breaking Bad', 'Two and a Half Men', 'Modern Family', 'Kevin Costner', and 'Maggie Smith'.",
-            "Where the Wild Things Are was both written and directed by Gary Goetzman, which is why it has a direct connection to his name in this graph."
-        ],
-        "image": "NovaChart/25",
-        "question_type": "multi_choice"
-    },
-    "225": {
-        "question": "Considering the No class and semantic grouping designated by No, what value can be derived from the chart?\n",
-        "answer": "D",
-        "dataset": "NovaChart",
-        "image_id": 26,
-        "choices": [
-            "12",
-            "",
-            "8",
-            "80",
-            "70"
-        ],
-        "image": "NovaChart/26",
-        "question_type": "multi_choice"
-    },
-    "226": {
-        "question": "Pick the pattern that aligns most accurately with the shown picture.\n",
-        "answer": "A",
-        "dataset": "NovaChart",
-        "image_id": 27,
-        "choices": [
-            "no-obvious-pattern",
-            "",
-            "linear",
-            "crossing ",
-            "parallel "
-        ],
-        "image": "NovaChart/27",
-        "question_type": "multi_choice"
-    },
-    "227": {
-        "question": "Could you specify the label assigned to the x-coordinate in this scenario?\n",
-        "answer": "E",
-        "dataset": "NovaChart",
-        "image_id": 29,
-        "choices": [
-            "",
-            "Dynamic ",
-            "Opening Price",
-            "2020",
-            "Date"
-        ],
-        "image": "NovaChart/29",
-        "question_type": "multi_choice"
-    },
-    "228": {
-        "question": "What color is the tricycle in the image?\n",
-        "answer": "E",
-        "dataset": "Video_Monitoring",
-        "image_id": 0,
-        "choices": [
-            "Red",
-            "Silver",
-            "Green",
-            "Black",
-            "The image does not feature the tricycle"
-        ],
-        "image": "Video_Monitoring/0",
-        "question_type": "multi_choice"
-    },
-    "229": {
-        "question": "What material is the blue object on the roof of the middle teaching building made of?\n",
-        "answer": "A",
-        "dataset": "Video_Monitoring",
-        "image_id": 1,
-        "choices": [
-            "iron",
-            "plastic",
-            "aluminium",
-            "concrete",
-            "The image does not feature the object"
-        ],
-        "image": "Video_Monitoring/1",
-        "question_type": "multi_choice"
-    },
-    "230": {
-        "question": "What color is the car in the image?\n",
-        "answer": "B",
-        "dataset": "Video_Monitoring",
-        "image_id": 2,
-        "choices": [
-            "Red",
-            "Silver",
-            "Black",
-            "Green",
-            "The image does not feature the car"
-        ],
-        "image": "Video_Monitoring/2",
-        "question_type": "multi_choice"
-    },
-    "231": {
-        "question": "What shape is the manhole cover on the road in the picture?\n",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 3,
-        "choices": [
-            "circle",
-            "rectangle",
-            "circle and rectangle",
-            "square",
-            "The image does not feature the object"
-        ],
-        "image": "Video_Monitoring/3",
-        "question_type": "multi_choice"
-    },
-    "232": {
-        "question": "What material is the blue roof on the left in the picture made of?\n",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 4,
-        "choices": [
-            "plastic",
-            "iron",
-            "aluminium",
-            "concrete",
-            "The image does not feature the object"
-        ],
-        "image": "Video_Monitoring/4",
-        "question_type": "multi_choice"
-    },
-    "233": {
-        "question": "What is the number of pedestrians in the image?",
-        "answer": "E",
-        "dataset": "Video_Monitoring",
-        "image_id": 6,
-        "choices": [
-            "21",
-            "66",
-            "33",
-            "19",
-            "The image does not feature the pedestrians"
-        ],
-        "image": "Video_Monitoring/6",
-        "question_type": "multi_choice"
-    },
-    "234": {
-        "question": "What color is the pedestrian's coat in the image?",
-        "answer": "D",
-        "dataset": "Video_Monitoring",
-        "image_id": 7,
-        "choices": [
-            "Blue",
-            "Red",
-            "White",
-            "Black",
-            "The image does not feature the pedestrian"
-        ],
-        "image": "Video_Monitoring/7",
-        "question_type": "multi_choice"
-    },
-    "235": {
-        "question": "What is the number of trucks in the image?\n",
-        "answer": "E",
-        "dataset": "Video_Monitoring",
-        "image_id": 8,
-        "choices": [
-            "97",
-            "24",
-            "25",
-            "13",
-            "The image does not feature the trucks"
-        ],
-        "image": "Video_Monitoring/8",
-        "question_type": "multi_choice"
-    },
-    "236": {
-        "question": "What is the total number of people and cars in the image?",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 9,
-        "choices": [
-            "47",
-            "20",
-            "29",
-            "21",
-            "The image does not feature the objects"
-        ],
-        "image": "Video_Monitoring/9",
-        "question_type": "multi_choice"
-    },
-    "237": {
-        "question": "What is the orientation of the car in the image?\n",
-        "answer": "B",
-        "dataset": "Video_Monitoring",
-        "image_id": 10,
-        "choices": [
-            "The right of the image",
-            "The bottom of the image",
-            "The left of the image",
-            "The top of the image",
-            "The image does not feature the car"
-        ],
-        "image": "Video_Monitoring/10",
-        "question_type": "multi_choice"
-    },
-    "238": {
-        "question": "What color is the pedestrian's coat in the image?",
-        "answer": "B",
-        "dataset": "Video_Monitoring",
-        "image_id": 11,
-        "choices": [
-            "Red",
-            "White",
-            "Green",
-            "Black",
-            "The image does not feature the pedestrian"
-        ],
-        "image": "Video_Monitoring/11",
-        "question_type": "multi_choice"
-    },
-    "239": {
-        "question": "Where is the truck in the image?\n",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 12,
-        "choices": [
-            "The upper left corner",
-            "The lower left corner",
-            "The right center",
-            "The upper right corner",
-            "The image does not feature the truck"
-        ],
-        "image": "Video_Monitoring/12",
-        "question_type": "multi_choice"
-    },
-    "240": {
-        "question": "What will the bus do in the image?\n",
-        "answer": "B",
-        "dataset": "Video_Monitoring",
-        "image_id": 13,
-        "choices": [
-            "stopping",
-            "no response",
-            "turn left",
-            "turn right",
-            "The image does not feature the bus"
-        ],
-        "image": "Video_Monitoring/13",
-        "question_type": "multi_choice"
-    },
-    "241": {
-        "question": "What is the number of vans in the image?\n",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 15,
-        "choices": [
-            "3",
-            "10",
-            "8",
-            "9",
-            "The image does not feature the vans"
-        ],
-        "image": "Video_Monitoring/15",
-        "question_type": "multi_choice"
-    },
-    "242": {
-        "question": "What is the number of bicycles in the image?\n",
-        "answer": "B",
-        "dataset": "Video_Monitoring",
-        "image_id": 16,
-        "choices": [
-            "3",
-            "5",
-            "10",
-            "6",
-            "The image does not feature the bicycles"
-        ],
-        "image": "Video_Monitoring/16",
-        "question_type": "multi_choice"
-    },
-    "243": {
-        "question": "What color is the tricycle in the image?\n",
-        "answer": "A",
-        "dataset": "Video_Monitoring",
-        "image_id": 17,
-        "choices": [
-            "Red",
-            "White",
-            "Black",
-            "Green",
-            "The image does not feature the tricycle"
-        ],
-        "image": "Video_Monitoring/17",
-        "question_type": "multi_choice"
-    },
-    "244": {
-        "question": "What is the number of bicycles in the image?\n",
-        "answer": "E",
-        "dataset": "Video_Monitoring",
-        "image_id": 18,
-        "choices": [
-            "26",
-            "90",
-            "22",
-            "27",
-            "The image does not feature the bicycles"
-        ],
-        "image": "Video_Monitoring/18",
-        "question_type": "multi_choice"
-    },
-    "245": {
-        "question": "Where is the tricycle in the image?\n",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 19,
-        "choices": [
-            "The upper left corner",
-            "The lower left corner",
-            "The lower right corner",
-            "The upper right corner",
-            "The image does not feature the tricycle"
-        ],
-        "image": "Video_Monitoring/19",
-        "question_type": "multi_choice"
-    },
-    "246": {
-        "question": "What is the number of persons in the image?\n",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 20,
-        "choices": [
-            "54",
-            "61",
-            "62",
-            "49",
-            "The image does not feature the persons"
-        ],
-        "image": "Video_Monitoring/20",
-        "question_type": "multi_choice"
-    },
-    "247": {
-        "question": "What color is the people's coat in the image?",
-        "answer": "A",
-        "dataset": "Video_Monitoring",
-        "image_id": 21,
-        "choices": [
-            "White and Black",
-            "Red",
-            "White",
-            "Black",
-            "The image does not feature the people"
-        ],
-        "image": "Video_Monitoring/21",
-        "question_type": "multi_choice"
-    },
-    "248": {
-        "question": "What is the orientation of the pedestrian's coat in the image?",
-        "answer": "E",
-        "dataset": "Video_Monitoring",
-        "image_id": 22,
-        "choices": [
-            "The right of the image",
-            "The bottom of the image",
-            "The left of the image",
-            "The top of the image",
-            "The image does not feature the pedestrian"
-        ],
-        "image": "Video_Monitoring/22",
-        "question_type": "multi_choice"
-    },
-    "249": {
-        "question": "What will the pedestrian do in the image?",
-        "answer": "B",
-        "dataset": "Video_Monitoring",
-        "image_id": 23,
-        "choices": [
-            "stopping",
-            "keep moving",
-            "turn left",
-            "turn right",
-            "The image does not feature the pedestrian"
-        ],
-        "image": "Video_Monitoring/23",
-        "question_type": "multi_choice"
-    },
-    "250": {
-        "question": "What is the total number of bicycles and people in the image?",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 25,
-        "choices": [
-            "19",
-            "1",
-            "6",
-            "17",
-            "The image does not feature the objects"
-        ],
-        "image": "Video_Monitoring/25",
-        "question_type": "multi_choice"
-    },
-    "251": {
-        "question": "What is the number of trucks in the image?\n",
-        "answer": "C",
-        "dataset": "Video_Monitoring",
-        "image_id": 26,
-        "choices": [
-            "6",
-            "11",
-            "5",
-            "9",
-            "The image does not feature the trucks"
-        ],
-        "image": "Video_Monitoring/26",
-        "question_type": "multi_choice"
-    },
-    "252": {
-        "question": "What is the number of buses in the image?\n",
-        "answer": "E",
-        "dataset": "Video_Monitoring",
-        "image_id": 27,
-        "choices": [
-            "70",
-            "38",
-            "66",
-            "17",
-            "The image does not feature the buses"
-        ],
-        "image": "Video_Monitoring/27",
-        "question_type": "multi_choice"
-    },
-    "253": {
-        "question": "What is the number of persons in the image?\n",
-        "answer": "D",
-        "dataset": "Video_Monitoring",
-        "image_id": 28,
-        "choices": [
-            "32",
-            "27",
-            "29",
-            "35",
-            "The image does not feature the persons"
-        ],
-        "image": "Video_Monitoring/28",
-        "question_type": "multi_choice"
-    },
-    "254": {
-        "question": "What is the orientation of the awning-tricycle in the image?\n",
-        "answer": "E",
-        "dataset": "Video_Monitoring",
-        "image_id": 29,
-        "choices": [
-            "The right of the image",
-            "The bottom of the image",
-            "The left of the image",
-            "The top of the image",
-            "The image does not feature the awning-tricycle"
-        ],
-        "image": "Video_Monitoring/29",
-        "question_type": "multi_choice"
-    },
-    "255": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "A",
-        "dataset": "VisDiffBench",
-        "image_id": 0,
-        "choices": [
-            "Sky view (Night vs Day)",
-            "Airborne item (Balloons vs Kites)",
-            "Sky view (Sun vs Moon)",
-            "Background Colors (White vs Blue)"
-        ],
-        "image": "VisDiffBench/0",
-        "question_type": "multi_choice"
-    },
-    "256": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "D",
-        "dataset": "VisDiffBench",
-        "image_id": 1,
-        "choices": [
-            "Jungle animal (Lions vs Tigers)",
-            "Landscape (Mountains vs Desert)",
-            "Number of Objects (1 vs 2)",
-            "Jungle animal (Lions vs Monkeys)"
-        ],
-        "image": "VisDiffBench/1",
-        "question_type": "multi_choice"
-    },
-    "257": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 2,
-        "choices": [
-            "Dress Type (Formal vs Casual)",
-            "Formal attire type (Suit vs Tuxedo)",
-            "Fabric (Lace vs Satin)",
-            "Gender (Men vs Women)"
-        ],
-        "image": "VisDiffBench/2",
-        "question_type": "multi_choice"
-    },
-    "258": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "A",
-        "dataset": "VisDiffBench",
-        "image_id": 5,
-        "choices": [
-            "Eating utensil (Chopsticks vs Forks)",
-            "Eating utensil (Spoon vs Bowls)",
-            "Kitchen item placement (Cups vs Table)",
-            "Material (Wood vs Plastic)"
-        ],
-        "image": "VisDiffBench/5",
-        "question_type": "multi_choice"
-    },
-    "259": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "A",
-        "dataset": "VisDiffBench",
-        "image_id": 6,
-        "choices": [
-            "Building type (Towers vs Houses)",
-            "Building type (Town vs Villages)",
-            "Landscape (City vs Desert)",
-            "Number of Objects (2 vs 3)"
-        ],
-        "image": "VisDiffBench/6",
-        "question_type": "multi_choice"
-    },
-    "260": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "A",
-        "dataset": "VisDiffBench",
-        "image_id": 7,
-        "choices": [
-            "Architectural style (Gothic vs Baroque)",
-            "Background Colors (White vs Silver)",
-            "Building type (Town vs Villages)",
-            "Building type (Towers vs Houses)"
-        ],
-        "image": "VisDiffBench/7",
-        "question_type": "multi_choice"
-    },
-    "261": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 8,
-        "choices": [
-            "Arctic animal (Penguins vs Sharks)",
-            "Snow activity (Skiing vs Ice Skating)",
-            "Arctic animal (Penguins vs Seals)",
-            "Background Colors (Blue vs Green)"
-        ],
-        "image": "VisDiffBench/8",
-        "question_type": "multi_choice"
-    },
-    "262": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "B",
-        "dataset": "VisDiffBench",
-        "image_id": 9,
-        "choices": [
-            "Material (Wood vs Plastic)",
-            "Clock type (Digital vs Analog)",
-            "Background Colors (Green vs Blue)",
-            "Time of the day (Day vs Night)"
-        ],
-        "image": "VisDiffBench/9",
-        "question_type": "multi_choice"
-    },
-    "263": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 11,
-        "choices": [
-            "Vehicle (Cars vs Trains)",
-            "Bike type (Mountain vs Road)",
-            "Car era (Vintage vs Modern)",
-            "Number of Objects (2 vs 3)"
-        ],
-        "image": "VisDiffBench/11",
-        "question_type": "multi_choice"
-    },
-    "264": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "A",
-        "dataset": "VisDiffBench",
-        "image_id": 12,
-        "choices": [
-            "Desert animal (Kangaroos vs Camels)",
-            "Number of Objects (1 vs 2)",
-            "Landscape (Mountains vs Rivers)",
-            "Desert animal (Kangaroos vs Snakes)"
-        ],
-        "image": "VisDiffBench/12",
-        "question_type": "multi_choice"
-    },
-    "265": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 13,
-        "choices": [
-            "Time of the day (Day vs Night)",
-            "Number of Objects (1 vs 2)",
-            "Plant type (Bonsai vs Cacti)",
-            "Landscape (Forest vs River)"
-        ],
-        "image": "VisDiffBench/13",
-        "question_type": "multi_choice"
-    },
-    "266": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 14,
-        "choices": [
-            "Forest animal (Dogs vs Donkeys)",
-            "Number of Objects (2 vs 3)",
-            "Horseback activity (Racing vs Dressage)",
-            "Vehicle (Cars vs Trains)"
-        ],
-        "image": "VisDiffBench/14",
-        "question_type": "multi_choice"
-    },
-    "267": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "D",
-        "dataset": "VisDiffBench",
-        "image_id": 15,
-        "choices": [
-            "Background Colors (White vs Green)",
-            "Landscape (Rivers vs Desert)",
-            "Time of the day (Day vs Night)",
-            "Landscape (Mountains vs Desert)"
-        ],
-        "image": "VisDiffBench/15",
-        "question_type": "multi_choice"
-    },
-    "268": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "B",
-        "dataset": "VisDiffBench",
-        "image_id": 16,
-        "choices": [
-            "Background Colors (Blue vs Green)",
-            "Cat coat pattern (Ginger vs Tabby)",
-            "Animal (Dogs vs Cats)",
-            "Number of Objects (1 vs 2)"
-        ],
-        "image": "VisDiffBench/16",
-        "question_type": "multi_choice"
-    },
-    "269": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "B",
-        "dataset": "VisDiffBench",
-        "image_id": 18,
-        "choices": [
-            "Landscape (Mountains vs Rivers)",
-            "Pond animal (Frogs vs Ducks)",
-            "Pond animal (Frogs vs Fishes)",
-            "Sky view (Sun vs Moon)"
-        ],
-        "image": "VisDiffBench/18",
-        "question_type": "multi_choice"
-    },
-    "270": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "B",
-        "dataset": "VisDiffBench",
-        "image_id": 19,
-        "choices": [
-            "Artistic period (Renaissance vs Hellenistic)",
-            "Art style (Cubist vs Impressionist)",
-            "War period (WWI vs WWII)",
-            "Background Colors (Black vs White)"
-        ],
-        "image": "VisDiffBench/19",
-        "question_type": "multi_choice"
-    },
-    "271": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "A",
-        "dataset": "VisDiffBench",
-        "image_id": 20,
-        "choices": [
-            "Sport and gender (Basketball/Men vs Volleyball/Women)",
-            "Sky view (Sun vs Moon)",
-            "Sport and gender (Football/Men vs Baseball/Women)",
-            "Background Colors (Black vs White)"
-        ],
-        "image": "VisDiffBench/20",
-        "question_type": "multi_choice"
-    },
-    "272": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "D",
-        "dataset": "VisDiffBench",
-        "image_id": 21,
-        "choices": [
-            "Background Colors (Brown vs Blue)",
-            "Number of Objects (2 vs 3)",
-            "Shelf item (Books vs Plants)",
-            "Toy type (Dolls vs Teddy bears)"
-        ],
-        "image": "VisDiffBench/21",
-        "question_type": "multi_choice"
-    },
-    "273": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "B",
-        "dataset": "VisDiffBench",
-        "image_id": 22,
-        "choices": [
-            "Gender (Men vs Women)",
-            "Playground equipment (Slide vs Swing)",
-            "Background Colors (Black vs White)",
-            "Time of the day (Day vs Night)"
-        ],
-        "image": "VisDiffBench/22",
-        "question_type": "multi_choice"
-    },
-    "274": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "B",
-        "dataset": "VisDiffBench",
-        "image_id": 23,
-        "choices": [
-            "Type of refreshment (Ice cream vs Juice)",
-            "Dessert (Macarons vs Meringues)",
-            "Type of refreshment (Ice cream vs Gelato)",
-            "Type of refreshment (Tea vs Coffee)"
-        ],
-        "image": "VisDiffBench/23",
-        "question_type": "multi_choice"
-    },
-    "275": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 24,
-        "choices": [
-            "Bed item (Bed vs Bed Sheets)",
-            "Food type (Pizzas vs Donuts)",
-            "Bed item (Pillows vs Blankets)",
-            "Room Type (Kitchen vs Living Room)"
-        ],
-        "image": "VisDiffBench/24",
-        "question_type": "multi_choice"
-    },
-    "276": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 25,
-        "choices": [
-            "Film coloring method (Black and white vs Technicolor)",
-            "Number of Objects (1 vs 2)",
-            "Historical setting (Medieval Europe vs Ancient Rome)",
-            "Background Colors (Black vs White)"
-        ],
-        "image": "VisDiffBench/25",
-        "question_type": "multi_choice"
-    },
-    "277": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "B",
-        "dataset": "VisDiffBench",
-        "image_id": 26,
-        "choices": [
-            "Boot height (Ankle vs Knee-high)",
-            "Shoe type (Pointe shoes vs Ballet slippers)",
-            "Background Colors (Black vs White)",
-            "Gender (Men vs Women)"
-        ],
-        "image": "VisDiffBench/26",
-        "question_type": "multi_choice"
-    },
-    "278": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "C",
-        "dataset": "VisDiffBench",
-        "image_id": 28,
-        "choices": [
-            "Landscape (Mountains vs Desert)",
-            "Number of Objects (1 vs 2)",
-            "Beach item (Sandcastles vs Umbrellas)",
-            "Landscape (Mountains vs Rivers)"
-        ],
-        "image": "VisDiffBench/28",
-        "question_type": "multi_choice"
-    },
-    "279": {
-        "question": "What is the difference between the first two rows of images and the last two rows?\n",
-        "answer": "A",
-        "dataset": "VisDiffBench",
-        "image_id": 29,
-        "choices": [
-            "Traditional attire (Hanbok vs Kimono)",
-            "Attire (Thai vs Vietnamese)",
-            "Number of Objects (1 vs 2)",
-            "Gender (Men vs Women)"
-        ],
-        "image": "VisDiffBench/29",
-        "question_type": "multi_choice"
-    },
-    "280": {
-        "question": "Is there a fracture in the vertebrae seen?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 0,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/0",
-        "question_type": "multi_choice"
-    },
-    "281": {
-        "question": "Are air fluid levels depicted in this image?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 1,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/1",
-        "question_type": "multi_choice"
-    },
-    "282": {
-        "question": "Are there lungs free of consolidation?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 2,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/2",
-        "question_type": "multi_choice"
-    },
-    "283": {
-        "question": "Is there more that one lesion present?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 3,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/3",
-        "question_type": "multi_choice"
-    },
-    "284": {
-        "question": "Is this a coronal view?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 4,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/4",
-        "question_type": "multi_choice"
-    },
-    "285": {
-        "question": "Is there a clavicle fracture shown in this radiograph?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 5,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/5",
-        "question_type": "multi_choice"
-    },
-    "286": {
-        "question": "Is there a pneumothorax present?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 6,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/6",
-        "question_type": "multi_choice"
-    },
-    "287": {
-        "question": "Is the trachea deviated?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 7,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/7",
-        "question_type": "multi_choice"
-    },
-    "288": {
-        "question": "Is there small bowel thickening present?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 8,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/8",
-        "question_type": "multi_choice"
-    },
-    "289": {
-        "question": "Are the hilar soft tissue densities symmetric?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 9,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/9",
-        "question_type": "multi_choice"
-    },
-    "290": {
-        "question": "Is this a PA film?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 10,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/10",
-        "question_type": "multi_choice"
-    },
-    "291": {
-        "question": "Would you describe the mass as cystic?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 11,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/11",
-        "question_type": "multi_choice"
-    },
-    "292": {
-        "question": "Is there any presence of tracheal deviation?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 12,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/12",
-        "question_type": "multi_choice"
-    },
-    "293": {
-        "question": "Are any ribs in the image fractured?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 13,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/13",
-        "question_type": "multi_choice"
-    },
-    "294": {
-        "question": "Is there evidence of any abnormalities of the lung parenchyma?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 14,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/14",
-        "question_type": "multi_choice"
-    },
-    "295": {
-        "question": "Is the trachea midline?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 15,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/15",
-        "question_type": "multi_choice"
-    },
-    "296": {
-        "question": "Is this image sufficient for a diagnosis?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 16,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/16",
-        "question_type": "multi_choice"
-    },
-    "297": {
-        "question": "Are the findings normal?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 17,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/17",
-        "question_type": "multi_choice"
-    },
-    "298": {
-        "question": "Are feces located in the colon?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 18,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/18",
-        "question_type": "multi_choice"
-    },
-    "299": {
-        "question": "Is there an air fluid level present?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 19,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/19",
-        "question_type": "multi_choice"
-    },
-    "300": {
-        "question": "Is there fat stranding present?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 20,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/20",
-        "question_type": "multi_choice"
-    },
-    "301": {
-        "question": "Is the left lung field more radioopaque than the right side?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 21,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/21",
-        "question_type": "multi_choice"
-    },
-    "302": {
-        "question": "Is this patient lying supine?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 22,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/22",
-        "question_type": "multi_choice"
-    },
-    "303": {
-        "question": "is there calcification\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 23,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/23",
-        "question_type": "multi_choice"
-    },
-    "304": {
-        "question": "Are there any consolidations present in the lungs?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 24,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/24",
-        "question_type": "multi_choice"
-    },
-    "305": {
-        "question": "Is the liver abnormal?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 25,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/25",
-        "question_type": "multi_choice"
-    },
-    "306": {
-        "question": "Is this lesion loculated\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 26,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/26",
-        "question_type": "multi_choice"
-    },
-    "307": {
-        "question": "Does this image show a pneumothorax?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 27,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/27",
-        "question_type": "multi_choice"
-    },
-    "308": {
-        "question": "Is there blunting of the costovertebral angles?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 28,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/28",
-        "question_type": "multi_choice"
-    },
-    "309": {
-        "question": "Are there any fractures in any of the ribs?\n",
-        "answer": NaN,
-        "dataset": "VQA-RAD",
-        "image_id": 29,
-        "choices": [
-            "Yes",
-            "No",
-            "Not specified"
-        ],
-        "image": "VQA-RAD/29",
-        "question_type": "multi_choice"
-    },
-    "310": {
-        "question": "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 0,
-        "choices": [
-            "I don't know",
-            "No",
-            "two",
-            "Yes"
-        ],
-        "image": "Galaxy/0",
-        "question_type": "multi_choice"
-    },
-    "311": {
-        "question": "How many of celestial object is shown in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "A",
-        "dataset": "Galaxy",
-        "image_id": 1,
-        "choices": [
-            "2",
-            "0",
-            "10",
-            "1"
-        ],
-        "image": "Galaxy/1",
-        "question_type": "multi_choice"
-    },
-    "312": {
-        "question": "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "D",
-        "dataset": "Galaxy",
-        "image_id": 2,
-        "choices": [
-            "Yes",
-            "I don't know",
-            "two",
-            "No"
-        ],
-        "image": "Galaxy/2",
-        "question_type": "multi_choice"
-    },
-    "313": {
-        "question": "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "D",
-        "dataset": "Galaxy",
-        "image_id": 3,
-        "choices": [
-            "I don't know",
-            "No",
-            "two",
-            "Yes"
-        ],
-        "image": "Galaxy/3",
-        "question_type": "multi_choice"
-    },
-    "314": {
-        "question": "How many yellow stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "C",
-        "dataset": "Galaxy",
-        "image_id": 4,
-        "choices": [
-            "50+",
-            "1-10",
-            "20-30",
-            "10-20"
-        ],
-        "image": "Galaxy/4",
-        "question_type": "multi_choice"
-    },
-    "315": {
-        "question": "How many galaxy in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "A",
-        "dataset": "Galaxy",
-        "image_id": 5,
-        "choices": [
-            "1-3",
-            "0",
-            "20",
-            "10"
-        ],
-        "image": "Galaxy/5",
-        "question_type": "multi_choice"
-    },
-    "316": {
-        "question": "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 6,
-        "choices": [
-            "No",
-            "Yes",
-            "I don't know",
-            "two"
-        ],
-        "image": "Galaxy/6",
-        "question_type": "multi_choice"
-    },
-    "317": {
-        "question": "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "A",
-        "dataset": "Galaxy",
-        "image_id": 7,
-        "choices": [
-            "I don't know",
-            "Yes",
-            "No",
-            "two"
-        ],
-        "image": "Galaxy/7",
-        "question_type": "multi_choice"
-    },
-    "318": {
-        "question": "How many planets in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 9,
-        "choices": [
-            "2",
-            "1",
-            "0",
-            "3"
-        ],
-        "image": "Galaxy/9",
-        "question_type": "multi_choice"
-    },
-    "319": {
-        "question": "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 10,
-        "choices": [
-            "Yes",
-            "I don't know",
-            "No",
-            "two"
-        ],
-        "image": "Galaxy/10",
-        "question_type": "multi_choice"
-    },
-    "320": {
-        "question": "Are the objects in the image all the same size? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "D",
-        "dataset": "Galaxy",
-        "image_id": 11,
-        "choices": [
-            "Yes",
-            "two",
-            "I don't know",
-            "No"
-        ],
-        "image": "Galaxy/11",
-        "question_type": "multi_choice"
-    },
-    "321": {
-        "question": "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "C",
-        "dataset": "Galaxy",
-        "image_id": 12,
-        "choices": [
-            "No",
-            "two",
-            "I don't know",
-            "Yes"
-        ],
-        "image": "Galaxy/12",
-        "question_type": "multi_choice"
-    },
-    "322": {
-        "question": "How many reddish stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 13,
-        "choices": [
-            "1-10",
-            "50+",
-            "30-50",
-            "20-30"
-        ],
-        "image": "Galaxy/13",
-        "question_type": "multi_choice"
-    },
-    "323": {
-        "question": "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "A",
-        "dataset": "Galaxy",
-        "image_id": 14,
-        "choices": [
-            "No",
-            "I don't know",
-            "Yes",
-            "two"
-        ],
-        "image": "Galaxy/14",
-        "question_type": "multi_choice"
-    },
-    "324": {
-        "question": "What type of celestial object is shown in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 15,
-        "choices": [
-            "irregular",
-            "planet",
-            "Elliptical",
-            "Spiral"
-        ],
-        "image": "Galaxy/15",
-        "question_type": "multi_choice"
-    },
-    "325": {
-        "question": "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "C",
-        "dataset": "Galaxy",
-        "image_id": 16,
-        "choices": [
-            "Yes",
-            "two",
-            "No",
-            "I don't know"
-        ],
-        "image": "Galaxy/16",
-        "question_type": "multi_choice"
-    },
-    "326": {
-        "question": "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "D",
-        "dataset": "Galaxy",
-        "image_id": 17,
-        "choices": [
-            "No",
-            "Yes",
-            "two",
-            "I don't know"
-        ],
-        "image": "Galaxy/17",
-        "question_type": "multi_choice"
-    },
-    "327": {
-        "question": "Where is the brightest star located in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "C",
-        "dataset": "Galaxy",
-        "image_id": 19,
-        "choices": [
-            "top",
-            "left",
-            "middle",
-            "bottom"
-        ],
-        "image": "Galaxy/19",
-        "question_type": "multi_choice"
-    },
-    "328": {
-        "question": "How many stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 21,
-        "choices": [
-            "20",
-            "100+",
-            "0",
-            "10"
-        ],
-        "image": "Galaxy/21",
-        "question_type": "multi_choice"
-    },
-    "329": {
-        "question": "What type of celestial object is shown in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "C",
-        "dataset": "Galaxy",
-        "image_id": 23,
-        "choices": [
-            "Elliptical",
-            "irregular",
-            "planet",
-            "Spiral"
-        ],
-        "image": "Galaxy/23",
-        "question_type": "multi_choice"
-    },
-    "330": {
-        "question": "How many yellow stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "A",
-        "dataset": "Galaxy",
-        "image_id": 24,
-        "choices": [
-            "50+",
-            "10-20",
-            "1-10",
-            "20-30"
-        ],
-        "image": "Galaxy/24",
-        "question_type": "multi_choice"
-    },
-    "331": {
-        "question": "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 25,
-        "choices": [
-            "two",
-            "Yes",
-            "No",
-            "I don't know"
-        ],
-        "image": "Galaxy/25",
-        "question_type": "multi_choice"
-    },
-    "332": {
-        "question": "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "D",
-        "dataset": "Galaxy",
-        "image_id": 26,
-        "choices": [
-            "Yes",
-            "two",
-            "I don't know",
-            "No"
-        ],
-        "image": "Galaxy/26",
-        "question_type": "multi_choice"
-    },
-    "333": {
-        "question": "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "B",
-        "dataset": "Galaxy",
-        "image_id": 27,
-        "choices": [
-            "Yes",
-            "No",
-            "two",
-            "I don't know"
-        ],
-        "image": "Galaxy/27",
-        "question_type": "multi_choice"
-    },
-    "334": {
-        "question": "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "C",
-        "dataset": "Galaxy",
-        "image_id": 28,
-        "choices": [
-            "No",
-            "two",
-            "I don't know",
-            "Yes"
-        ],
-        "image": "Galaxy/28",
-        "question_type": "multi_choice"
-    },
-    "335": {
-        "question": "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
-        "answer": "D",
-        "dataset": "Galaxy",
-        "image_id": 29,
-        "choices": [
-            "Yes",
-            "two",
-            "I don't know",
-            "No"
-        ],
-        "image": "Galaxy/29",
-        "question_type": "multi_choice"
-    },
-    "336": {
-        "question": "What color is next to the blue square building in the upper left corner of the picture?\n",
-        "answer": "E",
-        "dataset": "Remote_Sensing",
-        "image_id": 0,
-        "choices": [
-            "Blue",
-            "Black",
-            "White",
-            "Red",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/0",
-        "question_type": "multi_choice"
-    },
-    "337": {
-        "question": "How many red cars are there in the red parking lot in the bottom right corner of the picture?\n",
-        "answer": "E",
-        "dataset": "Remote_Sensing",
-        "image_id": 1,
-        "choices": [
-            "2",
-            "1",
-            "3",
-            "5",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/1",
-        "question_type": "multi_choice"
-    },
-    "338": {
-        "question": "How many big ships are docked around the dock in the middle below the picture?\n",
-        "answer": "A",
-        "dataset": "Remote_Sensing",
-        "image_id": 2,
-        "choices": [
-            "3",
-            "1",
-            "2",
-            "4",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/2",
-        "question_type": "multi_choice"
-    },
-    "339": {
-        "question": "What color is the irregular Y-shaped building at the top of the picture?\n",
-        "answer": "D",
-        "dataset": "Remote_Sensing",
-        "image_id": 3,
-        "choices": [
-            "Gray",
-            "Green",
-            "Red",
-            "White",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/3",
-        "question_type": "multi_choice"
-    },
-    "340": {
-        "question": "What color is the house in the top right corner of the picture?\n",
-        "answer": "E",
-        "dataset": "Remote_Sensing",
-        "image_id": 5,
-        "choices": [
-            "White",
-            "Gray",
-            "Black",
-            "Red",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/5",
-        "question_type": "multi_choice"
-    },
-    "341": {
-        "question": "How many hoisting equipments are there beside the water in the upper left area of this picture?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 6,
-        "choices": [
-            "1",
-            "2",
-            "5",
-            "7",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/6",
-        "question_type": "multi_choice"
-    },
-    "342": {
-        "question": "What color are the flowers blooming on the trees between the buildings on the left side of the picture?\n",
-        "answer": "B",
-        "dataset": "Remote_Sensing",
-        "image_id": 7,
-        "choices": [
-            "red",
-            "pink",
-            "blue",
-            "yellow",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/7",
-        "question_type": "multi_choice"
-    },
-    "343": {
-        "question": "Where is the park with a lake and paths in the picture?\n",
-        "answer": "A",
-        "dataset": "Remote_Sensing",
-        "image_id": 8,
-        "choices": [
-            "On the top left side of the picture.",
-            "On the top right side of the picture.",
-            "On the bottom left side of the picture.",
-            "On the bottom right side of the picture.",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/8",
-        "question_type": "multi_choice"
-    },
-    "344": {
-        "question": "What color is the tramcar in the mid right of the picture?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 9,
-        "choices": [
-            "dark red",
-            "blue",
-            "greee and white",
-            "black",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/9",
-        "question_type": "multi_choice"
-    },
-    "345": {
-        "question": "How many green ships are there in the picture?\n",
-        "answer": "D",
-        "dataset": "Remote_Sensing",
-        "image_id": 10,
-        "choices": [
-            "1",
-            "4",
-            "3",
-            "2",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/10",
-        "question_type": "multi_choice"
-    },
-    "346": {
-        "question": "Where is the white bus located in the picture?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 11,
-        "choices": [
-            "In the upper left area of the picture",
-            "In the upper right area of the picture",
-            "In the lower right area of the picture",
-            "In the lower left area of the picture",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/11",
-        "question_type": "multi_choice"
-    },
-    "347": {
-        "question": "What color is the ship currently in motion in the water area at the bottom left of the picture?\n",
-        "answer": "A",
-        "dataset": "Remote_Sensing",
-        "image_id": 12,
-        "choices": [
-            "White",
-            "Yellow",
-            "Red",
-            "Blue",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/12",
-        "question_type": "multi_choice"
-    },
-    "348": {
-        "question": "Where is the light green rectangular object in the picture?\n",
-        "answer": "E",
-        "dataset": "Remote_Sensing",
-        "image_id": 13,
-        "choices": [
-            "In the upper right corner of the picture",
-            "In the lower right corner of the picture",
-            "In the lower left corner of the picture",
-            "In the upper left corner of the picture",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/13",
-        "question_type": "multi_choice"
-    },
-    "349": {
-        "question": "What color is the roof of the larger rectangular building in the upper right corner edge area of the picture?\n",
-        "answer": "D",
-        "dataset": "Remote_Sensing",
-        "image_id": 14,
-        "choices": [
-            "Black",
-            "Red",
-            "Gray",
-            "White",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/14",
-        "question_type": "multi_choice"
-    },
-    "350": {
-        "question": "What color are the buildings surrounding the dark green water area in the upper right corner of the picture?\n",
-        "answer": "B",
-        "dataset": "Remote_Sensing",
-        "image_id": 15,
-        "choices": [
-            "Red",
-            "White",
-            "Blue",
-            "Green",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/15",
-        "question_type": "multi_choice"
-    },
-    "351": {
-        "question": "Where is the cement-colored chimney-shaped building in the picture?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 16,
-        "choices": [
-            "To the right of the top of the picture.",
-            "In the bottom left corner of the picture.",
-            "In the bottom right corner of the picture.",
-            "In the upper left corner of the picture.",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/16",
-        "question_type": "multi_choice"
-    },
-    "352": {
-        "question": "What color are the two chimneys in the center of the picture?\n",
-        "answer": "A",
-        "dataset": "Remote_Sensing",
-        "image_id": 17,
-        "choices": [
-            "Red and white",
-            "Red",
-            "White",
-            "Black",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/17",
-        "question_type": "multi_choice"
-    },
-    "353": {
-        "question": "What color is the ship on the upper left side of the picture, sailing on the water's surface and leaving white ripples?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 18,
-        "choices": [
-            "Blue",
-            "Gray",
-            "White",
-            "Red",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/18",
-        "question_type": "multi_choice"
-    },
-    "354": {
-        "question": "How many ships are there in the left side along the pier of the picture?\n",
-        "answer": "B",
-        "dataset": "Remote_Sensing",
-        "image_id": 19,
-        "choices": [
-            "7",
-            "5",
-            "4",
-            "2",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/19",
-        "question_type": "multi_choice"
-    },
-    "355": {
-        "question": "Where is the house with a blue roof in the picture?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 20,
-        "choices": [
-            "In the middle area of the picture",
-            "In the left area of the picture",
-            "In the bottom area of the picture",
-            "In the upper right of the picture",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/20",
-        "question_type": "multi_choice"
-    },
-    "356": {
-        "question": "Where is the basketball court in the picture?\n",
-        "answer": "A",
-        "dataset": "Remote_Sensing",
-        "image_id": 21,
-        "choices": [
-            "In the upper right corner of the picture.",
-            "On the lower left side of the picture",
-            "In the center of the picture.",
-            "At the top left corner of the picture.",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/21",
-        "question_type": "multi_choice"
-    },
-    "357": {
-        "question": "How many white concrete mixing tower facilities are there in the bottom right corner of this picture?\n",
-        "answer": "D",
-        "dataset": "Remote_Sensing",
-        "image_id": 22,
-        "choices": [
-            "2",
-            "3",
-            "5",
-            "7",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/22",
-        "question_type": "multi_choice"
-    },
-    "358": {
-        "question": "How many red cars are there in the bottom left corner of the picture?\n",
-        "answer": "B",
-        "dataset": "Remote_Sensing",
-        "image_id": 23,
-        "choices": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/23",
-        "question_type": "multi_choice"
-    },
-    "359": {
-        "question": "Where is the light blue rectangular ground in the picture?\n",
-        "answer": "B",
-        "dataset": "Remote_Sensing",
-        "image_id": 24,
-        "choices": [
-            "At the top of the picture",
-            "In the center of the picture",
-            "At the bottom of the picture",
-            "On the right of the picture",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/24",
-        "question_type": "multi_choice"
-    },
-    "360": {
-        "question": "Where is the Light-rail vehicle located in this picture?\n",
-        "answer": "E",
-        "dataset": "Remote_Sensing",
-        "image_id": 25,
-        "choices": [
-            "In the top right corner of this picture",
-            "In the top left corner of this picture",
-            "In the bottom left corner of this picture",
-            "In the bottom right corner of this picture",
-            "This image doesn't feature the position."
-        ],
-        "image": "Remote_Sensing/25",
-        "question_type": "multi_choice"
-    },
-    "361": {
-        "question": "How many red flags are there in the bottom right corner of the picture?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 26,
-        "choices": [
-            "4",
-            "5",
-            "6",
-            "7",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/26",
-        "question_type": "multi_choice"
-    },
-    "362": {
-        "question": "How many yellow cars are there on the lower left side of the road?\n",
-        "answer": "D",
-        "dataset": "Remote_Sensing",
-        "image_id": 27,
-        "choices": [
-            "7",
-            "8",
-            "9",
-            "2",
-            "This image doesn't feature the count."
-        ],
-        "image": "Remote_Sensing/27",
-        "question_type": "multi_choice"
-    },
-    "363": {
-        "question": "What color is the truck on the bridge in the bottom right corner of the picture?\n",
-        "answer": "C",
-        "dataset": "Remote_Sensing",
-        "image_id": 28,
-        "choices": [
-            "Red",
-            "Purple",
-            "White",
-            "Blue",
-            "This image doesn't feature the color."
-        ],
-        "image": "Remote_Sensing/28",
-        "question_type": "multi_choice"
-    },
-    "364": {
-        "question": "How many non-human characters are there in the picture?\n",
-        "answer": "C",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 0,
-        "choices": [
-            "1.",
-            "2.",
-            "4.",
-            "5.",
-            "The image does not feature the related information."
-        ],
-        "image": "OCR_in_the_Wild/0",
-        "question_type": "multi_choice"
-    },
-    "365": {
-        "question": "What might be the relationship between the people in the picture?\n",
-        "answer": "C",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 1,
-        "choices": [
-            "Classmates.",
-            "Enemies.",
-            "Teacher and students.",
-            "Father and sons.",
-            "The image does not feature the related information."
-        ],
-        "image": "OCR_in_the_Wild/1",
-        "question_type": "multi_choice"
-    },
-    "366": {
-        "question": "How many characters are there in the picture?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 2,
-        "choices": [
-            "3.",
-            "4.",
-            "1.",
-            "2.",
-            "The image does not feature the related information."
-        ],
-        "image": "OCR_in_the_Wild/2",
-        "question_type": "multi_choice"
-    },
-    "367": {
-        "question": "What is the text content in the first grid of this picture?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 3,
-        "choices": [
-            "\u3053\u306e\u8857\u306e\u5974\u3089\u306f\u4eba\u3082\u5974\u96b7\u3082\u5168\u3066\u72c2\u3063\u3066\u3044\u308b...",
-            "\u3042\u3042\u3042\u3042\u3042\u3042\u3063 \u59eb\u69d8\u306e\u5b50\u5bae\u5438\u3044\u4ed8\u3044\u3066\u96e2\u3055\u306a\u3044\u3063\u5b50\u5bae\u306a\u3093\u3060\u3063",
-            "\u3053\u3046\u306a\u3063\u305f\u3089\u79c1\u304c\u7523\u307e\u305b\u3066\u3084\u308b\u7d14\u8840\u306e\u6b63\u5f53\u306a\u738b\u5bb6\u306e\u8840\u7b4b\u3092\uff01\uff01\u3042\u306e\u61a7\u308c\u306e\u59eb\u69d8\u306b\u3053\u306e\u79c1\u304c\u3063\uff01\uff01\u59eb\u69d8\u3063\uff01\uff01 \u59eb\u69d8",
-            "\u304f\u305d\u304a\u304a\u304a\u304a\u304a\u304a\u304a\u3044\uff01\u3053\u306e\u58f2\u5973\u3081\u3048\u3048\u3048\u3048\u3048\uff01\u304f\u305d\u304f\u305d\u304f\u305d\u304a\u304a\u304a\u304a\u304a\u3044\uff01",
-            "The image does not feature the content."
-        ],
-        "image": "OCR_in_the_Wild/3",
-        "question_type": "multi_choice"
-    },
-    "368": {
-        "question": "How will this picnic last?\n",
-        "answer": "C",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 4,
-        "choices": [
-            "2 days.",
-            "10 hours.",
-            "7 hours.",
-            "8 hours.",
-            "The image does not feature the related information."
-        ],
-        "image": "OCR_in_the_Wild/4",
-        "question_type": "multi_choice"
-    },
-    "369": {
-        "question": "How much money do they win?\n",
-        "answer": "B",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 5,
-        "choices": [
-            "100",
-            "1000",
-            "1888",
-            "1088",
-            "The image does not feature the money."
-        ],
-        "image": "OCR_in_the_Wild/5",
-        "question_type": "multi_choice"
-    },
-    "370": {
-        "question": "What is the black number on the front glass of the tram closest to the camera?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 6,
-        "choices": [
-            "545",
-            "594",
-            "542",
-            "549",
-            "This image doesn't feature the plate number."
-        ],
-        "image": "OCR_in_the_Wild/6",
-        "question_type": "multi_choice"
-    },
-    "371": {
-        "question": "What is the house plate number under the lamp of the garage in the picture?\n",
-        "answer": "B",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 7,
-        "choices": [
-            "2811",
-            "2911",
-            "1192",
-            "1182",
-            "This image doesn't feature the number."
-        ],
-        "image": "OCR_in_the_Wild/7",
-        "question_type": "multi_choice"
-    },
-    "372": {
-        "question": "Which university has Dr. Altaf joined according to this newspaper?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 8,
-        "choices": [
-            "PHC",
-            "Inayat",
-            "Ohio Univercity",
-            "Ohio University",
-            "The image does not feature the content."
-        ],
-        "image": "OCR_in_the_Wild/8",
-        "question_type": "multi_choice"
-    },
-    "373": {
-        "question": "What map is it in the picture?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 9,
-        "choices": [
-            "MAP OF THE UNITED STATE,1861-1865",
-            "MAP OF THE UNITED STATE,1961-1965",
-            "MAP OF THE UNITED KINGDOM,1861-1865",
-            "MAP OF THE UNITED STATE,1961-1965",
-            "The image does not feature the content."
-        ],
-        "image": "OCR_in_the_Wild/9",
-        "question_type": "multi_choice"
-    },
-    "374": {
-        "question": "Which car has the biggest discount?\n",
-        "answer": "B",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 10,
-        "choices": [
-            "CAMARO LS.",
-            "EQUINOX LS.",
-            "BLAZER LT.",
-            "SPARK LS.",
-            "The image does not feature the information."
-        ],
-        "image": "OCR_in_the_Wild/10",
-        "question_type": "multi_choice"
-    },
-    "375": {
-        "question": "What is the content on the black sign next to the street lamp on the left side of the picture?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 11,
-        "choices": [
-            "APTEKA",
-            "Terranove",
-            "Centralna",
-            "Terranova",
-            "The image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/11",
-        "question_type": "multi_choice"
-    },
-    "376": {
-        "question": "Who will be the guest musicians at this event?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 12,
-        "choices": [
-            "KBD",
-            "CRAWFISH",
-            "Beachside Vibes",
-            "DJ CYDE",
-            "The image does not feature the content."
-        ],
-        "image": "OCR_in_the_Wild/12",
-        "question_type": "multi_choice"
-    },
-    "377": {
-        "question": "What is the content on the plaque in the center of the picture?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 13,
-        "choices": [
-            "\u5b89\u3089\u304e\u306e\u6883",
-            "\u5b89\u3089\u304e\u306e\u5ef7",
-            "\u5b89\u3089\u304e\u306e\u633a",
-            "\u5b89\u3089\u304e\u306e\u5ead",
-            "This image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/13",
-        "question_type": "multi_choice"
-    },
-    "378": {
-        "question": "What are the second line parameters on the LED display screen of the chassis?\n",
-        "answer": "C",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 14,
-        "choices": [
-            "BATT. CAPACOTY",
-            "LOAD CAPACITY",
-            "BATT. CAPACITY",
-            "INPUT",
-            "This image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/14",
-        "question_type": "multi_choice"
-    },
-    "379": {
-        "question": "Which company does this bus belong to?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 15,
-        "choices": [
-            "Volvo Buses",
-            "Mercedes-Benz",
-            "Van Hool",
-            "Lion's city",
-            "The image does not feature the company."
-        ],
-        "image": "OCR_in_the_Wild/15",
-        "question_type": "multi_choice"
-    },
-    "380": {
-        "question": "What is the license plate number of this bus?\n",
-        "answer": "B",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 16,
-        "choices": [
-            "Lask 813",
-            "LSK 813",
-            "LSK 909",
-            "Lask 909",
-            "The image does not feature the name."
-        ],
-        "image": "OCR_in_the_Wild/16",
-        "question_type": "multi_choice"
-    },
-    "381": {
-        "question": "What is the content of the last row in English on the paper on the right side of the picture?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 17,
-        "choices": [
-            "DENY WITH REGRET",
-            "CHICKEN",
-            "BEEF",
-            "VEGETARIAN",
-            "The image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/17",
-        "question_type": "multi_choice"
-    },
-    "382": {
-        "question": "What is the number on the left side of the first window of the pink house in the picture?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 18,
-        "choices": [
-            "6563",
-            "6593",
-            "9563",
-            "6568",
-            "This image doesn't feature the number."
-        ],
-        "image": "OCR_in_the_Wild/18",
-        "question_type": "multi_choice"
-    },
-    "383": {
-        "question": "What is the big red letter of the shop sign on the building in the middle of the picture facing the spire?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 19,
-        "choices": [
-            "DANIJA",
-            "DAN",
-            "DANNE",
-            "DUSK",
-            "This image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/19",
-        "question_type": "multi_choice"
-    },
-    "384": {
-        "question": "What are the red letters on the newspaper?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 20,
-        "choices": [
-            "CASTELNOVO",
-            "Gara benefica di zuppa inglese",
-            "CARPINETI",
-            "CASINA",
-            "The image does not feature the content."
-        ],
-        "image": "OCR_in_the_Wild/20",
-        "question_type": "multi_choice"
-    },
-    "385": {
-        "question": "What are the larger letters on the brown billboard on the left side of the street lamp in the middle of the picture?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 21,
-        "choices": [
-            "GIELGGUD",
-            "APOLLO",
-            "LYRIC",
-            "Soho",
-            "This image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/21",
-        "question_type": "multi_choice"
-    },
-    "386": {
-        "question": "What might be the relationship between the characters?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 22,
-        "choices": [
-            "They love each other.",
-            "They don't know each other.",
-            "Ben and Mia don't know the other one.",
-            "Ben and Mia hate the other one.",
-            "The image does not feature the related information."
-        ],
-        "image": "OCR_in_the_Wild/22",
-        "question_type": "multi_choice"
-    },
-    "387": {
-        "question": "What is the content of the shop sign in red characters on the left in the picture?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 23,
-        "choices": [
-            "HAIR 2000",
-            "HARI 2000",
-            "SDADA",
-            "SDADA",
-            "This image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/23",
-        "question_type": "multi_choice"
-    },
-    "388": {
-        "question": "What is the content on the black sign on the left side of the picture?\n",
-        "answer": "B",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 24,
-        "choices": [
-            "ONE VAY",
-            "ONE WAY",
-            "DON WAY",
-            "DNE Y",
-            "The image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/24",
-        "question_type": "multi_choice"
-    },
-    "389": {
-        "question": "What might be the relationship between the people in the picture?\n",
-        "answer": "C",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 25,
-        "choices": [
-            "Couples.",
-            "Father and son.",
-            "Enemies.",
-            "Friends.",
-            "The image does not feature the related information."
-        ],
-        "image": "OCR_in_the_Wild/25",
-        "question_type": "multi_choice"
-    },
-    "390": {
-        "question": "What is the likely number plate of the first runner?\n",
-        "answer": "B",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 26,
-        "choices": [
-            "7033.",
-            "9591.",
-            "5185.",
-            "1434.",
-            "The image does not feature the related information."
-        ],
-        "image": "OCR_in_the_Wild/26",
-        "question_type": "multi_choice"
-    },
-    "391": {
-        "question": "What's the number on the white doorplate to the left of the white door on the left side of this picture?\n",
-        "answer": "A",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 27,
-        "choices": [
-            "46",
-            "8",
-            "16",
-            "64",
-            "This image doesn't feature the number."
-        ],
-        "image": "OCR_in_the_Wild/27",
-        "question_type": "multi_choice"
-    },
-    "392": {
-        "question": "What are the letters on the orange excavator arm on the left side of the picture?\n",
-        "answer": "B",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 28,
-        "choices": [
-            "LU",
-            "IU",
-            "LO",
-            "OU",
-            "The image doesn't feature the content."
-        ],
-        "image": "OCR_in_the_Wild/28",
-        "question_type": "multi_choice"
-    },
-    "393": {
-        "question": "What is the phone number on the sign held by the two girls?\n",
-        "answer": "D",
-        "dataset": "OCR_in_the_Wild",
-        "image_id": 29,
-        "choices": [
-            "0439 347988",
-            "0439 347987",
-            "0439 346986",
-            "0439 347986",
-            "This image doesn't feature the number."
-        ],
-        "image": "OCR_in_the_Wild/29",
-        "question_type": "multi_choice"
-    },
-    "394": {
-        "question": "What is the data of Total Bushes Planted in Project 3 in the table Develepment Asusmptions?\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 0,
-        "choices": [
-            "104.000.000",
-            "126.000.000",
-            "77.000.000",
-            "33.000.000",
-            "This image doesn't feature the data."
-        ],
-        "image": "Diagram_and_Table/0",
-        "question_type": "multi_choice"
-    },
-    "395": {
-        "question": "In which year does the Net Profit Margin of Post-Divestiture first exceed 22.0%, according to the 'Net Profit Margin' diagram?\n",
-        "answer": "C",
-        "dataset": "Diagram_and_Table",
-        "image_id": 1,
-        "choices": [
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/1",
-        "question_type": "multi_choice"
-    },
-    "396": {
-        "question": "Which year does the EBIT first exceed 120,000, according to the 'Free Cash Flows' section?\n",
-        "answer": "D",
-        "dataset": "Diagram_and_Table",
-        "image_id": 2,
-        "choices": [
-            "2025",
-            "2029",
-            "2030",
-            "2031",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/2",
-        "question_type": "multi_choice"
-    },
-    "397": {
-        "question": "Which year displays the lowest value for 'Average Students to Staff' according to the 'Student vs Staff Numbers' chart?\n",
-        "answer": "C",
-        "dataset": "Diagram_and_Table",
-        "image_id": 3,
-        "choices": [
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/3",
-        "question_type": "multi_choice"
-    },
-    "398": {
-        "question": "What is the Sales Rep Headcount for Tier 1 Type 1 in August 2025?\n",
-        "answer": "D",
-        "dataset": "Diagram_and_Table",
-        "image_id": 4,
-        "choices": [
-            "19.22",
-            "15.29",
-            "0",
-            "0.66",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/4",
-        "question_type": "multi_choice"
-    },
-    "399": {
-        "question": "Which investment has the highest total exit amount in the TOTAL FUND table?\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 5,
-        "choices": [
-            "Investment - 1",
-            "Investment - 2",
-            "Investment - 3",
-            "Investment - 4",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/5",
-        "question_type": "multi_choice"
-    },
-    "400": {
-        "question": "Which Pipeline Status has the highest Client Count?\n",
-        "answer": "C",
-        "dataset": "Diagram_and_Table",
-        "image_id": 6,
-        "choices": [
-            "Lead",
-            "Appointment",
-            "Negotiating",
-            "Closed",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/6",
-        "question_type": "multi_choice"
-    },
-    "401": {
-        "question": "Which month shows the highest EBITDA in 2025, according to the 'Income Statement' section?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 7,
-        "choices": [
-            "May",
-            "June",
-            "August",
-            "October",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/7",
-        "question_type": "multi_choice"
-    },
-    "402": {
-        "question": "What's the data of Shipping Costs of 2028 Year 5 in the table Profit per kg NH3 Analysis?\n",
-        "answer": "D",
-        "dataset": "Diagram_and_Table",
-        "image_id": 9,
-        "choices": [
-            "-0.51",
-            "-0.52",
-            "-0.53",
-            "-0.54",
-            "This image doesn't feature the data."
-        ],
-        "image": "Diagram_and_Table/9",
-        "question_type": "multi_choice"
-    },
-    "403": {
-        "question": "What is the maximum value of Funding Required in 2024 in the free cash flow forecast table?\n",
-        "answer": "D",
-        "dataset": "Diagram_and_Table",
-        "image_id": 10,
-        "choices": [
-            "93,407",
-            "94,776",
-            "95,750",
-            "95,993",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/10",
-        "question_type": "multi_choice"
-    },
-    "404": {
-        "question": "Which year displays the highest value of 'Debt to Equity Ratio', according to the 'Capital Structure' chart?\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 11,
-        "choices": [
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/11",
-        "question_type": "multi_choice"
-    },
-    "405": {
-        "question": "Which month has the highest value of 'Revenue', according to the 'Income Statement' table?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 12,
-        "choices": [
-            "June",
-            "July",
-            "September",
-            "October",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/12",
-        "question_type": "multi_choice"
-    },
-    "406": {
-        "question": "What is the data of Total Liabilities in Mar-23 in the table?\n",
-        "answer": "D",
-        "dataset": "Diagram_and_Table",
-        "image_id": 13,
-        "choices": [
-            "22365",
-            "99770",
-            "99540",
-            "99308",
-            "This image doesn't feature the data."
-        ],
-        "image": "Diagram_and_Table/13",
-        "question_type": "multi_choice"
-    },
-    "407": {
-        "question": "What's the Cash Flow data of FY 2025 in the table Contribution & Distribution Summary?\n",
-        "answer": "C",
-        "dataset": "Diagram_and_Table",
-        "image_id": 14,
-        "choices": [
-            "$390,915",
-            "$303,418",
-            "$341,591",
-            "$314,591",
-            "This image doesn't feature the data."
-        ],
-        "image": "Diagram_and_Table/14",
-        "question_type": "multi_choice"
-    },
-    "408": {
-        "question": "What's the data of Cash Flow in FY 2030 in this table?\n",
-        "answer": "C",
-        "dataset": "Diagram_and_Table",
-        "image_id": 15,
-        "choices": [
-            "$174,756",
-            "$297,746",
-            "$235,886",
-            "$358,883",
-            "This image doesn't feature the data."
-        ],
-        "image": "Diagram_and_Table/15",
-        "question_type": "multi_choice"
-    },
-    "409": {
-        "question": "What is the highest value of 'Borrowings to Assets', according to the 'Balance Sheet' diagram?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 16,
-        "choices": [
-            "17.4%",
-            "11.5%",
-            "7.3%",
-            "3.7%",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/16",
-        "question_type": "multi_choice"
-    },
-    "410": {
-        "question": "Which kayak category has the highest value of 'Avg. Rides/Kayak Boat/Day', according to the 'Avg. Rides per Kayak Boat per Day' diagram?\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 17,
-        "choices": [
-            "Sit-In Kayak",
-            "Sit-On-Top Kayak",
-            "Tandem Kayak",
-            "Fishing Kayak",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/17",
-        "question_type": "multi_choice"
-    },
-    "411": {
-        "question": "What's the Google other revenues of 2014 in the diagram?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 18,
-        "choices": [
-            "$7.8 bn",
-            "$6 bn",
-            "$5 bn",
-            "$89",
-            "This image doesn't feature the data."
-        ],
-        "image": "Diagram_and_Table/18",
-        "question_type": "multi_choice"
-    },
-    "412": {
-        "question": "What is the data of Tier 1 in FY 3 in the table Monthly Subscription Pricing?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 19,
-        "choices": [
-            "$30",
-            "$22",
-            "$40",
-            "$75",
-            "This image doesn't feature the data."
-        ],
-        "image": "Diagram_and_Table/19",
-        "question_type": "multi_choice"
-    },
-    "413": {
-        "question": "Which year displays the lowest value of 'EBITDA Margin %', according to the 'Income Statement' chart?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 20,
-        "choices": [
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/20",
-        "question_type": "multi_choice"
-    },
-    "414": {
-        "question": "Which year has the lowest value of 'EBITDA Margin', according to the 'Earnings' chart?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 21,
-        "choices": [
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/21",
-        "question_type": "multi_choice"
-    },
-    "415": {
-        "question": "What is the highest value of 'Profit After Tax', according to the 'Income Statement' table\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 22,
-        "choices": [
-            "100,695",
-            "107,200",
-            "134,260",
-            "80,400",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/22",
-        "question_type": "multi_choice"
-    },
-    "416": {
-        "question": "What are the marketing costs for total group for 2023 in the Income Statement table?\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 23,
-        "choices": [
-            "8,644",
-            "8,404",
-            "8,896",
-            "6,375",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/23",
-        "question_type": "multi_choice"
-    },
-    "417": {
-        "question": "In which year does the value of 'Gross Profit' first exceed 300,000, according to the 'Income Statement' table?\n",
-        "answer": "C",
-        "dataset": "Diagram_and_Table",
-        "image_id": 25,
-        "choices": [
-            "2030",
-            "2031",
-            "2032",
-            "2033",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/25",
-        "question_type": "multi_choice"
-    },
-    "418": {
-        "question": "Which month has the highest cash flow from operations, according to the Cash Flow Statement table?\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 26,
-        "choices": [
-            "May",
-            "June",
-            "July",
-            "August",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/26",
-        "question_type": "multi_choice"
-    },
-    "419": {
-        "question": "Which investor has the highest IRR accroding to the 'IRR' chart?\n",
-        "answer": "A",
-        "dataset": "Diagram_and_Table",
-        "image_id": 28,
-        "choices": [
-            "Founders",
-            "Investor 1",
-            "Investor 2",
-            "Investor 3",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/28",
-        "question_type": "multi_choice"
-    },
-    "420": {
-        "question": "What is the difference between property taxes and insurance in Year 2?\n",
-        "answer": "B",
-        "dataset": "Diagram_and_Table",
-        "image_id": 29,
-        "choices": [
-            "6,000",
-            "6,180",
-            "6,365",
-            "6,287",
-            "The image does not feature the number."
-        ],
-        "image": "Diagram_and_Table/29",
-        "question_type": "multi_choice"
-    },
-    "421": {
-        "question": "Does the flag have two or three colors?\n",
-        "answer": "A",
-        "dataset": "VStar_Bench",
-        "image_id": 1,
-        "choices": [
-            "The flag has three colors.",
-            "The flag has two colors."
-        ],
-        "image": "VStar_Bench/1",
-        "question_type": "multi_choice"
-    },
-    "422": {
-        "question": "What is the color of the cart?\n",
-        "answer": "D",
-        "dataset": "VStar_Bench",
-        "image_id": 2,
-        "choices": [
-            "The color of the cart is black.",
-            "The color of the cart is silver.",
-            "The color of the cart is white.",
-            "The color of the cart is green."
-        ],
-        "image": "VStar_Bench/2",
-        "question_type": "multi_choice"
-    },
-    "423": {
-        "question": "What is the color of the mailbox?\n",
-        "answer": "B",
-        "dataset": "VStar_Bench",
-        "image_id": 3,
-        "choices": [
-            "The color of the mailbox is yellow.",
-            "The color of the mailbox is black.",
-            "The color of the mailbox is white.",
-            "The color of the mailbox is red."
-        ],
-        "image": "VStar_Bench/3",
-        "question_type": "multi_choice"
-    },
-    "424": {
-        "question": "What is the color of the Apple logo?\n",
-        "answer": "A",
-        "dataset": "VStar_Bench",
-        "image_id": 4,
-        "choices": [
-            "The color of the Apple logo is polychromatic.",
-            "The color of the Apple logo is silver.",
-            "The color of the Apple logo is white.",
-            "The color of the Apple logo is red."
-        ],
-        "image": "VStar_Bench/4",
-        "question_type": "multi_choice"
-    },
-    "425": {
-        "question": "What is the color of the slippers?\n",
-        "answer": "A",
-        "dataset": "VStar_Bench",
-        "image_id": 5,
-        "choices": [
-            "The color of the slippers is blue.",
-            "The color of the slippers is black.",
-            "The color of the slippers is pink.",
-            "The color of the slippers is red."
-        ],
-        "image": "VStar_Bench/5",
-        "question_type": "multi_choice"
-    },
-    "426": {
-        "question": "What is the color of the flag?\n",
-        "answer": "D",
-        "dataset": "VStar_Bench",
-        "image_id": 12,
-        "choices": [
-            "The color of the flag is red and yellow.",
-            "The color of the flag is green and white.",
-            "The color of the flag is blue and red.",
-            "The color of the flag is blue and yellow."
-        ],
-        "image": "VStar_Bench/12",
-        "question_type": "multi_choice"
-    },
-    "427": {
-        "question": "What is the color of the straw?\n",
-        "answer": "A",
-        "dataset": "VStar_Bench",
-        "image_id": 15,
-        "choices": [
-            "The color of the straw is black.",
-            "The color of the straw is red.",
-            "The color of the straw is white.",
-            "The color of the straw is pink."
-        ],
-        "image": "VStar_Bench/15",
-        "question_type": "multi_choice"
-    },
-    "428": {
-        "question": "What is the color of the man's cap?\n",
-        "answer": "A",
-        "dataset": "VStar_Bench",
-        "image_id": 18,
-        "choices": [
-            "The color of the man's cap is red.",
-            "The color of the man's cap is gray.",
-            "The color of the man's cap is white.",
-            "The color of the man's cap is blue."
-        ],
-        "image": "VStar_Bench/18",
-        "question_type": "multi_choice"
-    },
-    "429": {
-        "question": "What is the color of the tent?\n",
-        "answer": "B",
-        "dataset": "VStar_Bench",
-        "image_id": 20,
-        "choices": [
-            "The color of the tent is blue.",
-            "The color of the tent is green.",
-            "The color of the tent is white.",
-            "The color of the tent is yellow."
-        ],
-        "image": "VStar_Bench/20",
-        "question_type": "multi_choice"
-    },
-    "430": {
-        "question": "Is the flag blue and yellow or red and yellow?\n",
-        "answer": "B",
-        "dataset": "VStar_Bench",
-        "image_id": 25,
-        "choices": [
-            "The color of the flag is red and yellow.",
-            "The color of the flag is blue and yellow."
-        ],
-        "image": "VStar_Bench/25",
-        "question_type": "multi_choice"
-    },
-    "431": {
-        "question": "What is the color of the bottle cap?\n",
-        "answer": "B",
-        "dataset": "VStar_Bench",
-        "image_id": 28,
-        "choices": [
-            "The color of the bottle cap is black.",
-            "The color of the bottle cap is blue.",
-            "The color of the bottle cap is white.",
-            "The color of the bottle cap is red."
-        ],
-        "image": "VStar_Bench/28",
-        "question_type": "multi_choice"
-    },
-    "432": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "A",
-        "dataset": "MAME",
-        "image_id": 0,
-        "choices": [
-            "Woven fabric ",
-            "Limestone",
-            "Wood",
-            "Glass",
-            "Steel",
-            "Bronze",
-            "Silver",
-            "Ivory",
-            "Clay",
-            "Oil on canvas"
-        ],
-        "image": "MAME/0",
-        "question_type": "multi_choice"
-    },
-    "433": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "G",
-        "dataset": "MAME",
-        "image_id": 1,
-        "choices": [
-            "Glass",
-            "Pen and brown ink",
-            "Oil on canvas",
-            "Graphite",
-            "Lithograph",
-            "Woodblock",
-            "Marble",
-            "Faience",
-            "Iron",
-            "Etching"
-        ],
-        "image": "MAME/1",
-        "question_type": "multi_choice"
-    },
-    "434": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "H",
-        "dataset": "MAME",
-        "image_id": 2,
-        "choices": [
-            "Gold",
-            "Silk and metal thread",
-            "Clay",
-            "Etching",
-            "Graphite",
-            "Hand-colored etching",
-            "Ivory",
-            "Wood",
-            "Pen and brown ink",
-            "Engraving"
-        ],
-        "image": "MAME/2",
-        "question_type": "multi_choice"
-    },
-    "435": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "E",
-        "dataset": "MAME",
-        "image_id": 3,
-        "choices": [
-            "Woodblock",
-            "Wood engraving",
-            "Engraving",
-            "Limestone",
-            "Hand-colored etching",
-            "Hand-colored engraving",
-            "Ceramic",
-            "Porcelain",
-            "Marble",
-            "Lithograph"
-        ],
-        "image": "MAME/3",
-        "question_type": "multi_choice"
-    },
-    "436": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "D",
-        "dataset": "MAME",
-        "image_id": 4,
-        "choices": [
-            "Hand-colored engraving",
-            "Clay",
-            "Gold",
-            "Pen and brown ink",
-            "Woodcut",
-            "Ceramic",
-            "Wood engraving",
-            "Polychromed wood",
-            "Steel",
-            "Marble"
-        ],
-        "image": "MAME/4",
-        "question_type": "multi_choice"
-    },
-    "437": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "B",
-        "dataset": "MAME",
-        "image_id": 5,
-        "choices": [
-            "Steel",
-            "Clay",
-            "Wood",
-            "Pen and brown ink",
-            "Ivory",
-            "Woodblock",
-            "Glass",
-            "Wood engraving",
-            "Woven fabric ",
-            "Lithograph"
-        ],
-        "image": "MAME/5",
-        "question_type": "multi_choice"
-    },
-    "438": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "H",
-        "dataset": "MAME",
-        "image_id": 6,
-        "choices": [
-            "Wood engraving",
-            "Marble",
-            "Albumen photograph",
-            "Iron",
-            "Ceramic",
-            "Clay",
-            "Engraving",
-            "Hand-colored etching",
-            "Woodblock",
-            "Oil on canvas"
-        ],
-        "image": "MAME/6",
-        "question_type": "multi_choice"
-    },
-    "439": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "I",
-        "dataset": "MAME",
-        "image_id": 7,
-        "choices": [
-            "Woodblock",
-            "Hand-colored etching",
-            "Ceramic",
-            "Polychromed wood",
-            "Faience",
-            "Bronze",
-            "Silver",
-            "Limestone",
-            "Ivory",
-            "Porcelain"
-        ],
-        "image": "MAME/7",
-        "question_type": "multi_choice"
-    },
-    "440": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "I",
-        "dataset": "MAME",
-        "image_id": 8,
-        "choices": [
-            "Woven fabric ",
-            "Bronze",
-            "Limestone",
-            "Glass",
-            "Polychromed wood",
-            "Steel",
-            "Ivory",
-            "Marble",
-            "Ceramic",
-            "Silver"
-        ],
-        "image": "MAME/8",
-        "question_type": "multi_choice"
-    },
-    "441": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "G",
-        "dataset": "MAME",
-        "image_id": 9,
-        "choices": [
-            "Oil on canvas",
-            "Etching",
-            "Woodblock",
-            "Steel",
-            "Ceramic",
-            "Marble",
-            "Pen and brown ink",
-            "Wood engraving",
-            "Wood",
-            "Faience"
-        ],
-        "image": "MAME/9",
-        "question_type": "multi_choice"
-    },
-    "442": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "B",
-        "dataset": "MAME",
-        "image_id": 10,
-        "choices": [
-            "Pen and brown ink",
-            "Woodcut",
-            "Ceramic",
-            "Hand-colored etching",
-            "Graphite",
-            "Marble",
-            "Silver",
-            "Albumen photograph",
-            "Oil on canvas",
-            "Polychromed wood"
-        ],
-        "image": "MAME/10",
-        "question_type": "multi_choice"
-    },
-    "443": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "G",
-        "dataset": "MAME",
-        "image_id": 11,
-        "choices": [
-            "Engraving",
-            "Ivory",
-            "Graphite",
-            "Hand-colored etching",
-            "Wood engraving",
-            "Glass",
-            "Lithograph",
-            "Porcelain",
-            "Steel",
-            "Clay"
-        ],
-        "image": "MAME/11",
-        "question_type": "multi_choice"
-    },
-    "444": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "H",
-        "dataset": "MAME",
-        "image_id": 12,
-        "choices": [
-            "Wood engraving",
-            "Polychromed wood",
-            "Faience",
-            "Woodcut",
-            "Etching",
-            "Wood",
-            "Marble",
-            "Hand-colored etching",
-            "Lithograph",
-            "Glass"
-        ],
-        "image": "MAME/12",
-        "question_type": "multi_choice"
-    },
-    "445": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "C",
-        "dataset": "MAME",
-        "image_id": 13,
-        "choices": [
-            "Polychromed wood",
-            "Woodcut",
-            "Engraving",
-            "Wood",
-            "Silk and metal thread",
-            "Iron",
-            "Porcelain",
-            "Gold",
-            "Hand-colored engraving",
-            "Oil on canvas"
-        ],
-        "image": "MAME/13",
-        "question_type": "multi_choice"
-    },
-    "446": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "C",
-        "dataset": "MAME",
-        "image_id": 14,
-        "choices": [
-            "Polychromed wood",
-            "Steel",
-            "Porcelain",
-            "Clay",
-            "Woven fabric ",
-            "Iron",
-            "Engraving",
-            "Silver",
-            "Limestone",
-            "Silk and metal thread"
-        ],
-        "image": "MAME/14",
-        "question_type": "multi_choice"
-    },
-    "447": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "E",
-        "dataset": "MAME",
-        "image_id": 15,
-        "choices": [
-            "Albumen photograph",
-            "Faience",
-            "Ivory",
-            "Oil on canvas",
-            "Wood engraving",
-            "Gold",
-            "Glass",
-            "Etching",
-            "Hand-colored etching",
-            "Polychromed wood"
-        ],
-        "image": "MAME/15",
-        "question_type": "multi_choice"
-    },
-    "448": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "E",
-        "dataset": "MAME",
-        "image_id": 16,
-        "choices": [
-            "Faience",
-            "Marble",
-            "Pen and brown ink",
-            "Bronze",
-            "Woven fabric ",
-            "Engraving",
-            "Woodcut",
-            "Ivory",
-            "Hand-colored engraving",
-            "Graphite"
-        ],
-        "image": "MAME/16",
-        "question_type": "multi_choice"
-    },
-    "449": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "A",
-        "dataset": "MAME",
-        "image_id": 17,
-        "choices": [
-            "Hand-colored etching",
-            "Ceramic",
-            "Woodblock",
-            "Iron",
-            "Graphite",
-            "Lithograph",
-            "Gold",
-            "Silver",
-            "Engraving",
-            "Hand-colored engraving"
-        ],
-        "image": "MAME/17",
-        "question_type": "multi_choice"
-    },
-    "450": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "D",
-        "dataset": "MAME",
-        "image_id": 18,
-        "choices": [
-            "Albumen photograph",
-            "Clay",
-            "Ivory",
-            "Porcelain",
-            "Etching",
-            "Woodblock",
-            "Polychromed wood",
-            "Steel",
-            "Wood",
-            "Glass"
-        ],
-        "image": "MAME/18",
-        "question_type": "multi_choice"
-    },
-    "451": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "J",
-        "dataset": "MAME",
-        "image_id": 19,
-        "choices": [
-            "Bronze",
-            "Etching",
-            "Lithograph",
-            "Steel",
-            "Woven fabric ",
-            "Graphite",
-            "Pen and brown ink",
-            "Oil on canvas",
-            "Wood engraving",
-            "Faience"
-        ],
-        "image": "MAME/19",
-        "question_type": "multi_choice"
-    },
-    "452": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "J",
-        "dataset": "MAME",
-        "image_id": 20,
-        "choices": [
-            "Woven fabric ",
-            "Albumen photograph",
-            "Woodblock",
-            "Hand-colored etching",
-            "Polychromed wood",
-            "Hand-colored engraving",
-            "Clay",
-            "Graphite",
-            "Iron",
-            "Woodcut"
-        ],
-        "image": "MAME/20",
-        "question_type": "multi_choice"
-    },
-    "453": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "F",
-        "dataset": "MAME",
-        "image_id": 21,
-        "choices": [
-            "Graphite",
-            "Ceramic",
-            "Steel",
-            "Porcelain",
-            "Hand-colored engraving",
-            "Pen and brown ink",
-            "Polychromed wood",
-            "Woven fabric ",
-            "Limestone",
-            "Oil on canvas"
-        ],
-        "image": "MAME/21",
-        "question_type": "multi_choice"
-    },
-    "454": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "E",
-        "dataset": "MAME",
-        "image_id": 22,
-        "choices": [
-            "Engraving",
-            "Etching",
-            "Gold",
-            "Hand-colored engraving",
-            "Silver",
-            "Bronze",
-            "Ivory",
-            "Pen and brown ink",
-            "Steel",
-            "Limestone"
-        ],
-        "image": "MAME/22",
-        "question_type": "multi_choice"
-    },
-    "455": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "G",
-        "dataset": "MAME",
-        "image_id": 23,
-        "choices": [
-            "Engraving",
-            "Woodblock",
-            "Woodcut",
-            "Ceramic",
-            "Ivory",
-            "Oil on canvas",
-            "Limestone",
-            "Silk and metal thread",
-            "Bronze",
-            "Hand-colored etching"
-        ],
-        "image": "MAME/23",
-        "question_type": "multi_choice"
-    },
-    "456": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "H",
-        "dataset": "MAME",
-        "image_id": 24,
-        "choices": [
-            "Limestone",
-            "Woodblock",
-            "Lithograph",
-            "Gold",
-            "Steel",
-            "Faience",
-            "Iron",
-            "Etching",
-            "Bronze",
-            "Ceramic"
-        ],
-        "image": "MAME/24",
-        "question_type": "multi_choice"
-    },
-    "457": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "C",
-        "dataset": "MAME",
-        "image_id": 25,
-        "choices": [
-            "Gold",
-            "Glass",
-            "Hand-colored engraving",
-            "Engraving",
-            "Wood engraving",
-            "Graphite",
-            "Lithograph",
-            "Silver",
-            "Porcelain",
-            "Ivory"
-        ],
-        "image": "MAME/25",
-        "question_type": "multi_choice"
-    },
-    "458": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "B",
-        "dataset": "MAME",
-        "image_id": 27,
-        "choices": [
-            "Engraving",
-            "Polychromed wood",
-            "Ceramic",
-            "Bronze",
-            "Ivory",
-            "Porcelain",
-            "Silver",
-            "Limestone",
-            "Faience",
-            "Steel"
-        ],
-        "image": "MAME/27",
-        "question_type": "multi_choice"
-    },
-    "459": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "J",
-        "dataset": "MAME",
-        "image_id": 28,
-        "choices": [
-            "Iron",
-            "Limestone",
-            "Marble",
-            "Woodblock",
-            "Woven fabric ",
-            "Bronze",
-            "Etching",
-            "Oil on canvas",
-            "Engraving",
-            "Graphite"
-        ],
-        "image": "MAME/28",
-        "question_type": "multi_choice"
-    },
-    "460": {
-        "question": "The artwork in the picture belongs to which of the following medium categories?\n",
-        "answer": "I",
-        "dataset": "MAME",
-        "image_id": 29,
-        "choices": [
-            "Limestone",
-            "Engraving",
-            "Albumen photograph",
-            "Hand-colored etching",
-            "Faience",
-            "Woven fabric ",
-            "Bronze",
-            "Woodcut",
-            "Porcelain",
-            "Iron"
-        ],
-        "image": "MAME/29",
-        "question_type": "multi_choice"
-    },
-    "461": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 0,
-        "choices": [
-            "300-400",
-            "100-200",
-            "more than 400",
-            "200-300"
-        ],
-        "image": "Izembek/0",
-        "question_type": "multi_choice"
-    },
-    "462": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 1,
-        "choices": [
-            "more than 400",
-            "100-300",
-            "100-200",
-            "200-300",
-            "300-400"
-        ],
-        "image": "Izembek/1",
-        "question_type": "multi_choice"
-    },
-    "463": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "C",
-        "dataset": "Izembek",
-        "image_id": 2,
-        "choices": [
-            "more than 400",
-            "300-400",
-            "100-200",
-            "100-300",
-            "200-300"
-        ],
-        "image": "Izembek/2",
-        "question_type": "multi_choice"
-    },
-    "464": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 3,
-        "choices": [
-            "100-300",
-            "100-200",
-            "300-400",
-            "more than 400",
-            "200-300"
-        ],
-        "image": "Izembek/3",
-        "question_type": "multi_choice"
-    },
-    "465": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 4,
-        "choices": [
-            "100-200",
-            "300-400",
-            "more than 400",
-            "200-300"
-        ],
-        "image": "Izembek/4",
-        "question_type": "multi_choice"
-    },
-    "466": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 5,
-        "choices": [
-            "200-300",
-            "100-200",
-            "100-300",
-            "300-400",
-            "more than 400"
-        ],
-        "image": "Izembek/5",
-        "question_type": "multi_choice"
-    },
-    "467": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 6,
-        "choices": [
-            "100-200",
-            "more than 400",
-            "300-400",
-            "200-300",
-            "100-300"
-        ],
-        "image": "Izembek/6",
-        "question_type": "multi_choice"
-    },
-    "468": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "D",
-        "dataset": "Izembek",
-        "image_id": 7,
-        "choices": [
-            "more than 400",
-            "200-300",
-            "300-400",
-            "100-200",
-            "100-300"
-        ],
-        "image": "Izembek/7",
-        "question_type": "multi_choice"
-    },
-    "469": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "C",
-        "dataset": "Izembek",
-        "image_id": 8,
-        "choices": [
-            "100-300",
-            "more than 400",
-            "300-400",
-            "100-200",
-            "200-300"
-        ],
-        "image": "Izembek/8",
-        "question_type": "multi_choice"
-    },
-    "470": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "D",
-        "dataset": "Izembek",
-        "image_id": 9,
-        "choices": [
-            "200-300",
-            "100-200",
-            "300-400",
-            "more than 400"
-        ],
-        "image": "Izembek/9",
-        "question_type": "multi_choice"
-    },
-    "471": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "D",
-        "dataset": "Izembek",
-        "image_id": 10,
-        "choices": [
-            "200-300",
-            "more than 400",
-            "300-400",
-            "100-200"
-        ],
-        "image": "Izembek/10",
-        "question_type": "multi_choice"
-    },
-    "472": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 11,
-        "choices": [
-            "200-300",
-            "100-200",
-            "300-400",
-            "more than 400",
-            "100-300"
-        ],
-        "image": "Izembek/11",
-        "question_type": "multi_choice"
-    },
-    "473": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "E",
-        "dataset": "Izembek",
-        "image_id": 12,
-        "choices": [
-            "more than 400",
-            "200-300",
-            "300-400",
-            "100-300",
-            "100-200"
-        ],
-        "image": "Izembek/12",
-        "question_type": "multi_choice"
-    },
-    "474": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 13,
-        "choices": [
-            "200-300",
-            "more than 400",
-            "300-400",
-            "100-200"
-        ],
-        "image": "Izembek/13",
-        "question_type": "multi_choice"
-    },
-    "475": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 14,
-        "choices": [
-            "100-200",
-            "300-400",
-            "more than 400",
-            "200-300"
-        ],
-        "image": "Izembek/14",
-        "question_type": "multi_choice"
-    },
-    "476": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 15,
-        "choices": [
-            "200-300",
-            "100-300",
-            "300-400",
-            "more than 400",
-            "100-200"
-        ],
-        "image": "Izembek/15",
-        "question_type": "multi_choice"
-    },
-    "477": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "C",
-        "dataset": "Izembek",
-        "image_id": 16,
-        "choices": [
-            "200-300",
-            "more than 400",
-            "100-200",
-            "100-300",
-            "300-400"
-        ],
-        "image": "Izembek/16",
-        "question_type": "multi_choice"
-    },
-    "478": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 17,
-        "choices": [
-            "100-300",
-            "100-200",
-            "200-300",
-            "300-400",
-            "more than 400"
-        ],
-        "image": "Izembek/17",
-        "question_type": "multi_choice"
-    },
-    "479": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "D",
-        "dataset": "Izembek",
-        "image_id": 18,
-        "choices": [
-            "300-400",
-            "more than 400",
-            "200-300",
-            "100-200"
-        ],
-        "image": "Izembek/18",
-        "question_type": "multi_choice"
-    },
-    "480": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "E",
-        "dataset": "Izembek",
-        "image_id": 19,
-        "choices": [
-            "300-400",
-            "100-300",
-            "more than 400",
-            "200-300",
-            "100-200"
-        ],
-        "image": "Izembek/19",
-        "question_type": "multi_choice"
-    },
-    "481": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 20,
-        "choices": [
-            "more than 400",
-            "300-400",
-            "200-300",
-            "100-200"
-        ],
-        "image": "Izembek/20",
-        "question_type": "multi_choice"
-    },
-    "482": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 21,
-        "choices": [
-            "100-200",
-            "more than 400",
-            "200-300",
-            "300-400"
-        ],
-        "image": "Izembek/21",
-        "question_type": "multi_choice"
-    },
-    "483": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "E",
-        "dataset": "Izembek",
-        "image_id": 22,
-        "choices": [
-            "more than 400",
-            "300-400",
-            "100-300",
-            "200-300",
-            "100-200"
-        ],
-        "image": "Izembek/22",
-        "question_type": "multi_choice"
-    },
-    "484": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 23,
-        "choices": [
-            "100-200",
-            "more than 400",
-            "100-300",
-            "200-300",
-            "300-400"
-        ],
-        "image": "Izembek/23",
-        "question_type": "multi_choice"
-    },
-    "485": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "A",
-        "dataset": "Izembek",
-        "image_id": 24,
-        "choices": [
-            "200-300",
-            "100-200",
-            "300-400",
-            "more than 400"
-        ],
-        "image": "Izembek/24",
-        "question_type": "multi_choice"
-    },
-    "486": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 25,
-        "choices": [
-            "more than 400",
-            "100-200",
-            "300-400",
-            "200-300",
-            "100-300"
-        ],
-        "image": "Izembek/25",
-        "question_type": "multi_choice"
-    },
-    "487": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 26,
-        "choices": [
-            "100-300",
-            "100-200",
-            "200-300",
-            "300-400",
-            "more than 400"
-        ],
-        "image": "Izembek/26",
-        "question_type": "multi_choice"
-    },
-    "488": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "B",
-        "dataset": "Izembek",
-        "image_id": 27,
-        "choices": [
-            "300-400",
-            "100-200",
-            "200-300",
-            "100-300",
-            "more than 400"
-        ],
-        "image": "Izembek/27",
-        "question_type": "multi_choice"
-    },
-    "489": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "D",
-        "dataset": "Izembek",
-        "image_id": 28,
-        "choices": [
-            "300-400",
-            "more than 400",
-            "200-300",
-            "100-200"
-        ],
-        "image": "Izembek/28",
-        "question_type": "multi_choice"
-    },
-    "490": {
-        "question": "How many goose or other animals do you see in the image?\n",
-        "answer": "C",
-        "dataset": "Izembek",
-        "image_id": 29,
-        "choices": [
-            "200-300",
-            "100-200",
-            "300-400",
-            "more than 400"
-        ],
-        "image": "Izembek/29",
-        "question_type": "multi_choice"
-    },
-    "491": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "D",
-        "dataset": "ArtBench",
-        "image_id": 0,
-        "choices": [
-            "Surrealism",
-            "Post Impressionism",
-            "Expressionism",
-            "Impressionism",
-            "Art Nouveau",
-            "Ukiyo E",
-            "Baroque",
-            "Realism",
-            "Romanticism"
-        ],
-        "image": "ArtBench/0",
-        "question_type": "multi_choice"
-    },
-    "492": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "C",
-        "dataset": "ArtBench",
-        "image_id": 1,
-        "choices": [
-            "Ukiyo E",
-            "Art Nouveau",
-            "Surrealism",
-            "Impressionism",
-            "Expressionism",
-            "Realism",
-            "Post Impressionism",
-            "Romanticism",
-            "Baroque"
-        ],
-        "image": "ArtBench/1",
-        "question_type": "multi_choice"
-    },
-    "493": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "B",
-        "dataset": "ArtBench",
-        "image_id": 2,
-        "choices": [
-            "Expressionism",
-            "Post Impressionism",
-            "Art Nouveau",
-            "Surrealism",
-            "Romanticism",
-            "Realism",
-            "Ukiyo E",
-            "Impressionism",
-            "Baroque"
-        ],
-        "image": "ArtBench/2",
-        "question_type": "multi_choice"
-    },
-    "494": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "D",
-        "dataset": "ArtBench",
-        "image_id": 3,
-        "choices": [
-            "Romanticism",
-            "Baroque",
-            "Post Impressionism",
-            "Realism",
-            "Surrealism",
-            "Art Nouveau",
-            "Ukiyo E",
-            "Impressionism",
-            "Expressionism"
-        ],
-        "image": "ArtBench/3",
-        "question_type": "multi_choice"
-    },
-    "495": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "H",
-        "dataset": "ArtBench",
-        "image_id": 4,
-        "choices": [
-            "Baroque",
-            "Surrealism",
-            "Realism",
-            "Expressionism",
-            "Post Impressionism",
-            "Art Nouveau",
-            "Romanticism",
-            "Ukiyo E",
-            "Impressionism"
-        ],
-        "image": "ArtBench/4",
-        "question_type": "multi_choice"
-    },
-    "496": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "D",
-        "dataset": "ArtBench",
-        "image_id": 5,
-        "choices": [
-            "Realism",
-            "Surrealism",
-            "Impressionism",
-            "Ukiyo E",
-            "Post Impressionism",
-            "Art Nouveau",
-            "Romanticism",
-            "Baroque",
-            "Expressionism"
-        ],
-        "image": "ArtBench/5",
-        "question_type": "multi_choice"
-    },
-    "497": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "I",
-        "dataset": "ArtBench",
-        "image_id": 6,
-        "choices": [
-            "Romanticism",
-            "Ukiyo E",
-            "Art Nouveau",
-            "Expressionism",
-            "Baroque",
-            "Post Impressionism",
-            "Surrealism",
-            "Realism",
-            "Impressionism"
-        ],
-        "image": "ArtBench/6",
-        "question_type": "multi_choice"
-    },
-    "498": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "I",
-        "dataset": "ArtBench",
-        "image_id": 7,
-        "choices": [
-            "Romanticism",
-            "Art Nouveau",
-            "Expressionism",
-            "Ukiyo E",
-            "Realism",
-            "Surrealism",
-            "Post Impressionism",
-            "Impressionism",
-            "Baroque"
-        ],
-        "image": "ArtBench/7",
-        "question_type": "multi_choice"
-    },
-    "499": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "H",
-        "dataset": "ArtBench",
-        "image_id": 8,
-        "choices": [
-            "Art Nouveau",
-            "Ukiyo E",
-            "Romanticism",
-            "Realism",
-            "Baroque",
-            "Surrealism",
-            "Impressionism",
-            "Expressionism",
-            "Post Impressionism"
-        ],
-        "image": "ArtBench/8",
-        "question_type": "multi_choice"
-    },
-    "500": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "E",
-        "dataset": "ArtBench",
-        "image_id": 9,
-        "choices": [
-            "Ukiyo E",
-            "Romanticism",
-            "Realism",
-            "Impressionism",
-            "Surrealism",
-            "Expressionism",
-            "Baroque",
-            "Art Nouveau",
-            "Post Impressionism"
-        ],
-        "image": "ArtBench/9",
-        "question_type": "multi_choice"
-    },
-    "501": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "A",
-        "dataset": "ArtBench",
-        "image_id": 10,
-        "choices": [
-            "Baroque",
-            "Realism",
-            "Post Impressionism",
-            "Expressionism",
-            "Ukiyo E",
-            "Surrealism",
-            "Impressionism",
-            "Art Nouveau",
-            "Romanticism"
-        ],
-        "image": "ArtBench/10",
-        "question_type": "multi_choice"
-    },
-    "502": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "F",
-        "dataset": "ArtBench",
-        "image_id": 11,
-        "choices": [
-            "Baroque",
-            "Surrealism",
-            "Expressionism",
-            "Ukiyo E",
-            "Realism",
-            "Impressionism",
-            "Romanticism",
-            "Post Impressionism",
-            "Art Nouveau"
-        ],
-        "image": "ArtBench/11",
-        "question_type": "multi_choice"
-    },
-    "503": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "G",
-        "dataset": "ArtBench",
-        "image_id": 12,
-        "choices": [
-            "Ukiyo E",
-            "Surrealism",
-            "Baroque",
-            "Expressionism",
-            "Romanticism",
-            "Impressionism",
-            "Realism",
-            "Post Impressionism",
-            "Art Nouveau"
-        ],
-        "image": "ArtBench/12",
-        "question_type": "multi_choice"
-    },
-    "504": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "C",
-        "dataset": "ArtBench",
-        "image_id": 13,
-        "choices": [
-            "Post Impressionism",
-            "Art Nouveau",
-            "Expressionism",
-            "Realism",
-            "Surrealism",
-            "Romanticism",
-            "Impressionism",
-            "Baroque",
-            "Ukiyo E"
-        ],
-        "image": "ArtBench/13",
-        "question_type": "multi_choice"
-    },
-    "505": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "B",
-        "dataset": "ArtBench",
-        "image_id": 14,
-        "choices": [
-            "Post Impressionism",
-            "Impressionism",
-            "Baroque",
-            "Romanticism",
-            "Ukiyo E",
-            "Expressionism",
-            "Art Nouveau",
-            "Realism",
-            "Surrealism"
-        ],
-        "image": "ArtBench/14",
-        "question_type": "multi_choice"
-    },
-    "506": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "G",
-        "dataset": "ArtBench",
-        "image_id": 15,
-        "choices": [
-            "Expressionism",
-            "Ukiyo E",
-            "Art Nouveau",
-            "Impressionism",
-            "Post Impressionism",
-            "Romanticism",
-            "Baroque",
-            "Surrealism",
-            "Realism"
-        ],
-        "image": "ArtBench/15",
-        "question_type": "multi_choice"
-    },
-    "507": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "E",
-        "dataset": "ArtBench",
-        "image_id": 16,
-        "choices": [
-            "Baroque",
-            "Expressionism",
-            "Ukiyo E",
-            "Romanticism",
-            "Art Nouveau",
-            "Impressionism",
-            "Realism",
-            "Post Impressionism",
-            "Surrealism"
-        ],
-        "image": "ArtBench/16",
-        "question_type": "multi_choice"
-    },
-    "508": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "C",
-        "dataset": "ArtBench",
-        "image_id": 17,
-        "choices": [
-            "Art Nouveau",
-            "Expressionism",
-            "Ukiyo E",
-            "Post Impressionism",
-            "Realism",
-            "Impressionism",
-            "Baroque",
-            "Romanticism",
-            "Surrealism"
-        ],
-        "image": "ArtBench/17",
-        "question_type": "multi_choice"
-    },
-    "509": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "E",
-        "dataset": "ArtBench",
-        "image_id": 18,
-        "choices": [
-            "Baroque",
-            "Art Nouveau",
-            "Surrealism",
-            "Realism",
-            "Impressionism",
-            "Romanticism",
-            "Ukiyo E",
-            "Expressionism",
-            "Post Impressionism"
-        ],
-        "image": "ArtBench/18",
-        "question_type": "multi_choice"
-    },
-    "510": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "A",
-        "dataset": "ArtBench",
-        "image_id": 19,
-        "choices": [
-            "Post Impressionism",
-            "Surrealism",
-            "Ukiyo E",
-            "Art Nouveau",
-            "Romanticism",
-            "Impressionism",
-            "Expressionism",
-            "Realism",
-            "Baroque"
-        ],
-        "image": "ArtBench/19",
-        "question_type": "multi_choice"
-    },
-    "511": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "H",
-        "dataset": "ArtBench",
-        "image_id": 20,
-        "choices": [
-            "Impressionism",
-            "Realism",
-            "Romanticism",
-            "Post Impressionism",
-            "Expressionism",
-            "Baroque",
-            "Art Nouveau",
-            "Ukiyo E",
-            "Surrealism"
-        ],
-        "image": "ArtBench/20",
-        "question_type": "multi_choice"
-    },
-    "512": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "H",
-        "dataset": "ArtBench",
-        "image_id": 21,
-        "choices": [
-            "Baroque",
-            "Romanticism",
-            "Realism",
-            "Art Nouveau",
-            "Post Impressionism",
-            "Expressionism",
-            "Impressionism",
-            "Ukiyo E",
-            "Surrealism"
-        ],
-        "image": "ArtBench/21",
-        "question_type": "multi_choice"
-    },
-    "513": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "E",
-        "dataset": "ArtBench",
-        "image_id": 22,
-        "choices": [
-            "Realism",
-            "Art Nouveau",
-            "Surrealism",
-            "Post Impressionism",
-            "Expressionism",
-            "Impressionism",
-            "Romanticism",
-            "Baroque",
-            "Ukiyo E"
-        ],
-        "image": "ArtBench/22",
-        "question_type": "multi_choice"
-    },
-    "514": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "D",
-        "dataset": "ArtBench",
-        "image_id": 23,
-        "choices": [
-            "Ukiyo E",
-            "Art Nouveau",
-            "Baroque",
-            "Surrealism",
-            "Post Impressionism",
-            "Expressionism",
-            "Impressionism",
-            "Realism",
-            "Romanticism"
-        ],
-        "image": "ArtBench/23",
-        "question_type": "multi_choice"
-    },
-    "515": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "F",
-        "dataset": "ArtBench",
-        "image_id": 24,
-        "choices": [
-            "Romanticism",
-            "Ukiyo E",
-            "Expressionism",
-            "Impressionism",
-            "Art Nouveau",
-            "Surrealism",
-            "Realism",
-            "Post Impressionism",
-            "Baroque"
-        ],
-        "image": "ArtBench/24",
-        "question_type": "multi_choice"
-    },
-    "516": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "D",
-        "dataset": "ArtBench",
-        "image_id": 25,
-        "choices": [
-            "Art Nouveau",
-            "Impressionism",
-            "Surrealism",
-            "Expressionism",
-            "Realism",
-            "Post Impressionism",
-            "Romanticism",
-            "Ukiyo E",
-            "Baroque"
-        ],
-        "image": "ArtBench/25",
-        "question_type": "multi_choice"
-    },
-    "517": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "E",
-        "dataset": "ArtBench",
-        "image_id": 26,
-        "choices": [
-            "Art Nouveau",
-            "Realism",
-            "Surrealism",
-            "Ukiyo E",
-            "Impressionism",
-            "Post Impressionism",
-            "Expressionism",
-            "Romanticism",
-            "Baroque"
-        ],
-        "image": "ArtBench/26",
-        "question_type": "multi_choice"
-    },
-    "518": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "D",
-        "dataset": "ArtBench",
-        "image_id": 27,
-        "choices": [
-            "Impressionism",
-            "Surrealism",
-            "Art Nouveau",
-            "Post Impressionism",
-            "Realism",
-            "Expressionism",
-            "Ukiyo E",
-            "Romanticism",
-            "Baroque"
-        ],
-        "image": "ArtBench/27",
-        "question_type": "multi_choice"
-    },
-    "519": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "E",
-        "dataset": "ArtBench",
-        "image_id": 28,
-        "choices": [
-            "Post Impressionism",
-            "Art Nouveau",
-            "Impressionism",
-            "Ukiyo E",
-            "Romanticism",
-            "Realism",
-            "Baroque",
-            "Expressionism",
-            "Surrealism"
-        ],
-        "image": "ArtBench/28",
-        "question_type": "multi_choice"
-    },
-    "520": {
-        "question": "The painting in the picture belongs to which of the following categories?\n",
-        "answer": "D",
-        "dataset": "ArtBench",
-        "image_id": 29,
-        "choices": [
-            "Baroque",
-            "Expressionism",
-            "Ukiyo E",
-            "Impressionism",
-            "Post Impressionism",
-            "Art Nouveau",
-            "Realism",
-            "Surrealism",
-            "Romanticism"
-        ],
-        "image": "ArtBench/29",
-        "question_type": "multi_choice"
-    },
-    "521": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "D",
-        "dataset": "Grass",
-        "image_id": 0,
-        "choices": [
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200"
-        ],
-        "image": "Grass/0",
-        "question_type": "multi_choice"
-    },
-    "522": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "D",
-        "dataset": "Grass",
-        "image_id": 1,
-        "choices": [
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200"
-        ],
-        "image": "Grass/1",
-        "question_type": "multi_choice"
-    },
-    "523": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "A",
-        "dataset": "Grass",
-        "image_id": 2,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/2",
-        "question_type": "multi_choice"
-    },
-    "524": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 3,
-        "choices": [
-            "Reproductive stage, 100-200 (include 200)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)"
-        ],
-        "image": "Grass/3",
-        "question_type": "multi_choice"
-    },
-    "525": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 4,
-        "choices": [
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, more than 200"
-        ],
-        "image": "Grass/4",
-        "question_type": "multi_choice"
-    },
-    "526": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "B",
-        "dataset": "Grass",
-        "image_id": 5,
-        "choices": [
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200"
-        ],
-        "image": "Grass/5",
-        "question_type": "multi_choice"
-    },
-    "527": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "A",
-        "dataset": "Grass",
-        "image_id": 6,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/6",
-        "question_type": "multi_choice"
-    },
-    "528": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "E",
-        "dataset": "Grass",
-        "image_id": 7,
-        "choices": [
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, more than 200",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 10-100 (include 100)"
-        ],
-        "image": "Grass/7",
-        "question_type": "multi_choice"
-    },
-    "529": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "B",
-        "dataset": "Grass",
-        "image_id": 8,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 10-100 (include 100)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, more than 200"
-        ],
-        "image": "Grass/8",
-        "question_type": "multi_choice"
-    },
-    "530": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "D",
-        "dataset": "Grass",
-        "image_id": 9,
-        "choices": [
-            "Vegetative stage, no racemes",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/9",
-        "question_type": "multi_choice"
-    },
-    "531": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "B",
-        "dataset": "Grass",
-        "image_id": 10,
-        "choices": [
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Vegetative stage, no racemes"
-        ],
-        "image": "Grass/10",
-        "question_type": "multi_choice"
-    },
-    "532": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 11,
-        "choices": [
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, more than 200"
-        ],
-        "image": "Grass/11",
-        "question_type": "multi_choice"
-    },
-    "533": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "B",
-        "dataset": "Grass",
-        "image_id": 12,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 100-200 (include 200)",
-            "Vegetative stage, no racemes"
-        ],
-        "image": "Grass/12",
-        "question_type": "multi_choice"
-    },
-    "534": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "A",
-        "dataset": "Grass",
-        "image_id": 13,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, more than 200",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/13",
-        "question_type": "multi_choice"
-    },
-    "535": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 14,
-        "choices": [
-            "Vegetative stage, no racemes",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/14",
-        "question_type": "multi_choice"
-    },
-    "536": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "E",
-        "dataset": "Grass",
-        "image_id": 15,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 100-200 (include 200)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)"
-        ],
-        "image": "Grass/15",
-        "question_type": "multi_choice"
-    },
-    "537": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "E",
-        "dataset": "Grass",
-        "image_id": 16,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 10-100 (include 100)"
-        ],
-        "image": "Grass/16",
-        "question_type": "multi_choice"
-    },
-    "538": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "E",
-        "dataset": "Grass",
-        "image_id": 17,
-        "choices": [
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/17",
-        "question_type": "multi_choice"
-    },
-    "539": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "E",
-        "dataset": "Grass",
-        "image_id": 18,
-        "choices": [
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 0-10 (include 10)"
-        ],
-        "image": "Grass/18",
-        "question_type": "multi_choice"
-    },
-    "540": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 19,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Vegetative stage, no racemes"
-        ],
-        "image": "Grass/19",
-        "question_type": "multi_choice"
-    },
-    "541": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "D",
-        "dataset": "Grass",
-        "image_id": 20,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 10-100 (include 100)"
-        ],
-        "image": "Grass/20",
-        "question_type": "multi_choice"
-    },
-    "542": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 21,
-        "choices": [
-            "Reproductive stage, more than 200",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/21",
-        "question_type": "multi_choice"
-    },
-    "543": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 22,
-        "choices": [
-            "Reproductive stage, 10-100 (include 100)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, more than 200"
-        ],
-        "image": "Grass/22",
-        "question_type": "multi_choice"
-    },
-    "544": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 23,
-        "choices": [
-            "Reproductive stage, more than 200",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 100-200 (include 200)"
-        ],
-        "image": "Grass/23",
-        "question_type": "multi_choice"
-    },
-    "545": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "B",
-        "dataset": "Grass",
-        "image_id": 24,
-        "choices": [
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)",
-            "Vegetative stage, no racemes"
-        ],
-        "image": "Grass/24",
-        "question_type": "multi_choice"
-    },
-    "546": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "D",
-        "dataset": "Grass",
-        "image_id": 25,
-        "choices": [
-            "Reproductive stage, more than 200",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, 10-100 (include 100)"
-        ],
-        "image": "Grass/25",
-        "question_type": "multi_choice"
-    },
-    "547": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 26,
-        "choices": [
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 100-200 (include 200)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 10-100 (include 100)"
-        ],
-        "image": "Grass/26",
-        "question_type": "multi_choice"
-    },
-    "548": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "C",
-        "dataset": "Grass",
-        "image_id": 27,
-        "choices": [
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 0-10 (include 10)",
-            "Reproductive stage, 10-100 (include 100)",
-            "Vegetative stage, no racemes"
-        ],
-        "image": "Grass/27",
-        "question_type": "multi_choice"
-    },
-    "549": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "B",
-        "dataset": "Grass",
-        "image_id": 28,
-        "choices": [
-            "Reproductive stage, 10-100 (include 100)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 100-200 (include 200)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 0-10 (include 10)"
-        ],
-        "image": "Grass/28",
-        "question_type": "multi_choice"
-    },
-    "550": {
-        "question": "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
-        "answer": "E",
-        "dataset": "Grass",
-        "image_id": 29,
-        "choices": [
-            "Reproductive stage, 10-100 (include 100)",
-            "Reproductive stage, more than 200",
-            "Reproductive stage, 100-200 (include 200)",
-            "Vegetative stage, no racemes",
-            "Reproductive stage, 0-10 (include 10)"
-        ],
-        "image": "Grass/29",
-        "question_type": "multi_choice"
-    },
-    "551": {
-        "question": "What kind of product is in the image?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 0,
-        "choices": [
-            "A bar of soap",
-            "A candle",
-            "A piece of chalk",
-            "A bar of butter"
-        ],
-        "image": "MMAD/0",
-        "question_type": "multi_choice"
-    },
-    "552": {
-        "question": "Is there any defect in the object?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 1,
-        "choices": [
-            "Yes.",
-            "No."
-        ],
-        "image": "MMAD/1",
-        "question_type": "multi_choice"
-    },
-    "553": {
-        "question": "There is a defect in the object. What is the type of the defect?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 3,
-        "choices": [
-            "Scratches.",
-            "Discoloration.",
-            "Holes.",
-            "Cracks."
-        ],
-        "image": "MMAD/3",
-        "question_type": "multi_choice"
-    },
-    "554": {
-        "question": "What are the different food items in the breakfast box?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 5,
-        "choices": [
-            "Granola, almonds, and banana chips",
-            "Oranges, nectarine, and granola",
-            "Oranges, nectarine, granola, almonds, and banana chips",
-            "Granola and fruit"
-        ],
-        "image": "MMAD/5",
-        "question_type": "multi_choice"
-    },
-    "555": {
-        "question": "There is a defect in the object. What is the appearance of the defect?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 6,
-        "choices": [
-            "Small and irregular",
-            "Large and smooth",
-            "Circular",
-            "Elongated"
-        ],
-        "image": "MMAD/6",
-        "question_type": "multi_choice"
-    },
-    "556": {
-        "question": "There is a defect in the object. Where is the defect?\n",
-        "answer": "B",
-        "dataset": "MMAD",
-        "image_id": 7,
-        "choices": [
-            "Top left",
-            "Top right",
-            "Bottom left",
-            "Bottom right"
-        ],
-        "image": "MMAD/7",
-        "question_type": "multi_choice"
-    },
-    "557": {
-        "question": "There is a defect in the object. What is the type of the defect?\n",
-        "answer": "B",
-        "dataset": "MMAD",
-        "image_id": 8,
-        "choices": [
-            "A tear.",
-            "A hole.",
-            "Discoloration.",
-            "Stain."
-        ],
-        "image": "MMAD/8",
-        "question_type": "multi_choice"
-    },
-    "558": {
-        "question": "There is a defect in the object. Where is the defect?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 9,
-        "choices": [
-            "Top center",
-            "Bottom center",
-            "Left side",
-            "Right side"
-        ],
-        "image": "MMAD/9",
-        "question_type": "multi_choice"
-    },
-    "559": {
-        "question": "There is a defect in the object. Where is the defect?\n",
-        "answer": "D",
-        "dataset": "MMAD",
-        "image_id": 10,
-        "choices": [
-            "On the left side of the box.",
-            "On the right side of the box.",
-            "In the center of the box.",
-            "On the mango in the top left region of the box."
-        ],
-        "image": "MMAD/10",
-        "question_type": "multi_choice"
-    },
-    "560": {
-        "question": "There is a defect in the object. What is the type of the defect?\n",
-        "answer": "D",
-        "dataset": "MMAD",
-        "image_id": 11,
-        "choices": [
-            "Discoloration",
-            "Crack",
-            "Hole",
-            "Dent"
-        ],
-        "image": "MMAD/11",
-        "question_type": "multi_choice"
-    },
-    "561": {
-        "question": "There is a defect in the object. What is the type of the defect?\n",
-        "answer": "B",
-        "dataset": "MMAD",
-        "image_id": 12,
-        "choices": [
-            "Discoloration and textural inconsistency",
-            "Scratches and uneven surface",
-            "Scorch mark or melting damage",
-            "All of the above"
-        ],
-        "image": "MMAD/12",
-        "question_type": "multi_choice"
-    },
-    "562": {
-        "question": "Is there any defect in the object?\n",
-        "answer": "B",
-        "dataset": "MMAD",
-        "image_id": 13,
-        "choices": [
-            "Yes.",
-            "No."
-        ],
-        "image": "MMAD/13",
-        "question_type": "multi_choice"
-    },
-    "563": {
-        "question": "What is the layout or arrangement of the pasta shells?\n",
-        "answer": "D",
-        "dataset": "MMAD",
-        "image_id": 14,
-        "choices": [
-            "Randomly scattered",
-            "Stacked on top of each other",
-            "Placed in a row",
-            "Arranged in a grid"
-        ],
-        "image": "MMAD/14",
-        "question_type": "multi_choice"
-    },
-    "564": {
-        "question": "Is there any defect in the object?\n",
-        "answer": "B",
-        "dataset": "MMAD",
-        "image_id": 15,
-        "choices": [
-            "Yes.",
-            "No."
-        ],
-        "image": "MMAD/15",
-        "question_type": "multi_choice"
-    },
-    "565": {
-        "question": "There is a defect in the object. What is the effect of the defect?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 16,
-        "choices": [
-            "Affects the legibility of the label",
-            "Changes the color of the liquid",
-            "Damages the bottle structure",
-            "Reduces the product's shelf life"
-        ],
-        "image": "MMAD/16",
-        "question_type": "multi_choice"
-    },
-    "566": {
-        "question": "What is the specific characteristic of the surface texture of the object?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 17,
-        "choices": [
-            "The surface has a shiny, glossy finish.",
-            "The surface has a matte, dull appearance.",
-            "The surface has a slightly rough, granular texture.",
-            "The surface has a smooth, polished look."
-        ],
-        "image": "MMAD/17",
-        "question_type": "multi_choice"
-    },
-    "567": {
-        "question": "There is a defect in the object. Where is the defect?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 18,
-        "choices": [
-            "Top of the bottle",
-            "Bottom of the bottle",
-            "Center of the bottle",
-            "All over the bottle"
-        ],
-        "image": "MMAD/18",
-        "question_type": "multi_choice"
-    },
-    "568": {
-        "question": "There is a defect in the object. What is the type of the defect?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 19,
-        "choices": [
-            "Missing component",
-            "Damaged component",
-            "Discoloration",
-            "Irregular pattern"
-        ],
-        "image": "MMAD/19",
-        "question_type": "multi_choice"
-    },
-    "569": {
-        "question": "There is a defect in the object. What is the potential effect of the defect?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 20,
-        "choices": [
-            "Reduced product quality",
-            "Increased product value",
-            "Improved product durability",
-            "Enhanced product appearance"
-        ],
-        "image": "MMAD/20",
-        "question_type": "multi_choice"
-    },
-    "570": {
-        "question": "There is a defect in the object. What is the effect of the defect?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 21,
-        "choices": [
-            "Affects the taste.",
-            "Affects the texture.",
-            "Affects the visual appearance.",
-            "All of the above."
-        ],
-        "image": "MMAD/21",
-        "question_type": "multi_choice"
-    },
-    "571": {
-        "question": "What additional information can be provided about the object?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 22,
-        "choices": [
-            "It is made of metal.",
-            "It is a functional mechanical component.",
-            "It is placed on a green textured surface.",
-            "It is a decorative item without any specific purpose."
-        ],
-        "image": "MMAD/22",
-        "question_type": "multi_choice"
-    },
-    "572": {
-        "question": "What is the likely purpose or characteristic of this beverage product based on the packaging?\n",
-        "answer": "B",
-        "dataset": "MMAD",
-        "image_id": 23,
-        "choices": [
-            "It is a high-end, premium milk product.",
-            "It is a low-fat or non-dairy milk alternative.",
-            "It is a children's flavored milk drink.",
-            "It is a standard, everyday dairy milk product."
-        ],
-        "image": "MMAD/23",
-        "question_type": "multi_choice"
-    },
-    "573": {
-        "question": "Is there any defect in the object?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 24,
-        "choices": [
-            "Yes.",
-            "No."
-        ],
-        "image": "MMAD/24",
-        "question_type": "multi_choice"
-    },
-    "574": {
-        "question": "What kind of product is in the image?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 25,
-        "choices": [
-            "Soda bottle",
-            "Shampoo bottle",
-            "Snack chip container",
-            "Cooking oil bottle"
-        ],
-        "image": "MMAD/25",
-        "question_type": "multi_choice"
-    },
-    "575": {
-        "question": "There is a defect in the object. What is the appearance of the defect?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 26,
-        "choices": [
-            "Small and subtle",
-            "Large and prominent",
-            "Slightly opened or torn",
-            "Faded and indistinct"
-        ],
-        "image": "MMAD/26",
-        "question_type": "multi_choice"
-    },
-    "576": {
-        "question": "There is a defect in the object. Where is the defect?\n",
-        "answer": "C",
-        "dataset": "MMAD",
-        "image_id": 27,
-        "choices": [
-            "Slightly off-center to the left.",
-            "In the center.",
-            "Slightly off-center to the right.",
-            "At the top edge."
-        ],
-        "image": "MMAD/27",
-        "question_type": "multi_choice"
-    },
-    "577": {
-        "question": "There is a defect in the object. What is the appearance of the defect?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 28,
-        "choices": [
-            "Small and round",
-            "Large and irregular",
-            "Elongated and linear",
-            "Faint and barely visible"
-        ],
-        "image": "MMAD/28",
-        "question_type": "multi_choice"
-    },
-    "578": {
-        "question": "Is there any defect in the object?\n",
-        "answer": "A",
-        "dataset": "MMAD",
-        "image_id": 29,
-        "choices": [
-            "Yes.",
-            "No."
-        ],
-        "image": "MMAD/29",
-        "question_type": "multi_choice"
-    },
-    "579": {
-        "question": "This is a navigation video of an agent following instruction: \"Turn left and walk across the hallway. Turn left again and walk across this hallway and wait by the bathtub.\" What is the next action it should take?\n",
-        "answer": "C",
-        "dataset": "MileBench",
-        "image_id": 0,
-        "choices": [
-            "Move forward",
-            "Stop",
-            "Turn left and move forward",
-            "Turn right and move forward"
-        ],
-        "image": "MileBench/0",
-        "question_type": "multi_choice"
-    },
-    "580": {
-        "question": "Question: what is the amount of potassium mg./100g.  for Gelatin, Plain ?\n",
-        "answer": "C",
-        "dataset": "MileBench",
-        "image_id": 1,
-        "choices": [
-            "21",
-            "23",
-            "22",
-            "25"
-        ],
-        "image": "MileBench/1",
-        "question_type": "multi_choice"
-    },
-    "581": {
-        "question": "What can you say about the temperature of the water being poured?\n",
-        "answer": "A",
-        "dataset": "MileBench",
-        "image_id": 2,
-        "choices": [
-            "The water seems hot.",
-            "No water was poured.",
-            "The water seems cold."
-        ],
-        "image": "MileBench/2",
-        "question_type": "multi_choice"
-    },
-    "582": {
-        "question": "What is the color of the object that is stationary when the video ends?\n",
-        "answer": "D",
-        "dataset": "MileBench",
-        "image_id": 3,
-        "choices": [
-            "cyan",
-            "red",
-            "green",
-            "blue"
-        ],
-        "image": "MileBench/3",
-        "question_type": "multi_choice"
-    },
-    "583": {
-        "question": "This is a navigation video of an agent following instruction: \"Turn right and go down the long hall. Turn left toward the bar. Turn right into the kitchen and stop by the fridge.\" What is the next action it should take?\n",
-        "answer": "C",
-        "dataset": "MileBench",
-        "image_id": 5,
-        "choices": [
-            "Turn right and move forward",
-            "Move forward",
-            "Turn left and move forward",
-            "Stop"
-        ],
-        "image": "MileBench/5",
-        "question_type": "multi_choice"
-    },
-    "584": {
-        "question": "If the sphere is removed, which event will happen?\n",
-        "answer": "A",
-        "dataset": "MileBench",
-        "image_id": 8,
-        "choices": [
-            "The yellow object and the cylinder collide",
-            "The cylinder collides with the purple cube"
-        ],
-        "image": "MileBench/8",
-        "question_type": "multi_choice"
-    },
-    "585": {
-        "question": "This is a navigation video of an agent following instruction: \"Walk out through the door. Follow the red carpet to the right of the table. Stop in the next doorway.\" What is the next action it should take?\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 9,
-        "choices": [
-            "Turn right and move forward",
-            "Move forward",
-            "Turn left and move forward",
-            "Stop"
-        ],
-        "image": "MileBench/9",
-        "question_type": "multi_choice"
-    },
-    "586": {
-        "question": "Image Caption #1: Elanus axillaris -Royal Botanic Gardens, Cranbourne, Melbourne, Victoria, Australia-8 A Black-shouldered Kite at Royal Botanic Gardens, Cranbourne, Melbourne, Victoria, Australia. Image Caption #2: Resplendent Quetzal. Pharomachrus moccino - Flickr - gailhampshire Question: Which has longer tail feathers; Pharomachrus moccino or Elanus axillaris?\n",
-        "answer": "C",
-        "dataset": "MileBench",
-        "image_id": 10,
-        "choices": [
-            "Pharomachrus moccino has shorter tail feathers.",
-            "Pharomachrus moccino and Elanus axillaris have equal length tail feathers.",
-            "Pharomachrus moccino has longer tail feathers.",
-            "Elanus axillaris has longer tail feathers."
-        ],
-        "image": "MileBench/10",
-        "question_type": "multi_choice"
-    },
-    "587": {
-        "question": "Image Caption #1: Cantharellus-tubaeformis  Trumpet Chanterelles ",
-        "answer": "C",
-        "dataset": "MileBench",
-        "image_id": 12,
-        "choices": [
-            "The Dziewicza Gora's cap edges appear more frilled or uneven than the Trumpet Chanterelles's.",
-            "The cap edges of both Trumpet Chanterelles and Dziewicza Gora appear equally frilled or uneven.",
-            "The Trumpet Chanterelles's cap edges appear more frilled or uneven than the Dziewicza Gora's.",
-            "The cap edges of neither Trumpet Chanterelles nor Dziewicza Gora appear frilled or uneven."
-        ],
-        "image": "MileBench/12",
-        "question_type": "multi_choice"
-    },
-    "588": {
-        "question": "What shape is the stationary object when the brown object enters the scene?\n",
-        "answer": "C",
-        "dataset": "MileBench",
-        "image_id": 13,
-        "choices": [
-            "sphere",
-            "cube",
-            "cylinder"
-        ],
-        "image": "MileBench/13",
-        "question_type": "multi_choice"
-    },
-    "589": {
-        "question": "Global Table: {table#1} Context:  Question: How many human beings are shown in the picture of the Dead Poets Society play that Neil is in?\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 14,
-        "choices": [
-            "5",
-            "7",
-            "6",
-            "8"
-        ],
-        "image": "MileBench/14",
-        "question_type": "multi_choice"
-    },
-    "590": {
-        "question": "Pick the choice that correctly describes how the scenes in the video change.\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 15,
-        "choices": [
-            "From the kitchen to the garden.",
-            "From the wall to the boat.",
-            "From the beach to the city.",
-            "From the forest to the mountain."
-        ],
-        "image": "MileBench/15",
-        "question_type": "multi_choice"
-    },
-    "591": {
-        "question": "Are there any objects that enter the scene?\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 16,
-        "choices": [
-            "no",
-            "yes",
-            "not sure"
-        ],
-        "image": "MileBench/16",
-        "question_type": "multi_choice"
-    },
-    "592": {
-        "question": "Are there any gray cubes that enter the scene?\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 18,
-        "choices": [
-            "no",
-            "yes",
-            "not sure"
-        ],
-        "image": "MileBench/18",
-        "question_type": "multi_choice"
-    },
-    "593": {
-        "question": "Image Caption #1: Lodz old building LSSE 2010-05 Image Caption #2: AntrimHouse Antrim House, Wellington, New Zealand. New Zealand Historic Places Trust Register number: 208 Question: Do both the Antrim house and the Lodz Old Building have a porch?\n",
-        "answer": "A",
-        "dataset": "MileBench",
-        "image_id": 19,
-        "choices": [
-            "No, the Antrim house has a porch but the Lodz Old Building does not.",
-            "No, the Antrim house and the Lodz Old Building do not both have a porch.",
-            "Yes, the Antrim house and the Lodz Old Building both have a porch.",
-            "No, the Lodz Old Building has a porch but the Antrim house does not."
-        ],
-        "image": "MileBench/19",
-        "question_type": "multi_choice"
-    },
-    "594": {
-        "question": "Are there any stationary purple objects?\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 20,
-        "choices": [
-            "not sure",
-            "no",
-            "yes"
-        ],
-        "image": "MileBench/20",
-        "question_type": "multi_choice"
-    },
-    "595": {
-        "question": "Question: Who is the author of \" The Taming of the C.A.N.D.Y. Monster\"?\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 21,
-        "choices": [
-            "Lanskey",
-            "LANSKY",
-            "Lanski",
-            "Langsky"
-        ],
-        "image": "MileBench/21",
-        "question_type": "multi_choice"
-    },
-    "596": {
-        "question": "Image Caption #1: Praha, Karl\u016fv most, Statue of Saint Anthony of Padua on Charles Bridge DC12021 Image Caption #2: Saint Anthony Catholic Church ",
-        "answer": "C",
-        "dataset": "MileBench",
-        "image_id": 22,
-        "choices": [
-            "A2: A cross is the object depicted in the statues of Saint Anthony of Padua in both Prague and Saint Anthony Catholic Church in Temperance, Michigan.",
-            "A Bible is the object depicted in the statues of Saint Anthony of Padua in both Prague and Saint Anthony Catholic Church in Temperance, Michigan.",
-            "A book is the object depicted in the statues of Saint Anthony of Padua in both Prague and Saint Anthony Catholic Church in Temperance, Michigan.",
-            "A loaf of bread is the object depicted in the statues of Saint Anthony of Padua in both Prague and Saint Anthony Catholic Church in Temperance, Michigan."
-        ],
-        "image": "MileBench/22",
-        "question_type": "multi_choice"
-    },
-    "597": {
-        "question": "Question: Which gas is exhaled by the plant?\n",
-        "answer": "D",
-        "dataset": "MileBench",
-        "image_id": 23,
-        "choices": [
-            "Carbon Dioxide",
-            "Nitrogen",
-            "Carbon Monoxide",
-            "Oxygen"
-        ],
-        "image": "MileBench/23",
-        "question_type": "multi_choice"
-    },
-    "598": {
-        "question": "Question: Which of these periods is oldest?\n",
-        "answer": "A",
-        "dataset": "MileBench",
-        "image_id": 24,
-        "choices": [
-            "Cambrian",
-            "Jurassic",
-            "Neogene",
-            "Permian"
-        ],
-        "image": "MileBench/24",
-        "question_type": "multi_choice"
-    },
-    "599": {
-        "question": "Which object was put down by the person?\n",
-        "answer": "D",
-        "dataset": "MileBench",
-        "image_id": 25,
-        "choices": [
-            "The book.",
-            "The blanket.",
-            "The broom.",
-            "The picture."
-        ],
-        "image": "MileBench/25",
-        "question_type": "multi_choice"
-    },
-    "600": {
-        "question": "Question: what is the color of the shirt of the man that is talking on the phone?\n",
-        "answer": "B",
-        "dataset": "MileBench",
-        "image_id": 27,
-        "choices": [
-            "red",
-            "white",
-            "black",
-            "blue"
-        ],
-        "image": "MileBench/27",
-        "question_type": "multi_choice"
-    },
-    "601": {
-        "question": "Context:\n# Mafia state  \nIn politics, a mafia state or pakhanate is a state system where the government is tied with organized crime to the degree when government officials, the police, and/or military became a part of the criminal enterprise. According to US diplomats, the expression \"mafia state\" was coined by Alexander Litvinenko.  \n## Particular applications of the concept  \n### Mafia in Italy and Yakuza in Japan  \ndate=January 2022Giulio Andreotti, seven-time Prime Minister of Italy, was charged with having links to the Mafia.\nIn a critical review of Mois\u00e9s Na\u00edm's essay in Foreign Affairs, Peter Andreas pointed to the long existence of Italian mafia and Japanese Yakuza, writing that there were close relationships between those illicit organisations and respective governments. According to Andreas, these examples speak against incidences of mafia states as a historically new threat.  \nIn Italy, three main mafia organisations originated in the 19th century: the Cosa Nostra originating from the region of Sicily, the Camorra originating from the region of Campania, and the 'Ndrangheta originating from the region of Calabria.  \nFormer Prime Minister of Italy, Giulio Andreotti, had legal action against him, with a trial for mafia association on 27 March 1993 in the city of Palermo. The prosecution accused the former prime minister of \"making available to the mafia association named Cosa Nostra for the defense of its interests and attainment of its criminal goals, the influence and power coming from his position as the leader of a political faction\".  Prosecutors said in return for electoral support of Salvo Lima and assassination of Andreotti's enemies, he had agreed to protect the Mafia, which had expected him to fix the Maxi Trial. Andreotti's defense was predicated on character attacks against the prosecution's key witnesses, who were themselves involved with the mafia. Andreotti was acquitted on 23 October 1999. However, together with the greater series of corruption cases of Mani pulite, Andreotti's trials marked the purging and renewal of Italy's political system.  \nThe Camorra Casalesi clan rose in the 1980s, gaining control of large areas of the local economy \"partly by manipulating politicians and intimidating judges\". The clan was heavily involved in the Naples waste management crisis that dumped toxic waste around Campania in the 1990s and 2000s; the boss of the clan, Gaetano Vassallo, admitted to systematically working for 20 years to bribe local politicians and officials to gain their acquiescence to dumping toxic waste.\n\n### Countries described as mafia states  \n#### Republics, mobs and territories of the former Yugoslavia  \nMontenegro's former president Milo \u0110ukanovi\u0107 is often described as having strong links to Montenegrin mafia.\nKosovo, a partially recognised independent state formerly part of Serbia, was called a \"mafia state\" by Italian MEP Pino Arlacchi in 2011, and also by Mois\u00e9s Na\u00edm in his 2012 essay \"Mafia States\" in Foreign Affairs. Na\u00edm pointed out that Prime Minister of Kosovo Hashim Tha\u00e7i is allegedly connected to the heroin trade. Many other crime allegations have been made and investigated by several countries against Tha\u00e7i.  \nNa\u00edm also labeled Montenegro as a \"mafia state\" in the same essay, describing it as a hub for cigarette smuggling.\n\n#### Transnistria  \nTransnistria, an unrecognised break-away state from Moldova, has long been described by journalists, researchers, politicians and diplomats as a quasi-state whose economy is dependent on contraband and gunrunning, with some having directly referred to Transnistria as a mafia state.  \nFor instance, in 2002, Moldova's president, Vladimir Voronin, called Transnistria a \"residence of international mafia\", \"smuggling stronghold\", and \"outpost of Islamic combatants\". Attempts of customs blockade followed the allegations. Reacting to the allegations, Russian state-run RTR aired an investigative program revealing that Transnistrian firms were conducting industrial-level manufacturing of small arms purposely for subsequent illegal trafficking via the Ukrainian port of Odesa. According to the program, the trade was controlled by and benefited from Transnistria's founder and then-ruler Igor Smirnov.  \nHowever, more recent investigations and monitoring missions did not prove continuity in arms trafficking concerns. According to regular reports of the European Border Assistance Mission to Moldova and Ukraine ",
-        "answer": NaN,
-        "dataset": "MileBench",
-        "image_id": 28,
-        "choices": [
-            "A former prime minister of Kosovo",
-            "A former president of Montenegro",
-            "A former prime minister of Italy",
-            "A former leader of the Camorra Casalesi clan"
-        ],
-        "image": "MileBench/28",
-        "question_type": "multi_choice"
-    },
-    "602": {
-        "question": "In which direction does the green cube move in the video?\n",
-        "answer": NaN,
-        "dataset": "MileBench",
-        "image_id": 29,
-        "choices": [
-            "The object is stationary.",
-            "Down and to the right.",
-            "Up and to the right.",
-            "Up and to the left."
-        ],
-        "image": "MileBench/29",
-        "question_type": "multi_choice"
-    },
-    "603": {
-        "question": "How many adult person",
-        "answer": "D",
-        "dataset": "PANDA",
-        "image_id": 0,
-        "choices": [
-            "84",
-            "59",
-            "48",
-            "52"
-        ],
-        "image": "PANDA/0",
-        "question_type": "multi_choice"
-    },
-    "604": {
-        "question": "How many sitting person",
-        "answer": "A",
-        "dataset": "PANDA",
-        "image_id": 1,
-        "choices": [
-            "22",
-            "36",
-            "64",
-            "35"
-        ],
-        "image": "PANDA/1",
-        "question_type": "multi_choice"
-    },
-    "605": {
-        "question": "How many adult person",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 4,
-        "choices": [
-            "107",
-            "90",
-            "198",
-            "9"
-        ],
-        "image": "PANDA/4",
-        "question_type": "multi_choice"
-    },
-    "606": {
-        "question": "How many child person",
-        "answer": "D",
-        "dataset": "PANDA",
-        "image_id": 6,
-        "choices": [
-            "19",
-            "24",
-            "2",
-            "13"
-        ],
-        "image": "PANDA/6",
-        "question_type": "multi_choice"
-    },
-    "607": {
-        "question": "How many bicycle rider are in the image?\n",
-        "answer": "A",
-        "dataset": "PANDA",
-        "image_id": 7,
-        "choices": [
-            "3",
-            "0",
-            "4",
-            "5"
-        ],
-        "image": "PANDA/7",
-        "question_type": "multi_choice"
-    },
-    "608": {
-        "question": "How many adult person",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 8,
-        "choices": [
-            "273",
-            "151",
-            "63",
-            "236"
-        ],
-        "image": "PANDA/8",
-        "question_type": "multi_choice"
-    },
-    "609": {
-        "question": "How many baby carriage are in the image?\n",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 9,
-        "choices": [
-            "9",
-            "4",
-            "7",
-            "1"
-        ],
-        "image": "PANDA/9",
-        "question_type": "multi_choice"
-    },
-    "610": {
-        "question": "How many child person",
-        "answer": "C",
-        "dataset": "PANDA",
-        "image_id": 10,
-        "choices": [
-            "12",
-            "1",
-            "9",
-            "6"
-        ],
-        "image": "PANDA/10",
-        "question_type": "multi_choice"
-    },
-    "611": {
-        "question": "How many motorcycle are in the image?\n",
-        "answer": "C",
-        "dataset": "PANDA",
-        "image_id": 12,
-        "choices": [
-            "2",
-            "5",
-            "1",
-            "0"
-        ],
-        "image": "PANDA/12",
-        "question_type": "multi_choice"
-    },
-    "612": {
-        "question": "How many bicycle rider are in the image?\n",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 13,
-        "choices": [
-            "5",
-            "10",
-            "16",
-            "17"
-        ],
-        "image": "PANDA/13",
-        "question_type": "multi_choice"
-    },
-    "613": {
-        "question": "How many bicycle are in the image?\n",
-        "answer": "C",
-        "dataset": "PANDA",
-        "image_id": 14,
-        "choices": [
-            "74",
-            "48",
-            "135",
-            "37"
-        ],
-        "image": "PANDA/14",
-        "question_type": "multi_choice"
-    },
-    "614": {
-        "question": "How many bicycle rider are in the image?\n",
-        "answer": "A",
-        "dataset": "PANDA",
-        "image_id": 15,
-        "choices": [
-            "13",
-            "7",
-            "11",
-            "8"
-        ],
-        "image": "PANDA/15",
-        "question_type": "multi_choice"
-    },
-    "615": {
-        "question": "How many motorcycle rider are in the image?\n",
-        "answer": "D",
-        "dataset": "PANDA",
-        "image_id": 16,
-        "choices": [
-            "21",
-            "33",
-            "18",
-            "29"
-        ],
-        "image": "PANDA/16",
-        "question_type": "multi_choice"
-    },
-    "616": {
-        "question": "How many standing person",
-        "answer": "D",
-        "dataset": "PANDA",
-        "image_id": 17,
-        "choices": [
-            "82",
-            "75",
-            "54",
-            "57"
-        ],
-        "image": "PANDA/17",
-        "question_type": "multi_choice"
-    },
-    "617": {
-        "question": "How many adult person",
-        "answer": "C",
-        "dataset": "PANDA",
-        "image_id": 18,
-        "choices": [
-            "50",
-            "7",
-            "38",
-            "13"
-        ],
-        "image": "PANDA/18",
-        "question_type": "multi_choice"
-    },
-    "618": {
-        "question": "How many bicycle are in the image?\n",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 19,
-        "choices": [
-            "2",
-            "55",
-            "12",
-            "29"
-        ],
-        "image": "PANDA/19",
-        "question_type": "multi_choice"
-    },
-    "619": {
-        "question": "How many child person",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 21,
-        "choices": [
-            "7",
-            "2",
-            "4",
-            "0"
-        ],
-        "image": "PANDA/21",
-        "question_type": "multi_choice"
-    },
-    "620": {
-        "question": "How many walking person",
-        "answer": "D",
-        "dataset": "PANDA",
-        "image_id": 22,
-        "choices": [
-            "193",
-            "4",
-            "378",
-            "230"
-        ],
-        "image": "PANDA/22",
-        "question_type": "multi_choice"
-    },
-    "621": {
-        "question": "How many bicycle rider are in the image?\n",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 23,
-        "choices": [
-            "5",
-            "2",
-            "7",
-            "0"
-        ],
-        "image": "PANDA/23",
-        "question_type": "multi_choice"
-    },
-    "622": {
-        "question": "How many sitting person",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 24,
-        "choices": [
-            "4",
-            "0",
-            "1",
-            "2"
-        ],
-        "image": "PANDA/24",
-        "question_type": "multi_choice"
-    },
-    "623": {
-        "question": "How many motorcycle rider are in the image?\n",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 26,
-        "choices": [
-            "6",
-            "1",
-            "5",
-            "0"
-        ],
-        "image": "PANDA/26",
-        "question_type": "multi_choice"
-    },
-    "624": {
-        "question": "How many riding person",
-        "answer": "B",
-        "dataset": "PANDA",
-        "image_id": 27,
-        "choices": [
-            "7",
-            "11",
-            "12",
-            "20"
-        ],
-        "image": "PANDA/27",
-        "question_type": "multi_choice"
-    },
-    "625": {
-        "question": "How many adult person",
-        "answer": "A",
-        "dataset": "PANDA",
-        "image_id": 28,
-        "choices": [
-            "146",
-            "192",
-            "215",
-            "206"
-        ],
-        "image": "PANDA/28",
-        "question_type": "multi_choice"
-    },
-    "626": {
-        "question": "How many child person",
-        "answer": "C",
-        "dataset": "PANDA",
-        "image_id": 29,
-        "choices": [
-            "10",
-            "14",
-            "8",
-            "3"
-        ],
-        "image": "PANDA/29",
-        "question_type": "multi_choice"
-    }
-}
+test_data = [
+    {
+      id: "Autonomous_Driving_162",
+      question:
+        "What is motion of the pedestrian wearing black top on the right?\n",
+      answer: "A",
+      dataset: "Autonomous_Driving",
+      image_id: "162",
+      choices: [
+        "(A)  walking on the sidewalk",
+        "(B) crossing the crosswalk",
+        "(C) waiting to cross",
+        "(D) jaywalking (illegally crossing not at pedestrian crossing)",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/162",
+    },
+    {
+      id: "Autonomous_Driving_290",
+      question: "What color is the traffic light on the left?\n",
+      answer: "C",
+      dataset: "Autonomous_Driving",
+      image_id: "290",
+      choices: [
+        "(A)  red",
+        "(B) yellow",
+        "(C) green",
+        "(D) changing or off",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/290",
+    },
+    {
+      id: "Autonomous_Driving_124",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the left?\n",
+      answer: "C",
+      dataset: "Autonomous_Driving",
+      image_id: "124",
+      choices: [
+        "(A)  no response",
+        "(B) yielding",
+        "(C) slowing down",
+        "(D) accelerating/speeding up",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/124",
+    },
+    {
+      id: "Autonomous_Driving_264",
+      question:
+        "What is motion of the pedestrian wearing blue top and wearing blue bottom on the right?\n",
+      answer: "C",
+      dataset: "Autonomous_Driving",
+      image_id: "264",
+      choices: [
+        "(A)  jaywalking (illegally crossing not at pedestrian crossing)",
+        "(B) crossing the crosswalk",
+        "(C) waiting to cross",
+        "(D) walking on the sidewalk",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/264",
+    },
+    {
+      id: "Autonomous_Driving_188",
+      question:
+        "What type of the traffic signal (excluding traffic lights) is on the left?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "188",
+      choices: [
+        "(A)  speed limit sign",
+        "(B) construction work",
+        "(C) stop sign",
+        "(D) no parking",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/188",
+    },
+    {
+      id: "Autonomous_Driving_272",
+      question:
+        "What type of the traffic signal (excluding traffic lights) is on the ego lane?\n",
+      answer: "E",
+      dataset: "Autonomous_Driving",
+      image_id: "272",
+      choices: [
+        "(A)  speed limit sign",
+        "(B) construction work",
+        "(C) stop sign",
+        "(D) no parking",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/272",
+    },
+    {
+      id: "Autonomous_Driving_21",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black bottom on the right?\n",
+      answer: "D",
+      dataset: "Autonomous_Driving",
+      image_id: "21",
+      choices: [
+        "(A)  yielding",
+        "(B) passing by",
+        "(C) stopping",
+        "(D) no response",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/21",
+    },
+    {
+      id: "Autonomous_Driving_19",
+      question: "What is motion of the black suv on the left?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "19",
+      choices: [
+        "(A)  parked",
+        "(B) moving",
+        "(C) stopped",
+        "(D) other",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/19",
+    },
+    {
+      id: "Autonomous_Driving_238",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic signal(excluding traffic lights) on the right?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "238",
+      choices: [
+        "(A)  no response",
+        "(B) slowing down",
+        "(C) stopping",
+        "(D) accelerating/speeding up",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/238",
+    },
+    {
+      id: "Autonomous_Driving_134",
+      question: "What color is the traffic light on the left?\n",
+      answer: "C",
+      dataset: "Autonomous_Driving",
+      image_id: "134",
+      choices: [
+        "(A)  red",
+        "(B) yellow",
+        "(C) green",
+        "(D) changing or off",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/134",
+    },
+    {
+      id: "Autonomous_Driving_113",
+      question:
+        "What should the ego vehicle do when encountering the black sedan on the left?\n",
+      answer: "A",
+      dataset: "Autonomous_Driving",
+      image_id: "113",
+      choices: [
+        "(A)  no response",
+        "(B) yielding",
+        "(C) stopping",
+        "(D) accelerating/speeding up",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/113",
+    },
+    {
+      id: "Autonomous_Driving_243",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing blue bottom on the right?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "243",
+      choices: [
+        "(A)  stopping",
+        "(B) slowing down",
+        "(C) passing by",
+        "(D) yielding",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/243",
+    },
+    {
+      id: "Autonomous_Driving_126",
+      question:
+        "What is motion of the pedestrian wearing blue bottom on the left?\n",
+      answer: "D",
+      dataset: "Autonomous_Driving",
+      image_id: "126",
+      choices: [
+        "(A)  jaywalking (illegally crossing not at pedestrian crossing)",
+        "(B) crossing the crosswalk",
+        "(C) waiting to cross",
+        "(D) standing",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/126",
+    },
+    {
+      id: "Autonomous_Driving_61",
+      question: "What is motion of the white sedan on the left?\n",
+      answer: "D",
+      dataset: "Autonomous_Driving",
+      image_id: "61",
+      choices: [
+        "(A)  other",
+        "(B) parked",
+        "(C) stopped",
+        "(D) moving",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/61",
+    },
+    {
+      id: "Autonomous_Driving_96",
+      question:
+        "What is motion of the pedestrian wearing black bottom on the left?\n",
+      answer: "A",
+      dataset: "Autonomous_Driving",
+      image_id: "96",
+      choices: [
+        "(A)  walking on the sidewalk",
+        "(B) waiting to cross",
+        "(C) standing",
+        "(D) jaywalking (illegally crossing not at pedestrian crossing)",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/96",
+    },
+    {
+      id: "Autonomous_Driving_57",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing a pure purple top on the right\n",
+      answer: "E",
+      dataset: "Autonomous_Driving",
+      image_id: "57",
+      choices: [
+        "(A)  slowing down",
+        "(B) stopping",
+        "(C) passing by",
+        "(D) accelerating/speeding up",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/57",
+    },
+    {
+      id: "Autonomous_Driving_154",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic signal(excluding traffic lights) on the right?\n",
+      answer: "C",
+      dataset: "Autonomous_Driving",
+      image_id: "154",
+      choices: [
+        "(A)  accelerating/speeding up",
+        "(B) slowing down",
+        "(C) no response",
+        "(D) yielding",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/154",
+    },
+    {
+      id: "Autonomous_Driving_223",
+      question: "What is motion of the black van on the ego lane?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "223",
+      choices: [
+        "(A)  moving",
+        "(B) stopped",
+        "(C) other",
+        "(D) parked",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/223",
+    },
+    {
+      id: "Autonomous_Driving_172",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the traffic light on the left?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "172",
+      choices: [
+        "(A)  stopping",
+        "(B) slowing down",
+        "(C) no response",
+        "(D) yielding",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/172",
+    },
+    {
+      id: "Autonomous_Driving_111",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black bottom on the left?\n",
+      answer: "C",
+      dataset: "Autonomous_Driving",
+      image_id: "111",
+      choices: [
+        "(A)  accelerating/speeding up",
+        "(B) yielding",
+        "(C) no response",
+        "(D) passing by",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/111",
+    },
+    {
+      id: "Autonomous_Driving_0",
+      question:
+        "What is motion of the pedestrian wearing blue top on the left?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "0",
+      choices: [
+        "(A)  crossing the crosswalk",
+        "(B) standing",
+        "(C) jaywalking (illegally crossing not at pedestrian crossing)",
+        "(D) walking on the sidewalk",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/0",
+    },
+    {
+      id: "Autonomous_Driving_270",
+      question:
+        "What is motion of the pedestrian wearing black bottom on the right?\n",
+      answer: "D",
+      dataset: "Autonomous_Driving",
+      image_id: "270",
+      choices: [
+        "(A)  jaywalking (illegally crossing not at pedestrian crossing)",
+        "(B) standing",
+        "(C) walking on the sidewalk",
+        "(D) waiting to cross",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/270",
+    },
+    {
+      id: "Autonomous_Driving_56",
+      question:
+        "What type of the traffic signal (excluding traffic lights) is on the right?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "56",
+      choices: [
+        "(A)  speed limit sign",
+        "(B) construction work",
+        "(C) stop sign",
+        "(D) no parking",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/56",
+    },
+    {
+      id: "Autonomous_Driving_67",
+      question: "What is motion of the white truck on the ego lane?\n",
+      answer: "A",
+      dataset: "Autonomous_Driving",
+      image_id: "67",
+      choices: [
+        "(A)  stopped",
+        "(B) other",
+        "(C) parked",
+        "(D) moving",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/67",
+    },
+    {
+      id: "Autonomous_Driving_103",
+      question: "What is motion of the black sedan on the ego lane?\n",
+      answer: "D",
+      dataset: "Autonomous_Driving",
+      image_id: "103",
+      choices: [
+        "(A)  other",
+        "(B) parked",
+        "(C) stopped",
+        "(D) moving",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/103",
+    },
+    {
+      id: "Autonomous_Driving_45",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black top on the right?\n",
+      answer: "D",
+      dataset: "Autonomous_Driving",
+      image_id: "45",
+      choices: [
+        "(A)  accelerating/speeding up",
+        "(B) stopping",
+        "(C) yielding",
+        "(D) no response",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/45",
+    },
+    {
+      id: "Autonomous_Driving_241",
+      question: "What is motion of the purple sedan on the right?\n",
+      answer: "E",
+      dataset: "Autonomous_Driving",
+      image_id: "241",
+      choices: [
+        "(A)  other",
+        "(B) moving",
+        "(C) stopped",
+        "(D) parked",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/241",
+    },
+    {
+      id: "Autonomous_Driving_139",
+      question: "What is motion of the black truck on the left?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "139",
+      choices: [
+        "(A)  other",
+        "(B) moving",
+        "(C) stopped",
+        "(D) parked",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/139",
+    },
+    {
+      id: "Autonomous_Driving_93",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black bottom on the right?\n",
+      answer: "A",
+      dataset: "Autonomous_Driving",
+      image_id: "93",
+      choices: [
+        "(A)  passing by",
+        "(B) no response",
+        "(C) slowing down",
+        "(D) yielding",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/93",
+    },
+    {
+      id: "Autonomous_Driving_201",
+      question:
+        "This image shows the front view of the ego car. What should the ego vehicle do when encountering the pedestrian wearing black bottom on the ego lane?\n",
+      answer: "B",
+      dataset: "Autonomous_Driving",
+      image_id: "201",
+      choices: [
+        "(A)  slowing down",
+        "(B) no response",
+        "(C) stopping",
+        "(D) passing by",
+        "(E) The image does not feature the object",
+      ],
+      image: "Autonomous_Driving/201",
+    },
+    {
+      id: "DocStruct4M_244",
+      question:
+        "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
+      answer: "C",
+      dataset: "DocStruct4M",
+      image_id: "244",
+      choices: [
+        "(A)  Cancer in adult is rare",
+        "(B) More research requires",
+        "(C) Five-year survival rate for acute",
+        "(D) The number of visitors of",
+      ],
+      image: "DocStruct4M/244",
+    },
+    {
+      id: "DocStruct4M_255",
+      question:
+        "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "255",
+      choices: [
+        "(A)  Use proper grammar and show that you communicate effectively",
+        "(B) 10.4 M",
+        "(C) 18.5 M",
+        "(D) Social Networks are a bottom source for quality candidates",
+      ],
+      image: "DocStruct4M/255",
+    },
+    {
+      id: "DocStruct4M_89",
+      question:
+        "Parse the text behind: <doc>     University  of the Philippines \n     HANDWASHING \n     When    to   Wash    Your    Hands \n     After coughing \n     Before, during    When  hands \n     and after you    are dirty, especially \n     or sneezing \n     prepare food    after using the toilet \n     When caring    Before \n     After handling \n     for the sick    eating \n     animals or \n     animal waste \n     How    to   wash    your    hands    properly    with    soap    and    water \n     Use  soap  and   water  when   hands   are  visibily soiled. Otherwise   use  alcohol,   alcohol   based   hand   sanitizer. \n     Right palm \n     0    Wet hands    1 \n     Apply enoughes \n     soap to cover    2   Rub  hands    3    over left dorsum \n     with water    all hand    palm to palm    with interlaced \n     surfaces    fingers and \n     vice versa \n     Backs of    Rotational \n     4 \n     Palm  to \n     5 \n     fingers to    rubbing of \n     Rotational rubbing, \n     palm  with    opposing    left thumb \n     backwards  and \n     fingers    palms with    clasped in \n     forwards with \n     clasped fingers \n     interlaced    fingers    right palm \n     interlocked    and vice versa; \n     of righthand in left \n     palm and  vice versa \n     8 \n     Rinse  hands \n     Dry hands \n     thoroughly    10 \n     Use towel \n     with water    with a single \n     to turn off    11|   Your hands \n     use towel \n     faucet    are now  safe \n     For  alchohol,   alcohol-based    and  sanitizer,  replace   hand   wash   steps 0-1  by  applying  a  palmful  of the product \n     in a cupped   hand,  covering   all surfaces  then  apply \nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "89",
+      choices: [
+        "(A)   steps 2-7,  once dry, hands are now safe. ",
+        "    Sources: ",
+        "    https:/www.facebook.com/whowpro/photos/a.499491683555265/1446756502162107/7type=3&theater ",
+        "     https:/www.who.int/gpsc/5may/Hand_Hygiene_When_and_How_Leaflet.pdf?ua=1&fbclid=lwAR2eqNl-g4TP_XE4FnBxYuUqJJEJun1uKdVAL-2T3AyTen07XOdDOerNlyY ",
+        "     The COVID-19 is a present outbreak and ",
+        "     information may change daily. Scan  the QR   codes  for more ",
+        "     information  and  daily updates  regarding  the COVID-19 ",
+        "     Department   of Health Philippines    World  Health  Organization ",
+        "     up.edu.ph    1    @upsystem    @UniversityofthePhilippines1908 </doc>",
+        "(B)  steps 2-7,  once dry, hands are now safe. ",
+        "    Sources: ",
+        "    https:/www.facebook.com/whowpro/photos/a.499491683555265/1446756502162107/7type=3&theater ",
+        "     https:/www.who.int/gpsc/5may/Hand_Hygiene_When_and_How_Leaflet.pdf?ua=1&fbclid=lwAR2eqNl-g4TP_XE4FnBxYuUqJJEJun1uKdVAL-2T3AyTen07XOdDOerNlyY ",
+        "     The COVID-19 is a present outbreak and ",
+        "     information may change daily. Scan  the QR   codes  for more ",
+        "     information  and  daily updates  regarding  the COVID-19 ",
+        "     Department   of Health Philippines    World  Health  Organization ",
+        "     up.edu.ph    @upsystem    @UniversityofthePhilippines1908 </doc>",
+        "(C)  steps 2-7,  once dry, hands are now safe. ",
+        "    Sources: ",
+        "    https:/www.facebook.com/whowpro/photos/a.499491683555265/1446756502162107/7type=3&theater ",
+        "     https:/www.who.int/gpsc/5may/Hand_Hygiene_When_and_How_Leaflet.pdf?ua=1bfbclid=lwAR2eqNl-g4TP_XE4FnBxYuUqJJEJun1uKdVAL-2T3AyTen07XOdDOerNlyY ",
+        "     The COVID-19 is a present outbreak and ",
+        "     information may change daily. Scan  the QR   codes  for more ",
+        "     information  and  daily updates  regarding  the COVID-19 ",
+        "     Department   of Health Philippines    World  Health  Organization ",
+        "     up.edu.ph    @upsystem    @UniversityofthePhilippines1908 </doc>",
+        "(D)  steps 2-7,  once dry, hands are now safe. ",
+        "    Sources: ",
+        "    https:/www.facebook.com/whowpro/photos/a.499491683555265/1446756502162107/7type=3&theater ",
+        "     https:/www.who.int/gpsc/5may/Hand_Hygiene_When_and_How_Leaflet.pdf?ua=1&fbclid=lwAR2eqNl-g4TP_XE4FnBxYuUqJJEJun1uKdVAL-2T3AyTen07XOdDOerNlyY ",
+        "     The COVID-19 is a present outbreak and ",
+        "     information may change daily. Scan  the QR   codes  for more ",
+        "     information  and  daily updates  regarding  the COVID-19 ",
+        "     Department   of Health Philippines    World  Health  Organization ",
+        "     up.edu.ph    @upsystem o   @UniversityofthePhilippines1908 </doc>",
+      ],
+      image: "DocStruct4M/89",
+    },
+    {
+      id: "DocStruct4M_98",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "98",
+      choices: [
+        "(A)  <ocr> WYFF4.COM 4VVYFF MeTV CAROLINA </ocr>",
+        "(B) <ocr> WYFF4.COM 4WYFF MeTV CAROLINA </ocr>",
+        "(C) <ocr> WYFF.COM 4WYFF MeTV CAROLINA </ocr>",
+        "(D) <ocr> WYFF4.COM 4WYFF MeTV CALIFORNIA </ocr>",
+      ],
+      image: "DocStruct4M/98",
+    },
+    {
+      id: "DocStruct4M_46",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "46",
+      choices: [
+        "(A)  <ocr> New  4/9/20 11:55 AM  GARRETT WELLENS  New  83  $90.725.00  $90.725.00 </ocr>",
+        "(B) <ocr> New  4/9/20 11:55 AM  GARRETT WELLENS  New  83  $90,725.00  $90,725.00 </ocr>",
+        "(C) <ocr> New  4/9/20 12:05 AM  GARRETT WELLENS  New  83  $90,125.00  $90,125.00 </ocr>",
+        "(D) <ocr> New  4/9/20 11:55 AM  GARRETT WELLENS  New  83  $90,125.00  $90,125.00 </ocr>",
+      ],
+      image: "DocStruct4M/46",
+    },
+    {
+      id: "DocStruct4M_101",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "C",
+      dataset: "DocStruct4M",
+      image_id: "101",
+      choices: [
+        "(A)  <ocr> Tel: Code #304; 340-0824 </ocr>",
+        "(B) <ocr> Te1: Code #304; 346-0824 </ocr>",
+        "(C) <ocr> Tel: Code #304; 346-0824 </ocr>",
+        "(D) <ocr> Tel: Code #304; 346-0821 </ocr>",
+      ],
+      image: "DocStruct4M/101",
+    },
+    {
+      id: "DocStruct4M_237",
+      question:
+        "Discuss the content and wording found in the image. \nWhich of the following options is correct?\n",
+      answer: "C",
+      dataset: "DocStruct4M",
+      image_id: "237",
+      choices: [
+        "(A)  an artificial intelligence core levitating over a server <ocr> 2005 </ocr>",
+        "(B) a mechanical neural network suspended over a tablet <ocr> 2010 </ocr>",
+        "(C) a robotic human brain hovering over a computer <ocr> 2000 </ocr>",
+        "(D) a digital brain floating above a smartphone <ocr> 1995 </ocr>",
+      ],
+      image: "DocStruct4M/237",
+    },
+    {
+      id: "DocStruct4M_180",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "180",
+      choices: [
+        "(A)  <ocr> G-7-4 100.00% 99.75% </ocr>",
+        "(B) <ocr> G-7-4 90.00% 99.75% </ocr>",
+        "(C) <ocr> G-5-4 100.00% 99.75% </ocr>",
+        "(D) <ocr> G-7-4 100.00% 89.75% </ocr>",
+      ],
+      image: "DocStruct4M/180",
+    },
+    {
+      id: "DocStruct4M_252",
+      question:
+        "Locate the postion of the text <ocr> and Food Consultant </ocr> \nWhich of the following options is correct?\n",
+      answer: "C",
+      dataset: "DocStruct4M",
+      image_id: "252",
+      choices: [
+        "(A)  <bbox>603,398,749,503</bbox>",
+        "(B) <bbox>102,497,297,698</bbox>",
+        "(C) <bbox>335,180,480,195</bbox>",
+        "(D) <bbox>47,53,198,147</bbox>",
+      ],
+      image: "DocStruct4M/252",
+    },
+    {
+      id: "DocStruct4M_18",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "D",
+      dataset: "DocStruct4M",
+      image_id: "18",
+      choices: [
+        "(A)  <ocr> ibibleverses ibibleverses com <ocr>",
+        "(B) <ocr> ibib1everses ibib1everses.com <ocr>",
+        "(C) <ocr> mibibleverses ibibleverses.com <ocr>",
+        "(D) <ocr> ibibleverses ibibleverses.com <ocr>",
+      ],
+      image: "DocStruct4M/18",
+    },
+    {
+      id: "DocStruct4M_0",
+      question:
+        "Read the following text: <doc> CALL FOR NOMINATIONS \n BILINGUAL INSTRUCTIONAL ASSISTANT OF THE YEAR AWARD \n The purpose of this award is to recognize the excellent work and contributions of bilingual \n instructional assistants (teacher assistants, paraprofessionals) to the field of bilingual education \n in New York State. \n ELIGIBILITY CRITERIA: \n \u25aa  Bilingual instructional assistants working with ELLs/multilingual learners in a bilingual \n education program are eligible to be nominated. \n \u25aa  Nominees must have excelled in their ability to work cooperatively and effectively with \n teachers, parents, and ELLs/multilingual learners. \n \u25aa  Prior recipients of this award are not eligible for nomination. \n \u25aa  The nominee must be a member of NYSABE. \n NOMINATION PACKET: \n In addition to a completed nomination form, the supporting documentation, to be submitted by \n the nominator, must include: \n \u25aa  Nomination letter: This letter must provide evidence of the nominee\u2019s professional \n excellence, leadership, and impact on the achievement of ELLs/multilingual learners. The \n evidence may include testimonial quotes and/or descriptions of unique activities and projects. \n \u25aa  Three letters of recommendation: These letters should indicate\nWhich of the following options is correct?\n",
+      answer: "D",
+      dataset: "DocStruct4M",
+      image_id: "0",
+      choices: [
+        "(A)  the nominee\u2019s outstanding ",
+        " work and contributions to the education of ELLs/bilingual learners. ",
+        " \u25aa  Nominee\u2019s Statement: This statement details the nominee\u2019s beliefs and practices regarding ",
+        " bilingual education (200-250 words). ",
+        " NOTE: Each supporting document must be double-spaced and should not exceed four typed ",
+        " pages. All documents must be in either MS WORD or PDF format ",
+        " Nominations must be submitted electronically with the subject \u201cAWARD ",
+        " NOMINATION\u201d to our conference email address: ",
+        " nysabeconference@gmail.com",
+        " no later than 12:00pm on February 4, 2022 ",
+        " 14 </doc>",
+        "(B) the nominee\u2019s outstanding ",
+        " work and contributions to the education of ELL/bilingual learners. ",
+        " \u25aa  Nominee\u2019s Statement: This statement details the nominee\u2019s beliefs and practices regarding ",
+        " bilingual education (200-250 words). ",
+        " NOTE: Each supporting document must be double-spaced and should not exceed four typed ",
+        " pages. All documents must be in either MS WORD or PDF format ",
+        " Nominations must be submitted electronically with the subject \u201cAWARD ",
+        " NOMINATION\u201d to our conference email address: ",
+        " nysabeconference@gmail.com Faxes will not be accepted. ",
+        " no later than 12:00pm on February 4, 2022 ",
+        " 14 </doc>",
+        "(C) the nominee\u2019s outstanding ",
+        " work and contributions to the education of ELLs/bilingual learners. ",
+        " \u25aa  Nominee\u2019s Statement: This statement details the nominee\u2019s beliefs and practices regarding ",
+        " bilingual education (200-250 words). ",
+        " NOTE: Each supporting document must be double-spaced and should not exceed four typed ",
+        " pages. All documents must be in either MS WORD or PDF format ",
+        " Nominations must be submitted electronically with the subject \u201cAWARD ",
+        " NOMINATION\u201d to our conference email address: ",
+        " nysabeconference@gmail.com Faxes will not be accepted. ",
+        " no later than 12:00pm ",
+        " 14 </doc>",
+        "(D) the nominee\u2019s outstanding ",
+        " work and contributions to the education of ELLs/bilingual learners. ",
+        " \u25aa  Nominee\u2019s Statement: This statement details the nominee\u2019s beliefs and practices regarding ",
+        " bilingual education (200-250 words). ",
+        " NOTE: Each supporting document must be double-spaced and should not exceed four typed ",
+        " pages. All documents must be in either MS WORD or PDF format ",
+        " Nominations must be submitted electronically with the subject \u201cAWARD ",
+        " NOMINATION\u201d to our conference email address: ",
+        " nysabeconference@gmail.com Faxes will not be accepted. ",
+        " no later than 12:00pm on February 4, 2022 ",
+        " 14 </doc>",
+      ],
+      image: "DocStruct4M/0",
+    },
+    {
+      id: "DocStruct4M_119",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "C",
+      dataset: "DocStruct4M",
+      image_id: "119",
+      choices: [
+        "(A)  <ocr> * Apologies that 10 Williams is out of alphabetical order.",
+        "Research: Sam Schube and Danny Savitzky",
+        "Visualization: Craig Robinson </ocr>",
+        "(B) <ocr> * Apologies that J.D. Williams is out of alphabetical order.",
+        "Research: Sam Schube and Danny Samtzky",
+        "Visualization: Craig Robinson </ocr>",
+        "(C) <ocr> * Apologies that J.D. Williams is out of alphabetical order.",
+        "Research: Sam Schube and Danny Savitzky",
+        "Visualization: Craig Robinson </ocr>",
+        "(D) <ocr> * Apologies that J.D. Williams is out of alphabetical order.",
+        "Research: Sarn Schube and Danny Savitzky",
+        "Visualization: Craig Robinson </ocr>",
+      ],
+      image: "DocStruct4M/119",
+    },
+    {
+      id: "DocStruct4M_172",
+      question:
+        "Locate the postion of the text <ocr> 5) WATER POLO </ocr> \nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "172",
+      choices: [
+        "(A)  <bbox>37,808,474,821</bbox>",
+        "(B) <bbox>37,808",
+        "(C) <ocr> ROWING </ocr>",
+        "(D) <bbox>310,400,374,421</bbox>",
+      ],
+      image: "DocStruct4M/172",
+    },
+    {
+      id: "DocStruct4M_169",
+      question:
+        "Predict the bounding box of the text <ocr> Winston-Salem, NC 27102 </ocr> \nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "169",
+      choices: [
+        "(A)  <bbox>169,234,409,250</bbox>",
+        "(B) <bbox>69,434,109,450</bbox>",
+        "(C) <bbox>69,434",
+        "(D) <ocr> THE BOWMAN GRAY SCHOOL OF MEDICINE </ocr>",
+      ],
+      image: "DocStruct4M/169",
+    },
+    {
+      id: "DocStruct4M_268",
+      question:
+        "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "268",
+      choices: [
+        "(A)  effective 2 January 2025",
+        "(B) FRS 102",
+        "(C) SORP (FPS 102)",
+        "(D) FRS 103",
+      ],
+      image: "DocStruct4M/268",
+    },
+    {
+      id: "DocStruct4M_289",
+      question:
+        "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "289",
+      choices: [
+        "(A)  shutterbank",
+        "(B) 700858705",
+        "(C) SOLD IN",
+        "(D) less backgrounds",
+      ],
+      image: "DocStruct4M/289",
+    },
+    {
+      id: "DocStruct4M_59",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "59",
+      choices: [
+        "(A)  <ocr> FESTIVE",
+        "ALE </ocr>",
+        "(B) <ocr> FESTIVAL",
+        "ALE </ocr>",
+        "(C) <ocr> ALCOHOL </ocr>",
+        "(D) <ocr> Vintage All </ocr>",
+      ],
+      image: "DocStruct4M/59",
+    },
+    {
+      id: "DocStruct4M_73",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "D",
+      dataset: "DocStruct4M",
+      image_id: "73",
+      choices: [
+        "(A)  <ocr> The financial statements have been prepared to give a \u2018true and fair\u2019 view and have departed </ocr>",
+        '(B) <ocr> The accounts (financial statements) have been prepared to give a "true and fair" view and have departed </ocr>',
+        "(C) <ocr> The accounts and reports have been prepared to give a \u2018true and fair\u2019 view and have departed </ocr>",
+        "(D) <ocr> The accounts (financial statements) have been prepared to give a \u2018true and fair\u2019 view and have departed </ocr>",
+      ],
+      image: "DocStruct4M/73",
+    },
+    {
+      id: "DocStruct4M_105",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "105",
+      choices: [
+        "(A)  <ocr> Mask required | Remain 6m apart </ocr>",
+        "(B) <ocr> Mask required | Remain 6ft apart </ocr>",
+        "(C) <ocr> Facial mask required | Remain 6ft apart </ocr>",
+        "(D) <ocr> Wask required | Remain 6ft apart </ocr>",
+      ],
+      image: "DocStruct4M/105",
+    },
+    {
+      id: "DocStruct4M_138",
+      question:
+        "Which of the following sentences is present in the image? \nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "138",
+      choices: [
+        "(A)  71642857",
+        "(B) shutting",
+        "(C) shutterbank",
+        "(D) Elenakot",
+      ],
+      image: "DocStruct4M/138",
+    },
+    {
+      id: "DocStruct4M_58",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "58",
+      choices: [
+        "(A)  <ocr> Wazir Bowli Kullu 37.00 </ocr>",
+        "(B) <ocr> Wa2ir Bowli Kullu 37.00 </ocr>",
+        "(C) <ocr> Wazir Bowl Kullu 37.00 </ocr>",
+        "(D) <ocr> Wazir Bowll Kullu 37.00 </ocr>",
+      ],
+      image: "DocStruct4M/58",
+    },
+    {
+      id: "DocStruct4M_168",
+      question:
+        "Which of the following phrases appears in the picture? \nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "168",
+      choices: [
+        "(A)  non-executive independent Directors",
+        "(B) executive dependent Directors",
+        "(C) Consumer Committee",
+        "(D) Target meetings",
+      ],
+      image: "DocStruct4M/168",
+    },
+    {
+      id: "DocStruct4M_39",
+      question:
+        "Detect the text in the bounding box <bbox>228,283,697,567</bbox>\nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "39",
+      choices: [
+        "(A)  <ocr> WED 9-21",
+        "SHOCK",
+        "22:23 22 ",
+        "8NZ </ocr>",
+        "(B) <ocr> WED 9-21",
+        "SHOCK",
+        "22:23 22 ",
+        "SNZ </ocr>",
+        "(C) <ocr> WEO 9-21",
+        "SHOCK",
+        "22:23 22 ",
+        "SNZ </ocr>",
+        "(D) <ocr> WED 9-21",
+        "SHOCK",
+        "22:23 22 ",
+        "ONZ </ocr>",
+      ],
+      image: "DocStruct4M/39",
+    },
+    {
+      id: "DocStruct4M_199",
+      question:
+        "Give the bounding box of the text <ocr> (1,491,000} </ocr> \nWhich of the following options is correct?\n",
+      answer: "D",
+      dataset: "DocStruct4M",
+      image_id: "199",
+      choices: [
+        "(A)  <bbox>453,343,506,406</bbox>",
+        "(B) <bbox>108,396,159,443</bbox>",
+        "(C) <bbox>294,371,378,463</bbox>",
+        "(D) <bbox>564,242,650,256</bbox>",
+      ],
+      image: "DocStruct4M/199",
+    },
+    {
+      id: "DocStruct4M_224",
+      question:
+        "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "224",
+      choices: [
+        "(A)  Bank deposit and loan stock interest",
+        "(B) losses in the Statement of Financial Activities",
+        "(C) Stocks of Donations",
+        "(D) Gains on investment property",
+      ],
+      image: "DocStruct4M/224",
+    },
+    {
+      id: "DocStruct4M_274",
+      question:
+        "Which of the following phrases appears in the image? \nWhich of the following options is correct?\n",
+      answer: "C",
+      dataset: "DocStruct4M",
+      image_id: "274",
+      choices: [
+        "(A)  Calcified tissue production",
+        "(B) American Psychiatric Association journal",
+        "(C) Calcified tissue research",
+        "(D) Journal of diseases and sciences",
+      ],
+      image: "DocStruct4M/274",
+    },
+    {
+      id: "DocStruct4M_216",
+      question:
+        "Recognize the text in the bounding box <bbox>464,206,613,222</bbox> \nWhich of the following options is correct?\n",
+      answer: "B",
+      dataset: "DocStruct4M",
+      image_id: "216",
+      choices: [
+        "(A)  <ocr> Sasaki </ocr>",
+        "(B) <ocr> OF HYPERTENSION </ocr>",
+        "(C) <ocr> COMMUNITY INTERVENTION </ocr>",
+        "(D) <ocr> moderate restriction </ocr>",
+      ],
+      image: "DocStruct4M/216",
+    },
+    {
+      id: "DocStruct4M_90",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "D",
+      dataset: "DocStruct4M",
+      image_id: "90",
+      choices: [
+        "(A)  <ocr> Public Collection for Humanitarian Relief - 488,228 488,228 - 526,489 526,489 </ocr>",
+        "(B) <ocr> Iublic Collection for Humanitarian Relief - 489,228 489,228 - 526,489 526,489 </ocr>",
+        "(C) <ocr> Public Collection for Humanitarian Relief - 489,228 489,228 - 626,489 626,489 </ocr>",
+        "(D) <ocr> Public Collection for Humanitarian Relief - 489,228 489,228 - 526,489 526,489 </ocr>",
+      ],
+      image: "DocStruct4M/90",
+    },
+    {
+      id: "DocStruct4M_173",
+      question:
+        "Which of the following phrases appears in the picture? \nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "173",
+      choices: [
+        "(A)  World nuclear weapon status",
+        "(B) South Korea",
+        "(C) Canada",
+        "(D) Unofficial nuclear powers",
+      ],
+      image: "DocStruct4M/173",
+    },
+    {
+      id: "DocStruct4M_71",
+      question:
+        "Which of the following sentences is present in the image?\nWhich of the following options is correct?\n",
+      answer: "A",
+      dataset: "DocStruct4M",
+      image_id: "71",
+      choices: [
+        "(A)  <ocr> GUNS IN THE",
+        "UNITED STATES ",
+        "AMERICANS LEAD THE  WORLD IN GUN",
+        "OWNERSHIP. AND WHAT IS THE ACTUAL",
+        "IMPACT ON SOCIETY OF MORE",
+        "GUNS? </ocr>",
+        "(B) <ocr> GUNS IN THE",
+        "UNITED STATES ",
+        "AMERICANS LEAD THE  WORLD IN GUN",
+        "OWNERSHIP. AND WHAT IS THE ACTUAL",
+        "IMPACT SOCIETY OF MORE",
+        "GUNS? </ocr>",
+        "(C) <ocr> GUNS IN THE",
+        "UNITED STATES ",
+        "AMERICANS LEAD THE  WORLD IN GUN",
+        "OWNERSHIP. AND WHAT IS THE ACTUAL",
+        "IMPACT ON SOCIETY OF MORE",
+        "BUNS? </ocr>",
+        "(D) <ocr> GUNS IN THE",
+        "UNITED STATES ",
+        "AMERICANS LEAD THE  WORLD IN GUN",
+        "OWNERSHIP. WHAT IS THE ACTUAL",
+        "IMPACT ON SOCIETY OF MORE",
+        "GUNS? </ocr>",
+      ],
+      image: "DocStruct4M/71",
+    },
+    {
+      id: "HR-Bench_340",
+      question: "What is the primary function of the object in the red circle?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "340",
+      choices: [
+        "(A)  To hold and dispense water for drinking",
+        "(B) To store chemicals for laboratory use",
+        "(C) To serve as a container for cooking oil",
+        "(D) To be used as a decorative item",
+      ],
+      image: "HR-Bench/340",
+    },
+    {
+      id: "HR-Bench_367",
+      question: "What is the average sales of Item 10 and Item 15?\n",
+      answer: "C",
+      dataset: "HR-Bench",
+      image_id: "367",
+      choices: ["(A)  9", "(B) 12", "(C) 6", "(D) 15"],
+      image: "HR-Bench/367",
+    },
+    {
+      id: "HR-Bench_328",
+      question: "What is written inside the red rectangle on the sign?\n",
+      answer: "D",
+      dataset: "HR-Bench",
+      image_id: "328",
+      choices: [
+        "(A)  Muzium Kesenian Negara, National Art Museum",
+        "(B) Muzium Kebudayaan Negara, National Culture Museum",
+        "(C) Muzium Tekstil Negara, National Music Museum",
+        "(D) Muzium Tekstil Negara, National Textile Museum",
+      ],
+      image: "HR-Bench/328",
+    },
+    {
+      id: "HR-Bench_134",
+      question:
+        "What word is written on the building to the left in the image?\n",
+      answer: "C",
+      dataset: "HR-Bench",
+      image_id: "134",
+      choices: ["(A)  house", "(B) office", "(C) family", "(D) five"],
+      image: "HR-Bench/134",
+    },
+    {
+      id: "HR-Bench_78",
+      question: "What is hanging on the wall inside the house?\n",
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "78",
+      choices: [
+        "(A)  A picture frame",
+        "(B) A piece of cloth",
+        "(C) A hat",
+        "(D) A clock",
+      ],
+      image: "HR-Bench/78",
+    },
+    {
+      id: "HR-Bench_161",
+      question:
+        "Which president's face is highlighted in the red rectangle on Mount Rushmore?\n",
+      answer: "D",
+      dataset: "HR-Bench",
+      image_id: "161",
+      choices: [
+        "(A)  Thomas Jefferson",
+        "(B) George Washington",
+        "(C) Theodore Roosevelt",
+        "(D) Abraham Lincoln",
+      ],
+      image: "HR-Bench/161",
+    },
+    {
+      id: "HR-Bench_21",
+      question: "How many dogs are being walked in the image?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "21",
+      choices: ["(A)  Four", "(B) Five", "(C) Two", "(D) Three"],
+      image: "HR-Bench/21",
+    },
+    {
+      id: "HR-Bench_16",
+      question: "What is the title of the framed poster visible in the image?\n",
+      answer: "D",
+      dataset: "HR-Bench",
+      image_id: "16",
+      choices: [
+        "(A)  Ely Diocess",
+        "(B) Ely Division",
+        "(C) Ely Cathedral",
+        "(D) Ely Diocese",
+      ],
+      image: "HR-Bench/16",
+    },
+    {
+      id: "HR-Bench_75",
+      question:
+        "Which building has a red and white striped antenna on its top?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "75",
+      choices: [
+        "(A)  The building with the Helaba logo",
+        "(B) The building with the DB logo",
+        "(C) The building with the Deutsche Bank logo",
+        "(D) The building with the Commerzbank logo",
+      ],
+      image: "HR-Bench/75",
+    },
+    {
+      id: "HR-Bench_318",
+      question: "What is written on the parachute?\n",
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "318",
+      choices: ["(A)  SWING", "(B) SWOOP", "(C) SWIRL", "(D) SPRING"],
+      image: "HR-Bench/318",
+    },
+    {
+      id: "HR-Bench_19",
+      question:
+        "What is written on the road sign directly below the American flag?\n",
+      answer: "C",
+      dataset: "HR-Bench",
+      image_id: "19",
+      choices: ["(A)  ONE KIT", "(B) ONE KEY", "(C) ONE WAY", "(D) NO ENTRY"],
+      image: "HR-Bench/19",
+    },
+    {
+      id: "HR-Bench_55",
+      question: "What color are the flowers?\n",
+      answer: "D",
+      dataset: "HR-Bench",
+      image_id: "55",
+      choices: ["(A)  Red", "(B) Yellow", "(C) Blue", "(D) Purple"],
+      image: "HR-Bench/55",
+    },
+    {
+      id: "HR-Bench_36",
+      question:
+        'What is the color of the "1" on the left side hazard label of the storage container?\n',
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "36",
+      choices: ["(A)  Blue", "(B) Yellow", "(C) Green", "(D) Red"],
+      image: "HR-Bench/36",
+    },
+    {
+      id: "HR-Bench_320",
+      question: "What word is visible on the suitcase?\n",
+      answer: "D",
+      dataset: "HR-Bench",
+      image_id: "320",
+      choices: ["(A)  Daily", "(B) Dolly", "(C) Rally", "(D) Dally"],
+      image: "HR-Bench/320",
+    },
+    {
+      id: "HR-Bench_38",
+      question:
+        "What's the text written on the sign attached to the wall of building?\n",
+      answer: "C",
+      dataset: "HR-Bench",
+      image_id: "38",
+      choices: [
+        "(A)  Rue Saint-Pierre",
+        "(B) Rue Sainte-Marie",
+        "(C) Rue Saint-Paul",
+        "(D) Rue Saint-Jean",
+      ],
+      image: "HR-Bench/38",
+    },
+    {
+      id: "HR-Bench_87",
+      question: "What is the color of the flag?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "87",
+      choices: ["(A)  Red", "(B) Blue", "(C) Black", "(D) White"],
+      image: "HR-Bench/87",
+    },
+    {
+      id: "HR-Bench_190",
+      question:
+        "What is the position of the wooden jewelry box relative to the clock?\n",
+      answer: "D",
+      dataset: "HR-Bench",
+      image_id: "190",
+      choices: [
+        "(A)  To the right of the clock",
+        "(B) Below the clock",
+        "(C) Over the clock",
+        "(D) To the left of the clock",
+      ],
+      image: "HR-Bench/190",
+    },
+    {
+      id: "HR-Bench_151",
+      question:
+        "On the provided map, which two numbered locations belong to the same country?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "151",
+      choices: [
+        "(A)  Locations 1 and 2",
+        "(B) Locations 2 and 4",
+        "(C) Locations 2 and 3",
+        "(D) Locations 1 and 3",
+      ],
+      image: "HR-Bench/151",
+    },
+    {
+      id: "HR-Bench_46",
+      question: "What color is the shirt worn by the person in the image?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "46",
+      choices: ["(A)  Blue", "(B) Red", "(C) Green", "(D) Yellow"],
+      image: "HR-Bench/46",
+    },
+    {
+      id: "HR-Bench_150",
+      question:
+        "On the provided map, which two numbered locations belong to the same country?\n",
+      answer: "C",
+      dataset: "HR-Bench",
+      image_id: "150",
+      choices: [
+        "(A)  Locations 1 and 3",
+        "(B) Locations 2 and 3",
+        "(C) Locations 1 and 2",
+        "(D) Locations 2 and 4",
+      ],
+      image: "HR-Bench/150",
+    },
+    {
+      id: "HR-Bench_178",
+      question: "What is the color of the house?\n",
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "178",
+      choices: ["(A)  blue", "(B) white", "(C) green", "(D) red"],
+      image: "HR-Bench/178",
+    },
+    {
+      id: "HR-Bench_230",
+      question: "What is the year inscribed on the sundial?\n",
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "230",
+      choices: ["(A)  1752", "(B) 1762", "(C) 1768", "(D) 1782"],
+      image: "HR-Bench/230",
+    },
+    {
+      id: "HR-Bench_330",
+      question:
+        "Which direction is the taller white building in relation to the National Textile Museum?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "330",
+      choices: ["(A)  Right", "(B) Behind", "(C) Above", "(D) Left"],
+      image: "HR-Bench/330",
+    },
+    {
+      id: "HR-Bench_186",
+      question:
+        "Who is the founder of the company that makes the square white adapter shown in the image?\n",
+      answer: "C",
+      dataset: "HR-Bench",
+      image_id: "186",
+      choices: [
+        "(A)  Bill Gates",
+        "(B) Jeff Bezos",
+        "(C) Steve Jobs",
+        "(D) Wenbin Wang",
+      ],
+      image: "HR-Bench/186",
+    },
+    {
+      id: "HR-Bench_145",
+      question:
+        "What does the Chinese text in the red rectangle translate to in English?\n",
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "145",
+      choices: [
+        "(A)  Hong Kong Market",
+        "(B) Tong Fuk Nam Trading",
+        "(C) Happy Fortune Shop",
+        "(D) Dragon Street Bazaar",
+      ],
+      image: "HR-Bench/145",
+    },
+    {
+      id: "HR-Bench_96",
+      question:
+        "What is the relative position of the pink banner compared to the green trash bin?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "96",
+      choices: [
+        "(A)  To the left and slightly behind the green trash bin",
+        "(B) Directly above the green trash bin",
+        "(C) To the right and slightly in front of the green trash bin",
+        "(D) To the left and slightly in front of the green trash bin",
+      ],
+      image: "HR-Bench/96",
+    },
+    {
+      id: "HR-Bench_386",
+      question:
+        "What is the position of the blue backpack relative to the umbrella?\n",
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "386",
+      choices: [
+        "(A)  Upon and to the right of the umbrella",
+        "(B) Below and to the right of the umbrella",
+        "(C) Below and to the left of the umbrella",
+        "(D) Upon and to the left of the umbrella",
+      ],
+      image: "HR-Bench/386",
+    },
+    {
+      id: "HR-Bench_311",
+      question:
+        "In which direction is the child in the foreground running on the bridge?\n",
+      answer: "D",
+      dataset: "HR-Bench",
+      image_id: "311",
+      choices: [
+        "(A)  No child in the image",
+        "(B) Towards the camera",
+        "(C) Sideways",
+        "(D) Away from the camera",
+      ],
+      image: "HR-Bench/311",
+    },
+    {
+      id: "HR-Bench_97",
+      question:
+        "What is the relative position of the person in light brown hat compared to the person wearing pink shirt?\n",
+      answer: "B",
+      dataset: "HR-Bench",
+      image_id: "97",
+      choices: [
+        "(A)  To the right of the person wearing pink shirt",
+        "(B) To the left of the person wearing the pink shirt",
+        "(C) Directly in front of the person wearing pink shirt",
+        "(D) To the right and slightly behind the person wearing the pink shirt",
+      ],
+      image: "HR-Bench/97",
+    },
+    {
+      id: "HR-Bench_129",
+      question: "What is the license plate number of the car?\n",
+      answer: "A",
+      dataset: "HR-Bench",
+      image_id: "129",
+      choices: [
+        "(A)  217722-ROMA",
+        "(B) 217722-ROM",
+        "(C) 21722-ROMA",
+        "(D) 217722-RMA",
+      ],
+      image: "HR-Bench/129",
+    },
+    {
+      id: "HRVQA_54",
+      question:
+        "What color is the fourth small vehicle based on the left to right rule in this image?\n",
+      answer: "A",
+      dataset: "HRVQA",
+      image_id: "54",
+      choices: ["(A)  silver", "(B) red", "(C) white ", "(D) black"],
+      image: "HRVQA/54",
+    },
+    {
+      id: "HRVQA_264",
+      question: "What kind of scene can you see in this image?\n",
+      answer: "C",
+      dataset: "HRVQA",
+      image_id: "264",
+      choices: [
+        "(A)  high-density",
+        "(B) empty",
+        "(C) moderate-density",
+        "(D) low-density",
+      ],
+      image: "HRVQA/264",
+    },
+    {
+      id: "HRVQA_278",
+      question: "What sport can people do in this image?\n",
+      answer: "A",
+      dataset: "HRVQA",
+      image_id: "278",
+      choices: ["(A)  aerobic", "(B) tennis", "(C) basketball", "(D) cricket"],
+      image: "HRVQA/278",
+    },
+    {
+      id: "HRVQA_258",
+      question: "What kind of scene can you see in this image?\n",
+      answer: "B",
+      dataset: "HRVQA",
+      image_id: "258",
+      choices: [
+        "(A)  industrial",
+        "(B) lowdensity",
+        "(C) high-density",
+        "(D) moderate-density",
+      ],
+      image: "HRVQA/258",
+    },
+    {
+      id: "HRVQA_17",
+      question:
+        "What kind of shape is the third building based on the left to right rule in this image? \n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "17",
+      choices: [
+        "(A)  irregular",
+        "(B) triangular",
+        "(C) circular",
+        "(D) polygonal",
+      ],
+      image: "HRVQA/17",
+    },
+    {
+      id: "HRVQA_171",
+      question: "What size is the ship in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "171",
+      choices: ["(A)  large", "(B) small", "(C) tiny", "(D) nonexistent"],
+      image: "HRVQA/171",
+    },
+    {
+      id: "HRVQA_123",
+      question:
+        "How many rectangular basketball courts are visible in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "123",
+      choices: ["(A)  3", "(B) 2", "(C) 1", "(D) 0"],
+      image: "HRVQA/123",
+    },
+    {
+      id: "HRVQA_29",
+      question: "What kind of shape is the field track in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "29",
+      choices: ["(A)  irregular", "(B) polygonal", "(C) curved", "(D) straight"],
+      image: "HRVQA/29",
+    },
+    {
+      id: "HRVQA_6",
+      question: "What kind of shape is the track in this image? \n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "6",
+      choices: [
+        "(A)  hexagonal",
+        "(B) circular",
+        "(C) polygonal",
+        "(D) unfindable",
+      ],
+      image: "HRVQA/6",
+    },
+    {
+      id: "HRVQA_212",
+      question: "What kind of transportation can people use in this image?\n",
+      answer: "B",
+      dataset: "HRVQA",
+      image_id: "212",
+      choices: ["(A)  train", "(B) car", "(C) shuttle", "(D) bus"],
+      image: "HRVQA/212",
+    },
+    {
+      id: "HRVQA_108",
+      question:
+        "Are there more small vehicles than tennis courts in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "108",
+      choices: ["(A)  no", "(B) probably", "(C) ambiguous", "(D) yes"],
+      image: "HRVQA/108",
+    },
+    {
+      id: "HRVQA_10",
+      question: "What kind of shape is the track in this image? \n",
+      answer: "B",
+      dataset: "HRVQA",
+      image_id: "10",
+      choices: ["(A)  circular", "(B) uncertain", "(C) curvy", "(D) striaght"],
+      image: "HRVQA/10",
+    },
+    {
+      id: "HRVQA_168",
+      question: "What size is the bridge in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "168",
+      choices: ["(A)  small", "(B) tiny", "(C) large", "(D) nonexistent"],
+      image: "HRVQA/168",
+    },
+    {
+      id: "HRVQA_106",
+      question: "Is a rectangular tennis court pictured in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "106",
+      choices: ["(A)  ambiguous", "(B) yes", "(C) probably", "(D) no "],
+      image: "HRVQA/106",
+    },
+    {
+      id: "HRVQA_299",
+      question: "How can people improve their strength in this image?\n",
+      answer: "C",
+      dataset: "HRVQA",
+      image_id: "299",
+      choices: ["(A)  tennis", "(B) cricket", "(C) fitness", "(D) basketball"],
+      image: "HRVQA/299",
+    },
+    {
+      id: "HRVQA_93",
+      question:
+        "Is the number of small vehicles equal to the number of helicopters in this image?\n",
+      answer: "C",
+      dataset: "HRVQA",
+      image_id: "93",
+      choices: ["(A)  no", "(B) ambiguous", "(C) yes", "(D) probably"],
+      image: "HRVQA/93",
+    },
+    {
+      id: "HRVQA_285",
+      question: "How can people improve their strength in this image?\n",
+      answer: "A",
+      dataset: "HRVQA",
+      image_id: "285",
+      choices: ["(A)  aerobic", "(B) cricket", "(C) basketball", "(D) tennis"],
+      image: "HRVQA/285",
+    },
+    {
+      id: "HRVQA_107",
+      question:
+        "Is the number of roundabouts equal to the number of soccer ball fields in this image?\n",
+      answer: "C",
+      dataset: "HRVQA",
+      image_id: "107",
+      choices: ["(A)  probably", "(B) ambiguous", "(C) yes", "(D) no"],
+      image: "HRVQA/107",
+    },
+    {
+      id: "HRVQA_150",
+      question: "What size is the storage tank in this image?\n",
+      answer: "A",
+      dataset: "HRVQA",
+      image_id: "150",
+      choices: ["(A)  nonexistent", "(B) tiny", "(C) large", "(D) small"],
+      image: "HRVQA/150",
+    },
+    {
+      id: "HRVQA_252",
+      question: "What is the main scene of this image?\n",
+      answer: "A",
+      dataset: "HRVQA",
+      image_id: "252",
+      choices: [
+        "(A)  moderate-density",
+        "(B) low-density",
+        "(C) industrial",
+        "(D) high-density",
+      ],
+      image: "HRVQA/252",
+    },
+    {
+      id: "HRVQA_297",
+      question: "What sport can people do in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "297",
+      choices: ["(A)  tennis", "(B) cricket", "(C) basketball", "(D) aerobic"],
+      image: "HRVQA/297",
+    },
+    {
+      id: "HRVQA_200",
+      question:
+        "Which part of this image is the third small vehicle based on the left to right rule located in?\n",
+      answer: "B",
+      dataset: "HRVQA",
+      image_id: "200",
+      choices: [
+        "(A)  topright",
+        "(B) bottomleft",
+        "(C) topleft",
+        "(D) bottomright",
+      ],
+      image: "HRVQA/200",
+    },
+    {
+      id: "HRVQA_15",
+      question: "What kind of shape is the water section in this image? \n",
+      answer: "C",
+      dataset: "HRVQA",
+      image_id: "15",
+      choices: [
+        "(A)  polygonal",
+        "(B) straight",
+        "(C) unfindable",
+        "(D) rectangular",
+      ],
+      image: "HRVQA/15",
+    },
+    {
+      id: "HRVQA_52",
+      question:
+        "What color is the second small vehicle based on the left to right rule in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "52",
+      choices: ["(A)  red", "(B) blue", "(C) white", "(D) black"],
+      image: "HRVQA/52",
+    },
+    {
+      id: "HRVQA_51",
+      question:
+        "What color is the fourth small vehicle based on the left to right rule in this image?\n",
+      answer: "B",
+      dataset: "HRVQA",
+      image_id: "51",
+      choices: ["(A)  black", "(B) white", "(C) blue", "(D) red"],
+      image: "HRVQA/51",
+    },
+    {
+      id: "HRVQA_42",
+      question:
+        "What is the color of the first small vehicle based on the left to right rule in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "42",
+      choices: ["(A)  white ", "(B) red", "(C) yellow", "(D) black"],
+      image: "HRVQA/42",
+    },
+    {
+      id: "HRVQA_220",
+      question: "What kind of transportation can people use in this image?\n",
+      answer: "C",
+      dataset: "HRVQA",
+      image_id: "220",
+      choices: ["(A)  bus", "(B) train", "(C) car", "(D) foot"],
+      image: "HRVQA/220",
+    },
+    {
+      id: "HRVQA_159",
+      question: "What size is the bridge in this image?\n",
+      answer: "D",
+      dataset: "HRVQA",
+      image_id: "159",
+      choices: ["(A)  tiny", "(B) small", "(C) large", "(D) nonexistent"],
+      image: "HRVQA/159",
+    },
+    {
+      id: "HRVQA_101",
+      question: "Does building exist in this image? \n",
+      answer: "B",
+      dataset: "HRVQA",
+      image_id: "101",
+      choices: ["(A)  ambiguous", "(B) no ", "(C) probably", "(D) yes"],
+      image: "HRVQA/101",
+    },
+    {
+      id: "HRVQA_172",
+      question: "What size is the storage tank in this image?\n",
+      answer: "C",
+      dataset: "HRVQA",
+      image_id: "172",
+      choices: ["(A)  small", "(B) large", "(C) nonexistent", "(D) tiny"],
+      image: "HRVQA/172",
+    },
+    {
+      id: "HRIQ_82",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "82",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/82",
+    },
+    {
+      id: "HRIQ_58",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "B",
+      dataset: "HRIQ",
+      image_id: "58",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/58",
+    },
+    {
+      id: "HRIQ_281",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "281",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/281",
+    },
+    {
+      id: "HRIQ_104",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "B",
+      dataset: "HRIQ",
+      image_id: "104",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/104",
+    },
+    {
+      id: "HRIQ_125",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "A",
+      dataset: "HRIQ",
+      image_id: "125",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/125",
+    },
+    {
+      id: "HRIQ_136",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "136",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/136",
+    },
+    {
+      id: "HRIQ_173",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "173",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/173",
+    },
+    {
+      id: "HRIQ_236",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "236",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/236",
+    },
+    {
+      id: "HRIQ_24",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "24",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/24",
+    },
+    {
+      id: "HRIQ_62",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "62",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/62",
+    },
+    {
+      id: "HRIQ_102",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "B",
+      dataset: "HRIQ",
+      image_id: "102",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/102",
+    },
+    {
+      id: "HRIQ_66",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "B",
+      dataset: "HRIQ",
+      image_id: "66",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/66",
+    },
+    {
+      id: "HRIQ_189",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "189",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/189",
+    },
+    {
+      id: "HRIQ_124",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "124",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/124",
+    },
+    {
+      id: "HRIQ_199",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "199",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/199",
+    },
+    {
+      id: "HRIQ_9",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "9",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/9",
+    },
+    {
+      id: "HRIQ_57",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "A",
+      dataset: "HRIQ",
+      image_id: "57",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/57",
+    },
+    {
+      id: "HRIQ_95",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "A",
+      dataset: "HRIQ",
+      image_id: "95",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/95",
+    },
+    {
+      id: "HRIQ_28",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "28",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/28",
+    },
+    {
+      id: "HRIQ_241",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "241",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/241",
+    },
+    {
+      id: "HRIQ_249",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "B",
+      dataset: "HRIQ",
+      image_id: "249",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/249",
+    },
+    {
+      id: "HRIQ_4",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "4",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/4",
+    },
+    {
+      id: "HRIQ_1",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "1",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/1",
+    },
+    {
+      id: "HRIQ_242",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "242",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/242",
+    },
+    {
+      id: "HRIQ_294",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "294",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/294",
+    },
+    {
+      id: "HRIQ_195",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "195",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/195",
+    },
+    {
+      id: "HRIQ_233",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "233",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/233",
+    },
+    {
+      id: "HRIQ_231",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "C",
+      dataset: "HRIQ",
+      image_id: "231",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/231",
+    },
+    {
+      id: "HRIQ_51",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "D",
+      dataset: "HRIQ",
+      image_id: "51",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/51",
+    },
+    {
+      id: "HRIQ_255",
+      question:
+        "Assess the quality of a given image and predict a score that reflects the mean subjective human judgment of image quality. Some factors you may consider are distortions, such as Noise, Out-of-focus blur, Motion blur, Overexposure / Underexposure, Low contrast, Incorrect saturation, Sensor noise, and any combination of these distortions. Do not rely on metadata or external references - your judgment should be based purely on visual quality.\n",
+      answer: "A",
+      dataset: "HRIQ",
+      image_id: "255",
+      choices: [
+        "(A)  1 bad",
+        "(B) 2 poor",
+        "(C) 3 fair",
+        "(D) 4 good",
+        "(E) 5 excellent",
+      ],
+      image: "HRIQ/255",
+    },
+    {
+      id: "InfographicVQA_194",
+      question: "How many industries have a good job Outlook? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "194",
+      choices: ["(A)  3", "(B) 2", "(C) 5", "(D) 4"],
+      image: "InfographicVQA/194",
+    },
+    {
+      id: "InfographicVQA_83",
+      question:
+        "In which two Olympic games, greco Roman wrestling was not an event? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "83",
+      choices: [
+        "(A)  '1901, 1902'",
+        "(B) '1900, 1901'",
+        "(C) '1900, 1904'",
+        "(D) '1902, 1903'",
+      ],
+      image: "InfographicVQA/83",
+    },
+    {
+      id: "InfographicVQA_159",
+      question:
+        "What are the two ways in which prize winning novels begin their narrative? \n",
+      answer: "D",
+      dataset: "InfographicVQA",
+      image_id: "159",
+      choices: [
+        "(A)  in the first person, in the last person",
+        "(B) in a random way, in the first person",
+        "(C) in the second person, in the third person",
+        "(D) in the third person, in the first person",
+      ],
+      image: "InfographicVQA/159",
+    },
+    {
+      id: "InfographicVQA_206",
+      question: "What percentage of victims report sexual assault crimes? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "206",
+      choices: ["(A)  21", "(B) 19.9", "(C) 19", "(D) 20"],
+      image: "InfographicVQA/206",
+    },
+    {
+      id: "InfographicVQA_152",
+      question: "What was the number malicious URLS related to Covid-19? \n",
+      answer: "B",
+      dataset: "InfographicVQA",
+      image_id: "152",
+      choices: ["(A)  43k", "(B) 48k", "(C) 46k", "(D) 50k"],
+      image: "InfographicVQA/152",
+    },
+    {
+      id: "InfographicVQA_231",
+      question:
+        "Which countries had international arrival quarantines in March? \n",
+      answer: "B",
+      dataset: "InfographicVQA",
+      image_id: "231",
+      choices: [
+        "(A)  world, Italy",
+        "(B) germany, sweden",
+        "(C) Sweden, china",
+        "(D) China, south Korea",
+      ],
+      image: "InfographicVQA/231",
+    },
+    {
+      id: "InfographicVQA_65",
+      question: "Which is the most secure payment app according to Americans? \n",
+      answer: "A",
+      dataset: "InfographicVQA",
+      image_id: "65",
+      choices: [
+        "(A)  'paypal'",
+        "(B) 'google pay'",
+        "(C) 'chase'",
+        "(D) 'apple pay'",
+      ],
+      image: "InfographicVQA/65",
+    },
+    {
+      id: "InfographicVQA_27",
+      question: "Which hormones cause an increase in heart rate? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "27",
+      choices: [
+        "(A)  'Serotonin, Testosterone', 'Testosterone, Serotonin'",
+        "(B) 'Oxytocin, adrenaline', 'adrenaline, Oxytocin'",
+        "(C) 'norepinephrine, adrenaline', 'adrenaline, norepinephrine'",
+        "(D) 'norepinephrine, Serotonin', 'Serotonin, norepinephrine'",
+      ],
+      image: "InfographicVQA/27",
+    },
+    {
+      id: "InfographicVQA_275",
+      question: "Who are the Asgardians who are Thor's family? \n",
+      answer: "B",
+      dataset: "InfographicVQA",
+      image_id: "275",
+      choices: [
+        "(A)  Wang, loki, frigga",
+        "(B) odin, loki, frigga",
+        "(C) odin, hulk, frigga",
+        "(D) ant-man, loki, frigga",
+      ],
+      image: "InfographicVQA/275",
+    },
+    {
+      id: "InfographicVQA_235",
+      question:
+        "Which bank is ranked #5, and what is its asset value and market value? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "235",
+      choices: [
+        "(A)  hsbc, $2,459bn, $104.2bn",
+        "(B) hsbc, $2,354bn, $14.8bn",
+        "(C) hsbc, $2,354bn, $104.2bn",
+        "(D) icbc, $2,354bn, $104.2bn",
+      ],
+      image: "InfographicVQA/235",
+    },
+    {
+      id: "InfographicVQA_38",
+      question: "How many times did J. G. Farrell win the Booker prize? \n",
+      answer: "B",
+      dataset: "InfographicVQA",
+      image_id: "38",
+      choices: ["(A)  '0'", "(B) '2'", "(C) '1'", "(D) '4'"],
+      image: "InfographicVQA/38",
+    },
+    {
+      id: "InfographicVQA_186",
+      question:
+        "What is the total percentage of voters that blames either and both parties for not passing an economic package? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "186",
+      choices: ["(A)  33", "(B) 66", "(C) 88", "(D) 77"],
+      image: "InfographicVQA/186",
+    },
+    {
+      id: "InfographicVQA_188",
+      question:
+        "What is the percentage chance of infection when a person is not wearing an eye protection? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "188",
+      choices: ["(A)  5.50%", "(B) 16.60%", "(C) 16.00%", "(D) 3.10%"],
+      image: "InfographicVQA/188",
+    },
+    {
+      id: "InfographicVQA_270",
+      question:
+        "What percentage of world's population do not own a mobile phone? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "270",
+      choices: ["(A)  34%", "(B) 35%", "(C) 30%", "(D) 33%"],
+      image: "InfographicVQA/270",
+    },
+    {
+      id: "InfographicVQA_109",
+      question: "To which league does the Chicago Bulls belong? \n",
+      answer: "D",
+      dataset: "InfographicVQA",
+      image_id: "109",
+      choices: ["(A)  'fifa'", "(B) 'nyc'", "(C) 'nfl'", "(D) 'nba'"],
+      image: "InfographicVQA/109",
+    },
+    {
+      id: "InfographicVQA_242",
+      question:
+        "By what percentage did smartphone usage increase in 4 years from 19%? \n",
+      answer: "B",
+      dataset: "InfographicVQA",
+      image_id: "242",
+      choices: ["(A)  31.3", "(B) 31", "(C) 33.3", "(D) 30"],
+      image: "InfographicVQA/242",
+    },
+    {
+      id: "InfographicVQA_98",
+      question: "How many social media influencers are mentioned here? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "98",
+      choices: ["(A)  '1'", "(B) '3'", "(C) '6'", "(D) '4'"],
+      image: "InfographicVQA/98",
+    },
+    {
+      id: "InfographicVQA_135",
+      question: "Who are Hulk's teammates? \n",
+      answer: "A",
+      dataset: "InfographicVQA",
+      image_id: "135",
+      choices: [
+        "(A)  'nick fury, black widow, iron man'",
+        "(B) 'yondo, black widow, iron man'",
+        "(C) 'nick fury, black widow, the punisher'",
+        "(D) 'nick fury, black widow, hydra'",
+      ],
+      image: "InfographicVQA/135",
+    },
+    {
+      id: "InfographicVQA_111",
+      question: "what are the two melodrama books given in this infographic? \n",
+      answer: "A",
+      dataset: "InfographicVQA",
+      image_id: "111",
+      choices: [
+        "(A)  'great expectations, jane eyre'",
+        "(B) 'the hunter, jane eyre'",
+        "(C) 'great expectations, rebecca'",
+        "(D) 'in the woods, jane eyre'",
+      ],
+      image: "InfographicVQA/111",
+    },
+    {
+      id: "InfographicVQA_237",
+      question: "How many people allowed at funerals in Step 2? \n",
+      answer: "D",
+      dataset: "InfographicVQA",
+      image_id: "237",
+      choices: ["(A)  55", "(B) 51", "(C) 49", "(D) 50"],
+      image: "InfographicVQA/237",
+    },
+    {
+      id: "InfographicVQA_62",
+      question: "What percentage of Americans do not own a smartphone now? \n",
+      answer: "D",
+      dataset: "InfographicVQA",
+      image_id: "62",
+      choices: ["(A)  '50'", "(B) '10'", "(C) '32'", "(D) '23'"],
+      image: "InfographicVQA/62",
+    },
+    {
+      id: "InfographicVQA_278",
+      question:
+        "How many Americans are not concerned about their mental health due to Social distancing? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "278",
+      choices: ["(A)  24%", "(B) 41%", "(C) 42%", "(D) 100%"],
+      image: "InfographicVQA/278",
+    },
+    {
+      id: "InfographicVQA_295",
+      question: "When was Amazon Kindle launched? \n",
+      answer: "A",
+      dataset: "InfographicVQA",
+      image_id: "295",
+      choices: ["(A)  2007", "(B) 2017", "(C) 1997", "(D) 2006"],
+      image: "InfographicVQA/295",
+    },
+    {
+      id: "InfographicVQA_218",
+      question:
+        "How many countries have the current prison population as nil? \n",
+      answer: "D",
+      dataset: "InfographicVQA",
+      image_id: "218",
+      choices: ["(A)  0", "(B) 10", "(C) 5", "(D) 6"],
+      image: "InfographicVQA/218",
+    },
+    {
+      id: "InfographicVQA_81",
+      question: "Which was the most bought phone from the chart? \n",
+      answer: "B",
+      dataset: "InfographicVQA",
+      image_id: "81",
+      choices: [
+        "(A)  'blackberry'",
+        "(B) 'iphone 3g'",
+        "(C) 'phone'",
+        "(D) 'andriod'",
+      ],
+      image: "InfographicVQA/81",
+    },
+    {
+      id: "InfographicVQA_249",
+      question:
+        "When did Dr Alexander R. Inglis join as a lecturer in Erfurt University? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "249",
+      choices: ["(A)  2010", "(B) 2013", "(C) 2012", "(D) 2011"],
+      image: "InfographicVQA/249",
+    },
+    {
+      id: "InfographicVQA_170",
+      question: "how many swimming players are there in the list? \n",
+      answer: "C",
+      dataset: "InfographicVQA",
+      image_id: "170",
+      choices: ["(A)  2", "(B) 0", "(C) 3", "(D) 1"],
+      image: "InfographicVQA/170",
+    },
+    {
+      id: "InfographicVQA_89",
+      question:
+        "Which industry would need the third highest percentage of PPE kits ? \n",
+      answer: "A",
+      dataset: "InfographicVQA",
+      image_id: "89",
+      choices: [
+        "(A)  'retail trade'",
+        "(B) 'Health care and social assistance'",
+        "(C) 'Accommodation and food service'",
+        "(D) 'Transportation and warehouse'",
+      ],
+      image: "InfographicVQA/89",
+    },
+    {
+      id: "InfographicVQA_10",
+      question: "In phase 1, how many movies are set on planet Earth alone? \n",
+      answer: "B",
+      dataset: "InfographicVQA",
+      image_id: "10",
+      choices: ["(A)  '6'", "(B) '3'", "(C) '5'", "(D) '10'"],
+      image: "InfographicVQA/10",
+    },
+    {
+      id: "InfographicVQA_248",
+      question: "Which team has a higher value? \n",
+      answer: "D",
+      dataset: "InfographicVQA",
+      image_id: "248",
+      choices: [
+        "(A)  CHICAGO CLUBS",
+        "(B) Atlanta Falcons",
+        "(C) BOSTON RED SOX",
+        "(D) philadelphia eagles",
+      ],
+      image: "InfographicVQA/248",
+    },
+    {
+      id: "LungHist700_83",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "C",
+      dataset: "LungHist700",
+      image_id: "83",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/83",
+    },
+    {
+      id: "LungHist700_199",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "E",
+      dataset: "LungHist700",
+      image_id: "199",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/199",
+    },
+    {
+      id: "LungHist700_286",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "G",
+      dataset: "LungHist700",
+      image_id: "286",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/286",
+    },
+    {
+      id: "LungHist700_301",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "G",
+      dataset: "LungHist700",
+      image_id: "301",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/301",
+    },
+    {
+      id: "LungHist700_264",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "G",
+      dataset: "LungHist700",
+      image_id: "264",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/264",
+    },
+    {
+      id: "LungHist700_296",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "G",
+      dataset: "LungHist700",
+      image_id: "296",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/296",
+    },
+    {
+      id: "LungHist700_102",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "D",
+      dataset: "LungHist700",
+      image_id: "102",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/102",
+    },
+    {
+      id: "LungHist700_109",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "D",
+      dataset: "LungHist700",
+      image_id: "109",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/109",
+    },
+    {
+      id: "LungHist700_12",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "B",
+      dataset: "LungHist700",
+      image_id: "12",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/12",
+    },
+    {
+      id: "LungHist700_143",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "A",
+      dataset: "LungHist700",
+      image_id: "143",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/143",
+    },
+    {
+      id: "LungHist700_134",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "A",
+      dataset: "LungHist700",
+      image_id: "134",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/134",
+    },
+    {
+      id: "LungHist700_224",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "F",
+      dataset: "LungHist700",
+      image_id: "224",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/224",
+    },
+    {
+      id: "LungHist700_113",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "D",
+      dataset: "LungHist700",
+      image_id: "113",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/113",
+    },
+    {
+      id: "LungHist700_196",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "E",
+      dataset: "LungHist700",
+      image_id: "196",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/196",
+    },
+    {
+      id: "LungHist700_100",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "D",
+      dataset: "LungHist700",
+      image_id: "100",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/100",
+    },
+    {
+      id: "LungHist700_86",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "C",
+      dataset: "LungHist700",
+      image_id: "86",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/86",
+    },
+    {
+      id: "LungHist700_147",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "A",
+      dataset: "LungHist700",
+      image_id: "147",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/147",
+    },
+    {
+      id: "LungHist700_248",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "F",
+      dataset: "LungHist700",
+      image_id: "248",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/248",
+    },
+    {
+      id: "LungHist700_247",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "F",
+      dataset: "LungHist700",
+      image_id: "247",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/247",
+    },
+    {
+      id: "LungHist700_288",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "G",
+      dataset: "LungHist700",
+      image_id: "288",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/288",
+    },
+    {
+      id: "LungHist700_171",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "A",
+      dataset: "LungHist700",
+      image_id: "171",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/171",
+    },
+    {
+      id: "LungHist700_49",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "C",
+      dataset: "LungHist700",
+      image_id: "49",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/49",
+    },
+    {
+      id: "LungHist700_230",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "F",
+      dataset: "LungHist700",
+      image_id: "230",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/230",
+    },
+    {
+      id: "LungHist700_141",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "A",
+      dataset: "LungHist700",
+      image_id: "141",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/141",
+    },
+    {
+      id: "LungHist700_235",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "F",
+      dataset: "LungHist700",
+      image_id: "235",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/235",
+    },
+    {
+      id: "LungHist700_33",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "B",
+      dataset: "LungHist700",
+      image_id: "33",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/33",
+    },
+    {
+      id: "LungHist700_11",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "B",
+      dataset: "LungHist700",
+      image_id: "11",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/11",
+    },
+    {
+      id: "LungHist700_276",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "G",
+      dataset: "LungHist700",
+      image_id: "276",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/276",
+    },
+    {
+      id: "LungHist700_187",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "E",
+      dataset: "LungHist700",
+      image_id: "187",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/187",
+    },
+    {
+      id: "LungHist700_179",
+      question:
+        "Given the following histopathological image of lung tissue, classify the malignancy (if any) into one of the seven categories:\n",
+      answer: "E",
+      dataset: "LungHist700",
+      image_id: "179",
+      choices: [
+        "(A)  Normal tissue",
+        "(B) Adenocarcinoma (Well-differentiated)",
+        "(C) Adenocarcinoma (Moderately differentiated)",
+        "(D) Adenocarcinoma (Poorly differentiated)",
+        "(E) Squamous cell carcinoma (Well-differentiated)",
+        "(F) Squamous cell carcinoma (Moderately differentiated)",
+        "(G) Squamous cell carcinoma (Poorly differentiated)",
+      ],
+      image: "LungHist700/179",
+    },
+    {
+      id: "MuirBench_254",
+      question:
+        "Are you able to identify a building from the same university as the one shown in <image1>?\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "254",
+      choices: [
+        "(A)  None of the choices provided",
+        "(B) <image2>",
+        "(C) <image3>",
+        "(D) <image4>",
+      ],
+      image: "MuirBench/254",
+    },
+    {
+      id: "MuirBench_288",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8> How many figures are included in the presentation slides?\n",
+      answer: "B",
+      dataset: "MuirBench",
+      image_id: "288",
+      choices: ["(A)  None of the choices provided", "(B) 2", "(C) 4", "(D) 5"],
+      image: "MuirBench/288",
+    },
+    {
+      id: "MuirBench_62",
+      question:
+        "Can you determine which slide serves a different function compared to the others? For instance, some slides may be for concluding the presentation while others are for introducing the topic: \n\n<image1> <image2> <image3> <image4>\n",
+      answer: "A",
+      dataset: "MuirBench",
+      image_id: "62",
+      choices: [
+        "(A)  the third image",
+        "(B) the second image",
+        "(C) the forth image",
+        "(D) None of the choices provided",
+      ],
+      image: "MuirBench/62",
+    },
+    {
+      id: "MuirBench_67",
+      question:
+        "Below are four slides from one presentation. Please reorder them to ensure a logical flow: \n\n<image1> <image2> <image3> <image4>\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "67",
+      choices: [
+        "(A)  None of the choices provided",
+        "(B) The second image, the first image, the third image, the forth image.",
+        "(C) The third image, the second image, the forth image, the first image.",
+        "(D) The first image, the second image, the third image, the forth image.",
+      ],
+      image: "MuirBench/67",
+    },
+    {
+      id: "MuirBench_13",
+      question:
+        "Below are four slides from one presentation. Please reorder them to ensure a logical flow: \r\n\r\n<image1> <image2> <image3> <image4>\n",
+      answer: "C",
+      dataset: "MuirBench",
+      image_id: "13",
+      choices: [
+        "(A)  The first image, the second image, the third image, the forth image.",
+        "(B) None of the choices provided",
+        "(C) The third image, the second image, the first image, the forth image.",
+        "(D) The second image, the forth image, the first image, the third image.",
+      ],
+      image: "MuirBench/13",
+    },
+    {
+      id: "MuirBench_202",
+      question:
+        "Can you determine which slide serves a different function compared to the others? For instance, some slides may be for concluding the presentation while others are for introducing the topic: \n\n<image1> <image2> <image3> <image4>\n",
+      answer: "B",
+      dataset: "MuirBench",
+      image_id: "202",
+      choices: [
+        "(A)  the second image",
+        "(B) the forth image",
+        "(C) the third image",
+        "(D) None of the choices provided",
+      ],
+      image: "MuirBench/202",
+    },
+    {
+      id: "MuirBench_216",
+      question:
+        "Which of the following figure does not belong to the same paper?\n",
+      answer: "E",
+      dataset: "MuirBench",
+      image_id: "216",
+      choices: [
+        "(A)  <image1>",
+        "(B) <image2>",
+        "(C) <image3>",
+        "(D) None of the choices provided",
+        "(E) <image4>",
+      ],
+      image: "MuirBench/216",
+    },
+    {
+      id: "MuirBench_86",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> what color is the stoplight in the given images?\n",
+      answer: "C",
+      dataset: "MuirBench",
+      image_id: "86",
+      choices: [
+        "(A)  None of the choices provided",
+        "(B) yellow",
+        "(C) red",
+        "(D) green",
+      ],
+      image: "MuirBench/86",
+    },
+    {
+      id: "MuirBench_76",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8> How many tables are presented in the experimental results?\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "76",
+      choices: [
+        "(A)  Universit\u00e9 de Lorraine",
+        "(B) Universit\u00e9 C\u00f4te d'Azur",
+        "(C) None of the choices provided",
+        "(D) Normandie Universit\u00e9",
+      ],
+      image: "MuirBench/76",
+    },
+    {
+      id: "MuirBench_229",
+      question:
+        "How many hands with gloves on them are there? <image1> <image2>\n",
+      answer: "E",
+      dataset: "MuirBench",
+      image_id: "229",
+      choices: [
+        "(A)  None of the choices provided",
+        "(B) Four",
+        "(C) One",
+        "(D) Three",
+        "(E) Two",
+      ],
+      image: "MuirBench/229",
+    },
+    {
+      id: "MuirBench_92",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8> How many tables are presented in the experimental results?\n",
+      answer: "B",
+      dataset: "MuirBench",
+      image_id: "92",
+      choices: ["(A)  5", "(B) 1", "(C) 6", "(D) None of the choices provided"],
+      image: "MuirBench/92",
+    },
+    {
+      id: "MuirBench_151",
+      question:
+        "<image1> Which of the following images shares the same scene with the given image and contains the object car?\n",
+      answer: "C",
+      dataset: "MuirBench",
+      image_id: "151",
+      choices: [
+        "(A)  <image2>",
+        "(B) <image3>",
+        "(C) <image4>",
+        "(D) <image5>",
+        "(E) None of the choices provided",
+      ],
+      image: "MuirBench/151",
+    },
+    {
+      id: "MuirBench_177",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> what is the window shape on the building on front right and back right in the given images?\n",
+      answer: "A",
+      dataset: "MuirBench",
+      image_id: "177",
+      choices: [
+        "(A)  rectangle",
+        "(B) triangle",
+        "(C) None of the choices provided",
+        "(D) square",
+      ],
+      image: "MuirBench/177",
+    },
+    {
+      id: "MuirBench_78",
+      question:
+        "<image1> Which object is shaped like a cube and is below the table?\n",
+      answer: "C",
+      dataset: "MuirBench",
+      image_id: "78",
+      choices: [
+        "(A)  <image2>",
+        "(B) None of the choices provided",
+        "(C) <image3>",
+      ],
+      image: "MuirBench/78",
+    },
+    {
+      id: "MuirBench_260",
+      question: "<image1> Which object is below the desk?\n",
+      answer: "B",
+      dataset: "MuirBench",
+      image_id: "260",
+      choices: [
+        "(A)  <image2>",
+        "(B) <image3>",
+        "(C) None of the choices provided",
+      ],
+      image: "MuirBench/260",
+    },
+    {
+      id: "MuirBench_141",
+      question:
+        "Select the sub-figures that appear in the same figure as <image1>?\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "141",
+      choices: [
+        "(A)  None of the choices provided",
+        "(B) <image2>",
+        "(C) <image3>",
+        "(D) <image4>",
+        "(E) <image5>",
+      ],
+      image: "MuirBench/141",
+    },
+    {
+      id: "MuirBench_166",
+      question:
+        "<image1> Which of the following images shares the same scene with the given image but contains the object couch?\n",
+      answer: "E",
+      dataset: "MuirBench",
+      image_id: "166",
+      choices: [
+        "(A)  <image2>",
+        "(B) None of the choices provided",
+        "(C) <image3>",
+        "(D) <image4>",
+        "(E) <image5>",
+      ],
+      image: "MuirBench/166",
+    },
+    {
+      id: "MuirBench_194",
+      question:
+        "Are you able to find a structure from the identical university as portrayed in <image1>?\n",
+      answer: "A",
+      dataset: "MuirBench",
+      image_id: "194",
+      choices: [
+        "(A)  <image2>",
+        "(B) None of the choices provided",
+        "(C) <image3>",
+        "(D) <image4>",
+        "(E) <image5>",
+      ],
+      image: "MuirBench/194",
+    },
+    {
+      id: "MuirBench_150",
+      question:
+        "In the video, what activity is the man wearing a blue and white striped shirt NOT seen doing? <image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8>\n",
+      answer: "B",
+      dataset: "MuirBench",
+      image_id: "150",
+      choices: [
+        "(A)  Sitting on a couch holding a cup of coffee",
+        "(B) Using a spinning wheel",
+        "(C) Cutting food in a kitchen",
+        "(D) None of the choices provided",
+      ],
+      image: "MuirBench/150",
+    },
+    {
+      id: "MuirBench_124",
+      question:
+        "How many dogs are sleeping on their back in a belly up position in one of the images? <image1> <image2>\n",
+      answer: "C",
+      dataset: "MuirBench",
+      image_id: "124",
+      choices: [
+        "(A)  Three",
+        "(B) Two",
+        "(C) One",
+        "(D) None of the choices provided",
+        "(E) Four",
+      ],
+      image: "MuirBench/124",
+    },
+    {
+      id: "MuirBench_11",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8> Which conference are the slides being posted on?\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "11",
+      choices: [
+        "(A)  EMNLP",
+        "(B) COLING",
+        "(C) None of the choices provided",
+        "(D) ICML",
+      ],
+      image: "MuirBench/11",
+    },
+    {
+      id: "MuirBench_38",
+      question:
+        "<image1> Which of the following images contains the same object as the given image but with the attribute hard?\n",
+      answer: "A",
+      dataset: "MuirBench",
+      image_id: "38",
+      choices: [
+        "(A)  <image2>",
+        "(B) <image3>",
+        "(C) None of the choices provided",
+        "(D) <image4>",
+        "(E) <image5>",
+      ],
+      image: "MuirBench/38",
+    },
+    {
+      id: "MuirBench_40",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8> How many tables are presented in the experimental results?\n",
+      answer: "B",
+      dataset: "MuirBench",
+      image_id: "40",
+      choices: ["(A)  4", "(B) 1", "(C) 3", "(D) None of the choices provided"],
+      image: "MuirBench/40",
+    },
+    {
+      id: "MuirBench_54",
+      question:
+        "What is the primary activity the woman does in the bathroom? <image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8>\n",
+      answer: "A",
+      dataset: "MuirBench",
+      image_id: "54",
+      choices: [
+        "(A)  Brushing her teeth",
+        "(B) Coloring her hair",
+        "(C) Crying",
+        "(D) None of the choices provided",
+      ],
+      image: "MuirBench/54",
+    },
+    {
+      id: "MuirBench_99",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> Which conference are the slides being posted on?\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "99",
+      choices: [
+        "(A)  None of the choices provided",
+        "(B) EMNLP 2019",
+        "(C) COLING 2019",
+        "(D) ICML 2019",
+      ],
+      image: "MuirBench/99",
+    },
+    {
+      id: "MuirBench_224",
+      question:
+        "Is it possible for you to unearth images containing the identical building as portrayed in <image1>?\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "224",
+      choices: [
+        "(A)  <image2>",
+        "(B) None of the choices provided",
+        "(C) <image3>",
+        "(D) <image4>",
+        "(E) <image5>",
+      ],
+      image: "MuirBench/224",
+    },
+    {
+      id: "MuirBench_14",
+      question:
+        "<image1> <image2> <image3> The blue car attempts to leave the parking space. What is the correct order of images according to the given context?\n",
+      answer: "A",
+      dataset: "MuirBench",
+      image_id: "14",
+      choices: [
+        "(A)  the second image, the first image, the third image",
+        "(B) the third image, the first image, the second image",
+        "(C) None of the choices provided",
+        "(D) the third image, the second image, the first image",
+      ],
+      image: "MuirBench/14",
+    },
+    {
+      id: "MuirBench_33",
+      question:
+        "<image1> <image2> <image3> <image4> <image5> <image6> what time of day is it in the given images?\n",
+      answer: "C",
+      dataset: "MuirBench",
+      image_id: "33",
+      choices: [
+        "(A)  morning",
+        "(B) None of the choices provided",
+        "(C) night",
+        "(D) noon",
+      ],
+      image: "MuirBench/33",
+    },
+    {
+      id: "MuirBench_172",
+      question:
+        "Can you determine which slide serves a different function compared to the others? For instance, some slides may be for concluding the presentation while others are for introducing the topic: \n\n<image1> <image2> <image3> <image4>\n",
+      answer: "D",
+      dataset: "MuirBench",
+      image_id: "172",
+      choices: [
+        "(A)  the second image",
+        "(B) None of the choices provided",
+        "(C) the third image",
+        "(D) the forth image",
+      ],
+      image: "MuirBench/172",
+    },
+    {
+      id: "MuirBench_169",
+      question:
+        "How many images show less than three people in graduation attire? <image1> <image2>\n",
+      answer: "B",
+      dataset: "MuirBench",
+      image_id: "169",
+      choices: [
+        "(A)  Four",
+        "(B) Zero",
+        "(C) None of the choices provided",
+        "(D) Three",
+        "(E) Two",
+      ],
+      image: "MuirBench/169",
+    },
+    {
+      id: "NovaChart_108",
+      question:
+        "For the specified x and y ranges (106.5749, 141.8253) and (54.0025, 80.6168), what is the histogram's hist-value?\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "108",
+      choices: ["(A)  1", "(B) 173", "(C) 2", "(D) 11", "(E) 0.0"],
+      image: "NovaChart/108",
+    },
+    {
+      id: "NovaChart_78",
+      question: "What observations can you make from studying this image?\n",
+      answer: "C",
+      dataset: "NovaChart",
+      image_id: "78",
+      choices: [
+        "(A)  The peaks at 0.35 and 0.28 indicate that stimulants are consumed only when sugar & sweeteners are at their highest levels.",
+        "(B) Higher sugar & sweetener levels directly cause a rise in stimulant usage, as seen in the sharp peaks at 0.35 and 0.30.",
+        "(C) The line plot represents the relationship between the Sugar & Sweeteners intake and Stimulants intake in the COVID-19 Healthy Diet Dataset. The x-axis represents the Sugar & Sweeteners intake, while the y-axis represents the Stimulants intake. The plot shows that as the Sugar & Sweeteners intake increases, the Stimulants intake also tends to increase. There are some fluctuations in the data, indicating that the relationship between the two variables is not strictly linear. To recapitulate, the answer to this question is: There is a positive correlation between Sugar & Sweeteners intake and Stimulants intake in the COVID-19 Healthy Diet Dataset.",
+        "(D) The trend line shows a steady increase in stimulants as sugar & sweeteners increase, with no significant variation or decline.",
+        "(E) The chart clearly demonstrates a strong positive correlation between sugar & sweeteners and stimulants, as both increase simultaneously across all values.",
+      ],
+      image: "NovaChart/78",
+    },
+    {
+      id: "NovaChart_241",
+      question:
+        "In one paragraph, summarize the content depicted in the image.\n",
+      answer: "A",
+      dataset: "NovaChart",
+      image_id: "241",
+      choices: [
+        "(A)  This knowledge graph represents a structured representation of knowledge, capturing relationships between different entities. It includes information about Robert Young, Silent Hill, Prime Minister of the United Kingdom, and various films released in the United Kingdom. The relationships mentioned in the graph include country of citizenship, military rank, place of birth, conflict, and applies to jurisdiction. The graph visually displays the connections between entities and their associated attributes.",
+        "(B) ",
+        "(C) The graph shows that these films were released in the United Kingdom, not that Robert Young was personally involved with them.",
+        '(D) While Robert Young is linked to both World War I and the military rank of "Major General," there is no clear indication in the graph that he held this rank during World War I.',
+        "",
+        "",
+        '(E) The graph links the "Prime Minister of the United Kingdom" to the "United Kingdom," but there is no direct connection between Robert Young and this title.',
+      ],
+      image: "NovaChart/241",
+    },
+    {
+      id: "NovaChart_13",
+      question:
+        "Summarize the content depicted in the picture in one paragraph.\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "13",
+      choices: [
+        "(A)  The whiskers extending from the box capture all GDP values, meaning there are no extreme outliers in this dataset.",
+        "(B) This boxplot represents the distribution of GDP values for different countries. The x-axis represents GDP in the year 2018. The lower bound is 845,498,076.7882 and the upper bound is 8,139,096,936,653.851. There are no lower outliers and 19 upper outliers. The first quartile (Q1) is 41,449,360,800.3578, the median (Q2) is 358,171,226,387.607, and the third quartile (Q3) is 3,280,508,391,141.755. The majority of countries have GDP values below the median, with a few countries having extremely high GDP values.",
+        "(C) The boxplot clearly shows a symmetric distribution of GDP values, with most countries evenly distributed across the range.",
+        "(D) The data is concentrated around 1.2e14 GDP, as seen from the outlier at the far right, indicating that most countries have a GDP close to this value.",
+        "(E) Since the GDP axis is labeled in scientific notation, we can conclude that GDP values are measured in millions, with the majority of countries falling below 1 million.",
+      ],
+      image: "NovaChart/13",
+    },
+    {
+      id: "NovaChart_187",
+      question: "Which seaborn style is expected for this image?\n",
+      answer: "D",
+      dataset: "NovaChart",
+      image_id: "187",
+      choices: [
+        "(A)  white",
+        "(B) darkgrid",
+        "(C) dark",
+        "(D) whitegrid",
+        "(E) ",
+      ],
+      image: "NovaChart/187",
+    },
+    {
+      id: "NovaChart_75",
+      question: "Identify and extract the data points from the chart.\n",
+      answer: "D",
+      dataset: "NovaChart",
+      image_id: "75",
+      choices: [
+        "(A)  [[118502108.1453, 4.5326], [148089643.5021, 3.9072], [168709011.5622, 4.1946]]",
+        "(B) [[118502108.1453, 4.5326], [145695437.9479, 8.2138], [148089643.5021, 3.9072], [168709011.5622, 6.1946]]",
+        "(C) ",
+        "(D) [[118502108.1453, 4.5326], [145695437.9479, 6.2138], [148089643.5021, 3.9072], [168709011.5622, 4.1946]]",
+        "(E) [[118502222.1453, 7.5326], [145695437.9479, 6.2138], [148089643.5021, 3.9072], [168709011.5622, 4.1946]]",
+      ],
+      image: "NovaChart/75",
+    },
+    {
+      id: "NovaChart_105",
+      question: "What text is used for the x-coordinate label?\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "105",
+      choices: [
+        "(A)  ",
+        "(B) Probability",
+        "(C) Count",
+        "(D) 0.998",
+        "(E) Alive Probability",
+      ],
+      image: "NovaChart/105",
+    },
+    {
+      id: "NovaChart_148",
+      question: "Extract the quantitative data from the chart.\n",
+      answer: "A",
+      dataset: "NovaChart",
+      image_id: "148",
+      choices: [
+        "(A)  [[-155.0, 0.11], [-99.7877, 0.07], [-87.8542, 0.993], [-74.5112, 4.446], [-72.0068, 0.784], [-70.1546, 2.501], [-24.4608, 8.865], [-23.3318, 8.363], [122.2, 1.025], [124.629, 4.139], [126.758, 1.596], [127.051, 1.974], [146.169, 6.393], [150.788, 0.0], [162.786, 4.591], [163.215, 3.619], [174.337, 0.0]]",
+        "(B) [[146.169, 6.393], [150.788, 0.0], [162.786, 4.591], [163.215, 3.619], [174.337, 0.0]]",
+        "(C) [[155.0, 0.11], [99.7877, 0.07], [-87.8542, 0.993], [-74.5112, 4.446], [72.0068, 0.784], [70.1546, 2.501], [-24.4608, 8.865], [-23.3318, 8.363], [122.2, 7.025], [124.629, 4.139], [126.758, 1.596], [127.051, 1.974], [146.169, 8.393], [150.788, 0.0], [162.786, 4.591], [163.215, 3.619], [174.337, 0.0]]",
+        "(D) ",
+        "(E) [[-155.0, 0.11], [-99.7877, 0.07], [-87.8542, 0.993], [-74.5112, 4.446], [-72.0068, 0.784], [-70.1546, 2.501], [-24.4608, 8.865], [-23.3318, 8.363], [122.2, 1.025], [124.629, 4.139], [126.758, 1.596], [127.051, 1.974], [146.169, 6.393]]",
+      ],
+      image: "NovaChart/148",
+    },
+    {
+      id: "NovaChart_66",
+      question:
+        "Select the pattern from the options that best fits the given picture.\n",
+      answer: "D",
+      dataset: "NovaChart",
+      image_id: "66",
+      choices: [
+        "(A)  single-peak",
+        "(B) ",
+        "(C) no-obvious-pattern",
+        "(D) balanced",
+        "(E) unblanced",
+      ],
+      image: "NovaChart/66",
+    },
+    {
+      id: "NovaChart_107",
+      question:
+        "What is the chart classification for this graphical representation?\n",
+      answer: "A",
+      dataset: "NovaChart",
+      image_id: "107",
+      choices: [
+        "(A)  bivariate histogram",
+        "(B) ring chart",
+        "(C) univariate histogram",
+        "(D) radar char",
+        "(E) single-class line plot",
+      ],
+      image: "NovaChart/107",
+    },
+    {
+      id: "NovaChart_132",
+      question:
+        "Illustrate the relationship between Strategic Simulations and video game industry on the knowledge graph.\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "132",
+      choices: [
+        "(A)  composer",
+        "(B) country",
+        "(C) Citizenship ",
+        "(D) ",
+        "(E) industry",
+      ],
+      image: "NovaChart/132",
+    },
+    {
+      id: "NovaChart_76",
+      question:
+        "Can you determine the y-coordinate for x=1.317 based on the chart?\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "76",
+      choices: ["(A)  0.28", "(B) 0.35", "(C) 0.07", "(D) ", "(E) 0.2957"],
+      image: "NovaChart/76",
+    },
+    {
+      id: "NovaChart_224",
+      question:
+        "Share your perspective on the insights provided by this image.\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "224",
+      choices: [
+        "(A)  ",
+        "(B) The boxplot indicates that the foot length data has a median value of 67.95, with the first quartile (Q1) at 64.65 and the third quartile (Q3) at 72.5. There are no outliers detected in either the lower or upper bounds. In a nutshell, the answer to this inquiry is: The foot length data is slightly positively skewed, with the majority of values falling between 64.65 and 72.5.",
+        "(C) The presence of whiskers extending from the box suggests potential outliers beyond the interquartile range (IQR).",
+        "(D) The boxplot clearly shows a spread of values, indicating variations in foot length.",
+        "(E) The median is represented by the central line in the box and is not at the minimum value.",
+      ],
+      image: "NovaChart/224",
+    },
+    {
+      id: "NovaChart_230",
+      question: "What is the specific chart type represented in this visual?\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "230",
+      choices: [
+        "(A)  word cloud",
+        "(B) ring chart",
+        "(C) single-class scatter plot",
+        "(D) ",
+        "(E) heatmap",
+      ],
+      image: "NovaChart/230",
+    },
+    {
+      id: "NovaChart_297",
+      question: "Indicate the color of the data shown in this chart.\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "297",
+      choices: [
+        "(A)  moccasin",
+        "(B) orange",
+        "(C) plum",
+        "(D) orange",
+        "(E) silver",
+      ],
+      image: "NovaChart/297",
+    },
+    {
+      id: "NovaChart_63",
+      question: "Inform me of the chart value for class 0.\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "63",
+      choices: ["(A)  9", "(B) 39", "(C) 61", "(D) 41", "(E) "],
+      image: "NovaChart/63",
+    },
+    {
+      id: "NovaChart_0",
+      question:
+        "Can you discern the type of chart used in this visualization? From the provided alternatives, please select the correct choice for the question above:  \n",
+      answer: "A",
+      dataset: "NovaChart",
+      image_id: "0",
+      choices: [
+        "(A)  bivariate histogram",
+        "(B) single-class scatter plot",
+        "(C) radar chart",
+        "(D) pie chart",
+        "(E) univariate histogram",
+      ],
+      image: "NovaChart/0",
+    },
+    {
+      id: "NovaChart_135",
+      question: "How many nodes does the chart represent?\n",
+      answer: "C",
+      dataset: "NovaChart",
+      image_id: "135",
+      choices: ["(A)  17", "(B) ", "(C) 16", "(D) 14", "(E) 15"],
+      image: "NovaChart/135",
+    },
+    {
+      id: "NovaChart_153",
+      question: "Estimate the probable seaborn style for this image.\n",
+      answer: "A",
+      dataset: "NovaChart",
+      image_id: "153",
+      choices: [
+        "(A)  darkgrid",
+        "(B) dark",
+        "(C) white",
+        "(D) whitegrid",
+        "(E) ",
+      ],
+      image: "NovaChart/153",
+    },
+    {
+      id: "NovaChart_218",
+      question:
+        "Identify the seaborn style that is likely applied to this image.\n",
+      answer: "D",
+      dataset: "NovaChart",
+      image_id: "218",
+      choices: [
+        "(A)  darkgrid",
+        "(B) dark",
+        "(C) white",
+        "(D) whitegrid",
+        "(E) ",
+      ],
+      image: "NovaChart/218",
+    },
+    {
+      id: "NovaChart_255",
+      question: "Retrieve the data units from the chart.\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "255",
+      choices: [
+        "(A)  [[649148.74, 3.906], [964726.37, 4.018], [1151258.74, 3.548], [1320359.23, 3.989], [1368130.35, 3.701],  [1890273.44, 2.962], [2102530.17, 2.727], [2416051.17, 3.046]]",
+        "(B) [[649148.74, 3.906], [96472.37, 4.018], [151258.74, 3.548], [1320359.23, 3.989], [1368130.35, 3.701], [1380522.64, 2.708], [168064.06, 4.25], [180273.44, 2.962], [2102530.17, 2.727], [2416051.17, 3.046]]",
+        "(C) ",
+        "(D) [[649148.74, 3.906], [964726.37, 4.018], [1151258.74, 3.548], [1320359.23, 3.989], [1388130.35, 3.701], [1380522.64, 2.708], [168764.06, 4.25], [1890873.44, 2.962], [2102530.17, 2.727], [241651.17, 3.046]]",
+        "(E) [[649148.74, 3.906], [964726.37, 4.018], [1151258.74, 3.548], [1320359.23, 3.989], [1368130.35, 3.701], [1380522.64, 2.708], [1680764.06, 4.25], [1890273.44, 2.962], [2102530.17, 2.727], [2416051.17, 3.046]]",
+      ],
+      image: "NovaChart/255",
+    },
+    {
+      id: "NovaChart_124",
+      question: "What numerical data do Low and Open hold in the heatmap?\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "124",
+      choices: ["(A)  ", "(B) 0.9997", "(C) -0.45", "(D) -0.44", "(E) 1"],
+      image: "NovaChart/124",
+    },
+    {
+      id: "NovaChart_257",
+      question:
+        "The y-value of x=[-71.6876] under class=[0] is 1.984, yes or no?\n",
+      answer: "A",
+      dataset: "NovaChart",
+      image_id: "257",
+      choices: ["(A)  No", "(B) Yes", "(C) N", "(D) Y", "(E) "],
+      image: "NovaChart/257",
+    },
+    {
+      id: "NovaChart_273",
+      question: "Produce code to modify the current chart into a pie chart.\n",
+      answer: "A",
+      dataset: "NovaChart",
+      image_id: "273",
+      choices: [
+        "(A)  import pandas as pd",
+        "import matplotlib.pyplot as plt",
+        "",
+        "data = [['Beginner Level', 43], ['All Levels', 45], ['Intermediate Level', 12]]",
+        "",
+        "x_label = 'Level'",
+        'y_label = "count"',
+        "dataframe = pd.DataFrame(data, columns=[x_label, y_label])",
+        "",
+        "plt.figure(figsize=(8, 8))",
+        "plt.pie(dataframe[y_label], labels=dataframe[x_label], autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)",
+        "plt.title('Pie Chart of Counts by Region')",
+        "",
+        "plt.show()",
+        "",
+        "(B) import pandas as pd",
+        "import matplotlib.pyplot as plt",
+        "",
+        "data = [['Beginner Level', 43], ['All Levels', 45], ['Intermediate Level', 12]]",
+        "",
+        "x_label = 'Level'",
+        'y_label = "count"',
+        "dataframe = pd.DataFrame(data, columns=[y_label, y_label])",
+        "",
+        "plt.figure(figsize=(8, 8))",
+        "plt.pie(dataframe[y_label], labels=dataframe[x_label], autopct='%1.4f%%', startangle=140, colors=plt.cm.Paired.colors)",
+        "plt.show()",
+        "",
+        "(C) ",
+        "(D) import pandas as pd",
+        "import matplotlib.pyplot as plt",
+        "",
+        "data = [['Beginner Level', 43], ['All Levels', 45], ['Intermediate Level', 12]]",
+        "",
+        "x_label = 'Level'",
+        'y_label = "count"',
+        "dataframe = pd.DataFrame(data, columns=[y_label, y_label])",
+        "",
+        "plt.figure(figsize=(8, 8))",
+        "plt.pie(dataframe[y_label], labels=dataframe[x_label], autopct='%1.4f%%', startangle=140, colors=plt.cm.Paired.colors)",
+        "plt.title('Pie Chart of Counts by Region')",
+        "",
+        "plt.show()",
+        "",
+        "(E) ",
+        "data = [['Beginner Level', 45], ['All Levels', 43], ['Intermediate Level', 12]]",
+        "",
+        "x_label = 'Level'",
+        'y_label = "count"',
+        "dataframe = pd.DataFrame(data, columns=[x_label, y_label])",
+        "",
+        "plt.figure(figsize=(8, 8))",
+        "plt.pie(dataframe[y_label], labels=dataframe[x_label], autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)",
+        "plt.title('Pie Chart of Counts by Region')",
+        "",
+        "plt.show()",
+        "",
+      ],
+      image: "NovaChart/273",
+    },
+    {
+      id: "NovaChart_217",
+      question:
+        "Indicate the pattern that is the best fit for the presented image.\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "217",
+      choices: [
+        "(A)  no-obvious-pattern",
+        "(B) correlational",
+        "(C) clustered",
+        "(D) linear ",
+        "(E) ",
+      ],
+      image: "NovaChart/217",
+    },
+    {
+      id: "NovaChart_199",
+      question: "Kindly summarize the picture in a single paragraph.\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "199",
+      choices: [
+        "(A)  ",
+        "(B) This scatter plot represents the relationship between 'Previous Purchases' and 'Age'. Each data point on the plot represents a specific combination of previous purchases and age. However, there is no clear pattern or trend that can be observed from the scatter plot, indicating that there is no significant relationship between previous purchases and age.",
+        "(C) The scatter plot suggests that the number of previous purchases is uniformly spread across all age groups.",
+        "(D) As age increases, the number of previous purchases also consistently increases, indicating a direct correlation.",
+        "(E) The data shows that older individuals tend to make more purchases over time, whereas younger individuals have significantly fewer purchases.",
+      ],
+      image: "NovaChart/199",
+    },
+    {
+      id: "NovaChart_243",
+      question: "Determine the chart type used to represent this data.\n",
+      answer: "E",
+      dataset: "NovaChart",
+      image_id: "243",
+      choices: [
+        "(A)  ",
+        "(B) single-class line plot",
+        "(C) sankey chart",
+        "(D)  radar chart",
+        "(E) multi-hue bar plot",
+      ],
+      image: "NovaChart/243",
+    },
+    {
+      id: "NovaChart_101",
+      question:
+        "Share your perspective on the insights provided by this image.\n",
+      answer: "C",
+      dataset: "NovaChart",
+      image_id: "101",
+      choices: [
+        "(A)  All score ranges have comparable frequencies, meaning no range is more common than another.",
+        "(B) The bin with a total score around 23.87 has the highest count, representing the majority of the dataset.",
+        "(C) The majority of cities or countries in the dataset have relatively lower total scores, with only a few outliers having higher total scores.",
+        "(D) The data is evenly distributed across all score ranges, with similar counts for each bin.",
+        "(E) Each score range contributes equally to the dataset, with no significant variation in frequency.",
+      ],
+      image: "NovaChart/101",
+    },
+    {
+      id: "NovaChart_279",
+      question: "Provide insights into the content and meaning of this image.\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "279",
+      choices: [
+        "(A)  ",
+        "(B) The distribution of observations in each categorical bin is balanced.",
+        "(C) The counts vary significantly, with some levels having much higher occurrences (e.g., 21) than others (e.g., 12).",
+        "(D) Levels 5 and 6 both have the highest counts (21), while Level 10 has a lower count (14).",
+        "(E) The numbers fluctuate rather than follow a uniform trend.",
+        "",
+        "",
+      ],
+      image: "NovaChart/279",
+    },
+    {
+      id: "NovaChart_186",
+      question:
+        "Select the pattern that best mirrors the features of the given image.\n",
+      answer: "B",
+      dataset: "NovaChart",
+      image_id: "186",
+      choices: [
+        "(A)  ",
+        "(B) The line plot shows an ascending pattern, as the y-values increase as the x-values increase. To summarize, the solution to this question is: ascending",
+        "(C) The trend shows that higher total volume always leads to lower prices, suggesting a strong inverse relationship.",
+        "(D) The data suggests a perfectly linear trend where an increase in total volume always results in an increase in price.",
+        "(E) The price does not exhibit any variation as total volume changes, indicating no correlation between these two variables.",
+      ],
+      image: "NovaChart/186",
+    },
+    {
+      id: "Video_Monitoring_30",
+      question: "What is the orientation of the truck in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "30",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the truck",
+      ],
+      image: "Video_Monitoring/30",
+    },
+    {
+      id: "Video_Monitoring_276",
+      question: "What color is the van in the image?\n",
+      answer: "C",
+      dataset: "Video_Monitoring",
+      image_id: "276",
+      choices: [
+        "(A)  Red",
+        "(B) Yellow",
+        "(C) White",
+        "(D) Black",
+        "(E) The image does not feature the van",
+      ],
+      image: "Video_Monitoring/276",
+    },
+    {
+      id: "Video_Monitoring_90",
+      question: "What is the orientation of the tricycle in the image?\n",
+      answer: "C",
+      dataset: "Video_Monitoring",
+      image_id: "90",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the tricycle",
+      ],
+      image: "Video_Monitoring/90",
+    },
+    {
+      id: "Video_Monitoring_264",
+      question: "What is the number of persons in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "264",
+      choices: [
+        "(A)  13",
+        "(B) 19",
+        "(C) 20",
+        "(D) 15",
+        "(E) The image does not feature the persons",
+      ],
+      image: "Video_Monitoring/264",
+    },
+    {
+      id: "Video_Monitoring_288",
+      question: "What is the orientation of the awning-tricycle in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "288",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the awning-tricycle",
+      ],
+      image: "Video_Monitoring/288",
+    },
+    {
+      id: "Video_Monitoring_215",
+      question: "What material is the blue roof in the picture made of?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "215",
+      choices: [
+        "(A)  plastic",
+        "(B) iron",
+        "(C) aluminium",
+        "(D) concrete",
+        "(E) The image does not feature the object",
+      ],
+      image: "Video_Monitoring/215",
+    },
+    {
+      id: "Video_Monitoring_150",
+      question: "What is the orientation of the truck in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "150",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the truck",
+      ],
+      image: "Video_Monitoring/150",
+    },
+    {
+      id: "Video_Monitoring_155",
+      question: "What is on the tricycle at the bottom of the picture?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "155",
+      choices: [
+        "(A)  clothes",
+        "(B) wood",
+        "(C) fruit",
+        "(D) bicycle",
+        "(E) The image does not feature the object",
+      ],
+      image: "Video_Monitoring/155",
+    },
+    {
+      id: "Video_Monitoring_298",
+      question: "What color is the motor in the image?\n",
+      answer: "C",
+      dataset: "Video_Monitoring",
+      image_id: "298",
+      choices: [
+        "(A)  Red",
+        "(B) Yellow",
+        "(C) Silver",
+        "(D) Black",
+        "(E) The image does not feature the motor",
+      ],
+      image: "Video_Monitoring/298",
+    },
+    {
+      id: "Video_Monitoring_45",
+      question: "What is the total number of trucks and vans in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "45",
+      choices: [
+        "(A)  8",
+        "(B) 2",
+        "(C) 1",
+        "(D) 19",
+        "(E) The image does not feature the objects",
+      ],
+      image: "Video_Monitoring/45",
+    },
+    {
+      id: "Video_Monitoring_234",
+      question: "What is the number of trucks in the image?\n",
+      answer: "A",
+      dataset: "Video_Monitoring",
+      image_id: "234",
+      choices: [
+        "(A)  6",
+        "(B) 11",
+        "(C) 5",
+        "(D) 9",
+        "(E) The image does not feature the trucks",
+      ],
+      image: "Video_Monitoring/234",
+    },
+    {
+      id: "Video_Monitoring_166",
+      question: "What will the motor do in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "166",
+      choices: [
+        "(A)  stopping",
+        "(B) keep moving",
+        "(C) turn left",
+        "(D) turn right",
+        "(E) The image does not feature the motor",
+      ],
+      image: "Video_Monitoring/166",
+    },
+    {
+      id: "Video_Monitoring_238",
+      question:
+        "What material is the thin strip under a group of people in the middle of the picture made of?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "238",
+      choices: [
+        "(A)  plastic",
+        "(B) wood",
+        "(C) tile",
+        "(D) iron",
+        "(E) The image does not feature the object",
+      ],
+      image: "Video_Monitoring/238",
+    },
+    {
+      id: "Video_Monitoring_51",
+      question:
+        "What is the orientation of the people in the image?(If a human maintains standing pose or walking, please classify it as pedestrian, otherwise, it is classified as a people.)\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "51",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the people",
+      ],
+      image: "Video_Monitoring/51",
+    },
+    {
+      id: "Video_Monitoring_71",
+      question:
+        "What material is the blue room in the middle right of the picture made of?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "71",
+      choices: [
+        "(A)  plastic",
+        "(B) wood",
+        "(C) tile",
+        "(D) iron",
+        "(E) The image does not feature the object",
+      ],
+      image: "Video_Monitoring/71",
+    },
+    {
+      id: "Video_Monitoring_78",
+      question: "What is the orientation of the awning-tricycle in the image?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "78",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the awning-tricycle",
+      ],
+      image: "Video_Monitoring/78",
+    },
+    {
+      id: "Video_Monitoring_132",
+      question:
+        "What is the number of people in the image?(If a human maintains standing pose or walking, please classify it as pedestrian, otherwise, it is classified as a people.)\n",
+      answer: "E",
+      dataset: "Video_Monitoring",
+      image_id: "132",
+      choices: [
+        "(A)  60",
+        "(B) 56",
+        "(C) 86",
+        "(D) 73",
+        "(E) The image does not feature the people",
+      ],
+      image: "Video_Monitoring/132",
+    },
+    {
+      id: "Video_Monitoring_191",
+      question: "What does the man with a helmet do in the picture?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "191",
+      choices: [
+        "(A)  police",
+        "(B) doctor",
+        "(C) waiter",
+        "(D) Takeaway clerk",
+        "(E) The image does not feature the object",
+      ],
+      image: "Video_Monitoring/191",
+    },
+    {
+      id: "Video_Monitoring_212",
+      question: "Where is the awning-tricycle in the image?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "212",
+      choices: [
+        "(A)  The upper left corner",
+        "(B) The lower left corner",
+        "(C) The lower right corner",
+        "(D) The upper right corner",
+        "(E) The image does not feature the awning-tricycle",
+      ],
+      image: "Video_Monitoring/212",
+    },
+    {
+      id: "Video_Monitoring_186",
+      question: "What is the orientation of the bus in the image?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "186",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the bus",
+      ],
+      image: "Video_Monitoring/186",
+    },
+    {
+      id: "Video_Monitoring_58",
+      question: "What will the brown car do in the image?\n",
+      answer: "C",
+      dataset: "Video_Monitoring",
+      image_id: "58",
+      choices: [
+        "(A)  stopping",
+        "(B) keep moving",
+        "(C) turn left",
+        "(D) turn right",
+        "(E) The image does not feature the bicycle",
+      ],
+      image: "Video_Monitoring/58",
+    },
+    {
+      id: "Video_Monitoring_111",
+      question:
+        "What is the orientation of the people in the image?(If a human maintains standing pose or walking, please classify it as pedestrian, otherwise, it is classified as a people.)\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "111",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the people",
+      ],
+      image: "Video_Monitoring/111",
+    },
+    {
+      id: "Video_Monitoring_160",
+      question: "What is the number of persons in the image?\n",
+      answer: "A",
+      dataset: "Video_Monitoring",
+      image_id: "160",
+      choices: [
+        "(A)  54",
+        "(B) 61",
+        "(C) 62",
+        "(D) 49",
+        "(E) The image does not feature the persons",
+      ],
+      image: "Video_Monitoring/160",
+    },
+    {
+      id: "Video_Monitoring_232",
+      question: "What color is the motor in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "232",
+      choices: [
+        "(A)  Red",
+        "(B) Silver",
+        "(C) Green",
+        "(D) Black",
+        "(E) The image does not feature the motor",
+      ],
+      image: "Video_Monitoring/232",
+    },
+    {
+      id: "Video_Monitoring_269",
+      question:
+        "What is the total number of pedestrians and cars in the image?(If a human maintains standing pose or walking, please classify it as pedestrian, otherwise, it is classified as a people.)\n",
+      answer: "C",
+      dataset: "Video_Monitoring",
+      image_id: "269",
+      choices: [
+        "(A)  50",
+        "(B) 57",
+        "(C) 42",
+        "(D) 28",
+        "(E) The image does not feature the objects",
+      ],
+      image: "Video_Monitoring/269",
+    },
+    {
+      id: "Video_Monitoring_65",
+      question: "What color is the car in the image?\n",
+      answer: "D",
+      dataset: "Video_Monitoring",
+      image_id: "65",
+      choices: [
+        "(A)  Red",
+        "(B) White",
+        "(C) Green",
+        "(D) Black",
+        "(E) The image does not feature the car",
+      ],
+      image: "Video_Monitoring/65",
+    },
+    {
+      id: "Video_Monitoring_124",
+      question: "What is the number of persons in the image?\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "124",
+      choices: [
+        "(A)  12",
+        "(B) 13",
+        "(C) 21",
+        "(D) 8",
+        "(E) The image does not feature the persons",
+      ],
+      image: "Video_Monitoring/124",
+    },
+    {
+      id: "Video_Monitoring_118",
+      question:
+        "What will the bus do when encountering the black car in front slows down in the image?\n",
+      answer: "C",
+      dataset: "Video_Monitoring",
+      image_id: "118",
+      choices: [
+        "(A)  stopping",
+        "(B) keep moving",
+        "(C) slow down",
+        "(D) turn right",
+        "(E) The image does not feature the bus",
+      ],
+      image: "Video_Monitoring/118",
+    },
+    {
+      id: "Video_Monitoring_27",
+      question:
+        "What is the orientation of the pedestrian's coat in the image?(If a human maintains standing pose or walking, please classify it as pedestrian, otherwise, it is classified as a people.)\n",
+      answer: "B",
+      dataset: "Video_Monitoring",
+      image_id: "27",
+      choices: [
+        "(A)  The right of the image",
+        "(B) The bottom of the image",
+        "(C) The left of the image",
+        "(D) The top of the image",
+        "(E) The image does not feature the pedestrian",
+      ],
+      image: "Video_Monitoring/27",
+    },
+    {
+      id: "Video_Monitoring_203",
+      question: "What's on the roadside truck in the picture?\n",
+      answer: "A",
+      dataset: "Video_Monitoring",
+      image_id: "203",
+      choices: [
+        "(A)  wood",
+        "(B) iron",
+        "(C) aluminium",
+        "(D) concrete",
+        "(E) The image does not feature the object",
+      ],
+      image: "Video_Monitoring/203",
+    },
+    {
+      id: "VisDiffBench_26",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "B",
+      dataset: "VisDiffBench",
+      image_id: "26",
+      choices: [
+        "(A)  Plant type (Tulips vs Wheat)",
+        "(B) Plant type (Sunflowers vs Wheat)",
+        "(C) Plant type (Sunflowers vs Rice)",
+        "(D) Time of the day (Day vs Night)",
+      ],
+      image: "VisDiffBench/26",
+    },
+    {
+      id: "VisDiffBench_84",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "B",
+      dataset: "VisDiffBench",
+      image_id: "84",
+      choices: [
+        "(A)  Background Colors (Brown vs White)",
+        "(B) Stuffed animal type (Teddy bear vs Bunny rabbit)",
+        "(C) Toy type (Bears vs Cats)",
+        "(D) Insect type (Dogs vs Bees)",
+      ],
+      image: "VisDiffBench/84",
+    },
+    {
+      id: "VisDiffBench_54",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "54",
+      choices: [
+        "(A)  Gender (Men vs Women)",
+        "(B) Number of Objects (1 vs 2)",
+        "(C) Footwear(Shoes vs Sandles)",
+        "(D) Material (Leather vs Canvas)",
+      ],
+      image: "VisDiffBench/54",
+    },
+    {
+      id: "VisDiffBench_23",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "C",
+      dataset: "VisDiffBench",
+      image_id: "23",
+      choices: [
+        "(A)  Transport mode (Trains vs Cars)",
+        "(B) Time of the day (Day vs Night)",
+        "(C) Transport mode (Trains vs Buses)",
+        "(D) Vehicle type (Motorcycles vs Bicycles)",
+      ],
+      image: "VisDiffBench/23",
+    },
+    {
+      id: "VisDiffBench_39",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "B",
+      dataset: "VisDiffBench",
+      image_id: "39",
+      choices: [
+        "(A)  Gender (Men vs Women)",
+        "(B) Playground equipment (Slide vs Swing)",
+        "(C) Background Colors (Black vs White)",
+        "(D) Time of the day (Day vs Night)",
+      ],
+      image: "VisDiffBench/39",
+    },
+    {
+      id: "VisDiffBench_119",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "119",
+      choices: [
+        "(A)  Board game (Chess vs Checkers)",
+        "(B) Background Colors (Black vs White)",
+        "(C) Number of Objects (5 vs 10)",
+        "(D) Landscape (Mountains vs Gardens)",
+      ],
+      image: "VisDiffBench/119",
+    },
+    {
+      id: "VisDiffBench_128",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "128",
+      choices: [
+        "(A)  Musical period (Baroque vs Classical)",
+        "(B) Instrument style (Classical violin vs Fiddle)",
+        "(C) Musical instrument (Flute vs Guitars)",
+        "(D) Musical instrument (Pianos vs Guitars)",
+      ],
+      image: "VisDiffBench/128",
+    },
+    {
+      id: "VisDiffBench_34",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "B",
+      dataset: "VisDiffBench",
+      image_id: "34",
+      choices: [
+        "(A)  Landscape (Mountains vs Rivers)",
+        "(B) Pond animal (Frogs vs Ducks)",
+        "(C) Pond animal (Frogs vs Fishes)",
+        "(D) Sky view (Sun vs Moon)",
+      ],
+      image: "VisDiffBench/34",
+    },
+    {
+      id: "VisDiffBench_15",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "C",
+      dataset: "VisDiffBench",
+      image_id: "15",
+      choices: [
+        "(A)  Baby setting (Car Seat vs Strollers)",
+        "(B) Number of Objects (1 vs 2)",
+        "(C) Baby setting (Cribs vs Strollers)",
+        "(D) Baby setting (Cribs vs Cradle)",
+      ],
+      image: "VisDiffBench/15",
+    },
+    {
+      id: "VisDiffBench_124",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "124",
+      choices: [
+        "(A)  Background Colors (White vs Green)",
+        "(B) Landscape (Mountains vs Desert)",
+        "(C) Time of the day (Day vs Night)",
+        "(D) Season (Summer vs Early Spring)",
+      ],
+      image: "VisDiffBench/124",
+    },
+    {
+      id: "VisDiffBench_66",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "C",
+      dataset: "VisDiffBench",
+      image_id: "66",
+      choices: [
+        "(A)  Number of Objects (1 vs 2)",
+        "(B) Background Colors (Green vs Blue)",
+        "(C) Material (Leather vs Denim)",
+        "(D) Material (Wood vs Plastic)",
+      ],
+      image: "VisDiffBench/66",
+    },
+    {
+      id: "VisDiffBench_89",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "89",
+      choices: [
+        "(A)  Architectural style (Gothic vs Baroque)",
+        "(B) Background Colors (White vs Silver)",
+        "(C) Building type (Town vs Villages)",
+        "(D) Building type (Towers vs Houses)",
+      ],
+      image: "VisDiffBench/89",
+    },
+    {
+      id: "VisDiffBench_38",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "38",
+      choices: [
+        "(A)  Beverage type (Tea vs Coffee)",
+        "(B) Kitchen item placement (Cups vs Table)",
+        "(C) Background Colors (Black vs White)",
+        "(D) Type of refreshment (Ice cream vs Juice)",
+      ],
+      image: "VisDiffBench/38",
+    },
+    {
+      id: "VisDiffBench_50",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "50",
+      choices: [
+        "(A)  Transport (Elevator vs Cars)",
+        "(B) Number of Objects (2 vs 3)",
+        "(C) Vehicle (Cars vs Trucks)",
+        "(D) Vehicle design (SUVs vs Sedans)",
+      ],
+      image: "VisDiffBench/50",
+    },
+    {
+      id: "VisDiffBench_69",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "69",
+      choices: [
+        "(A)  Time of the day (Day vs Night)",
+        "(B) Landscape (Forest vs River)",
+        "(C) Color (Green vs Red)",
+        "(D) Plant type (Mushrooms vs Ferns)",
+      ],
+      image: "VisDiffBench/69",
+    },
+    {
+      id: "VisDiffBench_141",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "141",
+      choices: [
+        "(A)  Poem structure (Free verse vs Sonnet)",
+        "(B) Book genre (Comics vs Fairy tales)",
+        "(C) Shelf item (Books vs Plants)",
+        "(D) Language (English vs Spanish)",
+      ],
+      image: "VisDiffBench/141",
+    },
+    {
+      id: "VisDiffBench_40",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "40",
+      choices: [
+        "(A)  Desert animal (Kangaroos vs Camels)",
+        "(B) Number of Objects (1 vs 2)",
+        "(C) Landscape (Mountains vs Rivers)",
+        "(D) Desert animal (Kangaroos vs Snakes)",
+      ],
+      image: "VisDiffBench/40",
+    },
+    {
+      id: "VisDiffBench_29",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "29",
+      choices: [
+        "(A)  Sport and gender (Basketball/Men vs Volleyball/Women)",
+        "(B) Sky view (Sun vs Moon)",
+        "(C) Sport and gender (Football/Men vs Baseball/Women)",
+        "(D) Background Colors (Black vs White)",
+      ],
+      image: "VisDiffBench/29",
+    },
+    {
+      id: "VisDiffBench_129",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "129",
+      choices: [
+        "(A)  Background Colors (Black vs Green)",
+        "(B) Number of Objects (1 vs 3)",
+        "(C) Background Colors (Black vs White)",
+        "(D) War period (WWI vs WWII)",
+      ],
+      image: "VisDiffBench/129",
+    },
+    {
+      id: "VisDiffBench_131",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "B",
+      dataset: "VisDiffBench",
+      image_id: "131",
+      choices: [
+        "(A)  Type of refreshment (Ice cream vs Juice)",
+        "(B) Dessert (Macarons vs Meringues)",
+        "(C) Type of refreshment (Ice cream vs Gelato)",
+        "(D) Type of refreshment (Tea vs Coffee)",
+      ],
+      image: "VisDiffBench/131",
+    },
+    {
+      id: "VisDiffBench_32",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "32",
+      choices: [
+        "(A)  Background Colors (Green vs Red)",
+        "(B) Landscape (Mountains vs Rivers)",
+        "(C) Landscape (Mountains vs Desert)",
+        "(D) Sky phenomenon (Rainbows vs Lightning)",
+      ],
+      image: "VisDiffBench/32",
+    },
+    {
+      id: "VisDiffBench_53",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "B",
+      dataset: "VisDiffBench",
+      image_id: "53",
+      choices: [
+        "(A)  Background Colors (White vs Orange)",
+        "(B) Color (Green vs Red)",
+        "(C) Fruits (Oranges vs Apples)",
+        "(D) Number of Objects (2 vs 3)",
+      ],
+      image: "VisDiffBench/53",
+    },
+    {
+      id: "VisDiffBench_41",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "41",
+      choices: [
+        "(A)  Background Colors (White vs Silver)",
+        "(B) Number of Objects (1 vs 2)",
+        "(C) Basket content (Onions vs Avacado)",
+        "(D) Basket content (Tomatoes vs Eggs)",
+      ],
+      image: "VisDiffBench/41",
+    },
+    {
+      id: "VisDiffBench_103",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "A",
+      dataset: "VisDiffBench",
+      image_id: "103",
+      choices: [
+        "(A)  Shoe purpose (Tennis vs Running)",
+        "(B) Activity (Running vs Walking)",
+        "(C) Activity (Shopping vs Dining)",
+        "(D) Activity (Driving vs Dining)",
+      ],
+      image: "VisDiffBench/103",
+    },
+    {
+      id: "VisDiffBench_112",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "C",
+      dataset: "VisDiffBench",
+      image_id: "112",
+      choices: [
+        "(A)  Time of the day (Day vs Night)",
+        "(B) Number of Objects (1 vs 2)",
+        "(C) Plant type (Bonsai vs Cacti)",
+        "(D) Landscape (Forest vs River)",
+      ],
+      image: "VisDiffBench/112",
+    },
+    {
+      id: "VisDiffBench_126",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "126",
+      choices: [
+        "(A)  Background Colors (Black vs White)",
+        "(B) Sport and gender (Basketball/Men vs Volleyball/Women)",
+        "(C) Sport and gender (Football/Men vs Baseball/Women)",
+        "(D) Formation (Defensive vs Offensive)",
+      ],
+      image: "VisDiffBench/126",
+    },
+    {
+      id: "VisDiffBench_27",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "27",
+      choices: [
+        "(A)  Background Colors (Brown vs Blue)",
+        "(B) Number of Objects (2 vs 3)",
+        "(C) Shelf item (Books vs Plants)",
+        "(D) Toy type (Dolls vs Teddy bears)",
+      ],
+      image: "VisDiffBench/27",
+    },
+    {
+      id: "VisDiffBench_108",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "B",
+      dataset: "VisDiffBench",
+      image_id: "108",
+      choices: [
+        "(A)  Number of Objects (1 vs 2)",
+        "(B) Fuel type (Diesel vs Electric)",
+        "(C) Vehicle (Cars vs Trains)",
+        "(D) Vehicle (Cars vs Trucks)",
+      ],
+      image: "VisDiffBench/108",
+    },
+    {
+      id: "VisDiffBench_135",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "C",
+      dataset: "VisDiffBench",
+      image_id: "135",
+      choices: [
+        "(A)  Film coloring method (Black and white vs Technicolor)",
+        "(B) Number of Objects (1 vs 2)",
+        "(C) Historical setting (Medieval Europe vs Ancient Rome)",
+        "(D) Background Colors (Black vs White)",
+      ],
+      image: "VisDiffBench/135",
+    },
+    {
+      id: "VisDiffBench_120",
+      question:
+        "What is the difference between the first two rows of images and the last two rows?\n",
+      answer: "D",
+      dataset: "VisDiffBench",
+      image_id: "120",
+      choices: [
+        "(A)  Background Colors (White vs Black)",
+        "(B) Number of Objects (2 vs 3)",
+        "(C) Material (Wood vs Glass)",
+        "(D) Material (Porcelain vs Ceramic)",
+      ],
+      image: "VisDiffBench/120",
+    },
+    {
+      id: "VQA-RAD_155",
+      question: "Is this in the coronal plane?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "155",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/155",
+    },
+    {
+      id: "VQA-RAD_124",
+      question: "is there a cavitary lesion?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "124",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/124",
+    },
+    {
+      id: "VQA-RAD_231",
+      question: "Is this a tension pneumothorax?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "231",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/231",
+    },
+    {
+      id: "VQA-RAD_14",
+      question: "was the patient positioned appropriately \twithout tilting?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "14",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/14",
+    },
+    {
+      id: "VQA-RAD_228",
+      question: "Any tracheal deviation present?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "228",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/228",
+    },
+    {
+      id: "VQA-RAD_102",
+      question: "Does the left humerus appear to be fractured?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "102",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/102",
+    },
+    {
+      id: "VQA-RAD_3",
+      question: "Is there evidence of an aortic aneurysm?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "3",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/3",
+    },
+    {
+      id: "VQA-RAD_237",
+      question: "Is the cardiac silhouette enlarged?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "237",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/237",
+    },
+    {
+      id: "VQA-RAD_91",
+      question: "Can this image highlight bone fractures (if present)?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "91",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/91",
+    },
+    {
+      id: "VQA-RAD_2",
+      question: "Is there blunting of the costovertebral angles?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "2",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/2",
+    },
+    {
+      id: "VQA-RAD_53",
+      question: "Is the left hemidiaphragm normal?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "53",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/53",
+    },
+    {
+      id: "VQA-RAD_217",
+      question: "Is there a hypodensity located in the liver?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "217",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/217",
+    },
+    {
+      id: "VQA-RAD_110",
+      question: "Is there a mass in the lung?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "110",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/110",
+    },
+    {
+      id: "VQA-RAD_185",
+      question: "Is there bilateral hilar enlargement?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "185",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/185",
+    },
+    {
+      id: "VQA-RAD_78",
+      question: "Is this film properly exposed?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "78",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/78",
+    },
+    {
+      id: "VQA-RAD_27",
+      question: "was this chest x ray taken in PA format?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "27",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/27",
+    },
+    {
+      id: "VQA-RAD_101",
+      question: "Can the left ribs be evaluated?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "101",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/101",
+    },
+    {
+      id: "VQA-RAD_35",
+      question: "is it difficult to delineate the left costophrenic angle?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "35",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/35",
+    },
+    {
+      id: "VQA-RAD_44",
+      question: "Is there oral contrast in the patient's small bowel?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "44",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/44",
+    },
+    {
+      id: "VQA-RAD_209",
+      question: "Are the findings normal?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "209",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/209",
+    },
+    {
+      id: "VQA-RAD_16",
+      question:
+        "is there contrast material showing air-fluid levels in the small bowel\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "16",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/16",
+    },
+    {
+      id: "VQA-RAD_54",
+      question: "Is the left hemidiaphragm normal?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "54",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/54",
+    },
+    {
+      id: "VQA-RAD_213",
+      question: "Was contrast used?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "213",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/213",
+    },
+    {
+      id: "VQA-RAD_145",
+      question: "Is the heart enlarged?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "145",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/145",
+    },
+    {
+      id: "VQA-RAD_73",
+      question: "Are any ribs in the image fractured?\n",
+      answer: "B",
+      dataset: "VQA-RAD",
+      image_id: "73",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/73",
+    },
+    {
+      id: "VQA-RAD_210",
+      question: "Are the costophrenic angles preserved?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "210",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/210",
+    },
+    {
+      id: "VQA-RAD_39",
+      question:
+        "Is there evidence of a pneumoperitoneum secondary to a perforation?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "39",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/39",
+    },
+    {
+      id: "VQA-RAD_202",
+      question: "Is the cardiac contour normal in shape?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "202",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/202",
+    },
+    {
+      id: "VQA-RAD_111",
+      question: "is there a mass\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "111",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/111",
+    },
+    {
+      id: "VQA-RAD_47",
+      question: "Are the costophrenic angles sharp?\n",
+      answer: "A",
+      dataset: "VQA-RAD",
+      image_id: "47",
+      choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+      image: "VQA-RAD/47",
+    },
+    {
+      id: "Galaxy_6",
+      question:
+        "How many blue stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "D",
+      dataset: "Galaxy",
+      image_id: "6",
+      choices: ["(A)  1-20", "(B) 20-50", "(C) 50-70", "(D) 100+"],
+      image: "Galaxy/6",
+    },
+    {
+      id: "Galaxy_5",
+      question:
+        "Are the objects in the image all the same size? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "D",
+      dataset: "Galaxy",
+      image_id: "5",
+      choices: ["(A)  Yes", "(B) two", "(C) I don't know", "(D) No"],
+      image: "Galaxy/5",
+    },
+    {
+      id: "Galaxy_75",
+      question:
+        "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "75",
+      choices: ["(A)  No", "(B) I don't know", "(C) two", "(D) Yes"],
+      image: "Galaxy/75",
+    },
+    {
+      id: "Galaxy_43",
+      question:
+        "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "43",
+      choices: ["(A)  No", "(B) two", "(C) Yes", "(D) I don't know"],
+      image: "Galaxy/43",
+    },
+    {
+      id: "Galaxy_47",
+      question:
+        "How many galaxy in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "47",
+      choices: ["(A)  1-3", "(B) 0", "(C) 20", "(D) 10"],
+      image: "Galaxy/47",
+    },
+    {
+      id: "Galaxy_70",
+      question:
+        "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "B",
+      dataset: "Galaxy",
+      image_id: "70",
+      choices: ["(A)  I don't know", "(B) Yes", "(C) No", "(D) two"],
+      image: "Galaxy/70",
+    },
+    {
+      id: "Galaxy_69",
+      question:
+        "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "D",
+      dataset: "Galaxy",
+      image_id: "69",
+      choices: ["(A)  I don't know", "(B) No", "(C) two", "(D) Yes"],
+      image: "Galaxy/69",
+    },
+    {
+      id: "Galaxy_59",
+      question:
+        "How many stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "B",
+      dataset: "Galaxy",
+      image_id: "59",
+      choices: ["(A)  10", "(B) 100+", "(C) 0", "(D) 20"],
+      image: "Galaxy/59",
+    },
+    {
+      id: "Galaxy_23",
+      question:
+        "Where are the brightest stars located in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "D",
+      dataset: "Galaxy",
+      image_id: "23",
+      choices: ["(A)  top", "(B) right", "(C) bottom", "(D) middle"],
+      image: "Galaxy/23",
+    },
+    {
+      id: "Galaxy_62",
+      question:
+        "Is this image showing the Earth? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "62",
+      choices: ["(A)  Yes", "(B) I don't know", "(C) No", "(D) two"],
+      image: "Galaxy/62",
+    },
+    {
+      id: "Galaxy_36",
+      question:
+        "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "B",
+      dataset: "Galaxy",
+      image_id: "36",
+      choices: ["(A)  many", "(B) Yes", "(C) No", "(D) I don't know"],
+      image: "Galaxy/36",
+    },
+    {
+      id: "Galaxy_92",
+      question:
+        "How many of celestial object is shown in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "92",
+      choices: ["(A)  100+", "(B) 50", "(C) <10", "(D) 20"],
+      image: "Galaxy/92",
+    },
+    {
+      id: "Galaxy_58",
+      question:
+        "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "58",
+      choices: ["(A)  two", "(B) I don't know", "(C) Yes", "(D) No"],
+      image: "Galaxy/58",
+    },
+    {
+      id: "Galaxy_66",
+      question:
+        "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "66",
+      choices: ["(A)  two", "(B) I don't know", "(C) No", "(D) Yes"],
+      image: "Galaxy/66",
+    },
+    {
+      id: "Galaxy_34",
+      question:
+        "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "D",
+      dataset: "Galaxy",
+      image_id: "34",
+      choices: ["(A)  two", "(B) No", "(C) I don't know", "(D) Yes"],
+      image: "Galaxy/34",
+    },
+    {
+      id: "Galaxy_30",
+      question:
+        "What type of celestial object is shown in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "30",
+      choices: ["(A)  Elliptical", "(B) irregular", "(C) planet", "(D) Spiral"],
+      image: "Galaxy/30",
+    },
+    {
+      id: "Galaxy_80",
+      question:
+        "Is this image showing the Earth? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "D",
+      dataset: "Galaxy",
+      image_id: "80",
+      choices: ["(A)  I don't know", "(B) Yes", "(C) two", "(D) No"],
+      image: "Galaxy/80",
+    },
+    {
+      id: "Galaxy_64",
+      question:
+        "Is this image showing the Earth? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "D",
+      dataset: "Galaxy",
+      image_id: "64",
+      choices: ["(A)  Yes", "(B) I don't know", "(C) two", "(D) No"],
+      image: "Galaxy/64",
+    },
+    {
+      id: "Galaxy_29",
+      question:
+        "How many galaxy in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "B",
+      dataset: "Galaxy",
+      image_id: "29",
+      choices: ["(A)  0", "(B) 3-5", "(C) 10", "(D) 20"],
+      image: "Galaxy/29",
+    },
+    {
+      id: "Galaxy_37",
+      question:
+        "What are the bright glowing regions with reddish hues? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "37",
+      choices: [
+        "(A)  Reflection from Dust",
+        "(B) Supernova Remnants",
+        "(C) star-forming nebulae",
+        "(D) Distant Background Galaxies",
+      ],
+      image: "Galaxy/37",
+    },
+    {
+      id: "Galaxy_20",
+      question:
+        "How many yellow stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "20",
+      choices: ["(A)  50+", "(B) 10-20", "(C) 1-10", "(D) 20-30"],
+      image: "Galaxy/20",
+    },
+    {
+      id: "Galaxy_41",
+      question:
+        "Where are the brightest stars located in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "41",
+      choices: ["(A)  right", "(B) bottom", "(C) left", "(D) top"],
+      image: "Galaxy/41",
+    },
+    {
+      id: "Galaxy_27",
+      question:
+        "Where are the brightest red stars located in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "27",
+      choices: ["(A)  right", "(B) left", "(C) bottom", "(D) top"],
+      image: "Galaxy/27",
+    },
+    {
+      id: "Galaxy_95",
+      question:
+        "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "95",
+      choices: ["(A)  Yes", "(B) No", "(C) two", "(D) I don't know"],
+      image: "Galaxy/95",
+    },
+    {
+      id: "Galaxy_16",
+      question:
+        "Are there visible spiral arms? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "16",
+      choices: ["(A)  Yes", "(B) I don't know", "(C) No", "(D) two"],
+      image: "Galaxy/16",
+    },
+    {
+      id: "Galaxy_88",
+      question:
+        "How many of celestial object is shown in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "88",
+      choices: ["(A)  2", "(B) 0", "(C) 10", "(D) 1"],
+      image: "Galaxy/88",
+    },
+    {
+      id: "Galaxy_83",
+      question:
+        "Where is the brightest star located in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "83",
+      choices: ["(A)  top", "(B) left", "(C) middle", "(D) bottom"],
+      image: "Galaxy/83",
+    },
+    {
+      id: "Galaxy_51",
+      question:
+        "Does the galaxy appear symmetrical? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "A",
+      dataset: "Galaxy",
+      image_id: "51",
+      choices: ["(A)  Yes", "(B) No", "(C) I don't know", "(D) two"],
+      image: "Galaxy/51",
+    },
+    {
+      id: "Galaxy_74",
+      question:
+        "Does the galaxy have a distinct central core? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "B",
+      dataset: "Galaxy",
+      image_id: "74",
+      choices: ["(A)  No", "(B) Yes", "(C) I don't know", "(D) two"],
+      image: "Galaxy/74",
+    },
+    {
+      id: "Galaxy_86",
+      question:
+        "How many stars in the image? Please note that only clearly visible or distinguishable celestial bodies are counted.\n",
+      answer: "C",
+      dataset: "Galaxy",
+      image_id: "86",
+      choices: ["(A)  0", "(B) 1", "(C) 30+", "(D) 5-15"],
+      image: "Galaxy/86",
+    },
+    {
+      id: "Remote_Sensing_167",
+      question: "Where is the U-shaped pier in the picture?\n",
+      answer: "C",
+      dataset: "Remote_Sensing",
+      image_id: "167",
+      choices: [
+        "(A)  In the lower right area of the picture",
+        "(B) In the upper left area of the picture",
+        "(C) In the middle area of the picture",
+        "(D) In the upper right area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/167",
+    },
+    {
+      id: "Remote_Sensing_208",
+      question: "How many roundabouts are there in this picture?\n",
+      answer: "C",
+      dataset: "Remote_Sensing",
+      image_id: "208",
+      choices: [
+        "(A)  0",
+        "(B) 2",
+        "(C) 4",
+        "(D) 6",
+        "(E) This image doesn't feature the count.",
+      ],
+      image: "Remote_Sensing/208",
+    },
+    {
+      id: "Remote_Sensing_129",
+      question:
+        "What color is the boat in the top right corner of the picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "129",
+      choices: [
+        "(A)  Red",
+        "(B) White",
+        "(C) Orange",
+        "(D) Pink",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/129",
+    },
+    {
+      id: "Remote_Sensing_74",
+      question: "Where is the larger beach area in the picture?\n",
+      answer: "C",
+      dataset: "Remote_Sensing",
+      image_id: "74",
+      choices: [
+        "(A)  In the upper left area of the picture",
+        "(B) In the upper right area of the picture",
+        "(C) In the lower right area of the picture",
+        "(D) In the left-center area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/74",
+    },
+    {
+      id: "Remote_Sensing_203",
+      question:
+        "Where is the most brightly colored disk located in the picture?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "203",
+      choices: [
+        "(A)  In the upper left area of the picture",
+        "(B) In the upper right area of the picture",
+        "(C) In the lower right area of the picture",
+        "(D) In the lower left area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/203",
+    },
+    {
+      id: "Remote_Sensing_47",
+      question:
+        "In the picture, where is the traffic roundabout with red in the center and green around it?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "47",
+      choices: [
+        "(A)  On the upper right side of the picture.",
+        "(B) In the middle of the bottom of the picture.",
+        "(C) In the center of the picture.",
+        "(D) In the lower left corner of the picture.",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/47",
+    },
+    {
+      id: "Remote_Sensing_192",
+      question:
+        "What color is the zebra crossing on the far right side of the road in the picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "192",
+      choices: [
+        "(A)  White",
+        "(B) Yellow",
+        "(C) Black",
+        "(D) Red",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/192",
+    },
+    {
+      id: "Remote_Sensing_270",
+      question:
+        "What color is the square building with striped roof in the bottom right corner of the picture?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "270",
+      choices: [
+        "(A)  Red",
+        "(B) Black",
+        "(C) White",
+        "(D) Blue",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/270",
+    },
+    {
+      id: "Remote_Sensing_147",
+      question: "What color is the ship on the right edge of the picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "147",
+      choices: [
+        "(A)  White",
+        "(B) Red",
+        "(C) Blue",
+        "(D) Black",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/147",
+    },
+    {
+      id: "Remote_Sensing_224",
+      question: "Where is the arc building in the picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "224",
+      choices: [
+        "(A)  In the lower left corner of the picture",
+        "(B) In the upper left corner of the picture",
+        "(C) In the middle of the bottom of the picture",
+        "(D) In the lower right area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/224",
+    },
+    {
+      id: "Remote_Sensing_164",
+      question: "Where is the parking lot in the picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "164",
+      choices: [
+        "(A)  In the lower left area of the picture",
+        "(B) In the top left area of the picture",
+        "(C) In the bottom mid of the picture",
+        "(D) In the left-centre area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/164",
+    },
+    {
+      id: "Remote_Sensing_256",
+      question:
+        "How many buildings in the picture have coffee colored roofs or walls on the right?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "256",
+      choices: [
+        "(A)  1",
+        "(B) 2",
+        "(C) 3",
+        "(D) 4",
+        "(E) This image doesn't feature the count.",
+      ],
+      image: "Remote_Sensing/256",
+    },
+    {
+      id: "Remote_Sensing_27",
+      question:
+        "What is the color of the pipes on the roof of the house in the upper left of the picture?\n",
+      answer: "D",
+      dataset: "Remote_Sensing",
+      image_id: "27",
+      choices: [
+        "(A)  blue",
+        "(B) brown",
+        "(C) yellow and green",
+        "(D) yellow",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/27",
+    },
+    {
+      id: "Remote_Sensing_132",
+      question:
+        "What color is the bus driving on the road across the water on the right side of this picture?\n",
+      answer: "D",
+      dataset: "Remote_Sensing",
+      image_id: "132",
+      choices: [
+        "(A)  Blue",
+        "(B) Red",
+        "(C) Green",
+        "(D) White",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/132",
+    },
+    {
+      id: "Remote_Sensing_234",
+      question:
+        "What color is the small table-tennis table next to the stadium in the upper right corner of the picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "234",
+      choices: [
+        "(A)  White",
+        "(B) Blue",
+        "(C) Pink",
+        "(D) Orange",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/234",
+    },
+    {
+      id: "Remote_Sensing_264",
+      question:
+        "What color is the house in the top left corner of the picture?\n",
+      answer: "C",
+      dataset: "Remote_Sensing",
+      image_id: "264",
+      choices: [
+        "(A)  White",
+        "(B) Gray",
+        "(C) Black",
+        "(D) Red",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/264",
+    },
+    {
+      id: "Remote_Sensing_46",
+      question:
+        "How many containers is the ship moving on the water pulling in the lower right area of this picture?\n",
+      answer: "C",
+      dataset: "Remote_Sensing",
+      image_id: "46",
+      choices: [
+        "(A)  5",
+        "(B) 4",
+        "(C) 3",
+        "(D) 1",
+        "(E) This image doesn't feature the count.",
+      ],
+      image: "Remote_Sensing/46",
+    },
+    {
+      id: "Remote_Sensing_299",
+      question:
+        "Where is the truck with a red body and a white roof in the picture?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "299",
+      choices: [
+        "(A)  In the upper left area of the picture",
+        "(B) In the upper right area of the picture",
+        "(C) In the lower right area of the picture",
+        "(D) In the area below the center of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/299",
+    },
+    {
+      id: "Remote_Sensing_225",
+      question:
+        "What color is the small ship below the bridge in the top left area of this picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "225",
+      choices: [
+        "(A)  Green",
+        "(B) White",
+        "(C) Black and white",
+        "(D) Grey and white",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/225",
+    },
+    {
+      id: "Remote_Sensing_0",
+      question:
+        "What color is the second ship from top to bottom on the far right side of the picture?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "0",
+      choices: [
+        "(A)  White",
+        "(B) Red",
+        "(C) Green",
+        "(D) Yellow",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/0",
+    },
+    {
+      id: "Remote_Sensing_124",
+      question:
+        "How many white concrete mixing tower facilities are there in the lower left area of this picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "124",
+      choices: [
+        "(A)  5",
+        "(B) 2",
+        "(C) 1",
+        "(D) 0",
+        "(E) This image doesn't feature the count.",
+      ],
+      image: "Remote_Sensing/124",
+    },
+    {
+      id: "Remote_Sensing_58",
+      question:
+        "How many white arched roof structures are there in the upper right corner of the picture?\n",
+      answer: "D",
+      dataset: "Remote_Sensing",
+      image_id: "58",
+      choices: [
+        "(A)  5",
+        "(B) 6",
+        "(C) 7",
+        "(D) 8",
+        "(E) This image doesn't feature the count.",
+      ],
+      image: "Remote_Sensing/58",
+    },
+    {
+      id: "Remote_Sensing_173",
+      question:
+        "In which area of the picture is the roundabout with two cars driving on?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "173",
+      choices: [
+        "(A)  In the top left area of the picture",
+        "(B) In the top right area of the picture",
+        "(C) In the bottom left area of the picture",
+        "(D) In the bottom right area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/173",
+    },
+    {
+      id: "Remote_Sensing_290",
+      question: "Where is the football field located in the picture?\n",
+      answer: "C",
+      dataset: "Remote_Sensing",
+      image_id: "290",
+      choices: [
+        "(A)  In the upper left area of the picture",
+        "(B) In the upper right area of the picture",
+        "(C) In the lower left area of the picture",
+        "(D) In the lower right area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/290",
+    },
+    {
+      id: "Remote_Sensing_11",
+      question:
+        "In the picture, where is the lake with the largest area located?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "11",
+      choices: [
+        "(A)  In the central area of the picture.",
+        "(B) In the bottom left area of the picture.",
+        "(C) In the upper left corner of the picture.",
+        "(D) In the upper right corner of the picture.",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/11",
+    },
+    {
+      id: "Remote_Sensing_122",
+      question: "Where is the yellow boat in the picture?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "122",
+      choices: [
+        "(A)  In the upper left area of the picture",
+        "(B) In the middle area of the right side of the picture",
+        "(C) In the upper right area of the picture",
+        "(D) In the lower right area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/122",
+    },
+    {
+      id: "Remote_Sensing_227",
+      question: "Where are the trees with pink flowers in the picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "227",
+      choices: [
+        "(A)  In the upper left corner of the picture",
+        "(B) In the lower left area of the picture",
+        "(C) In the middle of the left of the picture",
+        "(D) In the upper right area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/227",
+    },
+    {
+      id: "Remote_Sensing_176",
+      question: "Where is the sports groud located in this picture?\n",
+      answer: "B",
+      dataset: "Remote_Sensing",
+      image_id: "176",
+      choices: [
+        "(A)  In the middle right area of this picture",
+        "(B) In the top left corner of this picture",
+        "(C) In the lower left area of this picture",
+        "(D) In the top right corner of this picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/176",
+    },
+    {
+      id: "Remote_Sensing_156",
+      question:
+        "What color is the ship currently in motion in the water area at the bottom left of the picture?\n",
+      answer: "A",
+      dataset: "Remote_Sensing",
+      image_id: "156",
+      choices: [
+        "(A)  White",
+        "(B) Yellow",
+        "(C) Red",
+        "(D) Blue",
+        "(E) This image doesn't feature the color.",
+      ],
+      image: "Remote_Sensing/156",
+    },
+    {
+      id: "Remote_Sensing_221",
+      question: "Where is the blue hexagon in the picture?\n",
+      answer: "C",
+      dataset: "Remote_Sensing",
+      image_id: "221",
+      choices: [
+        "(A)  In the lower right area of the picture",
+        "(B) In the upper left area of the picture",
+        "(C) In the middle top area of the picture",
+        "(D) In the upper right area of the picture",
+        "(E) This image doesn't feature the position.",
+      ],
+      image: "Remote_Sensing/221",
+    },
+    {
+      id: "OCR_in_the_Wild_186",
+      question:
+        "What is the content of the last row in English on the paper on the right side of the picture?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "186",
+      choices: [
+        "(A)  DENY WITH REGRET",
+        "(B) CHICKEN",
+        "(C) BEEF",
+        "(D) VEGETARIAN",
+        "(E) The image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/186",
+    },
+    {
+      id: "OCR_in_the_Wild_11",
+      question: "What is the text in the bottom left corner?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "11",
+      choices: [
+        "(A)  KONYA SPOR TRAFiK SiGORTASI",
+        "(B) KONYA SROR TRAFiK SiGORTASI",
+        "(C) KONYA SPOR CELL",
+        "(D) KONYA SPOR KASKO",
+        "(E) The image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/11",
+    },
+    {
+      id: "OCR_in_the_Wild_201",
+      question: "What might be the emotions of Doctor Octopus?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "201",
+      choices: [
+        "(A)  Happy.",
+        "(B) Nervous.",
+        "(C) Sad.",
+        "(D) Angry.",
+        "(E) The image does not feature the related information.",
+      ],
+      image: "OCR_in_the_Wild/201",
+    },
+    {
+      id: "OCR_in_the_Wild_248",
+      question: "What is the first phone number of AUTO DRIVER?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "248",
+      choices: [
+        "(A)  0745 147 720",
+        "(B) 0744 820 208",
+        "(C) 0741 155 355",
+        "(D) 0745 888 988",
+        "(E) The image does not feature the number.",
+      ],
+      image: "OCR_in_the_Wild/248",
+    },
+    {
+      id: "OCR_in_the_Wild_102",
+      question:
+        "What is the text under the wing-shaped logo in the middle of the car?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "102",
+      choices: [
+        "(A)  KNOW WONDER",
+        "(B) MUSEUM of LIFF+SCIENCE",
+        "(C) MUSEUM of LIVE+SCIENCE",
+        "(D) MUSEUM of LIFE+SCIENCE",
+        "(E) The image doesn't feature the text.",
+      ],
+      image: "OCR_in_the_Wild/102",
+    },
+    {
+      id: "OCR_in_the_Wild_287",
+      question:
+        "What is the content of the store sign to the right of the green store sign in the area on the right side of the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "287",
+      choices: [
+        "(A)  TATOOS",
+        "(B) TILES TACOS",
+        "(C) TITIS TACOS",
+        "(D) BIKINI BAY",
+        "(E) This image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/287",
+    },
+    {
+      id: "OCR_in_the_Wild_64",
+      question:
+        "What is the white text in the green box in the bottom right corner of the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "64",
+      choices: [
+        "(A)  A MIGATY STOMP. FOLLOWED BY\u2026",
+        "(B) AM I OVERTHINKING THIS?",
+        "(C) A MIGHTY STOMP. FOLLOWED BY\u2026",
+        "(D) MAN-THING HESITATES TOO LONG. THE ARMORED ARTHROPOD STRIKES FIRST\u2026",
+        "(E) The image does not feature the content.",
+      ],
+      image: "OCR_in_the_Wild/64",
+    },
+    {
+      id: "OCR_in_the_Wild_171",
+      question:
+        "What is the house number of the second house from the left in the picture?\n",
+      answer: "B",
+      dataset: "OCR_in_the_Wild",
+      image_id: "171",
+      choices: [
+        "(A)  356",
+        "(B) 352",
+        "(C) 358",
+        "(D) 353",
+        "(E) This image doesn't feature the number.",
+      ],
+      image: "OCR_in_the_Wild/171",
+    },
+    {
+      id: "OCR_in_the_Wild_111",
+      question: "When does the lunch begin?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "111",
+      choices: [
+        "(A)  9:00.",
+        "(B) 11:20.",
+        "(C) 10:50.",
+        "(D) 12:00.",
+        "(E) The image does not feature the related information.",
+      ],
+      image: "OCR_in_the_Wild/111",
+    },
+    {
+      id: "OCR_in_the_Wild_216",
+      question:
+        "What might be the relationship between the people in the picture?\n",
+      answer: "B",
+      dataset: "OCR_in_the_Wild",
+      image_id: "216",
+      choices: [
+        "(A) Couples.",
+        "(B) Enemies.",
+        "(C) Friends.",
+        "(D) Parents.",
+        "(E) The image does not feature the relationship.",
+      ],
+      image: "OCR_in_the_Wild/216",
+    },
+    {
+      id: "OCR_in_the_Wild_164",
+      question: "What is the number between two lights of the big building?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "164",
+      choices: [
+        "(A)  1130",
+        "(B) 0311",
+        "(C) 1136",
+        "(D) 1126",
+        "(E) This image doesn't feature the number.",
+      ],
+      image: "OCR_in_the_Wild/164",
+    },
+    {
+      id: "OCR_in_the_Wild_9",
+      question:
+        "What is the manufacturer of the car on the bottom left corner in the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "9",
+      choices: [
+        "(A)  RENAULT",
+        "(B) PEUGEOT",
+        "(C) BMW",
+        "(D) BWM",
+        "(E) This image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/9",
+    },
+    {
+      id: "OCR_in_the_Wild_165",
+      question:
+        "What is the text above the poster of the woman in yellow on the left side of the picture?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "165",
+      choices: [
+        "(A)  ABOUT YOU\u00b0",
+        "(B) GRATIS",
+        "(C) BEAUTY LOUNGE",
+        "(D) HAIR",
+        "(E) The image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/165",
+    },
+    {
+      id: "OCR_in_the_Wild_14",
+      question:
+        "What is the content of the building store sign on the far right side of the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "14",
+      choices: [
+        "(A)  200 No.1sg St.",
+        "(B) TRAFFIC SIGN",
+        "(C) 200 No.1st St.",
+        "(D) BUS LINE",
+        "(E) This image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/14",
+    },
+    {
+      id: "OCR_in_the_Wild_271",
+      question: "What might be the emotions of the man in red?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "271",
+      choices: [
+        "(A)  Happy.",
+        "(B) Sad.",
+        "(C) Angry.",
+        "(D) Afraid.",
+        "(E) The image does not feature the related information.",
+      ],
+      image: "OCR_in_the_Wild/271",
+    },
+    {
+      id: "OCR_in_the_Wild_228",
+      question:
+        "What's the green text on the third poster from up to down on the street lamp on the right of the picture?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "228",
+      choices: [
+        "(A)  BEHU TSAM KEIT",
+        "(B) LANGUAGE GEM",
+        "(C) DIE LINKE",
+        "(D) BEHU TSAN KEIT",
+        "(E) The image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/228",
+    },
+    {
+      id: "OCR_in_the_Wild_286",
+      question: "What is the score of the game?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "286",
+      choices: [
+        "(A)  5:0.",
+        "(B) 2:1.",
+        "(C) 2:0.",
+        "(D) 4:0.",
+        "(E) The image does not feature the related information.",
+      ],
+      image: "OCR_in_the_Wild/286",
+    },
+    {
+      id: "OCR_in_the_Wild_84",
+      question:
+        "What is the smaller font content in the billboard with the word Tee in the picture?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "84",
+      choices: [
+        "(A)  Gschwendner",
+        "(B) BACK",
+        "(C) Gschwondner",
+        "(D) ASSOS",
+        "(E) This image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/84",
+    },
+    {
+      id: "OCR_in_the_Wild_277",
+      question:
+        "What is the English at the bottom of the black poster behind the crowd on the right side of the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "277",
+      choices: [
+        "(A)  ALTMARKT GALERIE DRASDEN",
+        "(B) Pfeifen als Schulfech",
+        "(C) ALTMARKT GALERIE DRESDEN",
+        "(D) Zeitsprung",
+        "(E) The image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/277",
+    },
+    {
+      id: "OCR_in_the_Wild_30",
+      question: "Which company does this train belong to?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "30",
+      choices: [
+        "(A)  Union Pacific Railroad ",
+        "(B) BNSF Railway",
+        "(C) Canadian National Railway",
+        "(D) Pacific National",
+        "(E) The image does not feature the company.",
+      ],
+      image: "OCR_in_the_Wild/30",
+    },
+    {
+      id: "OCR_in_the_Wild_15",
+      question:
+        "What is written in the larger black font in the upper left corner of the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "15",
+      choices: [
+        "(A)  FRITINA ESEMEDi",
+        "(B) Komediyle gari d\u00f6n\u00fcyor",
+        "(C) FIRTINA ESEMEDi",
+        "(D) 425 GAZiYE KAMUDA G\u00d6REV",
+        "(E) The image does not feature the content.",
+      ],
+      image: "OCR_in_the_Wild/15",
+    },
+    {
+      id: "OCR_in_the_Wild_192",
+      question: "What's the ancient building in the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "192",
+      choices: [
+        "(A)  \u592a\u548c\u6bbf",
+        "(B) \u4e7e\u6e05\u5bab",
+        "(C) \u4ec1\u653f\u6bbf",
+        "(D) \u592a\u548c\u5bab",
+        "(E) The image does not feature the content.",
+      ],
+      image: "OCR_in_the_Wild/192",
+    },
+    {
+      id: "OCR_in_the_Wild_187",
+      question: "How many characters are there in the picture?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "187",
+      choices: [
+        "(A)  0.",
+        "(B) 1.",
+        "(C) 3.",
+        "(D) 2.",
+        "(E) The image does not feature the related information.",
+      ],
+      image: "OCR_in_the_Wild/187",
+    },
+    {
+      id: "OCR_in_the_Wild_51",
+      question:
+        "What's the plate number of the red car in the left corner of the picture?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "51",
+      choices: [
+        "(A)  PHJ9735",
+        "(B) PHL9735",
+        "(C) PHI9735",
+        "(D) RHJ9735",
+        "(E) This image doesn't feature the plate number.",
+      ],
+      image: "OCR_in_the_Wild/51",
+    },
+    {
+      id: "OCR_in_the_Wild_232",
+      question: "What is the  text in the third frame of the picture?\n",
+      answer: "C",
+      dataset: "OCR_in_the_Wild",
+      image_id: "232",
+      choices: [
+        "(A)  WHAT ARE YOU DOING? FINISH IT. KILL HIM!",
+        "(B) BLOODLUST ASSUMED ME, AND COULD HAVE LET TAKE ME OVER COMPLETELY.",
+        "(C) NOT THE OD PART.",
+        "(D) NO.",
+        "(E) The image does not feature the content.",
+      ],
+      image: "OCR_in_the_Wild/232",
+    },
+    {
+      id: "OCR_in_the_Wild_241",
+      question: "What is the second phone number of AUTO DRIVER?\n",
+      answer: "B",
+      dataset: "OCR_in_the_Wild",
+      image_id: "241",
+      choices: [
+        "(A)  0745 147 720",
+        "(B) 0744 820 208",
+        "(C) 0741 155 355",
+        "(D) 0745 888 988",
+        "(E) The image does not feature the number.",
+      ],
+      image: "OCR_in_the_Wild/241",
+    },
+    {
+      id: "OCR_in_the_Wild_139",
+      question: "What is the most expensive sides food?\n",
+      answer: "D",
+      dataset: "OCR_in_the_Wild",
+      image_id: "139",
+      choices: [
+        "(A)  Toast of English Muffin.",
+        "(B) Side of meat.",
+        "(C) Breakfast Potatoes.",
+        "(D) Assort Cold Cereal.",
+        "(E) The image does not feature the related information.",
+      ],
+      image: "OCR_in_the_Wild/139",
+    },
+    {
+      id: "OCR_in_the_Wild_105",
+      question: "What is content on the woman's helmet in this picture?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "105",
+      choices: [
+        "(A)  agv",
+        "(B) ogv",
+        "(C) SHOE",
+        "(D) HONDA",
+        "(E) This image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/105",
+    },
+    {
+      id: "OCR_in_the_Wild_107",
+      question: "What is the manufacturer of the black car on the road?\n",
+      answer: "B",
+      dataset: "OCR_in_the_Wild",
+      image_id: "107",
+      choices: [
+        "(A)  AUDI",
+        "(B) JAGUAR",
+        "(C) PORSCHE",
+        "(D) LAMBORGHINI",
+        "(E) This image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/107",
+    },
+    {
+      id: "OCR_in_the_Wild_119",
+      question:
+        "What is the artistic content of the red billboard in the picture?\n",
+      answer: "A",
+      dataset: "OCR_in_the_Wild",
+      image_id: "119",
+      choices: [
+        "(A)  Manch\u00e9 de No\u00e9l",
+        "(B) ALLEMAND",
+        "(C) de Qu\u00e9bec",
+        "(D) Monch\u00e9 da No\u00e9l",
+        "(E) This image doesn't feature the content.",
+      ],
+      image: "OCR_in_the_Wild/119",
+    },
+    {
+      id: "Diagram_and_Table_171",
+      question:
+        "In which year does the value of 'Gross Profit' first exceed 300,000, according to the 'Income Statement' table?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "171",
+      choices: [
+        "(A)  2030",
+        "(B) 2031",
+        "(C) 2032",
+        "(D) 2033",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/171",
+    },
+    {
+      id: "Diagram_and_Table_265",
+      question:
+        "What is the Total Debt Service Cash Flow for September 2023 in the table?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "265",
+      choices: [
+        "(A)  $81,830",
+        "(B) $82,730",
+        "(C) $83,631",
+        "(D) $59,916",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/265",
+    },
+    {
+      id: "Diagram_and_Table_112",
+      question:
+        "What's the data of Drawdown Schedule in 2024 in the table Debt Schedule Summary?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "112",
+      choices: [
+        "(A)  43.7%",
+        "(B) 46.9%",
+        "(C) 57.4%",
+        "(D) 58.9%",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/112",
+    },
+    {
+      id: "Diagram_and_Table_194",
+      question:
+        "Which year displays the lowest value for 'Average Students to Staff' according to the 'Student vs Staff Numbers' chart?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "194",
+      choices: [
+        "(A)  2020",
+        "(B) 2021",
+        "(C) 2022",
+        "(D) 2023",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/194",
+    },
+    {
+      id: "Diagram_and_Table_64",
+      question:
+        "What is the data of Debt Repayment in 2025 in the table Loan A?\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "64",
+      choices: [
+        "(A)  (10000)",
+        "(B) (5000)",
+        "(C) 263",
+        "(D) 188",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/64",
+    },
+    {
+      id: "Diagram_and_Table_209",
+      question:
+        "What's the percentage of Fixed Deposit in the diagram Saving/Investment?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "209",
+      choices: [
+        "(A)  71.59%",
+        "(B) 14.44%",
+        "(C) 13.67%",
+        "(D) 0.31%",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/209",
+    },
+    {
+      id: "Diagram_and_Table_218",
+      question:
+        "Which year has the highest value of 'Financial Debt/EBITDA' according to the 'Financial Debt' chart?\n",
+      answer: "A",
+      dataset: "Diagram_and_Table",
+      image_id: "218",
+      choices: [
+        "(A)  2025",
+        "(B) 2026",
+        "(C) 2027",
+        "(D) 2028",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/218",
+    },
+    {
+      id: "Diagram_and_Table_100",
+      question:
+        "What is the data of Sale Price in 2025 in the table Breakeven Analysis?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "100",
+      choices: [
+        "(A)  85",
+        "(B) 53",
+        "(C) 80",
+        "(D) 76",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/100",
+    },
+    {
+      id: "Diagram_and_Table_133",
+      question:
+        "Which factor has the largest volume in the diagram Budget Expenses (Monthly)?\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "133",
+      choices: [
+        "(A)  Car Payment",
+        "(B) Mortgage",
+        "(C) Water",
+        "(D) Internet",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/133",
+    },
+    {
+      id: "Diagram_and_Table_229",
+      question:
+        "What's the data of Closing Cash Balance in 2027 in the table Cash Flow Statement?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "229",
+      choices: [
+        "(A)  1.859",
+        "(B) 411",
+        "(C) 1.859.411",
+        "(D) 226.178",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/229",
+    },
+    {
+      id: "Diagram_and_Table_203",
+      question:
+        "Which lease has the highest 'Lease Receivable' for the year 2024?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "203",
+      choices: [
+        "(A)  LS1 - Lease A",
+        "(B) LS2 - Lease B",
+        "(C) LS3 - Lease C",
+        "(D) LS4 - Lease D",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/203",
+    },
+    {
+      id: "Diagram_and_Table_14",
+      question:
+        "In which year does the value of 'Unspent/Invested Cash Flow' first fall below 100k, according to the 'Asset Value Buy Vs Let' chart\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "14",
+      choices: [
+        "(A)  2047",
+        "(B) 2049",
+        "(C) 2051",
+        "(D) 2053",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/14",
+    },
+    {
+      id: "Diagram_and_Table_196",
+      question: "What's the data of Telephone Expense of Y3 in this table?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "196",
+      choices: [
+        "(A)  1,836",
+        "(B) 2,580",
+        "(C) 2,740",
+        "(D) 13,698",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/196",
+    },
+    {
+      id: "Diagram_and_Table_45",
+      question:
+        "What is the total gwp amount (USD) in the Gross Written Premium table?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "45",
+      choices: [
+        "(A)  10",
+        "(B) 700",
+        "(C) 10,000",
+        "(D) 7,000,000",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/45",
+    },
+    {
+      id: "Diagram_and_Table_48",
+      question: "What is the data of Designer in FY 2023 in the table?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "48",
+      choices: [
+        "(A)  $800",
+        "(B) $400",
+        "(C) $500",
+        "(D) $300",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/48",
+    },
+    {
+      id: "Diagram_and_Table_255",
+      question:
+        "Which year has the highest value of 'Cash Flow from Operations' according to the 'Cash Flow Statement' table?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "255",
+      choices: [
+        "(A)  2031",
+        "(B) 2032",
+        "(C) 2033",
+        "(D) 2034",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/255",
+    },
+    {
+      id: "Diagram_and_Table_190",
+      question:
+        "Which year shows the lowest 'Net Profit Margin' according to the 'Income Statement' chart?\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "190",
+      choices: [
+        "(A)  2023",
+        "(B) 2024",
+        "(C) 2025",
+        "(D) 2026",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/190",
+    },
+    {
+      id: "Diagram_and_Table_81",
+      question:
+        "What is the diagram of FCFE in 2025 in the chart of FCFF and FCFE $mn?\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "81",
+      choices: [
+        "(A)  44.9",
+        "(B) 43.9",
+        "(C) 55.8",
+        "(D) 66.0",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/81",
+    },
+    {
+      id: "Diagram_and_Table_6",
+      question:
+        "In which period do the 'Total Assets' first exceed 90,000, according to the 'Assets' section?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "6",
+      choices: [
+        "(A)  Period 7",
+        "(B) Period 8",
+        "(C) Period 9",
+        "(D) Period 10",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/6",
+    },
+    {
+      id: "Diagram_and_Table_288",
+      question: "What's the data of Amount of Interest Expense in this table?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "288",
+      choices: [
+        "(A)  50.000.00",
+        "(B) 500.00",
+        "(C) 200.000.00",
+        "(D) 800.00",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/288",
+    },
+    {
+      id: "Diagram_and_Table_54",
+      question:
+        "Which month has the highest Occupancy Rate, according to the Occupancy Rate diagram?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "54",
+      choices: [
+        "(A)  May",
+        "(B) June",
+        "(C) July",
+        "(D) August",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/54",
+    },
+    {
+      id: "Diagram_and_Table_193",
+      question:
+        "What's the data of 11 IRR Unlevered in Max in the table Key Value Drivers (Unsorted)?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "193",
+      choices: [
+        "(A)  5.5%",
+        "(B) 5.0%",
+        "(C) 3.5%",
+        "(D) 35.5%",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/193",
+    },
+    {
+      id: "Diagram_and_Table_243",
+      question:
+        "What is the maximum value of Occupancy Rate in the rental income section?\n",
+      answer: "A",
+      dataset: "Diagram_and_Table",
+      image_id: "243",
+      choices: [
+        "(A)  89.5%",
+        "(B) 80.0%",
+        "(C) 98.0%",
+        "(D) 87.0%",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/243",
+    },
+    {
+      id: "Diagram_and_Table_201",
+      question:
+        "What is the policy coverage period in the Insurance Period table?\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "201",
+      choices: [
+        "(A)  6",
+        "(B) 12",
+        "(C) 18",
+        "(D) 9",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/201",
+    },
+    {
+      id: "Diagram_and_Table_292",
+      question: "What is the data of Cash in the table Balance Sheet?\n",
+      answer: "C",
+      dataset: "Diagram_and_Table",
+      image_id: "292",
+      choices: [
+        "(A)  \u20ac398630",
+        "(B) \u20ac286630",
+        "(C) \u20ac66865.4",
+        "(D) \u20ac112000",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/292",
+    },
+    {
+      id: "Diagram_and_Table_275",
+      question:
+        "Which month has the highest index factor in the Seasonal Factors section?\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "275",
+      choices: [
+        "(A)  Jan",
+        "(B) July",
+        "(C) September",
+        "(D) November",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/275",
+    },
+    {
+      id: "Diagram_and_Table_277",
+      question:
+        "What is the data of Less:Capital Expenditure in 2026 in the table Net Operating Profit After Tax(NOPAT)?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "277",
+      choices: [
+        "(A)  (7.4)",
+        "(B) (9.1)",
+        "(C) (6.2)",
+        "(D) (2.3)",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/277",
+    },
+    {
+      id: "Diagram_and_Table_245",
+      question:
+        "What is the revenue (USD) in the Break-Even scenario for 2027?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "245",
+      choices: [
+        "(A)  473,496",
+        "(B) 3,427,037",
+        "(C) 3,052,156",
+        "(D) 2,528,638",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/245",
+    },
+    {
+      id: "Diagram_and_Table_94",
+      question:
+        "Which category in the 'Use of Sales Proceeds' pie chart has the largest percentage?\n",
+      answer: "D",
+      dataset: "Diagram_and_Table",
+      image_id: "94",
+      choices: [
+        "(A)  Repayment of Borrowings",
+        "(B) Capex Investment",
+        "(C) Dividend Distribution",
+        "(D) Top up Cash Balance",
+        "(E) The image does not feature the number.",
+      ],
+      image: "Diagram_and_Table/94",
+    },
+    {
+      id: "Diagram_and_Table_101",
+      question:
+        "What's the data of Investor/Limited Partner in FY 2024 in the table Executive Summary?\n",
+      answer: "B",
+      dataset: "Diagram_and_Table",
+      image_id: "101",
+      choices: [
+        "(A)  $1857356",
+        "(B) $1927435",
+        "(C) $1975785",
+        "(D) $1763856",
+        "(E) This image doesn't feature the data.",
+      ],
+      image: "Diagram_and_Table/101",
+    },
+    {
+      id: "VStar_Bench_193",
+      question: "What is the color of the cart?\n",
+      answer: "D",
+      dataset: "VStar_Bench",
+      image_id: "193",
+      choices: [
+        "(A)  The color of the cart is silver.",
+        "(B) The color of the cart is black.",
+        "(C) The color of the cart is white.",
+        "(D) The color of the cart is green.",
+      ],
+      image: "VStar_Bench/193",
+    },
+    {
+      id: "VStar_Bench_128",
+      question: "What is the color of the bicycle?\n",
+      answer: "C",
+      dataset: "VStar_Bench",
+      image_id: "128",
+      choices: [
+        "(A)  The color of the bicycle is black.",
+        "(B) The color of the bicycle is red.",
+        "(C) The color of the bicycle is yellow.",
+        "(D) The color of the bicycle is white.",
+      ],
+      image: "VStar_Bench/128",
+    },
+    {
+      id: "VStar_Bench_93",
+      question: "What is the color of the hat?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "93",
+      choices: [
+        "(A)  The color of the hat is white.",
+        "(B) The color of the hat is black.",
+        "(C) The color of the hat is yellow.",
+        "(D) The color of the hat is pink.",
+      ],
+      image: "VStar_Bench/93",
+    },
+    {
+      id: "VStar_Bench_58",
+      question: "What is the color of the scooter?\n",
+      answer: "D",
+      dataset: "VStar_Bench",
+      image_id: "58",
+      choices: [
+        "(A)  The color of the scooter is black.",
+        "(B) The color of the scooter is blue.",
+        "(C) The color of the scooter is green.",
+        "(D) The color of the scooter is orange.",
+      ],
+      image: "VStar_Bench/58",
+    },
+    {
+      id: "VStar_Bench_109",
+      question: "What is the color of the dustpan?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "109",
+      choices: [
+        "(A)  The color of the dustpan is purple.",
+        "(B) The color of the dustpan is blue.",
+        "(C) The color of the dustpan is white.",
+        "(D) The color of the dustpan is red.",
+      ],
+      image: "VStar_Bench/109",
+    },
+    {
+      id: "VStar_Bench_94",
+      question: "What is the color of the little girl's shirt?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "94",
+      choices: [
+        "(A)  The color of the little girl's shirt is pink.",
+        "(B) The color of the little girl's shirt is white.",
+        "(C) The color of the little girl's shirt is black.",
+        "(D) The color of the little girl's shirt is yellow.",
+      ],
+      image: "VStar_Bench/94",
+    },
+    {
+      id: "VStar_Bench_143",
+      question: "What is the color of the suitcase?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "143",
+      choices: [
+        "(A)  The color of the suitcase is black.",
+        "(B) The color of the suitcase is brown.",
+        "(C) The color of the suitcase is gray.",
+        "(D) The color of the suitcase is red.",
+      ],
+      image: "VStar_Bench/143",
+    },
+    {
+      id: "VStar_Bench_127",
+      question: "What is the color of the fire hydrant?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "127",
+      choices: [
+        "(A)  The color of the fire hydrant is black.",
+        "(B) The color of the fire hydrant is yellow.",
+        "(C) The color of the fire hydrant is red.",
+        "(D) The color of the fire hydrant is white.",
+      ],
+      image: "VStar_Bench/127",
+    },
+    {
+      id: "VStar_Bench_92",
+      question: "What is the color of the tissue box?\n",
+      answer: "C",
+      dataset: "VStar_Bench",
+      image_id: "92",
+      choices: [
+        "(A)  The color of the tissue box is white.",
+        "(B) The color of the tissue box is gray.",
+        "(C) The color of the tissue box is blue.",
+        "(D) The color of the tissue box is black.",
+      ],
+      image: "VStar_Bench/92",
+    },
+    {
+      id: "VStar_Bench_179",
+      question: "What is the pose of the woman with yellow backpack?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "179",
+      choices: [
+        "(A)  The pose of the woman with yellow backpack is squatting.",
+        "(B) The pose of the woman with yellow backpack is walking.",
+        "(C) The pose of the woman with yellow backpack is standing.",
+        "(D) The pose of the woman with yellow backpack is running.",
+      ],
+      image: "VStar_Bench/179",
+    },
+    {
+      id: "VStar_Bench_10",
+      question: "What kind of animal is on the blue sail?\n",
+      answer: "D",
+      dataset: "VStar_Bench",
+      image_id: "10",
+      choices: [
+        "(A)  The animal on the blue sail is a bird.",
+        "(B) The animal on the blue sail is a dog.",
+        "(C) The animal on the blue sail is a fish.",
+        "(D) The animal on the blue sail is a spider.",
+      ],
+      image: "VStar_Bench/10",
+    },
+    {
+      id: "VStar_Bench_73",
+      question: "What is the color of the broom?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "73",
+      choices: [
+        "(A)  The color of the broom is black.",
+        "(B) The color of the broom is red.",
+        "(C) The color of the broom is gray.",
+        "(D) The color of the broom is yellow.",
+      ],
+      image: "VStar_Bench/73",
+    },
+    {
+      id: "VStar_Bench_153",
+      question: "What is the color of the bottle cap?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "153",
+      choices: [
+        "(A)  The color of the bottle cap is black.",
+        "(B) The color of the bottle cap is blue.",
+        "(C) The color of the bottle cap is white.",
+        "(D) The color of the bottle cap is red.",
+      ],
+      image: "VStar_Bench/153",
+    },
+    {
+      id: "VStar_Bench_206",
+      question: "Does the flag have two or three colors?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "206",
+      choices: [
+        "(A)  The flag has three colors.",
+        "(B) The flag has two colors.",
+      ],
+      image: "VStar_Bench/206",
+    },
+    {
+      id: "VStar_Bench_4",
+      question: "What is the color of the bicycle?\n",
+      answer: "D",
+      dataset: "VStar_Bench",
+      image_id: "4",
+      choices: [
+        "(A)  The color of the bicycle is white.",
+        "(B) The color of the bicycle is blue.",
+        "(C) The color of the bicycle is silver.",
+        "(D) The color of the bicycle is red.",
+      ],
+      image: "VStar_Bench/4",
+    },
+    {
+      id: "VStar_Bench_52",
+      question: "What is the color of the cart?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "52",
+      choices: [
+        "(A)  The color of the cart is red.",
+        "(B) The color of the cart is green.",
+        "(C) The color of the cart is black.",
+        "(D) The color of the cart is white.",
+      ],
+      image: "VStar_Bench/52",
+    },
+    {
+      id: "VStar_Bench_50",
+      question: "Does the flag have two or three colors?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "50",
+      choices: [
+        "(A)  The flag has three colors.",
+        "(B) The flag has two colors.",
+      ],
+      image: "VStar_Bench/50",
+    },
+    {
+      id: "VStar_Bench_76",
+      question: "What is the color of the woman's handbag?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "76",
+      choices: [
+        "(A)  The color of the woman's handbag is red.",
+        "(B) The color of the woman's handbag is brown.",
+        "(C) The color of the woman's handbag is black.",
+        "(D) The color of the woman's handbag is white.",
+      ],
+      image: "VStar_Bench/76",
+    },
+    {
+      id: "VStar_Bench_68",
+      question: "What is the color of the guard's glove?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "68",
+      choices: [
+        "(A)  The color of the guard's glove is blue.",
+        "(B) The color of the guard's glove is white.",
+        "(C) The color of the guard's glove is black.",
+        "(D) The color of the guard's glove is brown.",
+      ],
+      image: "VStar_Bench/68",
+    },
+    {
+      id: "VStar_Bench_14",
+      question: "What is the color of the suitcase?\n",
+      answer: "C",
+      dataset: "VStar_Bench",
+      image_id: "14",
+      choices: [
+        "(A)  The color of the suitcase is black.",
+        "(B) The color of the suitcase is red.",
+        "(C) The color of the suitcase is brown.",
+        "(D) The color of the suitcase is gray.",
+      ],
+      image: "VStar_Bench/14",
+    },
+    {
+      id: "VStar_Bench_118",
+      question: "What is the color of the mailbox?\n",
+      answer: "C",
+      dataset: "VStar_Bench",
+      image_id: "118",
+      choices: [
+        "(A)  The color of the mailbox is white.",
+        "(B) The color of the mailbox is red.",
+        "(C) The color of the mailbox is black.",
+        "(D) The color of the mailbox is yellow.",
+      ],
+      image: "VStar_Bench/118",
+    },
+    {
+      id: "VStar_Bench_32",
+      question: "What is the color of the backpack?\n",
+      answer: "C",
+      dataset: "VStar_Bench",
+      image_id: "32",
+      choices: [
+        "(A)  The color of the backpack is white.",
+        "(B) The color of the backpack is yellow.",
+        "(C) The color of the backpack is gray.",
+        "(D) The color of the backpack is red.",
+      ],
+      image: "VStar_Bench/32",
+    },
+    {
+      id: "VStar_Bench_207",
+      question: "What is the color of the pink-haired woman's handbag?\n",
+      answer: "D",
+      dataset: "VStar_Bench",
+      image_id: "207",
+      choices: [
+        "(A)  The color of the pink-haired woman's handbag is brown.",
+        "(B) The color of the pink-haired woman's handbag is pink.",
+        "(C) The color of the pink-haired woman's handbag is red.",
+        "(D) The color of the pink-haired woman's handbag is white.",
+      ],
+      image: "VStar_Bench/207",
+    },
+    {
+      id: "VStar_Bench_39",
+      question: "What is the color of the woman's dress?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "39",
+      choices: [
+        "(A)  The color of the woman's dress is black.",
+        "(B) The color of the woman's dress is white.",
+        "(C) The color of the woman's dress is pink.",
+        "(D) The color of the woman's dress is red.",
+      ],
+      image: "VStar_Bench/39",
+    },
+    {
+      id: "VStar_Bench_44",
+      question: "What is the color of the bucket?\n",
+      answer: "C",
+      dataset: "VStar_Bench",
+      image_id: "44",
+      choices: [
+        "(A)  The color of the bucket is black.",
+        "(B) The color of the bucket is red.",
+        "(C) The color of the bucket is white.",
+        "(D) The color of the bucket is green.",
+      ],
+      image: "VStar_Bench/44",
+    },
+    {
+      id: "VStar_Bench_55",
+      question: "What is the color of the clock?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "55",
+      choices: [
+        "(A)  The color of the clock is yellow.",
+        "(B) The color of the clock is green.",
+        "(C) The color of the clock is black.",
+        "(D) The color of the clock is red.",
+      ],
+      image: "VStar_Bench/55",
+    },
+    {
+      id: "VStar_Bench_114",
+      question: "What is the color of the van?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "114",
+      choices: [
+        "(A)  The color of the van is red.",
+        "(B) The color of the van is silver.",
+        "(C) The color of the van is black.",
+        "(D) The color of the van is white.",
+      ],
+      image: "VStar_Bench/114",
+    },
+    {
+      id: "VStar_Bench_123",
+      question: "What is the color of the Apple logo?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "123",
+      choices: [
+        "(A)  The color of the Apple logo is silver.",
+        "(B) The color of the Apple logo is polychromatic.",
+        "(C) The color of the Apple logo is white.",
+        "(D) The color of the Apple logo is red.",
+      ],
+      image: "VStar_Bench/123",
+    },
+    {
+      id: "VStar_Bench_152",
+      question: "What is the color of the cyclist's box?\n",
+      answer: "A",
+      dataset: "VStar_Bench",
+      image_id: "152",
+      choices: [
+        "(A)  The color of the cyclist's box is green.",
+        "(B) The color of the cyclist's box is yellow.",
+        "(C) The color of the cyclist's box is red.",
+        "(D) The color of the cyclist's box is black.",
+      ],
+      image: "VStar_Bench/152",
+    },
+    {
+      id: "VStar_Bench_1",
+      question: "Is the flag blue and yellow or red and yellow?\n",
+      answer: "B",
+      dataset: "VStar_Bench",
+      image_id: "1",
+      choices: [
+        "(A)  The color of the flag is red and yellow.",
+        "(B) The color of the flag is blue and yellow.",
+      ],
+      image: "VStar_Bench/1",
+    },
+    {
+      id: "MAME_102",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "G",
+      dataset: "MAME",
+      image_id: "102",
+      choices: [
+        "(A)  Bronze",
+        "(B) Hand-colored engraving",
+        "(C) Glass",
+        "(D) Clay",
+        "(E) Ceramic",
+        "(F) Porcelain",
+        "(G) Gold",
+        "(H) Wood engraving",
+        "(I) Engraving",
+        "(J) Wood",
+      ],
+      image: "MAME/102",
+    },
+    {
+      id: "MAME_206",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "E",
+      dataset: "MAME",
+      image_id: "206",
+      choices: [
+        "(A)  Wood engraving",
+        "(B) Ceramic",
+        "(C) Iron",
+        "(D) Pen and brown ink",
+        "(E) Lithograph",
+        "(F) Gold",
+        "(G) Albumen photograph",
+        "(H) Woodcut",
+        "(I) Limestone",
+        "(J) Polychromed wood",
+      ],
+      image: "MAME/206",
+    },
+    {
+      id: "MAME_268",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "G",
+      dataset: "MAME",
+      image_id: "268",
+      choices: [
+        "(A)  Albumen photograph",
+        "(B) Woodblock",
+        "(C) Glass",
+        "(D) Wood engraving",
+        "(E) Polychromed wood",
+        "(F) Ivory",
+        "(G) Hand-colored engraving",
+        "(H) Silver",
+        "(I) Woodcut",
+        "(J) Hand-colored etching",
+      ],
+      image: "MAME/268",
+    },
+    {
+      id: "MAME_231",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "E",
+      dataset: "MAME",
+      image_id: "231",
+      choices: [
+        "(A)  Bronze",
+        "(B) Lithograph",
+        "(C) Etching",
+        "(D) Marble",
+        "(E) Pen and brown ink",
+        "(F) Steel",
+        "(G) Glass",
+        "(H) Hand-colored etching",
+        "(I) Ceramic",
+        "(J) Porcelain",
+      ],
+      image: "MAME/231",
+    },
+    {
+      id: "MAME_236",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "B",
+      dataset: "MAME",
+      image_id: "236",
+      choices: [
+        "(A)  Engraving",
+        "(B) Pen and brown ink",
+        "(C) Hand-colored etching",
+        "(D) Ivory",
+        "(E) Clay",
+        "(F) Glass",
+        "(G) Porcelain",
+        "(H) Polychromed wood",
+        "(I) Woodblock",
+        "(J) Iron",
+      ],
+      image: "MAME/236",
+    },
+    {
+      id: "MAME_213",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "A",
+      dataset: "MAME",
+      image_id: "213",
+      choices: [
+        "(A)  Woven fabric ",
+        "(B) Clay",
+        "(C) Porcelain",
+        "(D) Ceramic",
+        "(E) Albumen photograph",
+        "(F) Silk and metal thread",
+        "(G) Polychromed wood",
+        "(H) Limestone",
+        "(I) Hand-colored etching",
+        "(J) Wood",
+      ],
+      image: "MAME/213",
+    },
+    {
+      id: "MAME_121",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "B",
+      dataset: "MAME",
+      image_id: "121",
+      choices: [
+        "(A)  Wood engraving",
+        "(B) Ivory",
+        "(C) Polychromed wood",
+        "(D) Limestone",
+        "(E) Lithograph",
+        "(F) Silk and metal thread",
+        "(G) Iron",
+        "(H) Glass",
+        "(I) Faience",
+        "(J) Etching",
+      ],
+      image: "MAME/121",
+    },
+    {
+      id: "MAME_20",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "G",
+      dataset: "MAME",
+      image_id: "20",
+      choices: [
+        "(A)  Steel",
+        "(B) Porcelain",
+        "(C) Clay",
+        "(D) Pen and brown ink",
+        "(E) Lithograph",
+        "(F) Ceramic",
+        "(G) Graphite",
+        "(H) Faience",
+        "(I) Woodcut",
+        "(J) Woodblock",
+      ],
+      image: "MAME/20",
+    },
+    {
+      id: "MAME_250",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "C",
+      dataset: "MAME",
+      image_id: "250",
+      choices: [
+        "(A)  Steel",
+        "(B) Marble",
+        "(C) Wood engraving",
+        "(D) Gold",
+        "(E) Porcelain",
+        "(F) Woven fabric ",
+        "(G) Hand-colored engraving",
+        "(H) Albumen photograph",
+        "(I) Pen and brown ink",
+        "(J) Glass",
+      ],
+      image: "MAME/250",
+    },
+    {
+      id: "MAME_54",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "I",
+      dataset: "MAME",
+      image_id: "54",
+      choices: [
+        "(A)  Hand-colored etching",
+        "(B) Woodblock",
+        "(C) Oil on canvas",
+        "(D) Clay",
+        "(E) Iron",
+        "(F) Faience",
+        "(G) Ceramic",
+        "(H) Gold",
+        "(I) Bronze",
+        "(J) Polychromed wood",
+      ],
+      image: "MAME/54",
+    },
+    {
+      id: "MAME_116",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "C",
+      dataset: "MAME",
+      image_id: "116",
+      choices: [
+        "(A)  Ceramic",
+        "(B) Limestone",
+        "(C) Marble",
+        "(D) Pen and brown ink",
+        "(E) Polychromed wood",
+        "(F) Graphite",
+        "(G) Hand-colored engraving",
+        "(H) Wood",
+        "(I) Steel",
+        "(J) Woodblock",
+      ],
+      image: "MAME/116",
+    },
+    {
+      id: "MAME_51",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "I",
+      dataset: "MAME",
+      image_id: "51",
+      choices: [
+        "(A)  Iron",
+        "(B) Limestone",
+        "(C) Etching",
+        "(D) Hand-colored engraving",
+        "(E) Albumen photograph",
+        "(F) Silver",
+        "(G) Ceramic",
+        "(H) Engraving",
+        "(I) Bronze",
+        "(J) Hand-colored etching",
+      ],
+      image: "MAME/51",
+    },
+    {
+      id: "MAME_287",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "C",
+      dataset: "MAME",
+      image_id: "287",
+      choices: [
+        "(A)  Bronze",
+        "(B) Engraving",
+        "(C) Hand-colored etching",
+        "(D) Limestone",
+        "(E) Woven fabric ",
+        "(F) Albumen photograph",
+        "(G) Glass",
+        "(H) Marble",
+        "(I) Graphite",
+        "(J) Gold",
+      ],
+      image: "MAME/287",
+    },
+    {
+      id: "MAME_162",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "C",
+      dataset: "MAME",
+      image_id: "162",
+      choices: [
+        "(A)  Polychromed wood",
+        "(B) Woodcut",
+        "(C) Engraving",
+        "(D) Wood",
+        "(E) Silk and metal thread",
+        "(F) Iron",
+        "(G) Porcelain",
+        "(H) Gold",
+        "(I) Hand-colored engraving",
+        "(J) Oil on canvas",
+      ],
+      image: "MAME/162",
+    },
+    {
+      id: "MAME_28",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "H",
+      dataset: "MAME",
+      image_id: "28",
+      choices: [
+        "(A)  Lithograph",
+        "(B) Silk and metal thread",
+        "(C) Silver",
+        "(D) Woodcut",
+        "(E) Oil on canvas",
+        "(F) Etching",
+        "(G) Woven fabric ",
+        "(H) Glass",
+        "(I) Limestone",
+        "(J) Wood",
+      ],
+      image: "MAME/28",
+    },
+    {
+      id: "MAME_260",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "F",
+      dataset: "MAME",
+      image_id: "260",
+      choices: [
+        "(A)  Woodcut",
+        "(B) Gold",
+        "(C) Silk and metal thread",
+        "(D) Pen and brown ink",
+        "(E) Porcelain",
+        "(F) Hand-colored engraving",
+        "(G) Wood engraving",
+        "(H) Ceramic",
+        "(I) Lithograph",
+        "(J) Clay",
+      ],
+      image: "MAME/260",
+    },
+    {
+      id: "MAME_140",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "G",
+      dataset: "MAME",
+      image_id: "140",
+      choices: [
+        "(A)  Iron",
+        "(B) Limestone",
+        "(C) Marble",
+        "(D) Woodblock",
+        "(E) Woven fabric ",
+        "(F) Bronze",
+        "(G) Etching",
+        "(H) Oil on canvas",
+        "(I) Engraving",
+        "(J) Graphite",
+      ],
+      image: "MAME/140",
+    },
+    {
+      id: "MAME_169",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "D",
+      dataset: "MAME",
+      image_id: "169",
+      choices: [
+        "(A)  Polychromed wood",
+        "(B) Clay",
+        "(C) Steel",
+        "(D) Engraving",
+        "(E) Graphite",
+        "(F) Marble",
+        "(G) Porcelain",
+        "(H) Pen and brown ink",
+        "(I) Ceramic",
+        "(J) Silk and metal thread",
+      ],
+      image: "MAME/169",
+    },
+    {
+      id: "MAME_100",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "I",
+      dataset: "MAME",
+      image_id: "100",
+      choices: [
+        "(A)  Wood",
+        "(B) Albumen photograph",
+        "(C) Bronze",
+        "(D) Ivory",
+        "(E) Pen and brown ink",
+        "(F) Glass",
+        "(G) Marble",
+        "(H) Hand-colored engraving",
+        "(I) Gold",
+        "(J) Hand-colored etching",
+      ],
+      image: "MAME/100",
+    },
+    {
+      id: "MAME_196",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "G",
+      dataset: "MAME",
+      image_id: "196",
+      choices: [
+        "(A)  Marble",
+        "(B) Bronze",
+        "(C) Ivory",
+        "(D) Oil on canvas",
+        "(E) Faience",
+        "(F) Albumen photograph",
+        "(G) Silk and metal thread",
+        "(H) Ceramic",
+        "(I) Pen and brown ink",
+        "(J) Porcelain",
+      ],
+      image: "MAME/196",
+    },
+    {
+      id: "MAME_143",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "I",
+      dataset: "MAME",
+      image_id: "143",
+      choices: [
+        "(A)  Bronze",
+        "(B) Gold",
+        "(C) Graphite",
+        "(D) Woodblock",
+        "(E) Glass",
+        "(F) Silk and metal thread",
+        "(G) Wood engraving",
+        "(H) Steel",
+        "(I) Etching",
+        "(J) Albumen photograph",
+      ],
+      image: "MAME/143",
+    },
+    {
+      id: "MAME_152",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "D",
+      dataset: "MAME",
+      image_id: "152",
+      choices: [
+        "(A)  Wood engraving",
+        "(B) Gold",
+        "(C) Graphite",
+        "(D) Iron",
+        "(E) Woven fabric ",
+        "(F) Albumen photograph",
+        "(G) Silver",
+        "(H) Steel",
+        "(I) Ceramic",
+        "(J) Oil on canvas",
+      ],
+      image: "MAME/152",
+    },
+    {
+      id: "MAME_126",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "E",
+      dataset: "MAME",
+      image_id: "126",
+      choices: [
+        "(A)  Engraving",
+        "(B) Woodblock",
+        "(C) Woodcut",
+        "(D) Ceramic",
+        "(E) Ivory",
+        "(F) Oil on canvas",
+        "(G) Limestone",
+        "(H) Silk and metal thread",
+        "(I) Bronze",
+        "(J) Hand-colored etching",
+      ],
+      image: "MAME/126",
+    },
+    {
+      id: "MAME_248",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "A",
+      dataset: "MAME",
+      image_id: "248",
+      choices: [
+        "(A)  Woodcut",
+        "(B) Clay",
+        "(C) Lithograph",
+        "(D) Pen and brown ink",
+        "(E) Ivory",
+        "(F) Albumen photograph",
+        "(G) Hand-colored engraving",
+        "(H) Steel",
+        "(I) Etching",
+        "(J) Ceramic",
+      ],
+      image: "MAME/248",
+    },
+    {
+      id: "MAME_107",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "E",
+      dataset: "MAME",
+      image_id: "107",
+      choices: [
+        "(A)  Hand-colored etching",
+        "(B) Bronze",
+        "(C) Ivory",
+        "(D) Limestone",
+        "(E) Gold",
+        "(F) Graphite",
+        "(G) Marble",
+        "(H) Wood",
+        "(I) Ceramic",
+        "(J) Steel",
+      ],
+      image: "MAME/107",
+    },
+    {
+      id: "MAME_278",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "A",
+      dataset: "MAME",
+      image_id: "278",
+      choices: [
+        "(A)  Clay",
+        "(B) Hand-colored etching",
+        "(C) Lithograph",
+        "(D) Limestone",
+        "(E) Hand-colored engraving",
+        "(F) Glass",
+        "(G) Albumen photograph",
+        "(H) Marble",
+        "(I) Gold",
+        "(J) Oil on canvas",
+      ],
+      image: "MAME/278",
+    },
+    {
+      id: "MAME_215",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "I",
+      dataset: "MAME",
+      image_id: "215",
+      choices: [
+        "(A)  Porcelain",
+        "(B) Hand-colored engraving",
+        "(C) Ivory",
+        "(D) Wood",
+        "(E) Steel",
+        "(F) Engraving",
+        "(G) Clay",
+        "(H) Polychromed wood",
+        "(I) Woven fabric ",
+        "(J) Graphite",
+      ],
+      image: "MAME/215",
+    },
+    {
+      id: "MAME_188",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "E",
+      dataset: "MAME",
+      image_id: "188",
+      choices: [
+        "(A)  Faience",
+        "(B) Steel",
+        "(C) Polychromed wood",
+        "(D) Wood",
+        "(E) Woodblock",
+        "(F) Hand-colored etching",
+        "(G) Porcelain",
+        "(H) Graphite",
+        "(I) Ivory",
+        "(J) Ceramic",
+      ],
+      image: "MAME/188",
+    },
+    {
+      id: "MAME_200",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "E",
+      dataset: "MAME",
+      image_id: "200",
+      choices: [
+        "(A)  Glass",
+        "(B) Silver",
+        "(C) Polychromed wood",
+        "(D) Ceramic",
+        "(E) Lithograph",
+        "(F) Steel",
+        "(G) Limestone",
+        "(H) Clay",
+        "(I) Iron",
+        "(J) Hand-colored engraving",
+      ],
+      image: "MAME/200",
+    },
+    {
+      id: "MAME_60",
+      question:
+        "The artwork in the picture belongs to which of the following medium categories?\n",
+      answer: "J",
+      dataset: "MAME",
+      image_id: "60",
+      choices: [
+        "(A)  Clay",
+        "(B) Pen and brown ink",
+        "(C) Wood engraving",
+        "(D) Limestone",
+        "(E) Hand-colored etching",
+        "(F) Silk and metal thread",
+        "(G) Gold",
+        "(H) Steel",
+        "(I) Bronze",
+        "(J) Ceramic",
+      ],
+      image: "MAME/60",
+    },
+    {
+      id: "Izembek_240",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "240",
+      choices: [
+        "(A)  more than 400",
+        "(B) 100-200",
+        "(C) 300-400",
+        "(D) 200-300",
+      ],
+      image: "Izembek/240",
+    },
+    {
+      id: "Izembek_172",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "A",
+      dataset: "Izembek",
+      image_id: "172",
+      choices: [
+        "(A)  200-300",
+        "(B) 300-400",
+        "(C) 100-200",
+        "(D) more than 400",
+      ],
+      image: "Izembek/172",
+    },
+    {
+      id: "Izembek_101",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "C",
+      dataset: "Izembek",
+      image_id: "101",
+      choices: [
+        "(A)  more than 400",
+        "(B) 300-400",
+        "(C) 100-300",
+        "(D) 200-300",
+        "(E) 100-200",
+      ],
+      image: "Izembek/101",
+    },
+    {
+      id: "Izembek_159",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "B",
+      dataset: "Izembek",
+      image_id: "159",
+      choices: [
+        "(A)  100-200",
+        "(B) 200-300",
+        "(C) more than 400",
+        "(D) 300-400",
+      ],
+      image: "Izembek/159",
+    },
+    {
+      id: "Izembek_20",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "C",
+      dataset: "Izembek",
+      image_id: "20",
+      choices: [
+        "(A)  more than 400",
+        "(B) 100-200",
+        "(C) 100-300",
+        "(D) 200-300",
+        "(E) 300-400",
+      ],
+      image: "Izembek/20",
+    },
+    {
+      id: "Izembek_19",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "B",
+      dataset: "Izembek",
+      image_id: "19",
+      choices: [
+        "(A)  300-400",
+        "(B) 200-300",
+        "(C) more than 400",
+        "(D) 100-200",
+      ],
+      image: "Izembek/19",
+    },
+    {
+      id: "Izembek_104",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "104",
+      choices: [
+        "(A)  more than 400",
+        "(B) 200-300",
+        "(C) 100-200",
+        "(D) 300-400",
+      ],
+      image: "Izembek/104",
+    },
+    {
+      id: "Izembek_87",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "B",
+      dataset: "Izembek",
+      image_id: "87",
+      choices: [
+        "(A)  100-200",
+        "(B) 100-300",
+        "(C) 300-400",
+        "(D) 200-300",
+        "(E) more than 400",
+      ],
+      image: "Izembek/87",
+    },
+    {
+      id: "Izembek_142",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "B",
+      dataset: "Izembek",
+      image_id: "142",
+      choices: [
+        "(A)  more than 400",
+        "(B) 100-300",
+        "(C) 200-300",
+        "(D) 100-200",
+        "(E) 300-400",
+      ],
+      image: "Izembek/142",
+    },
+    {
+      id: "Izembek_106",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "A",
+      dataset: "Izembek",
+      image_id: "106",
+      choices: [
+        "(A)  100-300",
+        "(B) 100-200",
+        "(C) more than 400",
+        "(D) 300-400",
+        "(E) 200-300",
+      ],
+      image: "Izembek/106",
+    },
+    {
+      id: "Izembek_244",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "C",
+      dataset: "Izembek",
+      image_id: "244",
+      choices: [
+        "(A)  300-400",
+        "(B) more than 400",
+        "(C) 200-300",
+        "(D) 100-200",
+      ],
+      image: "Izembek/244",
+    },
+    {
+      id: "Izembek_24",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "24",
+      choices: [
+        "(A)  more than 400",
+        "(B) 300-400",
+        "(C) 100-200",
+        "(D) 100-300",
+        "(E) 200-300",
+      ],
+      image: "Izembek/24",
+    },
+    {
+      id: "Izembek_82",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "82",
+      choices: [
+        "(A)  200-300",
+        "(B) more than 400",
+        "(C) 100-200",
+        "(D) 100-300",
+        "(E) 300-400",
+      ],
+      image: "Izembek/82",
+    },
+    {
+      id: "Izembek_150",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "C",
+      dataset: "Izembek",
+      image_id: "150",
+      choices: [
+        "(A)  300-400",
+        "(B) more than 400",
+        "(C) 100-300",
+        "(D) 100-200",
+        "(E) 200-300",
+      ],
+      image: "Izembek/150",
+    },
+    {
+      id: "Izembek_3",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "A",
+      dataset: "Izembek",
+      image_id: "3",
+      choices: [
+        "(A)  200-300",
+        "(B) 100-200",
+        "(C) 300-400",
+        "(D) more than 400",
+      ],
+      image: "Izembek/3",
+    },
+    {
+      id: "Izembek_275",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "275",
+      choices: [
+        "(A)  300-400",
+        "(B) 200-300",
+        "(C) more than 400",
+        "(D) 100-300",
+        "(E) 100-200",
+      ],
+      image: "Izembek/275",
+    },
+    {
+      id: "Izembek_4",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "A",
+      dataset: "Izembek",
+      image_id: "4",
+      choices: [
+        "(A)  100-300",
+        "(B) more than 400",
+        "(C) 300-400",
+        "(D) 100-200",
+        "(E) 200-300",
+      ],
+      image: "Izembek/4",
+    },
+    {
+      id: "Izembek_85",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "85",
+      choices: [
+        "(A)  300-400",
+        "(B) 200-300",
+        "(C) 100-200",
+        "(D) more than 400",
+      ],
+      image: "Izembek/85",
+    },
+    {
+      id: "Izembek_273",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "E",
+      dataset: "Izembek",
+      image_id: "273",
+      choices: [
+        "(A)  more than 400",
+        "(B) 300-400",
+        "(C) 200-300",
+        "(D) 100-200",
+        "(E) 100-300",
+      ],
+      image: "Izembek/273",
+    },
+    {
+      id: "Izembek_75",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "75",
+      choices: [
+        "(A)  100-200",
+        "(B) more than 400",
+        "(C) 200-300",
+        "(D) 300-400",
+      ],
+      image: "Izembek/75",
+    },
+    {
+      id: "Izembek_84",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "B",
+      dataset: "Izembek",
+      image_id: "84",
+      choices: [
+        "(A)  300-400",
+        "(B) 100-300",
+        "(C) 200-300",
+        "(D) 100-200",
+        "(E) more than 400",
+      ],
+      image: "Izembek/84",
+    },
+    {
+      id: "Izembek_28",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "E",
+      dataset: "Izembek",
+      image_id: "28",
+      choices: [
+        "(A)  300-400",
+        "(B) more than 400",
+        "(C) 200-300",
+        "(D) 100-200",
+        "(E) 100-300",
+      ],
+      image: "Izembek/28",
+    },
+    {
+      id: "Izembek_42",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "A",
+      dataset: "Izembek",
+      image_id: "42",
+      choices: [
+        "(A)  more than 400",
+        "(B) 200-300",
+        "(C) 300-400",
+        "(D) 100-200",
+      ],
+      image: "Izembek/42",
+    },
+    {
+      id: "Izembek_98",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "98",
+      choices: [
+        "(A)  more than 400",
+        "(B) 200-300",
+        "(C) 300-400",
+        "(D) 100-300",
+        "(E) 100-200",
+      ],
+      image: "Izembek/98",
+    },
+    {
+      id: "Izembek_298",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "A",
+      dataset: "Izembek",
+      image_id: "298",
+      choices: [
+        "(A)  100-300",
+        "(B) more than 400",
+        "(C) 200-300",
+        "(D) 100-200",
+        "(E) 300-400",
+      ],
+      image: "Izembek/298",
+    },
+    {
+      id: "Izembek_88",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "B",
+      dataset: "Izembek",
+      image_id: "88",
+      choices: [
+        "(A)  200-300",
+        "(B) 100-300",
+        "(C) more than 400",
+        "(D) 100-200",
+        "(E) 300-400",
+      ],
+      image: "Izembek/88",
+    },
+    {
+      id: "Izembek_198",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "C",
+      dataset: "Izembek",
+      image_id: "198",
+      choices: [
+        "(A)  100-200",
+        "(B) 200-300",
+        "(C) 100-300",
+        "(D) 300-400",
+        "(E) more than 400",
+      ],
+      image: "Izembek/198",
+    },
+    {
+      id: "Izembek_5",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "D",
+      dataset: "Izembek",
+      image_id: "5",
+      choices: [
+        "(A)  100-200",
+        "(B) 200-300",
+        "(C) 300-400",
+        "(D) 100-300",
+        "(E) more than 400",
+      ],
+      image: "Izembek/5",
+    },
+    {
+      id: "Izembek_147",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "E",
+      dataset: "Izembek",
+      image_id: "147",
+      choices: [
+        "(A)  200-300",
+        "(B) 300-400",
+        "(C) more than 400",
+        "(D) 100-200",
+        "(E) 100-300",
+      ],
+      image: "Izembek/147",
+    },
+    {
+      id: "Izembek_27",
+      question: "How many goose or other animals do you see in the image?\n",
+      answer: "A",
+      dataset: "Izembek",
+      image_id: "27",
+      choices: [
+        "(A)  100-300",
+        "(B) more than 400",
+        "(C) 200-300",
+        "(D) 300-400",
+        "(E) 100-200",
+      ],
+      image: "Izembek/27",
+    },
+    {
+      id: "ArtBench_93",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "D",
+      dataset: "ArtBench",
+      image_id: "93",
+      choices: [
+        "(A)  Art Nouveau",
+        "(B) Post Impressionism",
+        "(C) Romanticism",
+        "(D) Realism",
+        "(E) Expressionism",
+        "(F) Surrealism",
+        "(G) Ukiyo E",
+        "(H) Baroque",
+        "(I) Impressionism",
+      ],
+      image: "ArtBench/93",
+    },
+    {
+      id: "ArtBench_90",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "I",
+      dataset: "ArtBench",
+      image_id: "90",
+      choices: [
+        "(A)  Ukiyo E",
+        "(B) Impressionism",
+        "(C) Post Impressionism",
+        "(D) Romanticism",
+        "(E) Art Nouveau",
+        "(F) Surrealism",
+        "(G) Expressionism",
+        "(H) Baroque",
+        "(I) Realism",
+      ],
+      image: "ArtBench/90",
+    },
+    {
+      id: "ArtBench_153",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "E",
+      dataset: "ArtBench",
+      image_id: "153",
+      choices: [
+        "(A)  Ukiyo E",
+        "(B) Art Nouveau",
+        "(C) Surrealism",
+        "(D) Impressionism",
+        "(E) Expressionism",
+        "(F) Realism",
+        "(G) Post Impressionism",
+        "(H) Romanticism",
+        "(I) Baroque",
+      ],
+      image: "ArtBench/153",
+    },
+    {
+      id: "ArtBench_251",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "H",
+      dataset: "ArtBench",
+      image_id: "251",
+      choices: [
+        "(A)  Art Nouveau",
+        "(B) Realism",
+        "(C) Ukiyo E",
+        "(D) Expressionism",
+        "(E) Post Impressionism",
+        "(F) Impressionism",
+        "(G) Romanticism",
+        "(H) Baroque",
+        "(I) Surrealism",
+      ],
+      image: "ArtBench/251",
+    },
+    {
+      id: "ArtBench_172",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "I",
+      dataset: "ArtBench",
+      image_id: "172",
+      choices: [
+        "(A)  Art Nouveau",
+        "(B) Surrealism",
+        "(C) Expressionism",
+        "(D) Impressionism",
+        "(E) Romanticism",
+        "(F) Realism",
+        "(G) Baroque",
+        "(H) Ukiyo E",
+        "(I) Post Impressionism",
+      ],
+      image: "ArtBench/172",
+    },
+    {
+      id: "ArtBench_18",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "D",
+      dataset: "ArtBench",
+      image_id: "18",
+      choices: [
+        "(A)  Romanticism",
+        "(B) Realism",
+        "(C) Post Impressionism",
+        "(D) Impressionism",
+        "(E) Art Nouveau",
+        "(F) Expressionism",
+        "(G) Baroque",
+        "(H) Ukiyo E",
+        "(I) Surrealism",
+      ],
+      image: "ArtBench/18",
+    },
+    {
+      id: "ArtBench_47",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "B",
+      dataset: "ArtBench",
+      image_id: "47",
+      choices: [
+        "(A)  Realism",
+        "(B) Art Nouveau",
+        "(C) Surrealism",
+        "(D) Ukiyo E",
+        "(E) Post Impressionism",
+        "(F) Romanticism",
+        "(G) Impressionism",
+        "(H) Expressionism",
+        "(I) Baroque",
+      ],
+      image: "ArtBench/47",
+    },
+    {
+      id: "ArtBench_190",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "F",
+      dataset: "ArtBench",
+      image_id: "190",
+      choices: [
+        "(A)  Ukiyo E",
+        "(B) Baroque",
+        "(C) Romanticism",
+        "(D) Surrealism",
+        "(E) Art Nouveau",
+        "(F) Post Impressionism",
+        "(G) Expressionism",
+        "(H) Realism",
+        "(I) Impressionism",
+      ],
+      image: "ArtBench/190",
+    },
+    {
+      id: "ArtBench_38",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "I",
+      dataset: "ArtBench",
+      image_id: "38",
+      choices: [
+        "(A)  Realism",
+        "(B) Ukiyo E",
+        "(C) Expressionism",
+        "(D) Baroque",
+        "(E) Surrealism",
+        "(F) Romanticism",
+        "(G) Post Impressionism",
+        "(H) Impressionism",
+        "(I) Art Nouveau",
+      ],
+      image: "ArtBench/38",
+    },
+    {
+      id: "ArtBench_104",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "B",
+      dataset: "ArtBench",
+      image_id: "104",
+      choices: [
+        "(A)  Ukiyo E",
+        "(B) Romanticism",
+        "(C) Impressionism",
+        "(D) Surrealism",
+        "(E) Baroque",
+        "(F) Art Nouveau",
+        "(G) Post Impressionism",
+        "(H) Expressionism",
+        "(I) Realism",
+      ],
+      image: "ArtBench/104",
+    },
+    {
+      id: "ArtBench_184",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "D",
+      dataset: "ArtBench",
+      image_id: "184",
+      choices: [
+        "(A)  Art Nouveau",
+        "(B) Baroque",
+        "(C) Surrealism",
+        "(D) Post Impressionism",
+        "(E) Realism",
+        "(F) Impressionism",
+        "(G) Ukiyo E",
+        "(H) Romanticism",
+        "(I) Expressionism",
+      ],
+      image: "ArtBench/184",
+    },
+    {
+      id: "ArtBench_285",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "I",
+      dataset: "ArtBench",
+      image_id: "285",
+      choices: [
+        "(A)  Impressionism",
+        "(B) Romanticism",
+        "(C) Baroque",
+        "(D) Surrealism",
+        "(E) Post Impressionism",
+        "(F) Art Nouveau",
+        "(G) Realism",
+        "(H) Expressionism",
+        "(I) Ukiyo E",
+      ],
+      image: "ArtBench/285",
+    },
+    {
+      id: "ArtBench_258",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "E",
+      dataset: "ArtBench",
+      image_id: "258",
+      choices: [
+        "(A)  Expressionism",
+        "(B) Impressionism",
+        "(C) Post Impressionism",
+        "(D) Ukiyo E",
+        "(E) Baroque",
+        "(F) Art Nouveau",
+        "(G) Realism",
+        "(H) Romanticism",
+        "(I) Surrealism",
+      ],
+      image: "ArtBench/258",
+    },
+    {
+      id: "ArtBench_194",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "E",
+      dataset: "ArtBench",
+      image_id: "194",
+      choices: [
+        "(A)  Surrealism",
+        "(B) Romanticism",
+        "(C) Art Nouveau",
+        "(D) Impressionism",
+        "(E) Post Impressionism",
+        "(F) Expressionism",
+        "(G) Ukiyo E",
+        "(H) Realism",
+        "(I) Baroque",
+      ],
+      image: "ArtBench/194",
+    },
+    {
+      id: "ArtBench_34",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "A",
+      dataset: "ArtBench",
+      image_id: "34",
+      choices: [
+        "(A)  Impressionism",
+        "(B) Ukiyo E",
+        "(C) Romanticism",
+        "(D) Post Impressionism",
+        "(E) Baroque",
+        "(F) Expressionism",
+        "(G) Surrealism",
+        "(H) Realism",
+        "(I) Art Nouveau",
+      ],
+      image: "ArtBench/34",
+    },
+    {
+      id: "ArtBench_281",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "F",
+      dataset: "ArtBench",
+      image_id: "281",
+      choices: [
+        "(A)  Impressionism",
+        "(B) Post Impressionism",
+        "(C) Realism",
+        "(D) Art Nouveau",
+        "(E) Romanticism",
+        "(F) Ukiyo E",
+        "(G) Surrealism",
+        "(H) Baroque",
+        "(I) Expressionism",
+      ],
+      image: "ArtBench/281",
+    },
+    {
+      id: "ArtBench_256",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "A",
+      dataset: "ArtBench",
+      image_id: "256",
+      choices: [
+        "(A)  Baroque",
+        "(B) Surrealism",
+        "(C) Art Nouveau",
+        "(D) Post Impressionism",
+        "(E) Realism",
+        "(F) Expressionism",
+        "(G) Impressionism",
+        "(H) Romanticism",
+        "(I) Ukiyo E",
+      ],
+      image: "ArtBench/256",
+    },
+    {
+      id: "ArtBench_123",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "F",
+      dataset: "ArtBench",
+      image_id: "123",
+      choices: [
+        "(A)  Art Nouveau",
+        "(B) Expressionism",
+        "(C) Baroque",
+        "(D) Impressionism",
+        "(E) Realism",
+        "(F) Romanticism",
+        "(G) Surrealism",
+        "(H) Ukiyo E",
+        "(I) Post Impressionism",
+      ],
+      image: "ArtBench/123",
+    },
+    {
+      id: "ArtBench_142",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "F",
+      dataset: "ArtBench",
+      image_id: "142",
+      choices: [
+        "(A)  Realism",
+        "(B) Art Nouveau",
+        "(C) Baroque",
+        "(D) Post Impressionism",
+        "(E) Ukiyo E",
+        "(F) Expressionism",
+        "(G) Impressionism",
+        "(H) Romanticism",
+        "(I) Surrealism",
+      ],
+      image: "ArtBench/142",
+    },
+    {
+      id: "ArtBench_259",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "H",
+      dataset: "ArtBench",
+      image_id: "259",
+      choices: [
+        "(A)  Ukiyo E",
+        "(B) Expressionism",
+        "(C) Romanticism",
+        "(D) Art Nouveau",
+        "(E) Realism",
+        "(F) Post Impressionism",
+        "(G) Impressionism",
+        "(H) Baroque",
+        "(I) Surrealism",
+      ],
+      image: "ArtBench/259",
+    },
+    {
+      id: "ArtBench_75",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "I",
+      dataset: "ArtBench",
+      image_id: "75",
+      choices: [
+        "(A)  Expressionism",
+        "(B) Surrealism",
+        "(C) Baroque",
+        "(D) Art Nouveau",
+        "(E) Post Impressionism",
+        "(F) Ukiyo E",
+        "(G) Romanticism",
+        "(H) Impressionism",
+        "(I) Realism",
+      ],
+      image: "ArtBench/75",
+    },
+    {
+      id: "ArtBench_101",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "E",
+      dataset: "ArtBench",
+      image_id: "101",
+      choices: [
+        "(A)  Surrealism",
+        "(B) Romanticism",
+        "(C) Post Impressionism",
+        "(D) Impressionism",
+        "(E) Realism",
+        "(F) Baroque",
+        "(G) Expressionism",
+        "(H) Ukiyo E",
+        "(I) Art Nouveau",
+      ],
+      image: "ArtBench/101",
+    },
+    {
+      id: "ArtBench_166",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "H",
+      dataset: "ArtBench",
+      image_id: "166",
+      choices: [
+        "(A)  Art Nouveau",
+        "(B) Realism",
+        "(C) Baroque",
+        "(D) Romanticism",
+        "(E) Post Impressionism",
+        "(F) Ukiyo E",
+        "(G) Impressionism",
+        "(H) Expressionism",
+        "(I) Surrealism",
+      ],
+      image: "ArtBench/166",
+    },
+    {
+      id: "ArtBench_54",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "E",
+      dataset: "ArtBench",
+      image_id: "54",
+      choices: [
+        "(A)  Impressionism",
+        "(B) Surrealism",
+        "(C) Expressionism",
+        "(D) Realism",
+        "(E) Art Nouveau",
+        "(F) Romanticism",
+        "(G) Post Impressionism",
+        "(H) Baroque",
+        "(I) Ukiyo E",
+      ],
+      image: "ArtBench/54",
+    },
+    {
+      id: "ArtBench_98",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "G",
+      dataset: "ArtBench",
+      image_id: "98",
+      choices: [
+        "(A)  Ukiyo E",
+        "(B) Romanticism",
+        "(C) Expressionism",
+        "(D) Surrealism",
+        "(E) Post Impressionism",
+        "(F) Baroque",
+        "(G) Realism",
+        "(H) Impressionism",
+        "(I) Art Nouveau",
+      ],
+      image: "ArtBench/98",
+    },
+    {
+      id: "ArtBench_213",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "E",
+      dataset: "ArtBench",
+      image_id: "213",
+      choices: [
+        "(A)  Art Nouveau",
+        "(B) Expressionism",
+        "(C) Realism",
+        "(D) Post Impressionism",
+        "(E) Surrealism",
+        "(F) Ukiyo E",
+        "(G) Baroque",
+        "(H) Romanticism",
+        "(I) Impressionism",
+      ],
+      image: "ArtBench/213",
+    },
+    {
+      id: "ArtBench_85",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "H",
+      dataset: "ArtBench",
+      image_id: "85",
+      choices: [
+        "(A)  Post Impressionism",
+        "(B) Impressionism",
+        "(C) Baroque",
+        "(D) Romanticism",
+        "(E) Ukiyo E",
+        "(F) Expressionism",
+        "(G) Art Nouveau",
+        "(H) Realism",
+        "(I) Surrealism",
+      ],
+      image: "ArtBench/85",
+    },
+    {
+      id: "ArtBench_260",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "G",
+      dataset: "ArtBench",
+      image_id: "260",
+      choices: [
+        "(A)  Romanticism",
+        "(B) Surrealism",
+        "(C) Impressionism",
+        "(D) Expressionism",
+        "(E) Post Impressionism",
+        "(F) Ukiyo E",
+        "(G) Baroque",
+        "(H) Art Nouveau",
+        "(I) Realism",
+      ],
+      image: "ArtBench/260",
+    },
+    {
+      id: "ArtBench_150",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "I",
+      dataset: "ArtBench",
+      image_id: "150",
+      choices: [
+        "(A)  Impressionism",
+        "(B) Realism",
+        "(C) Surrealism",
+        "(D) Ukiyo E",
+        "(E) Post Impressionism",
+        "(F) Romanticism",
+        "(G) Art Nouveau",
+        "(H) Baroque",
+        "(I) Expressionism",
+      ],
+      image: "ArtBench/150",
+    },
+    {
+      id: "ArtBench_39",
+      question:
+        "The painting in the picture belongs to which of the following categories?\n",
+      answer: "G",
+      dataset: "ArtBench",
+      image_id: "39",
+      choices: [
+        "(A)  Romanticism",
+        "(B) Impressionism",
+        "(C) Surrealism",
+        "(D) Baroque",
+        "(E) Expressionism",
+        "(F) Post Impressionism",
+        "(G) Art Nouveau",
+        "(H) Ukiyo E",
+        "(I) Realism",
+      ],
+      image: "ArtBench/39",
+    },
+    {
+      id: "Grass_72",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "C",
+      dataset: "Grass",
+      image_id: "72",
+      choices: [
+        "(A)  Reproductive stage, 100-200 (include 200)",
+        "(B) Vegetative stage, no racemes",
+        "(C) Reproductive stage, 10-100 (include 100)",
+        "(D) Reproductive stage, 0-10 (include 10)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/72",
+    },
+    {
+      id: "Grass_49",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "C",
+      dataset: "Grass",
+      image_id: "49",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Reproductive stage, 0-10 (include 10)",
+        "(C) Reproductive stage, 100-200 (include 200)",
+        "(D) Reproductive stage, 10-100 (include 100)",
+        "(E) Vegetative stage, no racemes",
+      ],
+      image: "Grass/49",
+    },
+    {
+      id: "Grass_184",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "C",
+      dataset: "Grass",
+      image_id: "184",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Vegetative stage, no racemes",
+        "(C) Reproductive stage, 10-100 (include 100)",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Reproductive stage, 0-10 (include 10)",
+      ],
+      image: "Grass/184",
+    },
+    {
+      id: "Grass_292",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "D",
+      dataset: "Grass",
+      image_id: "292",
+      choices: [
+        "(A)  Reproductive stage, 0-10 (include 10)",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Reproductive stage, more than 200",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/292",
+    },
+    {
+      id: "Grass_50",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "A",
+      dataset: "Grass",
+      image_id: "50",
+      choices: [
+        "(A)  Reproductive stage, 100-200 (include 200)",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/50",
+    },
+    {
+      id: "Grass_253",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "D",
+      dataset: "Grass",
+      image_id: "253",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, 100-200 (include 200)",
+        "(C) Reproductive stage, more than 200",
+        "(D) Reproductive stage, 0-10 (include 10)",
+        "(E) Vegetative stage, no racemes",
+      ],
+      image: "Grass/253",
+    },
+    {
+      id: "Grass_37",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "D",
+      dataset: "Grass",
+      image_id: "37",
+      choices: [
+        "(A)  Vegetative stage, no racemes",
+        "(B) Reproductive stage, 0-10 (include 10)",
+        "(C) Reproductive stage, 10-100 (include 100)",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/37",
+    },
+    {
+      id: "Grass_125",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "B",
+      dataset: "Grass",
+      image_id: "125",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Vegetative stage, no racemes",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Reproductive stage, 0-10 (include 10)",
+      ],
+      image: "Grass/125",
+    },
+    {
+      id: "Grass_215",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "A",
+      dataset: "Grass",
+      image_id: "215",
+      choices: [
+        "(A)  Reproductive stage, 0-10 (include 10)",
+        "(B) Reproductive stage, more than 200",
+        "(C) Reproductive stage, 10-100 (include 100)",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/215",
+    },
+    {
+      id: "Grass_157",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "A",
+      dataset: "Grass",
+      image_id: "157",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, more than 200",
+        "(C) Reproductive stage, 100-200 (include 200)",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 0-10 (include 10)",
+      ],
+      image: "Grass/157",
+    },
+    {
+      id: "Grass_234",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "C",
+      dataset: "Grass",
+      image_id: "234",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, more than 200",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/234",
+    },
+    {
+      id: "Grass_126",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "B",
+      dataset: "Grass",
+      image_id: "126",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Vegetative stage, no racemes",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Reproductive stage, 0-10 (include 10)",
+      ],
+      image: "Grass/126",
+    },
+    {
+      id: "Grass_163",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "C",
+      dataset: "Grass",
+      image_id: "163",
+      choices: [
+        "(A)  Vegetative stage, no racemes",
+        "(B) Reproductive stage, 0-10 (include 10)",
+        "(C) Reproductive stage, 10-100 (include 100)",
+        "(D) Reproductive stage, more than 200",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/163",
+    },
+    {
+      id: "Grass_22",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "E",
+      dataset: "Grass",
+      image_id: "22",
+      choices: [
+        "(A)  Reproductive stage, 0-10 (include 10)",
+        "(B) Vegetative stage, no racemes",
+        "(C) Reproductive stage, 10-100 (include 100)",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/22",
+    },
+    {
+      id: "Grass_154",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "A",
+      dataset: "Grass",
+      image_id: "154",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, more than 200",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/154",
+    },
+    {
+      id: "Grass_174",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "B",
+      dataset: "Grass",
+      image_id: "174",
+      choices: [
+        "(A)  Vegetative stage, no racemes",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/174",
+    },
+    {
+      id: "Grass_147",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "D",
+      dataset: "Grass",
+      image_id: "147",
+      choices: [
+        "(A)  Reproductive stage, 0-10 (include 10)",
+        "(B) Reproductive stage, 100-200 (include 200)",
+        "(C) Vegetative stage, no racemes",
+        "(D) Reproductive stage, 10-100 (include 100)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/147",
+    },
+    {
+      id: "Grass_254",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "D",
+      dataset: "Grass",
+      image_id: "254",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, 100-200 (include 200)",
+        "(C) Vegetative stage, no racemes",
+        "(D) Reproductive stage, 0-10 (include 10)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/254",
+    },
+    {
+      id: "Grass_170",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "B",
+      dataset: "Grass",
+      image_id: "170",
+      choices: [
+        "(A)  Reproductive stage, 100-200 (include 200)",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Vegetative stage, no racemes",
+        "(D) Reproductive stage, more than 200",
+        "(E) Reproductive stage, 0-10 (include 10)",
+      ],
+      image: "Grass/170",
+    },
+    {
+      id: "Grass_211",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "D",
+      dataset: "Grass",
+      image_id: "211",
+      choices: [
+        "(A)  Vegetative stage, no racemes",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Reproductive stage, 100-200 (include 200)",
+        "(D) Reproductive stage, 0-10 (include 10)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/211",
+    },
+    {
+      id: "Grass_261",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "C",
+      dataset: "Grass",
+      image_id: "261",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Reproductive stage, 0-10 (include 10)",
+        "(C) Vegetative stage, no racemes",
+        "(D) Reproductive stage, 10-100 (include 100)",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/261",
+    },
+    {
+      id: "Grass_162",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "D",
+      dataset: "Grass",
+      image_id: "162",
+      choices: [
+        "(A)  Reproductive stage, 100-200 (include 200)",
+        "(B) Reproductive stage, 0-10 (include 10)",
+        "(C) Vegetative stage, no racemes",
+        "(D) Reproductive stage, 10-100 (include 100)",
+        "(E) Reproductive stage, more than 200",
+      ],
+      image: "Grass/162",
+    },
+    {
+      id: "Grass_216",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "E",
+      dataset: "Grass",
+      image_id: "216",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, 100-200 (include 200)",
+        "(C) Reproductive stage, more than 200",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 0-10 (include 10)",
+      ],
+      image: "Grass/216",
+    },
+    {
+      id: "Grass_90",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "E",
+      dataset: "Grass",
+      image_id: "90",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Reproductive stage, 100-200 (include 200)",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 10-100 (include 100)",
+      ],
+      image: "Grass/90",
+    },
+    {
+      id: "Grass_77",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "C",
+      dataset: "Grass",
+      image_id: "77",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Vegetative stage, no racemes",
+        "(C) Reproductive stage, 10-100 (include 100)",
+        "(D) Reproductive stage, 0-10 (include 10)",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/77",
+    },
+    {
+      id: "Grass_273",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "E",
+      dataset: "Grass",
+      image_id: "273",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Vegetative stage, no racemes",
+      ],
+      image: "Grass/273",
+    },
+    {
+      id: "Grass_263",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "E",
+      dataset: "Grass",
+      image_id: "263",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, more than 200",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Vegetative stage, no racemes",
+      ],
+      image: "Grass/263",
+    },
+    {
+      id: "Grass_141",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "E",
+      dataset: "Grass",
+      image_id: "141",
+      choices: [
+        "(A)  Reproductive stage, 0-10 (include 10)",
+        "(B) Vegetative stage, no racemes",
+        "(C) Reproductive stage, 100-200 (include 200)",
+        "(D) Reproductive stage, more than 200",
+        "(E) Reproductive stage, 10-100 (include 100)",
+      ],
+      image: "Grass/141",
+    },
+    {
+      id: "Grass_79",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "A",
+      dataset: "Grass",
+      image_id: "79",
+      choices: [
+        "(A)  Reproductive stage, 10-100 (include 100)",
+        "(B) Reproductive stage, 0-10 (include 10)",
+        "(C) Reproductive stage, more than 200",
+        "(D) Vegetative stage, no racemes",
+        "(E) Reproductive stage, 100-200 (include 200)",
+      ],
+      image: "Grass/79",
+    },
+    {
+      id: "Grass_0",
+      question:
+        "Based on the plant in the image, which growth stage does it belong to, and how many racemes does it have?\n",
+      answer: "A",
+      dataset: "Grass",
+      image_id: "0",
+      choices: [
+        "(A)  Reproductive stage, more than 200",
+        "(B) Reproductive stage, 10-100 (include 100)",
+        "(C) Reproductive stage, 0-10 (include 10)",
+        "(D) Reproductive stage, 100-200 (include 200)",
+        "(E) Vegetative stage, no racemes",
+      ],
+      image: "Grass/0",
+    },
+    {
+      id: "MMAD_120",
+      question:
+        "There is a defect in the object. What is the type of the defect?\n",
+      answer: "D",
+      dataset: "MMAD",
+      image_id: "120",
+      choices: ["(A)  Crack.", "(B) Stain.", "(C) Dent.", "(D) Cut."],
+      image: "MMAD/120",
+    },
+    {
+      id: "MMAD_221",
+      question: "What kind of product is in the image?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "221",
+      choices: [
+        "(A)  Instant noodles",
+        "(B) Cereal",
+        "(C) Snack bar",
+        "(D) Canned food",
+      ],
+      image: "MMAD/221",
+    },
+    {
+      id: "MMAD_53",
+      question: "There is a defect in the object. Where is the defect?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "53",
+      choices: [
+        "(A)  Top of the box",
+        "(B) Left side of the box",
+        "(C) Bottom of the box",
+        "(D) Right side of the box",
+      ],
+      image: "MMAD/53",
+    },
+    {
+      id: "MMAD_100",
+      question: "Is there any defect in the object?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "100",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/100",
+    },
+    {
+      id: "MMAD_4",
+      question: "Is there any defect in the object?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "4",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/4",
+    },
+    {
+      id: "MMAD_131",
+      question: "What are the main visual elements of the product packaging?\n",
+      answer: "D",
+      dataset: "MMAD",
+      image_id: "131",
+      choices: [
+        "(A)  Branding, flavor, and nutritional information",
+        "(B) Shapes, colors, and text",
+        "(C) Reflective surface and creases",
+        "(D) All of the above",
+      ],
+      image: "MMAD/131",
+    },
+    {
+      id: "MMAD_190",
+      question: "There is a defect in the object. Where is the defect?\n",
+      answer: "B",
+      dataset: "MMAD",
+      image_id: "190",
+      choices: [
+        "(A)  On the handle.",
+        "(B) At the top center portion of the toothbrush.",
+        "(C) On the side edges of the toothbrush.",
+        "(D) At the bottom of the handle.",
+      ],
+      image: "MMAD/190",
+    },
+    {
+      id: "MMAD_114",
+      question: "Is there any defect in the object?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "114",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/114",
+    },
+    {
+      id: "MMAD_145",
+      question: "What kind of product is in the image?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "145",
+      choices: [
+        "(A)  Piece of chocolate",
+        "(B) Piece of bread",
+        "(C) Cashew nut",
+        "(D) Potato chip",
+      ],
+      image: "MMAD/145",
+    },
+    {
+      id: "MMAD_85",
+      question: "Is there any defect in the object?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "85",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/85",
+    },
+    {
+      id: "MMAD_165",
+      question: "Is there any defect in the object?\n",
+      answer: "B",
+      dataset: "MMAD",
+      image_id: "165",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/165",
+    },
+    {
+      id: "MMAD_10",
+      question: "There is a defect in the object. Where is the defect?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "10",
+      choices: [
+        "(A)  Bottom of the box",
+        "(B) Sides of the box",
+        "(C) Top center of the box",
+        "(D) Bottom corners of the box",
+      ],
+      image: "MMAD/10",
+    },
+    {
+      id: "MMAD_135",
+      question: "Where does the color of the hazelnut appear darkest?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "135",
+      choices: [
+        "(A)  Near the top where the shell meets the husk's remnants.",
+        "(B) At the bottom.",
+        "(C) In the middle.",
+        "(D) The color is uniform throughout.",
+      ],
+      image: "MMAD/135",
+    },
+    {
+      id: "MMAD_154",
+      question: "Is there any defect in the object?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "154",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/154",
+    },
+    {
+      id: "MMAD_122",
+      question:
+        "There is a defect in the object. What is the appearance of the defect?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "122",
+      choices: [
+        "(A)  Change in color or texture",
+        "(B) Visible damage or deformation",
+        "(C) Loose or unstable connection",
+        "(D) No visible defect",
+      ],
+      image: "MMAD/122",
+    },
+    {
+      id: "MMAD_192",
+      question: "There is a defect in the object. Where is the defect?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "192",
+      choices: [
+        "(A)  Top center",
+        "(B) Bottom center",
+        "(C) Left side",
+        "(D) Right side",
+      ],
+      image: "MMAD/192",
+    },
+    {
+      id: "MMAD_52",
+      question: "What is the layout or arrangement of the pasta shells?\n",
+      answer: "D",
+      dataset: "MMAD",
+      image_id: "52",
+      choices: [
+        "(A)  Randomly scattered",
+        "(B) Stacked on top of each other",
+        "(C) Placed in a row",
+        "(D) Arranged in a grid",
+      ],
+      image: "MMAD/52",
+    },
+    {
+      id: "MMAD_74",
+      question:
+        "There is a defect in the object. What is the type of the defect?\n",
+      answer: "B",
+      dataset: "MMAD",
+      image_id: "74",
+      choices: ["(A)  Discoloration.", "(B) Line.", "(C) Hole.", "(D) Wrinkle."],
+      image: "MMAD/74",
+    },
+    {
+      id: "MMAD_70",
+      question: "Is there any defect in the object?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "70",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/70",
+    },
+    {
+      id: "MMAD_253",
+      question: "What is the color of the label on the bottle?\n",
+      answer: "D",
+      dataset: "MMAD",
+      image_id: "253",
+      choices: ["(A)  Blue", "(B) Red", "(C) Green", "(D) Gold"],
+      image: "MMAD/253",
+    },
+    {
+      id: "MMAD_288",
+      question: "What kind of product is in the image?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "288",
+      choices: [
+        "(A)  A breakfast box",
+        "(B) A lunch box",
+        "(C) A snack tray",
+        "(D) A dinner plate",
+      ],
+      image: "MMAD/288",
+    },
+    {
+      id: "MMAD_109",
+      question: "What is the characteristic of the individual objects?\n",
+      answer: "D",
+      dataset: "MMAD",
+      image_id: "109",
+      choices: [
+        "(A)  The objects have different shapes and sizes.",
+        "(B) The objects have different colors.",
+        "(C) The objects have different textures.",
+        "(D) The objects are uniform in shape, size, and color.",
+      ],
+      image: "MMAD/109",
+    },
+    {
+      id: "MMAD_13",
+      question: "There is a defect in the object. Where is the defect?\n",
+      answer: "B",
+      dataset: "MMAD",
+      image_id: "13",
+      choices: [
+        "(A)  Top left",
+        "(B) Top right",
+        "(C) Bottom left",
+        "(D) Bottom right",
+      ],
+      image: "MMAD/13",
+    },
+    {
+      id: "MMAD_17",
+      question:
+        "There are some defects in the object. What are the potential effects of these defects?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "17",
+      choices: [
+        "(A)  Improved cable performance and increased safety.",
+        "(B) No impact on cable performance or safety.",
+        "(C) Reduced cable performance and compromised safety.",
+        "(D) Increased cable flexibility and durability.",
+      ],
+      image: "MMAD/17",
+    },
+    {
+      id: "MMAD_75",
+      question: "What kind of product is in the image?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "75",
+      choices: [
+        "(A)  Soda bottle",
+        "(B) Milk carton",
+        "(C) Drink bottle",
+        "(D) Shampoo bottle",
+      ],
+      image: "MMAD/75",
+    },
+    {
+      id: "MMAD_23",
+      question: "What is the shape of the pasta pieces?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "23",
+      choices: [
+        "(A)  Straight",
+        "(B) Spiral",
+        "(C) Cylindrical",
+        "(D) Triangular",
+      ],
+      image: "MMAD/23",
+    },
+    {
+      id: "MMAD_18",
+      question:
+        "There is a defect in the object. What is the type of the defect?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "18",
+      choices: [
+        "(A)  Tear in the material.",
+        "(B) Color inconsistency.",
+        "(C) Glossy substance.",
+        "(D) Burn mark.",
+      ],
+      image: "MMAD/18",
+    },
+    {
+      id: "MMAD_36",
+      question: "Is there any defect in the object?\n",
+      answer: "A",
+      dataset: "MMAD",
+      image_id: "36",
+      choices: ["(A)  Yes.", "(B) No."],
+      image: "MMAD/36",
+    },
+    {
+      id: "MMAD_12",
+      question: "What is the relative position of the fruits on the tray?\n",
+      answer: "C",
+      dataset: "MMAD",
+      image_id: "12",
+      choices: [
+        "(A)  On the right side",
+        "(B) In the center",
+        "(C) On the left side",
+        "(D) Scattered throughout",
+      ],
+      image: "MMAD/12",
+    },
+    {
+      id: "MMAD_299",
+      question: "What kind of product is in the image?\n",
+      answer: "D",
+      dataset: "MMAD",
+      image_id: "299",
+      choices: [
+        "(A)  Cereal box",
+        "(B) Lunch box",
+        "(C) Snack tray",
+        "(D) Breakfast box",
+      ],
+      image: "MMAD/299",
+    },
+    {
+      id: "MileBench_118",
+      question: "What will the person do next?\n",
+      answer: "B",
+      dataset: "MileBench",
+      image_id: "118",
+      choices: [
+        "(A)  Take the laptop.",
+        "(B) Put down the towel.",
+        "(C) Close the box.",
+        "(D) Close the closet/cabinet.",
+      ],
+      image: "MileBench/118",
+    },
+    {
+      id: "MileBench_297",
+      question:
+        "Image Caption #1: Polanco skyscrapers Polanco skyscrapers Image Caption #2: 131117 jumex def 121 Museo Jumex Question: Do the light poles outside Museo Jumex and the on the street by the Polanco skyscrapers have differently shaped light fixtures?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "297",
+      choices: [
+        "(A)  Yes, the light poles outside Museo Jumex and on the street by the Polanco skyscrapers have differently shaped light fixtures.",
+        "(B) No, the light poles outside Museo Jumex and on the street by the Polanco skyscrapers have the same shaped light fixtures.",
+        "(C) Yes, the light poles outside Museo Jumex and on the street by the Polanco skyscrapers have the same shaped light fixtures.",
+        "(D) No, the light poles outside Museo Jumex and on the street by the Polanco skyscrapers do not have light fixtures.",
+      ],
+      image: "MileBench/297",
+    },
+    {
+      id: "MileBench_13",
+      question:
+        'This is a navigation video of an agent following instruction: "Take a left and exit the closet. Take a left into the bedroom. Take another left into the bathroom and wait there." What is the next action it should take?\n',
+      answer: "B",
+      dataset: "MileBench",
+      image_id: "13",
+      choices: [
+        "(A)  Stop",
+        "(B) Turn left and move forward",
+        "(C) Move forward",
+        "(D) Turn right and move forward",
+      ],
+      image: "MileBench/13",
+    },
+    {
+      id: "MileBench_154",
+      question: "What letter did the person write first on the paper?\n",
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "154",
+      choices: ["(A)  c", "(B) t", "(C) a"],
+      image: "MileBench/154",
+    },
+    {
+      id: "MileBench_74",
+      question:
+        "The person interacts with a lighting device among other objects. Is the lighting device on at any point?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "74",
+      choices: ["(A)  no", "(B) I don't know", "(C) yes"],
+      image: "MileBench/74",
+    },
+    {
+      id: "MileBench_99",
+      question:
+        "Global Table: {table#1} Context:  Question: Kiyan Soltanpour played for the team with a logo with what color circle around it in the APL division?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "99",
+      choices: ["(A)  blue", "(B) red", "(C) yellow", "(D) green"],
+      image: "MileBench/99",
+    },
+    {
+      id: "MileBench_267",
+      question: "Which of the following will happen without the cube?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "267",
+      choices: [
+        "(A)  The green cylinder and the gray sphere collide",
+        "(B) The green object collides with the metal cylinder",
+        "(C) The purple sphere collides with the gray sphere",
+        "(D) The gray sphere and the metal cylinder collide",
+      ],
+      image: "MileBench/267",
+    },
+    {
+      id: "MileBench_101",
+      question:
+        "Pick the choice that correctly describes how the scenes in the video change.\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "101",
+      choices: [
+        "(A)  From the stairway to the night market on the other side of the river.",
+        "(B) From the park to the museum across the street.",
+        "(C) From the beach to the mountain trail.",
+        "(D) From the office to the coffee shop next door.",
+      ],
+      image: "MileBench/101",
+    },
+    {
+      id: "MileBench_148",
+      question:
+        "Can you identify the direction of the blue sphere's movement in the video?\n",
+      answer: "B",
+      dataset: "MileBench",
+      image_id: "148",
+      choices: [
+        "(A)  Up and to the right.",
+        "(B) Down and to the left.",
+        "(C) Down and to the right.",
+        "(D) The object is stationary.",
+      ],
+      image: "MileBench/148",
+    },
+    {
+      id: "MileBench_252",
+      question: "Question: What is the Page Number?\n",
+      answer: "D",
+      dataset: "MileBench",
+      image_id: "252",
+      choices: ["(A)  6", "(B) 5", "(C) 3", "(D) 4"],
+      image: "MileBench/252",
+    },
+    {
+      id: "MileBench_136",
+      question:
+        "Global Table: {table#1} Context:  Question: In this photo, is the face of the IndyCar champion of Chip Ganassi Racing from 1996 visible?\n",
+      answer: "D",
+      dataset: "MileBench",
+      image_id: "136",
+      choices: ["(A)  unclear.", "(B) yes.", "(C) partially.", "(D) no"],
+      image: "MileBench/136",
+    },
+    {
+      id: "MileBench_244",
+      question: "What will the person do next with the pillow?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "244",
+      choices: ["(A)  Put down.", "(B) Tidy up.", "(C) Take.", "(D) Throw."],
+      image: "MileBench/244",
+    },
+    {
+      id: "MileBench_271",
+      question:
+        "Question: Which of the following is the interconnection between two nerve cells?\n",
+      answer: "D",
+      dataset: "MileBench",
+      image_id: "271",
+      choices: ["(A)  Dendrite", "(B) Myelin Sheath", "(C) Axon", "(D) Synapse"],
+      image: "MileBench/271",
+    },
+    {
+      id: "MileBench_175",
+      question:
+        "The Mozza Cookbook: Recipes from Los Angeles's Favorite Italian Restaurant and PizzeriaThe Star Wars Cookbook II -Darth Malt and More Galactic RecipesDiversity Amid Globalization: World Regions, Environment, Development (5th Edition)Question: Please give the correct text order corresponding to each bookchoose\n",
+      answer: "F",
+      dataset: "MileBench",
+      image_id: "175",
+      choices: [
+        "(A)  1,2,0",
+        "(B) 0,1,2",
+        "(C) 2,0,1",
+        "(D) 1,0,2",
+        "(E) 0,2,1",
+        "(F) 2,1,0",
+      ],
+      image: "MileBench/175",
+    },
+    {
+      id: "MileBench_37",
+      question:
+        "During which part of the video does the action 'person walking through a doorway in the living room' occur?\n",
+      answer: "B",
+      dataset: "MileBench",
+      image_id: "37",
+      choices: [
+        "(A)  At the beginning of the video.",
+        "(B) Throughout the entire video.",
+        "(C) In the middle of the video.",
+        "(D) At the end of the video.",
+      ],
+      image: "MileBench/37",
+    },
+    {
+      id: "MileBench_143",
+      question:
+        "Based on the video, which choice shows the scene changes accurately?\n",
+      answer: "D",
+      dataset: "MileBench",
+      image_id: "143",
+      choices: [
+        "(A)  From the office to the park.",
+        "(B) From the classroom to the library.",
+        "(C) From the kitchen to the living room.",
+        "(D) From Mertok to the shore.",
+      ],
+      image: "MileBench/143",
+    },
+    {
+      id: "MileBench_157",
+      question: "Which object was put down by the person?\n",
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "157",
+      choices: [
+        "(A)  The picture.",
+        "(B) The cup/glass/bottle.",
+        "(C) The bag.",
+        "(D) The food.",
+      ],
+      image: "MileBench/157",
+    },
+    {
+      id: "MileBench_65",
+      question:
+        "Can you identify the direction of the green cylinder's movement in the video?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "65",
+      choices: [
+        "(A)  Down and to the right.",
+        "(B) Up and to the right.",
+        "(C) Up and to the left.",
+        "(D) Down and to the left.",
+      ],
+      image: "MileBench/65",
+    },
+    {
+      id: "MileBench_27",
+      question: "Which object was put down by the person?\n",
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "27",
+      choices: [
+        "(A)  The clothes.",
+        "(B) The bag.",
+        "(C) The food.",
+        "(D) The shoe.",
+      ],
+      image: "MileBench/27",
+    },
+    {
+      id: "MileBench_259",
+      question: "What was the order of the letters at the beginning?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "259",
+      choices: ["(A)  dog", "(B) god", "(C) dgo"],
+      image: "MileBench/259",
+    },
+    {
+      id: "MileBench_165",
+      question:
+        "What shape is the stationary object when the brown object enters the scene?\n",
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "165",
+      choices: ["(A)  sphere", "(B) cube", "(C) cylinder"],
+      image: "MileBench/165",
+    },
+    {
+      id: "MileBench_285",
+      question:
+        'Context:\n# Pure (Miller novel)  \nPure is a 2011 novel by English author Andrew Miller. The book is the sixth novel by Miller and was released on 9 June 2011 in the United Kingdom through Sceptre, an imprint of Hodder & Stoughton. The novel is set in pre-revolutionary France and the upcoming turmoil is a consistent theme throughout. It follows an engineer named Jean-Baptiste Baratte and chronicles his efforts in clearing an overfilled graveyard that is polluting the surrounding area. Baratte makes friends and enemies as the cemetery is both loved and hated by the people of the district.  \nMiller was inspired to write about the Les Innocents Cemetery after reading historian Philippe Ari\u00e8s\'s brief description of its clearing and imagining the theatrics that must have been involved. The novel received positive reviews, particularly noting the quality of the writing. The novel was awarded the Costa Book Award 2011 for "Best Novel" and "Book of the Year", and was nominated for the Walter Scott Prize and South Bank award.  \n## Plot  \nA 28-year-old engineer named Jean-Baptiste Baratte is tasked with the removal of the Les Innocents cemetery from Les Halles, Paris in 1786 (the Place Joachim-du-Bellay now occupies the area) and the removal of its church. Baratte is an engineer with a single decorative bridge, built in his small hometown, comprising his entire career, and, as such, is somewhat surprised by his appointment; he does, however, endeavour to complete his task.  \nThe cemetery has been in use for many years but, given the number of people buried in such a small area, the bodies have begun to overflow and fall into the neighbouring houses as greater excavations take place and basement walls are weakened. The entire area is also permeated with a foul smell, turning fresh produce rotten in far shorter times than natural and tainting the breath of those who live there.  \nWhile scouting the cemetery before his work begins Baratte goes to stay with the Monnards, a middle-class family with a beautiful young daughter, Ziguette. In the cemetery Baratte makes the acquaintance of Armand, the church organist who continues to play, but for no one as the church has long since closed, the reclusive P\u00e8re Colbert, the mad church priest, and 14-year-old Jeanne, the granddaughter of the sexton, who has grown up in the cemetery and is instrumental to Baratte\'s research.  \nBaratte initially keeps his work secret from his acquaintances but they eventually come to know of his work and most accept it reluctantly though Ziguette, in particular, seems upset about the destruction of the cemetery.  \nFor the work, Baratte hires men from a mine that he formerly worked in and also hires his former friend, Lacoeur to come as a foreman. The work goes well until suddenly one-night Baratte is attacked by Ziguette who wounds him in his head. Ziguette is sent away and Baratte is left with permanent injuries including severe migraines, difficulty reading, and the loss of a sense of taste. After the injury, Baratte decides to move Helo\u00efse, a known prostitute in the area, into the Monnard\'s home as his companion.  \nThough all goes well for Baratte after the injury he is called to the cemetery one night where he learns that Jeanne was attacked and raped by Lacoeur who commits suicide in penance. Baratte is ordered to cover up the suicide by his superiors and a rumour develops that he killed Lacoeur defending Helo\u00efse.  \n## Characters  \n* Jean-Baptiste Baratte \u2013 the protagonist of the novel; engineering graduate of the \u00c9cole des Ponts et Chauss\u00e9es and overseer of the project; originally from Normandy. The name is a reference to the biblical John the Baptist. Barattes nickname is "B\u00eache", which is French for "Spade", a reference to his career.  \n* Armand \u2013 the church\'s flamboyant and alcoholic organist; and close friend to Baratte; with links to "the party of the future".  \n* H\u00e9lo\u00efse Goddard \u2013 a prostitute, also known as "The Austrian" because of her resemblance to Queen Marie Antoinette, who specialises in indulging the peculiar perversions of her clients; also Baratte\'s love interest.  \n* Lecoeur \u2013 Baratte\'s old friend brought in as the foreman to the miners undertaking the excavation. English translation of the name is "The Heart".  \n* Ziguette Monnard \u2013 Barrate\'s landlord\'s daughter who attacks Baratte in the middle of the night, in opposition to his work.  \n* Marie \u2013 maid to the Monnards who spies on Baratte sleeping during the night.  \n* Jeanne \u2013 14-year-old granddaughter to the church\'s sexton.  \n* Dr.Guillotin \u2013 a doctor who is observing the progress of the excavation for research purposes.  \n* P\u00e8re Colbert \u2013 the church\'s mad priest.  \n## Themes  \nalt=An engraving by Theodor Josef Hubert Hoffbauer of the Saints Innocents Cemetery and its church. The image shows the Rue Saint-Denis on the left, the church at the rear and the graveyard in the foreground. A burial is taking place.\nThe novel takes place immediately before the French Revolution and, while not discussed in the novel, a number of sights and incidents foreshadow the impending events. Clare Clark, in The Guardian, stated "as Baratte\'s story unfolds, the impending revolution hangs over the narrative like the blade of the guillotine to come", identifying a number of auguries of the future turmoil; including "an organist playing to an empty church", the local theatre putting on a production of Beaumarchais\' The Marriage of Figaro; and a cart displaying the phrase "M Hulot et Fils: D\u00e9m\u00e9nageurs \u00e0 la Noblesse" on its side (English: M Hulot and Son: Movers to the Nobility). In The Week, Michael Bywater stated he felt that the novel has "a sense in the air that something decisive is going to happen, and happen soon".  \nThomas Quinn for The Big Issue opined that the removal of the cemetery as a whole could be construed as Miller asking "whether we should sweep away the past in the name of progress" or if we should be "confronting set ideas about what makes us human in the first place".  \nMiller also aimed to imbue the novel with a sense of anxiety, especially concerning the decisions Jean-Baptiste must take. Commenting on fiction in general in an interview with Lorna Bradbury for The Daily Telegraph, Miller stated that "a novel is a collection of anxieties held together, more or less well, more or less interestingly, by the chicken wire of plot". Bradbury goes on to state "that is absolutely the case with Pure, which details multiple counts of insanity as the panic-inducing business of razing the cemetery takes hold". Of Pure specifically, Miller stated that "I\'m interested in what anxiety does to people", "in what happens when they can\'t respond the way the world expects them to. What happens when our sense of ourselves falls away under the pressure of circumstances? What\'s left? That\'s a very interesting place to be."  \nAnother theme prevalent in the novel is death, influenced in part by the death of Miller\'s father, to whom the book is dedicated. Miller stated that "after the age of fortysomething, death is a taste in your mouth, and never goes away again". The reviewer for The Australian called the novel "a meditation on death and the frailty of the body and spirit".\n\n## Development  \nMiller first heard about the clearing of the Les Innocents cemetery ten years before writing the novel, when reading a book by French medievalist and historian, Philippe Ari\u00e8s; specifically, his 1977 work entitled L\'Homme devant la mort, or The Hour of Our Death. Ari\u00e8s\' book did not go into a great deal of detail concerning this actual event, however, Miller was "taken by the theatricality" of it and decided to write a novel based around the exhumation. In an interview with Kira Cochrane he stated the novel "appealed to him as being interesting, visually interesting", stating "it was when it all happened that made it stand out. It\'s the 1780s, a few years before the French revolution". Miller further stated that his father\'s occupation as a doctor also had some bearing on his interest in the human body, stating "I grew up looking at these things \u2013 my Beano and Dandy were the BMJ and The Lancet". Miller decided not to include any French dialogue in the novel as "it is so pretentious" in an English-language novel, stating "I was afraid that my editor would strike it out".  \n### Publication history  \n* 2011, UK, Sceptre 978-1-4447-2425-7, pub date 9 Jun 2011, Hardback  \n* 2012, UK, Sceptre 978-1-4447-2428-8, pub date 5 Jan 2012, Paperback  \n* 2012, UK, Dreamscape Media, pub date 29 May 2012, Audiobook  \n* 2012, USA, Europa Editions 978-1-60945-067-0, pub date 29 May 2012, Paperback  \n### Novel\'s title  \nThe novel\'s title can be attributed to a number of aspects of the work. The purification of the cemetery and the recent change in social mores (in relation to dirt and decay) being the most immediately apparent. James Kidd, writing for The Independent, stated "if this suggests one definition of purity, others are suggested by political undercurrents. Namely, the ideals that helped shape the French Revolution: Voltaire\'s call to reason, Rousseau\'s call to equality, and Robespierre\'s call to arms."  \n### Cover  \nalt=Francisco Goya\'s 1797\u20131799 etching, The Sleep of Reason Produces Monsters. The self-portrait shows the artist seated and burying his head into his arms, as owls and bats surround and assail him.\nThe cover, created by Royston Knipe, was based on Francisco Goya\'s etching The Sleep of Reason Produces Monsters. It features Baratte in his pistachio green silk Charvet suit replacing the recumbent Goya in his self-portrait. Instead of the owls and bats which assail Goya in The Sleep of Reason, Knipe used ravens. The cover was noted by The Guardian writer John Dugdale, in an article about the marketing aspect of book cover design, as being unique in the current market. He stated that; along with the covers for The Sense of an Ending and The Tiger\'s Wife; "None of the three looks like anything else in bookshops".\n\n### Audio adaptations  \nA Sweet Talk production of Pure was broadcast on BBC Radio 4 as part of the Book at Bedtime programme from 20\u201331 August 2012; it was read by John Sessions, abridged by Jeremy Osborne and produced by Rosalynd Ward.  \nThe novel was also the inspiration for two songs written by Bath based musicians, The Bookshop Band, namely "The downfall of Les Innocents" and "The Engineer\'s Paris" from their album Into The Farthest Reaches.  \n## Reception  \nThe novel received almost universal praise, with reviewers praising Miller\'s approach to the subject, his vividly rendered characters and setting and his eloquent prose.  \nIn a review for The Independent, James Urquhart found the novel to be "richly textured" and that it had "energetic, acutely observed characters"; stating "Miller populates Baratte\'s quest for equanimity with these lush and tart characters, seductively fleshed out, who collectively help to deliver the bittersweet resolution of Baratte\'s professional and personal travails." Clare Clark, writing for The Guardian, found that "Miller is a writer of subtlety and skill" and stated that she found the novel to be much like a parable, stating that "Unlike many parables, however, Pure is neither laboured nor leaden. Miller writes like a poet, with a deceptive simplicity \u2013 his sentences and images are intense distillations, conjuring the fleeting details of existence with clarity." Clark goes on to say that "Pure defies the ordinary conventions of storytelling, slipping dream-like between lucidity and a kind of abstracted elusiveness. The characters are often opaque. The narrative lacks dramatic structure, unfolding in the present tense much as life does, without clear shape or climax" and found that "The result is a book that is unsettling and, ultimately, optimistic." The Australian\'s Jennifer Levasseur found Pure to be "Well-executed and inventive", stating that she found the plot "Historically convincing, immediately engaging and intellectually stimulating". She went on to state, of Miller himself: "Miller is the calibre of writer who deserves to be followed regardless of topic, time period or setting because of his astonishing dexterity with language, his piercing observations and his ability to combine rollicking storytelling with depth of character."  \nNovelist Brian Lynch, writing for the Irish Independent found "The story in Pure is simple, almost dreamlike, a realistic fantasy, a violent fairy tale for adults", stating "At its best Pure shimmers". The novel received two reviews from The Daily Telegraph. Freya Johnston found that "Miller lingers up close on details: sour breath, decaying objects, pretty clothes, flames, smells, eyelashes. He is a close observer of cats" and stated, of Baratte\'s project as a whole, "Miller intimately imagines how it might have felt to witness it." Holly Kyte found Pure to be "irresistibly compelling" and "Exquisite inside and out". She stated that "Every so often a historical novel comes along that is so natural, so far from pastiche, so modern, that it thrills and expands the mind" and that she found that "Pure is a near-faultless thing: detailed, symbolic and richly evocative of a time, place and man in dangerous flux. It is brilliance distilled, with very few impurities." Suzi Feay, for the Financial Times, stated "Quietly powerful, consistently surprising, Pure is a fine addition to a substantial body of work" and also noted that "Miller\'s portraits of women and the poor are thoughtful and subtle." Writing for the Daily Express Vanessa Berridge found the novel to be "very atmospheric, if not to say positively creepy at times" and stated that "Miller\'s eloquent novel overflows with vitality and colour. It is packed with personal and physical details that evoke 18th-century Paris with startling immediacy."  \nIn a review for The Observer, Leo Robson found the novel to be somewhat underwhelming, stating that "It is disappointing, given the vitality of the novel\'s setting and set-up, that Miller fails to achieve corresponding dynamism in the development of plot and character", adding that "as a prose writer, Miller appears averse to taking risks, which means no pratfalls \u2013 but no glory either". He found the "engineer\'s progress and his setbacks are narrated in a patient, tight-lipped present tense, and just as the novel rarely concerns itself with anything that doesn\'t impinge on the destruction of Les Innocents, so it rarely deviates from its obsessive regime of description and dialogue". He did somewhat temper this, however, stating that "It is one of the historical novel\'s advantages over the topical or journalistic novel that the benchmark is plausibility rather than verifiable authenticity. Success in this effort requires a capacity for immersion and a degree of imagination, and whatever his shortcomings as a prose writer and a storyteller, Andrew Miller is endowed with both."  \n## Awards and nominations  \nThe novel was not longlisted for the Man Booker Prize, to the surprise of a number of reviewers. The novel did, however, win the Costa Book Award in 2011 for the "Best Novel" and "Book of the Year".  \nNovelist Rose Tremain, writing for The Guardian, identified the novel as one of her two "Books of the year 2011". In 2012, The Observer named it as one of "The 10 best historical novels". It was shortlisted for the 2012 Walter Scott Prize for historical fiction, with judges praising the novel as "a wholly unexpected story, richly imagined and beautifully structured"; and the South Bank Award in the "Literature" category. The novel was also short-listed for the "Independent Booksellers\' Week" Book Awards, which are voted for by the public through independent book-shops. The marketing campaign for the novel was short-listed in the "Best Overall Package" award by the Book Marketing Society in their Best Marketing Campaign of the Year awards.  \nPure was identified as an "Editors\' Choice" by The New York Times in June 2012. The novel was also listed on the Belfast Telegraph "Your Top Choice" listing for the best book of the week. Pure has, lc=y, been listed twelve times; with the first seven being in position 1. NPR listed it as one of their "Critics\' Lists" for summer 2012 in the "Rich Reads: Historical Fiction Fit for a Queen" section, nominated by historical fiction author Madeline Miller who stated that "this is historical fiction at its best."  \n### Costa "Book of the Year"  \nSpeaking about the novel at the awards ceremony in Piccadilly, London, Miller stated that he "had no special sense of this one being the one" and mentioned that "it\'s a strange journey, you spend three years in a room on your own and then this: a little unsettling but deeply pleasurable"; "It\'s a very happy occasion". Chair of the judging, editor of the Evening Standard newspaper Geordie Greig, said that the panel were basing their decision partially on the durability and memorability of the work, stating "we were looking for quality".  \nThe judges were undecided over whether the prize should have gone to Matthew Hollis\' biography Now All Roads Lead to France instead. The judging panel was locked in a "fierce debate and quite bitter dissent" and eventually used a vote to decide on the winner. Geordie Greig said "it was not unpleasant, it was forthright", stating "it\'s not like comparing apples and oranges \u2013 it\'s like comparing bananas and curry." Chair for the selection in 2010, web editor for Foyles bookshops Jonathan Ruppin, supported the decision, stating "Like Hilary Mantel, who finally became a major name when she won the Man Booker, Miller should now gain the commercial success his stylish and absorbing novels have long deserved." He goes on to say "Pure perfectly captures the mood of a downtrodden and angry nation, on the verge of overthrowing a self-serving and out-of-touch ruling class \u2013 it\'s very much a book for our time."  \nThe 2011 awards were subject to some attention from bookmakers, who offered odds of 2/1 for favourite Matthew Hollis\' biography Now All Roads Lead To France and odds of 3/1 for Miller\'s Pure.\n\nQuestion: Which theme is common to the novel discussed in the description of the first image and the artwork depicted in the second image?\n',
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "285",
+      choices: [
+        "(A)  The unpredictability of technological advancements",
+        "(B) The celebration of political revolutions through art",
+        "(C) The exploration of human anxiety and the concept of death",
+        "(D) The impact of climate change on historical landmarks",
+      ],
+      image: "MileBench/285",
+    },
+    {
+      id: "MileBench_16",
+      question:
+        "Image Caption #1: 2018-06-28 10 16 31 View west along Interstate 80 between Exit 12 and Exit 4 in Blairstown Township, Warren County, New Jersey View west along Interstate 80 between Exit 12 and Exit 4 in Blairstown Township, Warren County, New Jersey Image Caption #2: 2018-06-28 09 37 51 View east along Interstate 80 just east of Exit 12 in Hope Township, Warren County, New Jersey View east along Interstate 80 just east of Exit 12 in Hope Township, Warren County, New Jersey Question: What color are the letterings of the road signs to the right of the Interstate 80 between Exit 12 and Exit 4 in Blairstown Township, and to the right of Interstate 80 just east of Exit 12 in Hope Township?\n",
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "16",
+      choices: [
+        "(A)  The lettering of the signs to the right of the Interstate 80 between Exit 12 and Exit 4 in Blairstown Township, and to the right of Interstate 80 just east of Exit 12 in Hope Township, are both yellow.",
+        "(B) The lettering of the signs to the right of the Interstate 80 between Exit 12 and Exit 4 in Blairstown Township, and to the right of Interstate 80 just east of Exit 12 in Hope Township, are both black.",
+        "(C) The lettering of the signs to the right of the Interstate 80 between Exit 12 and Exit 4 in Blairstown Township, and to the right of Interstate 80 just east of Exit 12 in Hope Township, are both white.",
+        "(D) The lettering of the signs to the right of the Interstate 80 between Exit 12 and Exit 4 in Blairstown Township, and to the right of Interstate 80 just east of Exit 12 in Hope Township, are both green.",
+      ],
+      image: "MileBench/16",
+    },
+    {
+      id: "MileBench_239",
+      question:
+        "Image Caption #1: Ningbo Tengtou Case Pavilion Image Caption #2: Saudi Arabia Pavilion of Expo 2010 Saudi Arabia Pavilion of Expo 2010 Question: Is the Ningbo Tengtou Case Pavilion at Expo 2010 wider than the Saudi Arabia Pavilion at Expo 2010?\n",
+      answer: "D",
+      dataset: "MileBench",
+      image_id: "239",
+      choices: [
+        "(A)  It is the same width as the Saudi Arabia Pavilion at Expo 2010.",
+        "(B) Yes, the Ningbo Tengtou Case Pavilion at Expo 2010 is wider.",
+        "(C) The Saudi Arabia Pavilion at Expo 2010 is wider.",
+        "(D) No, the Ningbo Tengtou Case Pavilion at Expo 2010 is not wider.",
+      ],
+      image: "MileBench/239",
+    },
+    {
+      id: "MileBench_159",
+      question: "What happened before the person held the phone/camera?\n",
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "159",
+      choices: [
+        "(A)  Tidied up the closet/cabinet.",
+        "(B) Took the cup/glass/bottle.",
+        "(C) Put down the pillow.",
+        "(D) Tidied up the blanket.",
+      ],
+      image: "MileBench/159",
+    },
+    {
+      id: "MileBench_57",
+      question:
+        "Can you choose the option that matches how the scenes change in the video?\n",
+      answer: "D",
+      dataset: "MileBench",
+      image_id: "57",
+      choices: [
+        "(A)  From the classroom to the playground.",
+        "(B) From the kitchen to the living room.",
+        "(C) From the office to the conference room.",
+        "(D) From Evan's room to the prison corridor.",
+      ],
+      image: "MileBench/57",
+    },
+    {
+      id: "MileBench_166",
+      question: "Which object was put down by the person?\n",
+      answer: "D",
+      dataset: "MileBench",
+      image_id: "166",
+      choices: [
+        "(A)  The book.",
+        "(B) The blanket.",
+        "(C) The broom.",
+        "(D) The picture.",
+      ],
+      image: "MileBench/166",
+    },
+    {
+      id: "MileBench_171",
+      question: "What happened before the person held the broom?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "171",
+      choices: [
+        "(A)  Put down the phone/camera.",
+        "(B) Tidied up the closet/cabinet.",
+        "(C) Put down the cup/glass/bottle.",
+        "(D) Washed the table.",
+      ],
+      image: "MileBench/171",
+    },
+    {
+      id: "MileBench_87",
+      question: "Question: How many formations of a waterfall are there?\n",
+      answer: "C",
+      dataset: "MileBench",
+      image_id: "87",
+      choices: ["(A)  4", "(B) 2", "(C) 5", "(D) 3"],
+      image: "MileBench/87",
+    },
+    {
+      id: "MileBench_53",
+      question:
+        "What is the material of the stationary sphere when the video begins?\n",
+      answer: "A",
+      dataset: "MileBench",
+      image_id: "53",
+      choices: ["(A)  rubber", "(B) metal"],
+      image: "MileBench/53",
+    },
+    {
+      id: "PANDA_213",
+      question: "How many motorcycle are in the image?\n",
+      answer: "B",
+      dataset: "PANDA",
+      image_id: "213",
+      choices: ["(A)  3", "(B) 6", "(C) 4", "(D) 5"],
+      image: "PANDA/213",
+    },
+    {
+      id: "PANDA_130",
+      question: "How many motorcycle rider are in the image?\n",
+      answer: "B",
+      dataset: "PANDA",
+      image_id: "130",
+      choices: ["(A)  6", "(B) 1", "(C) 5", "(D) 0"],
+      image: "PANDA/130",
+    },
+    {
+      id: "PANDA_244",
+      question: "How many riding person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "244",
+      choices: ["(A)  16", "(B) 37", "(C) 19", "(D) 29"],
+      image: "PANDA/244",
+    },
+    {
+      id: "PANDA_54",
+      question: "How many baby carriage are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "54",
+      choices: ["(A)  0", "(B) 1", "(C) 3", "(D) 5"],
+      image: "PANDA/54",
+    },
+    {
+      id: "PANDA_237",
+      question: "How many baby carriage are in the image?\n",
+      answer: "B",
+      dataset: "PANDA",
+      image_id: "237",
+      choices: ["(A)  0", "(B) 2", "(C) 3", "(D) 4"],
+      image: "PANDA/237",
+    },
+    {
+      id: "PANDA_255",
+      question: "How many motorcycle rider are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "255",
+      choices: ["(A)  20", "(B) 22", "(C) 23", "(D) 40"],
+      image: "PANDA/255",
+    },
+    {
+      id: "PANDA_111",
+      question: "How many sitting person(s) are in the image?\n",
+      answer: "A",
+      dataset: "PANDA",
+      image_id: "111",
+      choices: ["(A)  43", "(B) 14", "(C) 71", "(D) 66"],
+      image: "PANDA/111",
+    },
+    {
+      id: "PANDA_21",
+      question: "How many bicycle rider are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "21",
+      choices: ["(A)  0", "(B) 2", "(C) 1", "(D) 5"],
+      image: "PANDA/21",
+    },
+    {
+      id: "PANDA_261",
+      question: "How many child person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "261",
+      choices: ["(A)  2", "(B) 17", "(C) 16", "(D) 9"],
+      image: "PANDA/261",
+    },
+    {
+      id: "PANDA_191",
+      question: "How many small car are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "191",
+      choices: ["(A)  2", "(B) 21", "(C) 18", "(D) 3"],
+      image: "PANDA/191",
+    },
+    {
+      id: "PANDA_157",
+      question: "How many standing person(s) are in the image?\n",
+      answer: "A",
+      dataset: "PANDA",
+      image_id: "157",
+      choices: ["(A)  44", "(B) 80", "(C) 46", "(D) 26"],
+      image: "PANDA/157",
+    },
+    {
+      id: "PANDA_270",
+      question: "How many bicycle rider are in the image?\n",
+      answer: "A",
+      dataset: "PANDA",
+      image_id: "270",
+      choices: ["(A)  1", "(B) 0", "(C) 2", "(D) 4"],
+      image: "PANDA/270",
+    },
+    {
+      id: "PANDA_109",
+      question: "How many adult person(s) are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "109",
+      choices: ["(A)  4", "(B) 5", "(C) 51", "(D) 57"],
+      image: "PANDA/109",
+    },
+    {
+      id: "PANDA_141",
+      question: "How many child person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "141",
+      choices: ["(A)  2", "(B) 0", "(C) 12", "(D) 11"],
+      image: "PANDA/141",
+    },
+    {
+      id: "PANDA_46",
+      question: "How many child person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "46",
+      choices: ["(A)  3", "(B) 0", "(C) 6", "(D) 1"],
+      image: "PANDA/46",
+    },
+    {
+      id: "PANDA_246",
+      question: "How many child person(s) are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "246",
+      choices: ["(A)  7", "(B) 0", "(C) 2", "(D) 4"],
+      image: "PANDA/246",
+    },
+    {
+      id: "PANDA_26",
+      question: "How many child person(s) are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "26",
+      choices: ["(A)  27", "(B) 15", "(C) 21", "(D) 18"],
+      image: "PANDA/26",
+    },
+    {
+      id: "PANDA_107",
+      question: "How many midsize car are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "107",
+      choices: ["(A)  0", "(B) 3", "(C) 2", "(D) 5"],
+      image: "PANDA/107",
+    },
+    {
+      id: "PANDA_284",
+      question: "How many adult person(s) are in the image?\n",
+      answer: "A",
+      dataset: "PANDA",
+      image_id: "284",
+      choices: ["(A)  107", "(B) 90", "(C) 198", "(D) 9"],
+      image: "PANDA/284",
+    },
+    {
+      id: "PANDA_34",
+      question: "How many adult person(s) are in the image?\n",
+      answer: "B",
+      dataset: "PANDA",
+      image_id: "34",
+      choices: ["(A)  615", "(B) 336", "(C) 79", "(D) 386"],
+      image: "PANDA/34",
+    },
+    {
+      id: "PANDA_51",
+      question: "How many adult person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "51",
+      choices: ["(A)  50", "(B) 80", "(C) 124", "(D) 110"],
+      image: "PANDA/51",
+    },
+    {
+      id: "PANDA_3",
+      question: "How many child person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "3",
+      choices: ["(A)  2", "(B) 5", "(C) 13", "(D) 8"],
+      image: "PANDA/3",
+    },
+    {
+      id: "PANDA_82",
+      question: "How many child person(s) are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "82",
+      choices: ["(A)  3", "(B) 2", "(C) 7", "(D) 11"],
+      image: "PANDA/82",
+    },
+    {
+      id: "PANDA_257",
+      question: "How many baby carriage are in the image?\n",
+      answer: "C",
+      dataset: "PANDA",
+      image_id: "257",
+      choices: ["(A)  6", "(B) 4", "(C) 1", "(D) 0"],
+      image: "PANDA/257",
+    },
+    {
+      id: "PANDA_79",
+      question: "How many motorcycle rider are in the image?\n",
+      answer: "B",
+      dataset: "PANDA",
+      image_id: "79",
+      choices: ["(A)  6", "(B) 2", "(C) 4", "(D) 1"],
+      image: "PANDA/79",
+    },
+    {
+      id: "PANDA_90",
+      question: "How many adult person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "90",
+      choices: ["(A)  213", "(B) 19", "(C) 92", "(D) 151"],
+      image: "PANDA/90",
+    },
+    {
+      id: "PANDA_266",
+      question: "How many midsize car are in the image?\n",
+      answer: "B",
+      dataset: "PANDA",
+      image_id: "266",
+      choices: ["(A)  4", "(B) 1", "(C) 5", "(D) 0"],
+      image: "PANDA/266",
+    },
+    {
+      id: "PANDA_217",
+      question: "How many adult person(s) are in the image?\n",
+      answer: "A",
+      dataset: "PANDA",
+      image_id: "217",
+      choices: ["(A)  146", "(B) 192", "(C) 215", "(D) 206"],
+      image: "PANDA/217",
+    },
+    {
+      id: "PANDA_198",
+      question: "How many walking person(s) are in the image?\n",
+      answer: "D",
+      dataset: "PANDA",
+      image_id: "198",
+      choices: ["(A)  42", "(B) 13", "(C) 53", "(D) 35"],
+      image: "PANDA/198",
+    },
+    {
+      id: "PANDA_163",
+      question: "How many standing person(s) are in the image?\n",
+      answer: "B",
+      dataset: "PANDA",
+      image_id: "163",
+      choices: ["(A)  6", "(B) 50", "(C) 16", "(D) 88"],
+      image: "PANDA/163",
+    },
+    {
+      id: "CAD_38",
+      question: "Where is the elevator in the image?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "38",
+      choices: [
+        "(A)  upper left",
+        "(B) upper right",
+        "(C) lower right",
+        "(D) lower left",
+      ],
+      image: "CAD/38",
+    },
+    {
+      id: "CAD_130",
+      question: "How many single doors are there in this image?\n",
+      answer: "B",
+      dataset: "CAD",
+      image_id: "130",
+      choices: ["(A)  0", "(B) 1", "(C) 3", "(D) 5"],
+      image: "CAD/130",
+    },
+    {
+      id: "CAD_69",
+      question: "Where is the washing machine in the image?\n",
+      answer: "A",
+      dataset: "CAD",
+      image_id: "69",
+      choices: [
+        "(A)  lower right",
+        "(B) lower left",
+        "(C) upper left",
+        "(D) upper right",
+      ],
+      image: "CAD/69",
+    },
+    {
+      id: "CAD_201",
+      question: "how many sinks are there in the image?\n",
+      answer: "B",
+      dataset: "CAD",
+      image_id: "201",
+      choices: ["(A)  4", "(B) 1", "(C) 3", "(D) 2"],
+      image: "CAD/201",
+    },
+    {
+      id: "CAD_164",
+      question: "how many elevators are there in the image?\n",
+      answer: "D",
+      dataset: "CAD",
+      image_id: "164",
+      choices: ["(A)  4", "(B) 3", "(C) 2", "(D) 1"],
+      image: "CAD/164",
+    },
+    {
+      id: "CAD_242",
+      question: "How many complete, non-cutoff cars can you see in the image?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "242",
+      choices: ["(A)  2", "(B) 3", "(C) 1", "(D) 4"],
+      image: "CAD/242",
+    },
+    {
+      id: "CAD_295",
+      question: "What shape is the room in the top-left of this image?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "295",
+      choices: ["(A)  Square", "(B) Circle", "(C) Rectangle", "(D) Triangle"],
+      image: "CAD/295",
+    },
+    {
+      id: "CAD_203",
+      question: "how many single doors are there in the image?\n",
+      answer: "D",
+      dataset: "CAD",
+      image_id: "203",
+      choices: ["(A)  4", "(B) 3", "(C) 1", "(D) 2"],
+      image: "CAD/203",
+    },
+    {
+      id: "CAD_235",
+      question: "How many sofas do you see in the image?\n",
+      answer: "B",
+      dataset: "CAD",
+      image_id: "235",
+      choices: ["(A)  1", "(B) 4", "(C) 3", "(D) 2"],
+      image: "CAD/235",
+    },
+    {
+      id: "CAD_146",
+      question: "How many urinals are there in this image?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "146",
+      choices: ["(A)  5", "(B) 9", "(C) 7", "(D) 3"],
+      image: "CAD/146",
+    },
+    {
+      id: "CAD_128",
+      question: "How many double doors are there in this image?\n",
+      answer: "D",
+      dataset: "CAD",
+      image_id: "128",
+      choices: ["(A)  8", "(B) 4", "(C) 0", "(D) 6"],
+      image: "CAD/128",
+    },
+    {
+      id: "CAD_110",
+      question: "What is the largest number written in the image?\n",
+      answer: "A",
+      dataset: "CAD",
+      image_id: "110",
+      choices: ["(A)  3300", "(B) 800", "(C) 3100", "(D) 900"],
+      image: "CAD/110",
+    },
+    {
+      id: "CAD_228",
+      question: "what is the shape of this floor?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "228",
+      choices: ["(A)  \\+", "(B) |", "(C) L", "(D) -"],
+      image: "CAD/228",
+    },
+    {
+      id: "CAD_276",
+      question: "How many windows are in the image?\n",
+      answer: "B",
+      dataset: "CAD",
+      image_id: "276",
+      choices: ["(A)  3", "(B) 2", "(C) 4", "(D) 1"],
+      image: "CAD/276",
+    },
+    {
+      id: "CAD_82",
+      question: "How many stairs are there in the image?\n",
+      answer: "A",
+      dataset: "CAD",
+      image_id: "82",
+      choices: ["(A)  2", "(B) 3", "(C) 1", "(D) 0"],
+      image: "CAD/82",
+    },
+    {
+      id: "CAD_274",
+      question: "How many perfect circles are in the image?\n",
+      answer: "A",
+      dataset: "CAD",
+      image_id: "274",
+      choices: ["(A)  1", "(B) 4", "(C) 2", "(D) 3"],
+      image: "CAD/274",
+    },
+    {
+      id: "CAD_150",
+      question: "How many beds are there in the image?\n",
+      answer: "B",
+      dataset: "CAD",
+      image_id: "150",
+      choices: ["(A)  0", "(B) 1", "(C) 3", "(D) 2"],
+      image: "CAD/150",
+    },
+    {
+      id: "CAD_123",
+      question: "How many sinks are there in this image?\n",
+      answer: "D",
+      dataset: "CAD",
+      image_id: "123",
+      choices: ["(A)  0", "(B) 2", "(C) 1", "(D) 4"],
+      image: "CAD/123",
+    },
+    {
+      id: "CAD_116",
+      question: "How many single doors are there in the image?\n",
+      answer: "D",
+      dataset: "CAD",
+      image_id: "116",
+      choices: ["(A)  1", "(B) 0", "(C) 2", "(D) 3"],
+      image: "CAD/116",
+    },
+    {
+      id: "CAD_297",
+      question: 'What is the percentage assigned to "i" in this image?\n',
+      answer: "D",
+      dataset: "CAD",
+      image_id: "297",
+      choices: ["(A)  1000", "(B) 8.8", "(C) 800", "(D) 1"],
+      image: "CAD/297",
+    },
+    {
+      id: "CAD_142",
+      question: "What is the largest number written in the image?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "142",
+      choices: ["(A)  1800", "(B) 800", "(C) 1322", "(D) 600"],
+      image: "CAD/142",
+    },
+    {
+      id: "CAD_182",
+      question: "how many sofas are there in the room?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "182",
+      choices: ["(A)  4", "(B) 3", "(C) 2", "(D) 1"],
+      image: "CAD/182",
+    },
+    {
+      id: "CAD_231",
+      question: "how many double doors are there in the image?\n",
+      answer: "D",
+      dataset: "CAD",
+      image_id: "231",
+      choices: ["(A)  2", "(B) 3", "(C) 4", "(D) 1"],
+      image: "CAD/231",
+    },
+    {
+      id: "CAD_63",
+      question: "How many sofas are there in the image?\n",
+      answer: "B",
+      dataset: "CAD",
+      image_id: "63",
+      choices: ["(A)  3", "(B) 2", "(C) 1", "(D) 4"],
+      image: "CAD/63",
+    },
+    {
+      id: "CAD_161",
+      question: "how many blind windows are there in the image?\n",
+      answer: "A",
+      dataset: "CAD",
+      image_id: "161",
+      choices: ["(A)  2", "(B) 1", "(C) 3", "(D) 4"],
+      image: "CAD/161",
+    },
+    {
+      id: "CAD_74",
+      question: "How many single doors are there in the image?\n",
+      answer: "A",
+      dataset: "CAD",
+      image_id: "74",
+      choices: ["(A)  2", "(B) 3", "(C) 4", "(D) 1"],
+      image: "CAD/74",
+    },
+    {
+      id: "CAD_202",
+      question: "how many double doors are there in the image?\n",
+      answer: "C",
+      dataset: "CAD",
+      image_id: "202",
+      choices: ["(A)  4", "(B) 2", "(C) 1", "(D) 3"],
+      image: "CAD/202",
+    },
+    {
+      id: "CAD_250",
+      question: "How many single doors can you see in the image?\n",
+      answer: "D",
+      dataset: "CAD",
+      image_id: "250",
+      choices: ["(A)  3", "(B) 4", "(C) 2", "(D) 0"],
+      image: "CAD/250",
+    },
+    {
+      id: "CAD_187",
+      question: "how many tables are there in the image?\n",
+      answer: "B",
+      dataset: "CAD",
+      image_id: "187",
+      choices: ["(A)  48", "(B) 24", "(C) 12", "(D) 96"],
+      image: "CAD/187",
+    },
+    {
+      id: "CAD_252",
+      question: "How many complete green squares do you see in the image?\n",
+      answer: "A",
+      dataset: "CAD",
+      image_id: "252",
+      choices: ["(A)  1", "(B) 3", "(C) 2", "(D) 4"],
+      image: "CAD/252",
+    },
+  ];
+  
