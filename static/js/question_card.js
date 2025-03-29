@@ -1,6 +1,6 @@
 // let BASE_DIR = './data';
 // let BASE_DIR = 'https://raw.githubusercontent.com/mathvista/data/main';
-let BASE_DIR = "static/images/explorer";
+let BASE_DIR = "static/images/myimages";
 
 function create_number(data) {
   let question = make_qt(data.question);
@@ -9,8 +9,9 @@ function create_number(data) {
   let image = "";
   if (data.image !== -1)
     // image = make_img(`${BASE_DImetadataR}/${filters.dataset}/${data.image}`);
-    image = make_img(`${BASE_DIR}/${data.image}`);
-  // image = make_img(`${BASE_DIR}/1.jpg`);
+    image = make_img(`${BASE_DIR}/${data.image}.jpg`);
+    // image = make_img(`${BASE_DIR}/1.jpg`);
+    // image = make_img('https://drive.google.com/file/d/1fB9bZWKM7zOJhWs0psgLFhdVNwYJPRGm/view?usp=drive_link')
 
   let choices = make_choices(data.choices);
 
