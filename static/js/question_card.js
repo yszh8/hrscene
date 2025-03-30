@@ -9,7 +9,19 @@ function create_number(data) {
   let image = "";
   if (data.image !== -1)
     // image = make_img(`${BASE_DImetadataR}/${filters.dataset}/${data.image}`);
-    image = make_img(`${BASE_DIR}/${data.image}.jpg`);
+
+    if (data.image.includes("CAD") || data.image.includes("HRVQA") || data.image.includes("MMAD") || data.image.includes("ArtBench"))
+      image = make_img(`${BASE_DIR}/${data.image}.png`);
+
+    else if (data.image.includes("InfographicVQA"))
+      image = make_img(`${BASE_DIR}/${data.image}.jpeg`);
+
+    // else if (data.image.includes("Galaxy"))
+    //   image = make_img(`${BASE_DIR}/${data.image}.tif`);
+
+    else 
+      image = make_img(`${BASE_DIR}/${data.image}.jpg`);
+
     // image = make_img(`${BASE_DIR}/1.jpg`);
     // image = make_img('https://drive.google.com/file/d/1fB9bZWKM7zOJhWs0psgLFhdVNwYJPRGm/view?usp=drive_link')
 
