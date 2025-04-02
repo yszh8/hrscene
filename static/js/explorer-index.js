@@ -157,6 +157,7 @@ function generate_row(qid, model_names) {
   let html = `
     <div class="level has-text-justified box question-level" style="background: rgba(0, 0, 0, 0.02);">
         <div class='leve-item container m-3' style='width: 30%;'>
+            <b>Dataset: ${test_data[qid.toString()]["dataset"]}</b>
             ${create_number(test_data[qid.toString()])}
         </div>
         <div class='leve-item container m-3' style='width: 30%; white-space: pre-wrap;'>${responses[0]['response']}</div>

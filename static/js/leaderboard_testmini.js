@@ -1,9 +1,9 @@
 function loadTables() {
   
-  var table = generateTable(score_table);
+  var table = generateTable(scores_testmini);
   document.getElementById('testmini_leaderboard').innerHTML = table;
 
-  table = generateTable(score_table_test);
+  table = generateTable(scores_test);
   document.getElementById('test_leaderboard').innerHTML = table;
 
 };

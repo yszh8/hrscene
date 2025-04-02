@@ -7,7 +7,7 @@ test_data = [
     dataset: "Autonomous_Driving",
     image_id: "193",
     choices: [
-      "(A)  stopped",
+      "(A) stopped",
       "(B) parked",
       "(C) other",
       "(D) moving",
@@ -24,7 +24,7 @@ test_data = [
     dataset: "Autonomous_Driving",
     image_id: "52",
     choices: [
-      "(A)  no response",
+      "(A) no response",
       "(B) slowing down",
       "(C) yielding",
       "(D) stopping",
@@ -41,7 +41,7 @@ test_data = [
     dataset: "Autonomous_Driving",
     image_id: "227",
     choices: [
-      "(A)  passing by",
+      "(A) passing by",
       "(B) no response",
       "(C) following",
       "(D) accelerating/speeding up",
@@ -58,7 +58,7 @@ test_data = [
     dataset: "Autonomous_Driving",
     image_id: "258",
     choices: [
-      "(A)  crossing the crosswalk",
+      "(A) crossing the crosswalk",
       "(B) standing",
       "(C) waiting to cross",
       "(D) walking on the sidewalk",
@@ -74,7 +74,7 @@ test_data = [
     dataset: "Autonomous_Driving",
     image_id: "163",
     choices: [
-      "(A)  stopped",
+      "(A) stopped",
       "(B) moving",
       "(C) other",
       "(D) parked",
@@ -91,7 +91,7 @@ test_data = [
     dataset: "DocStruct4M",
     image_id: "15",
     choices: [
-      "(A)  <ocr> Christophe </ocr>",
+      "(A) <ocr> Christophe </ocr>",
       "(B) <ocr> Castellano </ocr>",
       "(C) <ocr> Fragoso </ocr>",
       "(D) <ocr> Javier </ocr>",
@@ -107,7 +107,7 @@ test_data = [
     dataset: "DocStruct4M",
     image_id: "32",
     choices: [
-      "(A)  <ocr> Donations and Legacies  4  1,010,107  -  1.270,098 2,220,205  2,243,225  50,000  2,293,225 </ocr>",
+      "(A) <ocr> Donations and Legacies  4  1,010,107  -  1.270,098 2,220,205  2,243,225  50,000  2,293,225 </ocr>",
       "(B) <ocr> Donations and Legacies  4  1,010,107  -  1.210,098 2,220,205  2,243,225  50,000  2,293,225 </ocr>",
       "(C) <ocr> Donations and Legacies  4  1,010,107  -  1.210,098 102,356 2,220,205  2,243,225  50,000  2,293,225 </ocr>",
       "(D) <ocr> Donations and Legacies  4  1,010,101  -  1.210,098 2,220,205  2,243,225  50,000  2,293,225 </ocr>",
@@ -123,7 +123,7 @@ test_data = [
     dataset: "DocStruct4M",
     image_id: "259",
     choices: [
-      "(A)  expectant mother resting on a couch <ocr> Style RMK shutterstock tterstock shuttersto Style RMK Style RMK shutterstock shutterstock shutterstock IMAGE ID: 445271683 www.shutterstock.com </ocr>",
+      "(A) expectant mother resting on a couch <ocr> Style RMK shutterstock tterstock shuttersto Style RMK Style RMK shutterstock shutterstock shutterstock IMAGE ID: 445271683 www.shutterstock.com </ocr>",
       "(B) young new mother is sitting on a bed <ocr> Style DNF shutterstock tterstock shuttersto Style DNF Style DNF shutterstock shutterstock shutterstock IMAGE ID: 338360351 www.shutterstock.com </ocr>",
       "(C) pregnant woman relaxing on sofa <ocr> Style HNJ shutterstock tterstock shuttersto Style HNJ Style HNJ shutterstock shutterstock shutterstock IMAGE ID: 552947812 www.shutterstock.com </ocr>",
       "(D) first-time father sitting on hospital chair <ocr> Style TPL shutterstock tterstock shuttersto Style TPL Style TPL shutterstock shutterstock shutterstock IMAGE ID: 229184576 www.shutterstock.com </ocr>",
@@ -139,7 +139,7 @@ test_data = [
     dataset: "DocStruct4M",
     image_id: "120",
     choices: [
-      "(A)  <ocr> RECORD 21-15 108 PHOENIX SUNS at DETROIT PISTONS 110 RECORD 16-72 </ocr>",
+      "(A) <ocr> RECORD 21-15 108 PHOENIX SUNS at DETROIT PISTONS 110 RECORD 16-72 </ocr>",
       "(B) <ocr> RECORD 21-15 108 PHOENIX SUNS at DETROIT PISTONS 110 RECORD 16-22 </ocr>",
       "(C) <ocr> RECORD 21-5 108 PHOENIX SUNS at DETROIT PISTONS 110 RECORD 16-22 </ocr>",
       "(D) <ocr> RECORD 21-15 108 PNOENIX SUNS at DETROIT PISTONS 110 RECORD 16-22 </ocr>",
@@ -155,7 +155,7 @@ test_data = [
     dataset: "DocStruct4M",
     image_id: "18",
     choices: [
-      "(A)  <ocr> ibibleverses ibibleverses com <ocr>",
+      "(A) <ocr> ibibleverses ibibleverses com <ocr>",
       "(B) <ocr> ibib1everses ibib1everses.com <ocr>",
       "(C) <ocr> mibibleverses ibibleverses.com <ocr>",
       "(D) <ocr> ibibleverses ibibleverses.com <ocr>",
@@ -170,7 +170,7 @@ test_data = [
     dataset: "HR-Bench",
     image_id: "313",
     choices: [
-      "(A)  A boat",
+      "(A) A boat",
       "(B) A large tree",
       "(C) A smaller building",
       "(D) A car",
@@ -186,7 +186,7 @@ test_data = [
     dataset: "HR-Bench",
     image_id: "348",
     choices: [
-      "(A)  Locations 1 and 2",
+      "(A) Locations 1 and 2",
       "(B) Locations 2 and 3",
       "(C) Locations 2 and 4",
       "(D) Locations 1 and 3",
@@ -201,7 +201,7 @@ test_data = [
     dataset: "HR-Bench",
     image_id: "264",
     choices: [
-      "(A)  Green, white and red",
+      "(A) Green, white and red",
       "(B) Red, yellow and green",
       "(C) Red, white and green",
       "(D) Blue, yellow and red",
@@ -216,7 +216,7 @@ test_data = [
     dataset: "HR-Bench",
     image_id: "204",
     choices: [
-      "(A)  Passenger's side",
+      "(A) Passenger's side",
       "(B) Driver's side",
       "(C) Front (hood)",
       "(D) Back (trunk)",
@@ -232,7 +232,7 @@ test_data = [
     dataset: "HR-Bench",
     image_id: "138",
     choices: [
-      "(A)  A plastic bag",
+      "(A) A plastic bag",
       "(B) A dog",
       "(C) A metal chair",
       "(D) A wooden box with flowers",
@@ -247,7 +247,7 @@ test_data = [
     dataset: "HRVQA",
     image_id: "15",
     choices: [
-      "(A)  polygonal",
+      "(A) polygonal",
       "(B) straight",
       "(C) unfindable",
       "(D) rectangular",
@@ -261,7 +261,7 @@ test_data = [
     answer: "C",
     dataset: "HRVQA",
     image_id: "32",
-    choices: ["(A)  white", "(B) red", "(C) none", "(D) yellow"],
+    choices: ["(A) white", "(B) red", "(C) none", "(D) yellow"],
     image: "HRVQA/32",
   },
   {
@@ -272,7 +272,7 @@ test_data = [
     dataset: "HRVQA",
     image_id: "199",
     choices: [
-      "(A)  topleft",
+      "(A) topleft",
       "(B) bottomright",
       "(C) nonexistent",
       "(D) topright",
@@ -287,7 +287,7 @@ test_data = [
     dataset: "HRVQA",
     image_id: "201",
     choices: [
-      "(A)  topleft",
+      "(A) topleft",
       "(B) nonexistent",
       "(C) topright",
       "(D) bottomright",
@@ -301,7 +301,7 @@ test_data = [
     answer: "B",
     dataset: "HRVQA",
     image_id: "151",
-    choices: ["(A)  large", "(B) nonexistent", "(C) tiny", "(D) small"],
+    choices: ["(A) large", "(B) nonexistent", "(C) tiny", "(D) small"],
     image: "HRVQA/151",
   },
   {
@@ -313,7 +313,7 @@ test_data = [
     dataset: "HRIQ",
     image_id: "176",
     choices: [
-      "(A)  1 bad",
+      "(A) 1 bad",
       "(B) 2 poor",
       "(C) 3 fair",
       "(D) 4 good",
@@ -330,7 +330,7 @@ test_data = [
     dataset: "HRIQ",
     image_id: "289",
     choices: [
-      "(A)  1 bad",
+      "(A) 1 bad",
       "(B) 2 poor",
       "(C) 3 fair",
       "(D) 4 good",
@@ -347,7 +347,7 @@ test_data = [
     dataset: "HRIQ",
     image_id: "14",
     choices: [
-      "(A)  1 bad",
+      "(A) 1 bad",
       "(B) 2 poor",
       "(C) 3 fair",
       "(D) 4 good",
@@ -364,7 +364,7 @@ test_data = [
     dataset: "HRIQ",
     image_id: "90",
     choices: [
-      "(A)  1 bad",
+      "(A) 1 bad",
       "(B) 2 poor",
       "(C) 3 fair",
       "(D) 4 good",
@@ -381,7 +381,7 @@ test_data = [
     dataset: "HRIQ",
     image_id: "101",
     choices: [
-      "(A)  1 bad",
+      "(A) 1 bad",
       "(B) 2 poor",
       "(C) 3 fair",
       "(D) 4 good",
@@ -397,7 +397,7 @@ test_data = [
     dataset: "InfographicVQA",
     image_id: "65",
     choices: [
-      "(A)  'paypal'",
+      "(A) 'paypal'",
       "(B) 'google pay'",
       "(C) 'chase'",
       "(D) 'apple pay'",
@@ -412,7 +412,7 @@ test_data = [
     dataset: "InfographicVQA",
     image_id: "219",
     choices: [
-      "(A)  1953, 1962, 1970",
+      "(A) 1953, 1962, 1970",
       "(B) 1958, 1963, 1970",
       "(C) 1958, 1962, 1970",
       "(D) 1958, 1962, 1977",
@@ -428,7 +428,7 @@ test_data = [
     dataset: "InfographicVQA",
     image_id: "75",
     choices: [
-      "(A)  'laos, south korea, singapore'",
+      "(A) 'laos, south korea, singapore'",
       "(B) 'japan, south korea, singapore'",
       "(C) 'china, Mongolia,, singapore'",
       "(D) 'japan, south korea, Vietnam'",
@@ -443,7 +443,7 @@ test_data = [
     answer: "C",
     dataset: "InfographicVQA",
     image_id: "100",
-    choices: ["(A)  '3.1%'", "(B) '2.4%'", "(C) '17.4%'", "(D) '2.6%'"],
+    choices: ["(A) '3.1%'", "(B) '2.4%'", "(C) '17.4%'", "(D) '2.6%'"],
     image: "InfographicVQA/100",
   },
   {
@@ -454,7 +454,7 @@ test_data = [
     dataset: "InfographicVQA",
     image_id: "79",
     choices: [
-      "(A)  'fortis bank, dexia, kbc group', 'kbc group, fortis bank, BNP'",
+      "(A) 'fortis bank, dexia, kbc group', 'kbc group, fortis bank, BNP'",
       "(B) 'HSBC, dexia, kbc group', 'kbc group, fortis bank, dexia'",
       "(C) 'fortis bank, dexia, icbc', 'kbc group, fortis bank, dexia'",
       "(D) 'fortis bank, dexia, kbc group', 'kbc group, fortis bank, dexia'",
@@ -470,7 +470,7 @@ test_data = [
     dataset: "LungHist700",
     image_id: "299",
     choices: [
-      "(A)  Normal tissue",
+      "(A) Normal tissue",
       "(B) Adenocarcinoma (Well-differentiated)",
       "(C) Adenocarcinoma (Moderately differentiated)",
       "(D) Adenocarcinoma (Poorly differentiated)",
@@ -489,7 +489,7 @@ test_data = [
     dataset: "LungHist700",
     image_id: "233",
     choices: [
-      "(A)  Normal tissue",
+      "(A) Normal tissue",
       "(B) Adenocarcinoma (Well-differentiated)",
       "(C) Adenocarcinoma (Moderately differentiated)",
       "(D) Adenocarcinoma (Poorly differentiated)",
@@ -508,7 +508,7 @@ test_data = [
     dataset: "LungHist700",
     image_id: "292",
     choices: [
-      "(A)  Normal tissue",
+      "(A) Normal tissue",
       "(B) Adenocarcinoma (Well-differentiated)",
       "(C) Adenocarcinoma (Moderately differentiated)",
       "(D) Adenocarcinoma (Poorly differentiated)",
@@ -527,7 +527,7 @@ test_data = [
     dataset: "LungHist700",
     image_id: "171",
     choices: [
-      "(A)  Normal tissue",
+      "(A) Normal tissue",
       "(B) Adenocarcinoma (Well-differentiated)",
       "(C) Adenocarcinoma (Moderately differentiated)",
       "(D) Adenocarcinoma (Poorly differentiated)",
@@ -546,7 +546,7 @@ test_data = [
     dataset: "LungHist700",
     image_id: "248",
     choices: [
-      "(A)  Normal tissue",
+      "(A) Normal tissue",
       "(B) Adenocarcinoma (Well-differentiated)",
       "(C) Adenocarcinoma (Moderately differentiated)",
       "(D) Adenocarcinoma (Poorly differentiated)",
@@ -565,7 +565,7 @@ test_data = [
     dataset: "MuirBench",
     image_id: "51",
     choices: [
-      "(A)  None of the choices provided",
+      "(A) None of the choices provided",
       "(B) dhl",
       "(C) ups",
       "(D) usps",
@@ -581,11 +581,11 @@ test_data = [
     dataset: "MuirBench",
     image_id: "82",
     choices: [
-      "(A)  None of the choices provided",
-      "(B) <image1>",
-      "(C) <image2>",
-      "(D) <image3>",
-      "(E) <image4>",
+      "(A) None of the choices provided",
+      "(B) image1",
+      "(C) image2",
+      "(D) image3",
+      "(E) image4",
     ],
     image: "MuirBench/82",
   },
@@ -598,29 +598,29 @@ test_data = [
     dataset: "MuirBench",
     image_id: "25",
     choices: [
-      "(A)  <image2>",
-      "(B) <image3>",
-      "(C) <image4>",
-      "(D) <image5>",
+      "(A) image2",
+      "(B) image3",
+      "(C) image4",
+      "(D) image5",
       "(E) None of the choices provided",
     ],
     image: "MuirBench/25",
   },
   {
-    id: "MuirBench_76",
+    id: "MuirBench_79",
     id_row_col: null,
     question:
-      "<image1> <image2> <image3> <image4> <image5> <image6> <image7> <image8> How many tables are presented in the experimental results?\n",
-    answer: "D",
+      "Select the sub-figures that appear in the same figure as <image1>?\n",
+    answer: "C",
     dataset: "MuirBench",
-    image_id: "76",
+    image_id: "79",
     choices: [
-      "(A)  Universit\u00e9 de Lorraine",
-      "(B) Universit\u00e9 C\u00f4te d'Azur",
-      "(C) None of the choices provided",
-      "(D) Normandie Universit\u00e9",
+      "(A) image2",
+      "(B) None of the choices provided",
+      "(C) image3",
+      "(D) image4",
     ],
-    image: "MuirBench/76",
+    image: "MuirBench/79",
   },
   {
     id: "MuirBench_43",
@@ -631,11 +631,11 @@ test_data = [
     dataset: "MuirBench",
     image_id: "43",
     choices: [
-      "(A)  None of the choices provided",
-      "(B) <image2>",
-      "(C) <image3>",
-      "(D) <image4>",
-      "(E) <image5>",
+      "(A) None of the choices provided",
+      "(B) image2",
+      "(C) image3",
+      "(D) image4",
+      "(E) image5",
     ],
     image: "MuirBench/43",
   },
@@ -648,7 +648,7 @@ test_data = [
     dataset: "NovaChart",
     image_id: "271",
     choices: [
-      "(A)  Purchase Amount",
+      "(A) Purchase Amount",
       "(B) 30",
       "(C) Previous Purchases",
       "(D) ",
@@ -665,7 +665,7 @@ test_data = [
     dataset: "NovaChart",
     image_id: "123",
     choices: [
-      "(A)  ring chart",
+      "(A) ring chart",
       "(B) univariate histogram",
       "(C) single-class line plot",
       "(D) heatmap",
@@ -681,7 +681,7 @@ test_data = [
     answer: "E",
     dataset: "NovaChart",
     image_id: "149",
-    choices: ["(A)  8.87", "(B) 4.52", "(C) 2.27", "(D) 6.39", "(E) 2.6"],
+    choices: ["(A) 8.87", "(B) 4.52", "(C) 2.27", "(D) 6.39", "(E) 2.6"],
     image: "NovaChart/149",
   },
   {
@@ -692,7 +692,7 @@ test_data = [
     dataset: "NovaChart",
     image_id: "279",
     choices: [
-      "(A)  ",
+      "(A) ",
       "(B) The distribution of observations in each categorical bin is balanced.",
       "(C) The counts vary significantly, with some levels having much higher occurrences (e.g., 21) than others (e.g., 12).",
       "(D) Levels 5 and 6 both have the highest counts (21), while Level 10 has a lower count (14).",
@@ -710,7 +710,7 @@ test_data = [
     answer: "D",
     dataset: "NovaChart",
     image_id: "207",
-    choices: ["(A)  ", "(B) N", "(C) Yes", "(D) No", "(E) Y"],
+    choices: ["(A) ", "(B) N", "(C) Yes", "(D) No", "(E) Y"],
     image: "NovaChart/207",
   },
   {
@@ -721,7 +721,7 @@ test_data = [
     dataset: "Video_Monitoring",
     image_id: "255",
     choices: [
-      "(A)  The right of the image",
+      "(A) The right of the image",
       "(B) The bottom of the image",
       "(C) The left of the image",
       "(D) The top of the image",
@@ -738,7 +738,7 @@ test_data = [
     dataset: "Video_Monitoring",
     image_id: "292",
     choices: [
-      "(A)  stopping",
+      "(A) stopping",
       "(B) keep moving",
       "(C) turn left",
       "(D) turn right",
@@ -755,7 +755,7 @@ test_data = [
     dataset: "Video_Monitoring",
     image_id: "291",
     choices: [
-      "(A)  47",
+      "(A) 47",
       "(B) 20",
       "(C) 29",
       "(D) 21",
@@ -772,7 +772,7 @@ test_data = [
     dataset: "Video_Monitoring",
     image_id: "236",
     choices: [
-      "(A)  10",
+      "(A) 10",
       "(B) 0",
       "(C) 13",
       "(D) 8",
@@ -789,7 +789,7 @@ test_data = [
     dataset: "Video_Monitoring",
     image_id: "144",
     choices: [
-      "(A)  58",
+      "(A) 58",
       "(B) 47",
       "(C) 37",
       "(D) 61",
@@ -806,7 +806,7 @@ test_data = [
     dataset: "VisDiffBench",
     image_id: "132",
     choices: [
-      "(A)  Boot height (Ankle vs Knee-high)",
+      "(A) Boot height (Ankle vs Knee-high)",
       "(B) Shoe type (Pointe shoes vs Ballet slippers)",
       "(C) Background Colors (Black vs White)",
       "(D) Gender (Men vs Women)",
@@ -822,7 +822,7 @@ test_data = [
     dataset: "VisDiffBench",
     image_id: "57",
     choices: [
-      "(A)  Number of Objects (1 vs 2)",
+      "(A) Number of Objects (1 vs 2)",
       "(B) Bike type (Mountain vs Road)",
       "(C) Vehicle (Cars vs Trucks)",
       "(D) Background Colors (Black vs White)",
@@ -838,7 +838,7 @@ test_data = [
     dataset: "VisDiffBench",
     image_id: "74",
     choices: [
-      "(A)  Number of Objects (1 vs 2)",
+      "(A) Number of Objects (1 vs 2)",
       "(B) Material (Leather vs Denim)",
       "(C) Material and finish (Silk/Shiny vs Cotton/Matte)",
       "(D) Gender (Men vs Women)",
@@ -854,7 +854,7 @@ test_data = [
     dataset: "VisDiffBench",
     image_id: "27",
     choices: [
-      "(A)  Background Colors (Brown vs Blue)",
+      "(A) Background Colors (Brown vs Blue)",
       "(B) Number of Objects (2 vs 3)",
       "(C) Shelf item (Books vs Plants)",
       "(D) Toy type (Dolls vs Teddy bears)",
@@ -870,7 +870,7 @@ test_data = [
     dataset: "VisDiffBench",
     image_id: "133",
     choices: [
-      "(A)  Food type (Pizzas vs Donuts)",
+      "(A) Food type (Pizzas vs Donuts)",
       "(B) Food type (Pasta vs Donuts)",
       "(C) Food type (Pizzas vs Pasta)",
       "(D) Regional cuisine (Northern vs Southern Italy)",
@@ -884,7 +884,7 @@ test_data = [
     answer: "A",
     dataset: "VQA-RAD",
     image_id: "120",
-    choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+    choices: ["(A) Yes", "(B) No", "(C) Not specified"],
     image: "VQA-RAD/120",
   },
   {
@@ -894,7 +894,7 @@ test_data = [
     answer: "B",
     dataset: "VQA-RAD",
     image_id: "198",
-    choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+    choices: ["(A) Yes", "(B) No", "(C) Not specified"],
     image: "VQA-RAD/198",
   },
   {
@@ -904,7 +904,7 @@ test_data = [
     answer: "A",
     dataset: "VQA-RAD",
     image_id: "63",
-    choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+    choices: ["(A) Yes", "(B) No", "(C) Not specified"],
     image: "VQA-RAD/63",
   },
   {
@@ -914,7 +914,7 @@ test_data = [
     answer: "A",
     dataset: "VQA-RAD",
     image_id: "47",
-    choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+    choices: ["(A) Yes", "(B) No", "(C) Not specified"],
     image: "VQA-RAD/47",
   },
   {
@@ -924,7 +924,7 @@ test_data = [
     answer: "A",
     dataset: "VQA-RAD",
     image_id: "87",
-    choices: ["(A)  Yes", "(B) No", "(C) Not specified"],
+    choices: ["(A) Yes", "(B) No", "(C) Not specified"],
     image: "VQA-RAD/87",
   },
   {
@@ -935,7 +935,7 @@ test_data = [
     answer: "B",
     dataset: "Galaxy",
     image_id: "25",
-    choices: ["(A)  irregular", "(B) planet", "(C) Elliptical", "(D) Spiral"],
+    choices: ["(A) irregular", "(B) planet", "(C) Elliptical", "(D) Spiral"],
     image: "Galaxy/25",
   },
   {
@@ -946,7 +946,7 @@ test_data = [
     answer: "C",
     dataset: "Galaxy",
     image_id: "30",
-    choices: ["(A)  Elliptical", "(B) irregular", "(C) planet", "(D) Spiral"],
+    choices: ["(A) Elliptical", "(B) irregular", "(C) planet", "(D) Spiral"],
     image: "Galaxy/30",
   },
   {
@@ -957,7 +957,7 @@ test_data = [
     answer: "B",
     dataset: "Galaxy",
     image_id: "45",
-    choices: ["(A)  irregular", "(B) planet", "(C) Elliptical", "(D) Spiral"],
+    choices: ["(A) irregular", "(B) planet", "(C) Elliptical", "(D) Spiral"],
     image: "Galaxy/45",
   },
   {
@@ -968,7 +968,7 @@ test_data = [
     answer: "B",
     dataset: "Galaxy",
     image_id: "55",
-    choices: ["(A)  2", "(B) 1", "(C) 0", "(D) 3"],
+    choices: ["(A) 2", "(B) 1", "(C) 0", "(D) 3"],
     image: "Galaxy/55",
   },
   {
@@ -979,7 +979,7 @@ test_data = [
     answer: "D",
     dataset: "Galaxy",
     image_id: "68",
-    choices: ["(A)  two", "(B) Yes", "(C) I don't know", "(D) No"],
+    choices: ["(A) two", "(B) Yes", "(C) I don't know", "(D) No"],
     image: "Galaxy/68",
   },
   {
@@ -991,7 +991,7 @@ test_data = [
     dataset: "Remote_Sensing",
     image_id: "268",
     choices: [
-      "(A)  7",
+      "(A) 7",
       "(B) 48",
       "(C) 21",
       "(D) 4",
@@ -1007,7 +1007,7 @@ test_data = [
     dataset: "Remote_Sensing",
     image_id: "2",
     choices: [
-      "(A)  In the lower right area of this picture",
+      "(A) In the lower right area of this picture",
       "(B) In the upper left area of this picture",
       "(C) In the upper right area of this picture",
       "(D) In the lower left area of this picture",
@@ -1023,7 +1023,7 @@ test_data = [
     dataset: "Remote_Sensing",
     image_id: "78",
     choices: [
-      "(A)  Yellow",
+      "(A) Yellow",
       "(B) Red",
       "(C) Blue",
       "(D) Black",
@@ -1040,7 +1040,7 @@ test_data = [
     dataset: "Remote_Sensing",
     image_id: "220",
     choices: [
-      "(A)  1",
+      "(A) 1",
       "(B) 3",
       "(C) 5",
       "(D) 7",
@@ -1056,7 +1056,7 @@ test_data = [
     dataset: "Remote_Sensing",
     image_id: "263",
     choices: [
-      "(A)  In the center right area of the picture",
+      "(A) In the center right area of the picture",
       "(B) In the low area of the picture",
       "(C) In the top area of the picture",
       "(D) In the left area of the picture",
@@ -1073,7 +1073,7 @@ test_data = [
     dataset: "OCR_in_the_Wild",
     image_id: "129",
     choices: [
-      "(A)  88",
+      "(A) 88",
       "(B) 68",
       "(C) 86",
       "(D) 66",
@@ -1089,7 +1089,7 @@ test_data = [
     dataset: "OCR_in_the_Wild",
     image_id: "286",
     choices: [
-      "(A)  5:0.",
+      "(A) 5:0.",
       "(B) 2:1.",
       "(C) 2:0.",
       "(D) 4:0.",
@@ -1105,7 +1105,7 @@ test_data = [
     dataset: "OCR_in_the_Wild",
     image_id: "149",
     choices: [
-      "(A)  Ford",
+      "(A) Ford",
       "(B) Food",
       "(C) Foad",
       "(D) Frrd",
@@ -1121,7 +1121,7 @@ test_data = [
     dataset: "OCR_in_the_Wild",
     image_id: "81",
     choices: [
-      "(A)  GRand theft auto",
+      "(A) GRand theft auto",
       "(B) ONLINE",
       "(C) DOUBLE",
       "(D) SPECIAL",
@@ -1138,7 +1138,7 @@ test_data = [
     dataset: "OCR_in_the_Wild",
     image_id: "289",
     choices: [
-      "(A)  04 18 VE",
+      "(A) 04 18 VE",
       "(B) 98 BJ 07",
       "(C) 44 S1 34",
       "(D) 20 48 QG",
@@ -1155,7 +1155,7 @@ test_data = [
     dataset: "Diagram_and_Table",
     image_id: "216",
     choices: [
-      "(A)  4.075.090",
+      "(A) 4.075.090",
       "(B) 157.000",
       "(C) 1.000.000",
       "(D) 5.232.090",
@@ -1172,7 +1172,7 @@ test_data = [
     dataset: "Diagram_and_Table",
     image_id: "134",
     choices: [
-      "(A)  2031",
+      "(A) 2031",
       "(B) 2032",
       "(C) 2033",
       "(D) 2034",
@@ -1189,7 +1189,7 @@ test_data = [
     dataset: "Diagram_and_Table",
     image_id: "294",
     choices: [
-      "(A)  CR6 - Investor A",
+      "(A) CR6 - Investor A",
       "(B) CR7 - Investor B",
       "(C) CR8 - Investor C",
       "(D) CR9 - Investor D",
@@ -1206,7 +1206,7 @@ test_data = [
     dataset: "Diagram_and_Table",
     image_id: "257",
     choices: [
-      "(A)  618,948",
+      "(A) 618,948",
       "(B) 694,969",
       "(C) 889,958",
       "(D) 614,172",
@@ -1223,7 +1223,7 @@ test_data = [
     dataset: "Diagram_and_Table",
     image_id: "118",
     choices: [
-      "(A)  2031",
+      "(A) 2031",
       "(B) 2032",
       "(C) 2033",
       "(D) 2034",
@@ -1239,7 +1239,7 @@ test_data = [
     dataset: "VStar_Bench",
     image_id: "75",
     choices: [
-      "(A)  The color of the plastic bucket is green.",
+      "(A) The color of the plastic bucket is green.",
       "(B) The color of the plastic bucket is black.",
     ],
     image: "VStar_Bench/75",
@@ -1252,7 +1252,7 @@ test_data = [
     dataset: "VStar_Bench",
     image_id: "109",
     choices: [
-      "(A)  The color of the dustpan is purple.",
+      "(A) The color of the dustpan is purple.",
       "(B) The color of the dustpan is blue.",
       "(C) The color of the dustpan is white.",
       "(D) The color of the dustpan is red.",
@@ -1267,7 +1267,7 @@ test_data = [
     dataset: "VStar_Bench",
     image_id: "229",
     choices: [
-      "(A)  The color of the broom is gray.",
+      "(A) The color of the broom is gray.",
       "(B) The color of the broom is yellow.",
       "(C) The color of the broom is black.",
       "(D) The color of the broom is red.",
@@ -1282,7 +1282,7 @@ test_data = [
     dataset: "VStar_Bench",
     image_id: "191",
     choices: [
-      "(A)  The color of the plastic basin is white.",
+      "(A) The color of the plastic basin is white.",
       "(B) The color of the plastic basin is yellow.",
       "(C) The color of the plastic basin is blue.",
       "(D) The color of the plastic basin is pink.",
@@ -1297,7 +1297,7 @@ test_data = [
     dataset: "VStar_Bench",
     image_id: "4",
     choices: [
-      "(A)  The color of the bicycle is white.",
+      "(A) The color of the bicycle is white.",
       "(B) The color of the bicycle is blue.",
       "(C) The color of the bicycle is silver.",
       "(D) The color of the bicycle is red.",
@@ -1313,7 +1313,7 @@ test_data = [
     dataset: "MAME",
     image_id: "190",
     choices: [
-      "(A)  Graphite",
+      "(A) Graphite",
       "(B) Silk and metal thread",
       "(C) Lithograph",
       "(D) Glass",
@@ -1335,7 +1335,7 @@ test_data = [
     dataset: "MAME",
     image_id: "1",
     choices: [
-      "(A)  Woodcut",
+      "(A) Woodcut",
       "(B) Oil on canvas",
       "(C) Woodblock",
       "(D) Etching",
@@ -1357,7 +1357,7 @@ test_data = [
     dataset: "MAME",
     image_id: "178",
     choices: [
-      "(A)  Lithograph",
+      "(A) Lithograph",
       "(B) Silver",
       "(C) Faience",
       "(D) Steel",
@@ -1379,7 +1379,7 @@ test_data = [
     dataset: "MAME",
     image_id: "54",
     choices: [
-      "(A)  Hand-colored etching",
+      "(A) Hand-colored etching",
       "(B) Woodblock",
       "(C) Oil on canvas",
       "(D) Clay",
@@ -1401,7 +1401,7 @@ test_data = [
     dataset: "MAME",
     image_id: "150",
     choices: [
-      "(A)  Gold",
+      "(A) Gold",
       "(B) Iron",
       "(C) Clay",
       "(D) Graphite",
@@ -1422,7 +1422,7 @@ test_data = [
     dataset: "Izembek",
     image_id: "206",
     choices: [
-      "(A)  100-200",
+      "(A) 100-200",
       "(B) 300-400",
       "(C) 100-300",
       "(D) more than 400",
@@ -1437,12 +1437,7 @@ test_data = [
     answer: "B",
     dataset: "Izembek",
     image_id: "153",
-    choices: [
-      "(A)  200-300",
-      "(B) 300-400",
-      "(C) 100-200",
-      "(D) more than 400",
-    ],
+    choices: ["(A) 200-300", "(B) 300-400", "(C) 100-200", "(D) more than 400"],
     image: "Izembek/153",
   },
   {
@@ -1453,7 +1448,7 @@ test_data = [
     dataset: "Izembek",
     image_id: "106",
     choices: [
-      "(A)  100-300",
+      "(A) 100-300",
       "(B) 100-200",
       "(C) more than 400",
       "(D) 300-400",
@@ -1468,12 +1463,7 @@ test_data = [
     answer: "D",
     dataset: "Izembek",
     image_id: "220",
-    choices: [
-      "(A)  100-200",
-      "(B) more than 400",
-      "(C) 200-300",
-      "(D) 300-400",
-    ],
+    choices: ["(A) 100-200", "(B) more than 400", "(C) 200-300", "(D) 300-400"],
     image: "Izembek/220",
   },
   {
@@ -1484,7 +1474,7 @@ test_data = [
     dataset: "Izembek",
     image_id: "195",
     choices: [
-      "(A)  more than 400",
+      "(A) more than 400",
       "(B) 100-300",
       "(C) 300-400",
       "(D) 100-200",
@@ -1501,7 +1491,7 @@ test_data = [
     dataset: "ArtBench",
     image_id: "158",
     choices: [
-      "(A)  Realism",
+      "(A) Realism",
       "(B) Post Impressionism",
       "(C) Ukiyo E",
       "(D) Baroque",
@@ -1522,7 +1512,7 @@ test_data = [
     dataset: "ArtBench",
     image_id: "137",
     choices: [
-      "(A)  Art Nouveau",
+      "(A) Art Nouveau",
       "(B) Romanticism",
       "(C) Surrealism",
       "(D) Post Impressionism",
@@ -1543,7 +1533,7 @@ test_data = [
     dataset: "ArtBench",
     image_id: "101",
     choices: [
-      "(A)  Surrealism",
+      "(A) Surrealism",
       "(B) Romanticism",
       "(C) Post Impressionism",
       "(D) Impressionism",
@@ -1564,7 +1554,7 @@ test_data = [
     dataset: "ArtBench",
     image_id: "290",
     choices: [
-      "(A)  Realism",
+      "(A) Realism",
       "(B) Ukiyo E",
       "(C) Expressionism",
       "(D) Art Nouveau",
@@ -1585,7 +1575,7 @@ test_data = [
     dataset: "ArtBench",
     image_id: "144",
     choices: [
-      "(A)  Realism",
+      "(A) Realism",
       "(B) Ukiyo E",
       "(C) Baroque",
       "(D) Impressionism",
@@ -1606,7 +1596,7 @@ test_data = [
     dataset: "Grass",
     image_id: "106",
     choices: [
-      "(A)  Reproductive stage, 0-10 (include 10)",
+      "(A) Reproductive stage, 0-10 (include 10)",
       "(B) Reproductive stage, more than 200",
       "(C) Reproductive stage, 10-100 (include 100)",
       "(D) Reproductive stage, 100-200 (include 200)",
@@ -1623,7 +1613,7 @@ test_data = [
     dataset: "Grass",
     image_id: "146",
     choices: [
-      "(A)  Reproductive stage, more than 200",
+      "(A) Reproductive stage, more than 200",
       "(B) Vegetative stage, no racemes",
       "(C) Reproductive stage, 0-10 (include 10)",
       "(D) Reproductive stage, 10-100 (include 100)",
@@ -1640,7 +1630,7 @@ test_data = [
     dataset: "Grass",
     image_id: "230",
     choices: [
-      "(A)  Reproductive stage, 10-100 (include 100)",
+      "(A) Reproductive stage, 10-100 (include 100)",
       "(B) Reproductive stage, more than 200",
       "(C) Reproductive stage, 100-200 (include 200)",
       "(D) Vegetative stage, no racemes",
@@ -1657,7 +1647,7 @@ test_data = [
     dataset: "Grass",
     image_id: "40",
     choices: [
-      "(A)  Reproductive stage, more than 200",
+      "(A) Reproductive stage, more than 200",
       "(B) Reproductive stage, 10-100 (include 100)",
       "(C) Vegetative stage, no racemes",
       "(D) Reproductive stage, 0-10 (include 10)",
@@ -1674,7 +1664,7 @@ test_data = [
     dataset: "Grass",
     image_id: "248",
     choices: [
-      "(A)  Vegetative stage, no racemes",
+      "(A) Vegetative stage, no racemes",
       "(B) Reproductive stage, 0-10 (include 10)",
       "(C) Reproductive stage, 100-200 (include 200)",
       "(D) Reproductive stage, 10-100 (include 100)",
@@ -1689,7 +1679,7 @@ test_data = [
     answer: "B",
     dataset: "MMAD",
     image_id: "150",
-    choices: ["(A)  Yes.", "(B) No."],
+    choices: ["(A) Yes.", "(B) No."],
     image: "MMAD/150",
   },
   {
@@ -1699,7 +1689,7 @@ test_data = [
     answer: "A",
     dataset: "MMAD",
     image_id: "274",
-    choices: ["(A)  Yes.", "(B) No."],
+    choices: ["(A) Yes.", "(B) No."],
     image: "MMAD/274",
   },
   {
@@ -1710,7 +1700,7 @@ test_data = [
     dataset: "MMAD",
     image_id: "232",
     choices: [
-      "(A)  Potato chips",
+      "(A) Potato chips",
       "(B) Chocolate bars",
       "(C) Garlic-flavored peanuts",
       "(D) Cookies",
@@ -1724,7 +1714,7 @@ test_data = [
     answer: "D",
     dataset: "MMAD",
     image_id: "45",
-    choices: ["(A)  Dessert", "(B) Snack", "(C) Lunch", "(D) Breakfast"],
+    choices: ["(A) Dessert", "(B) Snack", "(C) Lunch", "(D) Breakfast"],
     image: "MMAD/45",
   },
   {
@@ -1736,7 +1726,7 @@ test_data = [
     dataset: "MMAD",
     image_id: "241",
     choices: [
-      "(A)  It changes color.",
+      "(A) It changes color.",
       "(B) It maintains a consistent pattern.",
       "(C) It varies in visibility.",
       "(D) It has a consistent width.",
@@ -1751,7 +1741,7 @@ test_data = [
     dataset: "MileBench",
     image_id: "275",
     choices: [
-      "(A)  The yellow object and the cylinder collide",
+      "(A) The yellow object and the cylinder collide",
       "(B) The cylinder collides with the purple cube",
     ],
     image: "MileBench/275",
@@ -1764,7 +1754,7 @@ test_data = [
     dataset: "MileBench",
     image_id: "157",
     choices: [
-      "(A)  The picture.",
+      "(A) The picture.",
       "(B) The cup/glass/bottle.",
       "(C) The bag.",
       "(D) The food.",
@@ -1780,7 +1770,7 @@ test_data = [
     dataset: "MileBench",
     image_id: "262",
     choices: [
-      "(A)  StLouis Cardinals",
+      "(A) StLouis Cardinals",
       "(B) Philadelphia Phillies",
       "(C) Arizona Diamondbacks",
       "(D) Atlanta Braves",
@@ -1796,7 +1786,7 @@ test_data = [
     dataset: "MileBench",
     image_id: "160",
     choices: [
-      "(A)  $712,785,000",
+      "(A) $712,785,000",
       "(B) \u00a5712,785,000",
       "(C) \u20ac712,785,000",
       "(D) $712,785,001",
@@ -1811,7 +1801,7 @@ test_data = [
     answer: "A",
     dataset: "MileBench",
     image_id: "180",
-    choices: ["(A)  8231", "(B) 8362", "(C) 8125", "(D) 8437"],
+    choices: ["(A) 8231", "(B) 8362", "(C) 8125", "(D) 8437"],
     image: "MileBench/180",
   },
   {
@@ -1821,7 +1811,7 @@ test_data = [
     answer: "B",
     dataset: "PANDA",
     image_id: "185",
-    choices: ["(A)  10", "(B) 22", "(C) 19", "(D) 1"],
+    choices: ["(A) 10", "(B) 22", "(C) 19", "(D) 1"],
     image: "PANDA/185",
   },
   {
@@ -1831,7 +1821,7 @@ test_data = [
     answer: "D",
     dataset: "PANDA",
     image_id: "42",
-    choices: ["(A)  0", "(B) 9", "(C) 3", "(D) 5"],
+    choices: ["(A) 0", "(B) 9", "(C) 3", "(D) 5"],
     image: "PANDA/42",
   },
   {
@@ -1841,7 +1831,7 @@ test_data = [
     answer: "D",
     dataset: "PANDA",
     image_id: "204",
-    choices: ["(A)  3", "(B) 0", "(C) 1", "(D) 2"],
+    choices: ["(A) 3", "(B) 0", "(C) 1", "(D) 2"],
     image: "PANDA/204",
   },
   {
@@ -1851,7 +1841,7 @@ test_data = [
     answer: "D",
     dataset: "PANDA",
     image_id: "141",
-    choices: ["(A)  2", "(B) 0", "(C) 12", "(D) 11"],
+    choices: ["(A) 2", "(B) 0", "(C) 12", "(D) 11"],
     image: "PANDA/141",
   },
   {
@@ -1861,7 +1851,7 @@ test_data = [
     answer: "D",
     dataset: "PANDA",
     image_id: "216",
-    choices: ["(A)  5", "(B) 9", "(C) 18", "(D) 15"],
+    choices: ["(A) 5", "(B) 9", "(C) 18", "(D) 15"],
     image: "PANDA/216",
   },
   {
@@ -1871,7 +1861,7 @@ test_data = [
     answer: "C",
     dataset: "CAD",
     image_id: "48",
-    choices: ["(A)  3", "(B) 1", "(C) 4", "(D) 2"],
+    choices: ["(A) 3", "(B) 1", "(C) 4", "(D) 2"],
     image: "CAD/48",
   },
   {
@@ -1881,7 +1871,7 @@ test_data = [
     answer: "D",
     dataset: "CAD",
     image_id: "180",
-    choices: ["(A)  1", "(B) 4", "(C) 2", "(D) 3"],
+    choices: ["(A) 1", "(B) 4", "(C) 2", "(D) 3"],
     image: "CAD/180",
   },
   {
@@ -1891,7 +1881,7 @@ test_data = [
     answer: "A",
     dataset: "CAD",
     image_id: "21",
-    choices: ["(A)  blue", "(B) red", "(C) yellow", "(D) purple"],
+    choices: ["(A) blue", "(B) red", "(C) yellow", "(D) purple"],
     image: "CAD/21",
   },
   {
@@ -1901,7 +1891,7 @@ test_data = [
     answer: "C",
     dataset: "CAD",
     image_id: "139",
-    choices: ["(A)  850", "(B) 150", "(C) 1300", "(D) 1500"],
+    choices: ["(A) 850", "(B) 150", "(C) 1300", "(D) 1500"],
     image: "CAD/139",
   },
   {
@@ -1911,7 +1901,7 @@ test_data = [
     answer: "C",
     dataset: "CAD",
     image_id: "111",
-    choices: ["(A)  5480", "(B) 800", "(C) 7800", "(D) 1200"],
+    choices: ["(A) 5480", "(B) 800", "(C) 7800", "(D) 1200"],
     image: "CAD/111",
   },
 ];
