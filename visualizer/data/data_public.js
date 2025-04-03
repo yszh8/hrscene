@@ -560,7 +560,7 @@ test_data = [
     id: "MuirBench_51",
     id_row_col: null,
     question:
-      "<image1> <image2> <image3> <image4> <image5> <image6> which postal service truck is seen in the picture in the given images?\n",
+      "image1 image2 image3 image4 image5 image6 which postal service truck is seen in the picture in the given images?\n",
     answer: "C",
     dataset: "MuirBench",
     image_id: "51",
@@ -593,7 +593,7 @@ test_data = [
     id: "MuirBench_25",
     id_row_col: null,
     question:
-      "Select the sub-figures that appear in the same figure as <image1>?\n",
+      "Select the sub-figures that appear in the same figure as image1?\n",
     answer: "D",
     dataset: "MuirBench",
     image_id: "25",
@@ -610,7 +610,7 @@ test_data = [
     id: "MuirBench_79",
     id_row_col: null,
     question:
-      "Select the sub-figures that appear in the same figure as <image1>?\n",
+      "Select the sub-figures that appear in the same figure as image1?\n",
     answer: "C",
     dataset: "MuirBench",
     image_id: "79",
@@ -626,7 +626,7 @@ test_data = [
     id: "MuirBench_43",
     id_row_col: null,
     question:
-      "Which of the following figures belongs to the same paper as <image1>?\n",
+      "Which of the following figures belongs to the same paper as image1?\n",
     answer: "C",
     dataset: "MuirBench",
     image_id: "43",
