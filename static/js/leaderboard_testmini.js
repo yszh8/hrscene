@@ -15,9 +15,7 @@ function generateTable(data) {
   table += `<tr>
           <td class="js-sort-number"><strong>#</strong></td>
           <td class="js-sort"><strong>Model</strong></td>
-          <td class="js-sort"><strong>Method</strong></td>
-          <td class="js-sort"><strong>Source</strong></td>
-          <td class="js-sort"><strong>Date</strong></td>
+          <td class="js-sort"><strong>Params (in billions) </strong></td>
 
           <td class="js-sort-number"><strong><u>ALL</u></strong></td>
           <td class="js-sort-number"><strong>daily</strong></td>
@@ -60,17 +58,13 @@ function generateTable(data) {
         // for key = "1", "2", "3"
         top_ranks = ["1", "2", "3"]
         if (top_ranks.includes(key)) {
-          table += `<td><b class="best-score-text">${entry.Model}</b></td>`;
-          table += `<td>${entry.Method}</td>`;
-          table += `<td><a href="${entry.Source}" class="ext-link" style="font-size: 16px;">Link</a></td>`;
-          table += `<td>${entry.Date}</td>`;
+          table += `<td><b class="best-score-text" style="color:${entry.Color};">${entry.Model}</b></td>`;
+          table += `<td>${entry.Params}</td>`;
           table += `<td><b class="best-score-text">${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
         }
         else {
-          table += `<td><b>${entry.Model}</b></td>`;
-          table += `<td>${entry.Method}</td>`;
-          table += `<td><a href="${entry.Source}" class="ext-link" style="font-size: 16px;">Link</a></td>`;
-          table += `<td>${entry.Date}</td>`;
+          table += `<td><b style="color:${entry.Color};">${entry.Model}</b></td>`;
+          table += `<td>${entry.Params}</td>`;
           table += `<td><b>${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
         }          
 
