@@ -144,6 +144,12 @@ body {
   padding: 10px;
 }
 
+.aff-icon {
+  max-width: 3%;
+  margin-left: 3px;
+  margin-right: 5px;
+}
+
 @media screen and (max-width: 768px) {
   #org-banners {
     flex-direction: column;
