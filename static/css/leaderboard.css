@@ -87,3 +87,17 @@ table#results.js-sort-14 tbody tr td:nth-child(15) {
     color: #C6011F
     /* color: #3457D5 */
 }
+
+.open-model {
+    color: darkgreen;
+    text-transform: capitalize;
+}
+
+.closed-model {
+    color: darkred;
+    text-transform: capitalize;
+}
+
+.column-name {
+    text-transform: capitalize;
+}

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Evaluating mathematical reasoning of foundation models in visual contexts">
-  <meta name="keywords" content="MathVista, Math Vista">
+        content="How Far Are VLMs from Effective High-Resolution Image Understanding?">
+  <meta name="keywords" content="HRScene">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?</title>
 
@@ -22,7 +22,7 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script> -->
 
-  <link rel="icon" href="./static/images/hrscene.png">
+  <link rel="icon" href="./static/images/icons/hrscene.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -34,22 +34,22 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/leaderboard.css">
 
-  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
-  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
-
+  <!-- external libs -->
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
+
+  <!-- dynamic html -->
+  <script type="text/javascript" src="./static/js/sort-table.js" defer></script>
   <script src="./static/js/explorer-index.js"></script>
   <script src="./static/js/question_card.js"></script>
-
   <script src="./static/js/leaderboard_testmini.js"></script>  
-  <script src="./data/results/output_folders.js" defer></script>
-  <script src="./data/model_scores.js" defer></script>
 
-  <script src="./visualizer/data/data_public.js" defer></script>
+  <!-- data variables -->
+  <script src="./data/leaderboard/results.js" defer></script>
+  <script src="./data/explorer/data.js" defer></script>
 </head>
 <body>
 
@@ -91,7 +91,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/hrscene.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <img src="static/images/icons/hrscene.png" style="width:1em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista" style="vertical-align: middle">HRScene</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
@@ -157,11 +157,11 @@
             <br>
             <span class="author-block">
               <sup>1</sup>
-              <img class="aff-icon" src="static/images/psu.jpg">Pennsylvania State University
+              <img class="aff-icon" src="static/images/icons/psu.jpg">Pennsylvania State University
             </span>
             <span class="author-block">
               <sup>2</sup>
-              <img class="aff-icon" src="static/images/aws.png">Amazon Web Services
+              <img class="aff-icon" src="static/images/icons/aws.png">Amazon Web Services
             </span>
             <br>
             <!-- <span class="author-block"><sup style="color:#ffac33">3</sup>Microsoft Research</span><br> -->
@@ -287,7 +287,7 @@
     <div class="content has-text-centered">
       <img src="static/images/tease_scores_gpt4v.png" alt="geometric reasoning" width="99%"/>
       <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
-      <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+      <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
       <span class="mathvista">HRScene</span>
       across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot.
       </p>
@@ -308,7 +308,7 @@
 
               <p> 
                   Comparison between the benchmarks that the models are evaluated and 
-                  <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>. 
+                  <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>. 
                   The y-axis is the square root of the total pixel. The boxes/icons indicate the image resolution they contain/support. 
                   The black lines inside each box show the average resolutions. For most of the vision-based benchmarks 
                   that VLMs are evaluated on, the average resolution is typically below 1k, making them unsuitable for HRI evaluation. 
@@ -323,7 +323,7 @@
                 Performance of some VLMs on our test set. We identify 8 categories of HRI tasks:  Daily pictures, Urban planning, 
                 Paper scanned images, Artwork, Multi-subimages, Remote sensing, Medical Diagnosing, and Research understanding. 
                 Experiments on real-world tasks demonstrate that current VLMs perform modestly, with an average accuracy of around 50%, 
-                highlighting substantial challenges of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>. 
+                highlighting substantial challenges of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>. 
                 Besides, we also provide the human performance of all real-world datasets by engaging graduate-level annotators to annotate 750 image-question pairs.
               </p>
             </div>
@@ -345,12 +345,12 @@
           <b>Large Language Models (LLMs)</b> and <b>Large Multimodal Models (LMMs)</b> exhibit impressive problem-solving skills in many tasks and domains, but their ability in mathematical reasoning in visual contexts has not been systematically studied.
           </p>
           <p>
-            To bridge this gap, we present <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            To bridge this gap, we present <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">HRScene</span>, a benchmark designed to combine challenges from diverse mathematical and visual tasks. It consists of <b>6,141 examples</b>, derived from <b>28 existing multimodal datasets</b> involving mathematics and <b>3 newly created datasets</b> (i.e., <b>IQTest, FunctionQA, and PaperQA</b>). Completing these tasks requires fine-grained, deep visual understanding and compositional reasoning, which all state-of-the-art foundation models find challenging. 
           </p>
           <p>
-            With <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">HRScene</span>, we have conducted <b>a comprehensive, quantitative evaluation of 12 prominent foundation models</b>. The best-performing <b>GPT-4V</b> model achieves an overall accuracy of <b>49.9%</b>, substantially outperforming Bard, the second-best performer, by <b>15.1%</b>. Our in-depth analysis reveals that the superiority of <b>GPT-4V</b> is mainly attributed to its enhanced visual perception and mathematical reasoning. However, <b>GPT-4V</b> still falls short of human performance by <b>10.4%</b>, as it often struggles to understand complex figures and perform rigorous reasoning. This significant gap underscores the critical role that <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            With <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">HRScene</span>, we have conducted <b>a comprehensive, quantitative evaluation of 12 prominent foundation models</b>. The best-performing <b>GPT-4V</b> model achieves an overall accuracy of <b>49.9%</b>, substantially outperforming Bard, the second-best performer, by <b>15.1%</b>. Our in-depth analysis reveals that the superiority of <b>GPT-4V</b> is mainly attributed to its enhanced visual perception and mathematical reasoning. However, <b>GPT-4V</b> still falls short of human performance by <b>10.4%</b>, as it often struggles to understand complex figures and perform rigorous reasoning. This significant gap underscores the critical role that <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">HRScene</span> will play in the development of general-purpose AI agents capable of tackling mathematically intensive and visually rich real-world tasks. We further explore the new ability of <b>self-verification</b>, the use of <b>self-consistency</b>, and the  <b>goal-directed multi-turn human-AI dialogues</b>, highlighting the promising potential of GPT-4V for future research. 
           </p> -->
 
@@ -360,19 +360,19 @@
             can exceed 1 million pixels. Vision Large Language Models (VLMs) typically handle higher-resolution images through
             dynamic patching. However, there is a lack of a comprehensive benchmark for VLMs to evaluate HRI understanding,
             leaving this domain underexplored. To address this gap, we introduce 
-            <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>, 
+            <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>, 
             a novel unified benchmark for HRI understanding with rich scenes. 
-            <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>
+            <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>
             incorporates 25 real-world datasets and 2 synthetic diagnostic datasets with
             resolutions ranging from 1,024 × 1,024 to 35,503 × 26,627. 
-            <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span> 
+            <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span> 
             is collected and re-annotated by 10 graduate-level annotators, covering 25 scenarios, ranging from microscopic and radiology images to street views, 
             long-range pictures, and telescope images. It includes high-resolution images of real-world objects, scanned documents, 
             and composite multi-image. The two diagnostic evaluation datasets
             are synthesized by combining the target image with the gold answer and similar distracting images in different orders.
             These datasets assess how well models utilize HRI by comparing performance across different image regions. 
             We conduct extensive experiments involving 27 VLMs, including Gemini 2.0 Pro and GPT-4o. 
-            Experiments on <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>
+            Experiments on <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>
             show that current VLMs achieve an average accuracy of around 50% on real-world tasks, revealing significant gaps
             in HRI understanding. Results on our synthetic datasets reveal that VLMs struggle to effectively utilize HRI regions
             compared to low-resolution images, with a gap exceeding 20%. Our code and data will be publicly available.
@@ -392,7 +392,7 @@
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3" id="leaderboard">Leaderboard on HRScene (testmini)</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>testmini</b> subset (1,000 examples) of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the <b>testmini</b> subset (1,000 examples) of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">HRScene</span>.
           </p>
 
@@ -402,7 +402,7 @@
 
         <h2 class="title is-3" id="leaderboard_test">Leaderboard on HRScene (test)</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>test</b> subset (5,323 examples with <b>private</b> ground truth) of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <p class="mt-3">Accuracy scores on the <b>test</b> subset (5,323 examples with <b>private</b> ground truth) of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">HRScene</span>.
           </p>
 
@@ -429,9 +429,16 @@
           <br>
           <br> -->
           <div>
-          <!-- <p>🚨 To submit your results to the leaderboard, please send to <a href="mailto:lupantech@gmail.com">this email</a> with your result json files.</p>
-          <p>🚨 For more submission details, please refer to <a href="https://github.com/lupantech/MathVista?tab=readme-ov-file#-leaderboard-">this link</a> and <a href="https://github.com/lupantech/MathVista?tab=readme-ov-file#-evaluations-on-mathvista">this link</a>. -->
+          <!-- <p>
+            🚨 To submit your results to the leaderboard, please send to <a href="mailto:lupantech@gmail.com">this email</a> with your result json files.
           </p>
+          <p>
+            🚨 For more submission details, please refer to <a href="https://github.com/lupantech/MathVista?tab=readme-ov-file#-leaderboard-">this link</a> and <a href="https://github.com/lupantech/MathVista?tab=readme-ov-file#-evaluations-on-mathvista">this link</a>.
+          </p> -->
+          <p>
+            🚨 Open source models are marked in <b style="color: darkgreen;">Green</b> and Closed source models are marked in <b style="color: darkred;">Red</b> 
+          </p>
+
           </div>
         </div>
 
@@ -444,9 +451,9 @@
 <!-- DATASET SECTION -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-    <!-- <h1 class="title is-1 mathvista"><img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
+    <!-- <h1 class="title is-1 mathvista"><img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
   <h1 class="title is-1 mathvista">
-    <img src="static/images/hrscene.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+    <img src="static/images/icons/hrscene.png" style="width:1em;vertical-align: middle" alt="Logo"/>
     <span class="mathvista" style="vertical-align: middle">HRScene Dataset</span>
   </h1>
   </div>
@@ -468,13 +475,13 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">HRScene</span> is collected from 25 existing data resources and 8 of them are re-annotated by 10 graduate-level annotators, 
             with diverse view scales, ranging from microscope to radiology, street views, long-range, and telescope images. 
             It contains high-resolution images of real objects, electronic documents, and composite multi-subimages. 
             Besides, six datasets require domain-expert knowledge, while the remaining 19 belong to general domains. 
             The diagnostic dataset is synthesized by combining the target image with the gold answer and visually similar distractors 
-            arranged in different orders to assess HRI utilization. Overall, <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            arranged in different orders to assess HRI utilization. Overall, <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">HRScene</span> comprises 7,081 images, with 2,008 of them being re-annotated.
             <!-- a compilation of data 1) carefully examined and filtered from 28 existing VQA and MathQA datasets and 2) manually collected by us. In total, 6,141 examples were collected from 31 different datasets. -->
           </p>
@@ -491,7 +498,7 @@
             <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="static/images/fig3.png" alt="algebraic reasoning" width="70%" style="margin-top: 150px"/>
-                <p> Some examples of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>. Blue ones are diagnostic datasets and purple ones are real-world datasets.</p>
+                <p> Some examples of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>. Blue ones are diagnostic datasets and purple ones are real-world datasets.</p>
               </div>
             </div>
 
@@ -506,7 +513,7 @@
 
           <!-- <div class="content has-text-centered">
             <img src="static/images/source_dataset.png" alt="geometric reasoning" width="60%"/>
-            <p> Summary of the 31 different source datasets in <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <p> Summary of the 31 different source datasets in <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
               <span class="mathvista">HRScene</span>.
             </p>
           </div>
@@ -516,12 +523,12 @@
           </div> -->
 
           <p>
-            <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>  
+            <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>  
             consists of 7,073 samples, divided into three splits:
             <!-- @PAN TODO: add download links -->
             <ul>
               <li><b>val</b> contains 750 samples. These samples are identical to human-annotated ones, designed for fine-grained validation of the users' VLM settings.</li>
-              <li><b>testmini</b> comprises 1,000 samples, picked from each <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>  
+              <li><b>testmini</b> comprises 1,000 samples, picked from each <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">HRScene</span>  
                 real-world dataset, intended for rapid model development evaluation or for those with limited computing resources.</li>
               <li><b>test</b> features the remaining 5,323 samples for standard evaluation. Notably, the answer labels for <b>test</b> will 
                 not be publicly released to facilitate fair evaluation. Instead, we maintain an online evaluation platform for user submissions.</li>
@@ -537,7 +544,7 @@
         <div class="content has-text-centered">
           <img src="static/images/tab2.png" alt="data-overview" style="max-width: 60%; margin-top: 200px;"/>
           <p> 
-            Key statistics of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            Key statistics of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             <span class="mathvista">HRScene</span>.<br/>
           </p> 
         </div>
@@ -546,7 +553,7 @@
         <div class="content has-text-centered">
           <img src="static/images/fig1a.png" alt="data-composition" style="max-width: 56%;"/>
           <p>
-              Source dataset distribution of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              Source dataset distribution of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
               <span class="mathvista">HRScene</span>.<br/>
               <!-- <b>FQA</b>: figure question answering,
               <b>GPS</b>: geometry problem solving,<br/>
@@ -562,7 +569,7 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Examples</h2>
-        <p>One example for each <b>category</b> in <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+        <p>One example for each <b>category</b> in <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
           <span class="mathvista">HRScene</span></p>
 
         <div id="results-carousel" class="carousel results-carousel">
@@ -619,7 +626,7 @@
         </div>
 
         <!-- <br><br>
-        <p>One example for each <b>visual context</b> type required in <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+        <p>One example for each <b>visual context</b> type required in <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
           <span class="mathvista">HRScene</span></p>
 
         <div id="results-carousel" class="carousel results-carousel">
@@ -728,34 +735,34 @@
     <div class="columns is-centered m-6" style="display: none;">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Statistics</h2>
-        <p>Notable statistics of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+        <p>Notable statistics of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
           <span class="mathvista">HRScene</span></p>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/statistics/context-dist.png" alt="context" class="stats-image">
-              <p>Distribution of visual context types within <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <p>Distribution of visual context types within <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/statistics/category.png" alt="category" class="stats-image"/>
-              <p>Category distribution of problems within <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <p>Category distribution of problems within <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/statistics/grade-levels.png" alt="grade" class="stats-image"/>
-              <p>Distribution of questions across different grade levels within <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <p>Distribution of questions across different grade levels within <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/statistics/qs-len.png" alt="qs-len" class="stats-image"/>
-              <p>Distribution of the number of words per question in <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <p>Distribution of the number of words per question in <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span>. 
                 <!-- Questions with a length greater than 60 are categorized as 61 for visualization simplicity -->
               </p>
@@ -764,21 +771,21 @@
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/statistics/reasoning.png" alt="reasoning" class="stats-image"/>
-              <p>Portion of each mathematical reasoning type involved in the problems of <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <p>Portion of each mathematical reasoning type involved in the problems of <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/statistics/reasoning-count.png" alt="reasoning-count" class="stats-image"/>
-              <p>Distribution of the number of mathematical reasoning types within <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <p>Distribution of the number of mathematical reasoning types within <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span></p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/statistics/task-type.png" alt="task-type" class="stats-image"/>
-              <p>Task type distribution of problems within <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <p>Task type distribution of problems within <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span></p>
             </div>
           </div>
@@ -817,7 +824,7 @@
               <img src="static/images/tab3.png" alt="grade-lv" width="50%"/>
               <p>
                 Overall results of all models on real-world datasets of 
-                <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
                 <span class="mathvista">HRScene</span>. <br><br>
 
                 The models are clustered according to the parameter sizes. 
@@ -889,7 +896,7 @@
 
     <div class="container is-full has-text-centered content m-6" id="result-table">
       <h2 class="title is-3" id="explorer">Explorer</h2>
-      <p>Explore the outputs of each model on <img src="static/images/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+      <p>Explore the outputs of each model on <img src="static/images/icons/hrscene.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
         <span class="mathvista">HRScene</span></p>
       <div class="level has-text-centered" style="position: sticky; top: 0; z-index: 20;">
         <div class="level-item box m-3" style="width: 30%; background: rgba(250, 250, 250, 1);">
@@ -949,8 +956,7 @@
     <pre><code>
       @article{zhang2025hrscene,
         title={HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?},
-        author={Zhang, Yusen and Zheng, Wenliang and Madasu, 
-          Aashrith and Shi, Peng and Kamoi, Ryo and Zhou, Hao and Zou, Zhuoyang and Zhao, Shu and Das, Sarkar Snigdha Sarathi and Gupta, Vipul and Lu, Xiaoxin and Zhang, Nan and Zhang, Ranran Haoran and Iyer, Avitej and Lou, Renze and Yin, Wenpeng and Zhang, Rui},
+        author={Zhang, Yusen and Zheng, Wenliang and Madasu, Aashrith and Shi, Peng and Kamoi, Ryo and Zhou, Hao and Zou, Zhuoyang and Zhao, Shu and Das, Sarkar Snigdha Sarathi and Gupta, Vipul and Lu, Xiaoxin and Zhang, Nan and Zhang, Ranran Haoran and Iyer, Avitej and Lou, Renze and Yin, Wenpeng and Zhang, Rui},
         journal={arXiv preprint},
         year={2025}
       }
@@ -961,10 +967,10 @@
 <!-- <section>
   <div class="section" id="org-banners" style="display:flex">
     <a href="" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/psu.jpg">
+        <img class="center-block org-banner" src="static/images/icons/psu.jpg">
     </a>
     <a href="" target="blank" class="ext-link">
-        <img class="center-block org-banner" src="static/images/aws.png">
+        <img class="center-block org-banner" src="static/images/icons/aws.png">
     </a>
   </div>
 </section> -->
@@ -976,12 +982,13 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
-            This website was adapted from <a href="https://mathvista.github.io/">MathVista</a> and developed by 
-            <a href="https://in.linkedin.com/in/aashrith-madasu-170771217">Aashrith Madasu</a>. 
-            You are free to use or adapt this <a href="https://github.com/yszh8/hrscene">website’s code</a> under the terms of the 
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>,
-            with appropriate credit.
+          <p style="text-align: center;">
+            Developed by <a href="https://in.linkedin.com/in/aashrith-madasu-170771217">Aashrith Madasu</a>, adapted from 
+            <a href="https://mathvista.github.io/">MathVista</a>.
+            <br>
+            Feel free to use the <a href="https://github.com/yszh8/hrscene">code</a> with a link back to this page in the footer.
+            <br>
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
           </p>
         </div>
       </div>

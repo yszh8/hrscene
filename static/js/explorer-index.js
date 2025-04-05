@@ -102,10 +102,11 @@ var num_output_qs = 5;
 // dynamically links a js data file
 function read_data(model_name) {
   console.log("loading data for " + model_name);
-  let folder = model_output_folder_list[model_name];
+  // let folder = model_output_folder_list[model_name];
+  let folder = model_name;
   // dynamically link the js file
   let script = document.createElement("script");
-  script.src = "./data/results/" + folder + "/data.js";
+  script.src = `./data/explorer/model_responses/${folder}/data.js`;
   document.body.appendChild(script);
   return [folder, script];
 }

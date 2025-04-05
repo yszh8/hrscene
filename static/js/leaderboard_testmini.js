@@ -15,25 +15,27 @@ function generateTable(data) {
   table += `<tr>
           <td class="js-sort-number"><strong>#</strong></td>
           <td class="js-sort"><strong>Model</strong></td>
-          <td class="js-sort"><strong>Params (in billions) </strong></td>
+          <td class="js-sort-number"><strong>Parameters (in billions) </strong></td>
 
-          <td class="js-sort-number"><strong><u>ALL</u></strong></td>
-          <td class="js-sort-number"><strong>daily</strong></td>
-          <td class="js-sort-number"><strong>research</strong></td>
-          <td class="js-sort-number"><strong>medical</strong></td>
-          <td class="js-sort-number"><strong>sub-img</strong></td>
-          <td class="js-sort-number"><strong>remote</strong></td>
-          <td class="js-sort-number"><strong>art</strong></td>
-          <td class="js-sort-number"><strong>paper</strong></td>
-          <td class="js-sort-number"><strong>urban</strong></td>
+          <td class="js-sort-number"><strong><u>All</u></strong></td>
+          <td class="js-sort-number"><strong>Daily</strong></td>
+          <td class="js-sort-number"><strong>Research</strong></td>
+          <td class="js-sort-number"><strong>Medical</strong></td>
+          <td class="js-sort-number"><strong>Sub-Img</strong></td>
+          <td class="js-sort-number"><strong>Remote</strong></td>
+          <td class="js-sort-number"><strong>Art</strong></td>
+          <td class="js-sort-number"><strong>Paper</strong></td>
+          <td class="js-sort-number"><strong>Urban</strong></td>
       </tr>`;
+      
+      // get all keys in data
+      var keys = Object.keys(data);
+
+/*    Uncomment this to put "Humman" at Top
 
       // sort data to make sure the best model is on top
       first_row = '-' // "Human Performance*"
       console.log(data);
-
-      // get all keys in data
-      var keys = Object.keys(data);
 
       // remove "Human Performance*" from keys
       var index = keys.indexOf(first_row);
@@ -43,6 +45,7 @@ function generateTable(data) {
 
       // add "Human Performance*" to the top of keys
       keys.unshift(first_row);
+*/
 
       console.log(keys);
 
@@ -54,24 +57,14 @@ function generateTable(data) {
 
         table += '<tr>';
         table += `<td>${key}</td>`
-
-        // for key = "1", "2", "3"
-        top_ranks = ["1", "2", "3"]
-        if (top_ranks.includes(key)) {
-          table += `<td><b class="best-score-text" style="color:${entry.Color};">${entry.Model}</b></td>`;
-          table += `<td>${entry.Params}</td>`;
-          table += `<td><b class="best-score-text">${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
-        }
-        else {
-          table += `<td><b style="color:${entry.Color};">${entry.Model}</b></td>`;
-          table += `<td>${entry.Params}</td>`;
-          table += `<td><b>${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
-        }          
+        table += `<td><b class="${entry.ModelType}-model">${entry.Model}</b></td>`;
+        table += `<td><b>${entry.Params.toString()}</b></td>`;
+        table += `<td><b>${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
 
         // if entry.FQA is a number
         if (!isNaN(entry.FQA)) {
           table += `<td>${entry["daily"].toFixed(1).toString()}</td>`;
-          table += `<td>${entry["research"].toFixed(1).toString()}</td>`;
+          table += `<td >${entry["research"].toFixed(1).toString()}</td>`;
           table += `<td>${entry["medical"].toFixed(1).toString()}</td>`;
           table += `<td>${entry["sub-img"].toFixed(1).toString()}</td>`;
           table += `<td>${entry["remote"].toFixed(1).toString()}</td>`;
