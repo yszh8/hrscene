@@ -155,7 +155,7 @@ scores_testmini = {
   },
   11: {
     Model: "Llava-hr-7B",
-    Params: "N/A",
+    Params: 7.28,
     ModelType: "open",
     daily: 16.1,
     research: 14.4,
