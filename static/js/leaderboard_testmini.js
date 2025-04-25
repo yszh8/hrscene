@@ -59,18 +59,18 @@ function generateTable(data) {
         table += `<td>${key}</td>`
         table += `<td><b class="${entry.ModelType}-model">${entry.Model}</b></td>`;
         table += `<td><b>${entry.Params.toString()}</b></td>`;
-        table += `<td><b>${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
+        table += `<td><b>${entry.ALL.toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
 
         // if entry.FQA is a number
         if (!isNaN(entry.FQA)) {
-          table += `<td>${entry["daily"].toFixed(1).toString()}</td>`;
-          table += `<td >${entry["research"].toFixed(1).toString()}</td>`;
-          table += `<td>${entry["medical"].toFixed(1).toString()}</td>`;
-          table += `<td>${entry["sub-img"].toFixed(1).toString()}</td>`;
-          table += `<td>${entry["remote"].toFixed(1).toString()}</td>`;
-          table += `<td>${entry["art"].toFixed(1).toString()}</td>`;
-          table += `<td>${entry["paper"].toFixed(1).toString()}</td>`;
-          table += `<td>${entry["urban"].toFixed(1).toString()}</td>`;
+          table += `<td>${entry["daily"].toString()}</td>`;
+          table += `<td>${entry["research"].toString()}</td>`;
+          table += `<td>${entry["medical"].toString()}</td>`;
+          table += `<td>${entry["sub-img"].toString()}</td>`;
+          table += `<td>${entry["remote"].toString()}</td>`;
+          table += `<td>${entry["art"].toString()}</td>`;
+          table += `<td>${entry["paper"].toString()}</td>`;
+          table += `<td>${entry["urban"].toString()}</td>`;
         }
         else {
           table += `<td>${entry["daily"].toString()}</td>`;
